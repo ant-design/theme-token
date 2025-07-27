@@ -3,10 +3,10 @@ name: Run Vitest and upload coverage to Codecov
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
