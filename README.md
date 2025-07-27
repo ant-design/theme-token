@@ -178,6 +178,50 @@ $ pnpm run docs:preview
 
 # check your project for potential problems
 $ pnpm run doctor
+
+# run tests
+$ pnpm test
+
+# run tests in watch mode
+$ pnpm run test:watch
+
+# run tests with coverage
+$ pnpm run test:coverage
+
+# convert LESS to TypeScript
+$ pnpm run convert:less
+```
+
+## Testing
+
+项目使用 Jest 作为测试框架，包含以下测试：
+
+### 测试覆盖范围
+
+- **核心功能测试**: `createStyleRegister` 函数测试
+- **CSS 变量测试**: CSS 变量注入功能测试
+- **类型定义测试**: TypeScript 类型安全测试
+- **LESS 转换器测试**: LESS 到 TypeScript 转换功能测试
+  - 变量解析测试
+  - CSS 变量转换测试
+  - 颜色值标准化测试
+  - Mixin 解析和生成测试
+  - 注释保留测试
+
+### 运行测试
+
+```bash
+# 运行所有测试
+npm test
+
+# 运行特定测试文件
+npm test tests/less-converter.test.js
+
+# 监听模式运行测试
+npm run test:watch
+
+# 生成测试覆盖率报告
+npm run test:coverage
 ```
 
 ## LICENSE

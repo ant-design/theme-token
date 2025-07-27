@@ -14,7 +14,7 @@ class EnhancedLessASTParser {
 
   // 解析 LESS 文件内容
   parse(content) {
-    const lines = content.split('\n');
+    this.contentLines = content.split('\n');
     const tokens = this.tokenize(content);
     const ast = this.buildAST(tokens);
     this.processAST(ast);
@@ -64,7 +64,8 @@ class EnhancedLessASTParser {
         type: 'variable',
         name: variableMatch[1].trim(),
         value: variableMatch[2].trim(),
-        line: lineNum
+        line: lineNum,
+        comment: this.getVariableComment(lineNum)
       };
     }
     return null;
@@ -96,7 +97,8 @@ class EnhancedLessASTParser {
           type: 'variable_declaration',
           name: token.name,
           value: token.value,
-          line: token.line
+          line: token.line,
+          comment: token.comment
         });
       } else if (token.type === 'import') {
         ast.children.push({
@@ -123,14 +125,14 @@ class EnhancedLessASTParser {
 
   // 处理变量声明
   processVariableDeclaration(node) {
-    const { name, value } = node;
+    const { name, value, comment } = node;
     
     if (this.isVariableReference(value)) {
       this.variableReferences.set(name, value);
       this.warnings.push(`变量 ${name} 引用了其他变量: ${value}`);
     }
     
-    this.variables.set(name, value);
+    this.variables.set(name, { value, comment });
   }
 
   // 处理导入声明
@@ -141,6 +143,34 @@ class EnhancedLessASTParser {
   // 检查是否为变量引用
   isVariableReference(value) {
     return value.startsWith('@') && value.includes('@');
+  }
+
+  // 获取变量注释
+  getVariableComment(lineNum) {
+    const lines = this.contentLines || [];
+    const commentLines = [];
+    
+    // 向上查找注释，最多查找3行
+    for (let i = lineNum - 2; i < lineNum; i++) {
+      if (i >= 0 && i < lines.length) {
+        const line = lines[i].trim();
+        
+        // 匹配单行注释 // 或 /* */
+        if (line.startsWith('//')) {
+          const comment = line.substring(2).trim();
+          if (comment) {
+            commentLines.push(comment);
+          }
+        } else if (line.startsWith('/*') && line.endsWith('*/')) {
+          const comment = line.substring(2, line.length - 2).trim();
+          if (comment) {
+            commentLines.push(comment);
+          }
+        }
+      }
+    }
+    
+    return commentLines.length > 0 ? commentLines.join(' ') : null;
   }
 
   // 解析 mixin 定义
@@ -403,9 +433,14 @@ ${this.processMixinContent(mixinData.content)}
   generateTypeScriptObject() {
     let content = 'export const global = {\n';
     
-    for (const [name, value] of this.variables) {
+    for (const [name, variableData] of this.variables) {
       const cssVarName = this.convertToCSSVariable(name);
-      const processedValue = this.processValue(value);
+      const processedValue = this.processValue(variableData.value);
+      
+      // 添加注释
+      if (variableData.comment) {
+        content += `  /** ${variableData.comment} */\n`;
+      }
       content += `  '${cssVarName}': '${processedValue}',\n`;
     }
     
@@ -573,27 +608,45 @@ const testCases = [
       'color-gray-bg-page-light': '@color-gray-1'
     }
   },
-  {
-    name: 'Mixin 测试',
-    input: `
-      .scrollbar-hidden() {
-        overflow-y: auto;
-        scrollbar-width: none;
-        
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      }
-      
-      .showScrollLine() {
-        border-top: 1px solid @color-transparent;
-        border-bottom: 1px solid @color-transparent;
-      }
-    `,
-    expected: {
-      // 这个测试主要验证 mixin 解析，变量解析是次要的
-    }
-  }
+     {
+     name: 'Mixin 测试',
+     input: `
+       .scrollbar-hidden() {
+         overflow-y: auto;
+         scrollbar-width: none;
+         
+         &::-webkit-scrollbar {
+           display: none;
+         }
+       }
+       
+       .showScrollLine() {
+         border-top: 1px solid @color-transparent;
+         border-bottom: 1px solid @color-transparent;
+       }
+     `,
+     expected: {
+       // 这个测试主要验证 mixin 解析，变量解析是次要的
+     }
+   },
+   {
+     name: '注释测试',
+     input: `
+       // 主要文本颜色
+       @color-gray-text: #343A45;
+       
+       /* 次要文本颜色 */
+       @color-gray-text-secondary: #767E8B;
+       
+       // 基础间距
+       @margin-component-base: 8px;
+     `,
+     expected: {
+       'color-gray-text': '#343A45',
+       'color-gray-text-secondary': '#767E8B',
+       'margin-component-base': '8px'
+     }
+   }
 ];
 
 // 运行测试
@@ -614,15 +667,15 @@ function runTests() {
       let testPassed = true;
       const errors = [];
       
-      for (const [expectedKey, expectedValue] of Object.entries(testCase.expected)) {
-        if (!result.has(expectedKey)) {
-          errors.push(`缺少变量: ${expectedKey}`);
-          testPassed = false;
-        } else if (result.get(expectedKey) !== expectedValue) {
-          errors.push(`变量 ${expectedKey} 值不匹配: 期望 "${expectedValue}", 实际 "${result.get(expectedKey)}"`);
-          testPassed = false;
-        }
-      }
+             for (const [expectedKey, expectedValue] of Object.entries(testCase.expected)) {
+         if (!result.has(expectedKey)) {
+           errors.push(`缺少变量: ${expectedKey}`);
+           testPassed = false;
+         } else if (result.get(expectedKey).value !== expectedValue) {
+           errors.push(`变量 ${expectedKey} 值不匹配: 期望 "${expectedValue}", 实际 "${result.get(expectedKey).value}"`);
+           testPassed = false;
+         }
+       }
       
       if (testPassed) {
         console.log('✅ 通过');
@@ -745,14 +798,14 @@ function generateExample() {
   const tsOutput = parser.generateTypeScriptObject();
   console.log(tsOutput.substring(0, 500) + '...');
   
-  console.log('\n🔍 变量引用分析:');
-  let referenceCount = 0;
-  for (const [name, value] of variables) {
-    if (value.startsWith('@')) {
-      console.log(`  ${name}: ${value} -> var(${parser.convertToCSSVariable(value.substring(1))})`);
-      referenceCount++;
-    }
-  }
+     console.log('\n🔍 变量引用分析:');
+   let referenceCount = 0;
+   for (const [name, variableData] of variables) {
+     if (variableData.value.startsWith('@')) {
+       console.log(`  ${name}: ${variableData.value} -> var(${parser.convertToCSSVariable(variableData.value.substring(1))})`);
+       referenceCount++;
+     }
+   }
   
   console.log(`\n📊 统计: 总共 ${variables.size} 个变量，其中 ${referenceCount} 个是引用变量`);
 }

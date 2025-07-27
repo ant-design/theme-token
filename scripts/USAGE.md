@@ -14,8 +14,8 @@ npm run convert:less:test
 # 生成使用示例
 npm run convert:less:example
 
-# 运行独立测试文件
-npm run test:less
+# 运行 Jest 测试（包含 LESS 转换器测试）
+npm test
 ```
 
 ### 命令行参数
@@ -44,7 +44,7 @@ node scripts/less-converter.js convert input.less output.ts
 - 生成转换报告 `src/token/global.md`
 - 包含使用示例
 
-### 2. 测试功能 (`convert:less:test` / `test:less`)
+### 2. 测试功能 (`convert:less:test` / `npm test`)
 
 - 运行基础变量测试
 - 运行变量引用测试
@@ -53,6 +53,7 @@ node scripts/less-converter.js convert input.less output.ts
 - 测试 CSS 变量转换
 - 测试颜色值标准化
 - 测试 mixin 函数生成
+- 测试注释保留功能
 
 ### 3. 示例功能 (`convert:less:example`)
 
