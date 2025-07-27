@@ -19,7 +19,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepublishOnly": "father doctor && npm run build",
+    "convert:less": "node scripts/less-converter.js",
+    "convert:less:test": "node scripts/less-converter.js test",
+    "convert:less:example": "node scripts/less-converter.js example",
+    "test:less": "node tests/less-converter.test.js"
   },
   "authors": [],
   "license": "MIT",
