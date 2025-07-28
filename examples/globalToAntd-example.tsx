@@ -9,7 +9,6 @@ const GlobalToAntdExample: React.FC = () => {
   const antdToken = convertGlobalToAntdToken();
   const antdTokenCssVar = convertGlobalToAntdCssToken();
 
-  console.log(antdTokenCssVar);
   return (
     <div
       className="my-component"
