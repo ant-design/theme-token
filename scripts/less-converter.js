@@ -1,3 +1,5 @@
+/* eslint-disable */
+// 此文件为脚本文件，禁用 ESLint 规则
 const fs = require('fs');
 const path = require('path');
 
@@ -984,7 +986,7 @@ function convertLessToTs(inputFile, outputFile, options = {}) {
 
     // 生成 TypeScript 代码
     let tsContent = parser.generateTypeScriptObject();
-
+    tsContent = `/* eslint-disable */\n${tsContent}`;
     // 写入输出文件
     fs.writeFileSync(outputFile, tsContent, 'utf8');
 

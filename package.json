@@ -2,44 +2,37 @@
   "name": "@ant-desgin/theme-token",
   "version": "0.0.1",
   "description": "A react library developed with dumi",
+  "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "father build",
+    "build": "npm run convert:less && father build",
     "build:watch": "father dev",
+    "convert:less": "node scripts/less-converter.js",
+    "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
-    "prepare": "dumi setup",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "prepare": "dumi setup",
     "prepublishOnly": "father doctor && npm run build",
-    "convert:less": "node scripts/less-converter.js",
-    "convert:less:test": "node scripts/less-converter.js test",
-    "convert:less:example": "node scripts/less-converter.js example"
+    "start": "npm run dev",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
-  "authors": [],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.24.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -65,7 +58,12 @@
     "stylelint": "^14.9.1",
     "ts-jest": "^29.1.1"
   },
-  "dependencies": {
-    "@ant-design/cssinjs": "^1.24.0"
-  }
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": []
 }

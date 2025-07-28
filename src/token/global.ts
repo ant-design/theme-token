@@ -1,3 +1,5 @@
+/* eslint-disable */
+// 此文件为脚本生成，禁用 ESLint 规则
 export const global = {
   '--name': 'text-code-s',
   /** 无间距-none 0 */
