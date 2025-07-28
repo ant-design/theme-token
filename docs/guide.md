@@ -115,7 +115,7 @@ return wrapSSR(component);
 
 - `options` (object): 配置选项
   - `theme` (any): antd 主题对象，用于样式注册
-  - `token` (Partial<ComponentToken>): 主题 token 配置
+  - `token` (Partial\<ComponentToken\>): 主题 token 配置
   - `hashId` (string): 样式 hash ID，用于样式隔离
   - `cssVariables` (CSSVariables): CSS 变量对象，会自动注入到 `:root` 选择器中
 

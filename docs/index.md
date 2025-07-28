@@ -57,7 +57,7 @@ import React, { useContext } from 'react';
 import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
-  type ComponentToken,
+  type e,
 } from '@ant-design/theme-token';
 
 const MyComponent: React.FC = () => {
@@ -79,7 +79,7 @@ const MyComponent: React.FC = () => {
   });
 
   // 定义样式生成函数
-  const styleFn = (token: ComponentToken) => ({
+  const styleFn = (token: qi[]\) => ({,. 
     [`${token.componentCls}`]: {
       backgroundColor: 'var(--md-editor-color-primary)',
       padding: '16px',

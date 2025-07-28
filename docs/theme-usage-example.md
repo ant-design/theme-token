@@ -1,30 +1,17 @@
-# Theme Token
+---
+order: 3
+title: theme
+nav:
+  title: utils
+---
 
-一个用于管理 CSS 变量和主题切换的 React 库。
+# Theme 使用示例
 
-## 功能特性
+## 概述
 
-- 🎨 **CSS 变量管理**: 自动生成和管理 CSS 变量
-- 🌓 **主题切换**: 支持动态主题切换
-- 📦 **TypeScript 支持**: 完整的类型定义
-- 🎯 **React Hooks**: 提供便捷的 React Hooks
-- 🎨 **Theme 对象**: 基于 global 对象自动生成的 theme 变量，方便在 CSS-in-JS 中使用
-
-## 安装
-
-```bash
-npm install theme-token
-# 或
-yarn add theme-token
-# 或
-pnpm add theme-token
-```
+`theme` 对象是基于 `global` 对象自动生成的，它将 CSS 变量名转换为驼峰命名法的属性名，方便在 CSS-in-JS 中使用。theme 对象现在位于 `src/token/theme.ts` 文件中。
 
 ## 基本用法
-
-### 使用 Theme 对象
-
-`theme` 对象是基于 `global` 对象自动生成的，它将 CSS 变量名转换为驼峰命名法的属性名，方便在 CSS-in-JS 中使用。
 
 ```tsx | pure
 import { theme } from '@ant-design/theme-token';
@@ -32,13 +19,13 @@ import { theme } from '@ant-design/theme-token';
 // 使用 theme 对象
 const styles = {
   margin: theme.marginNone, // 'var(--margin-none)'
-  padding: theme.marginComponentBase, // 'var(--margin-component-base)'
+  padding: theme.paddingCardM, // 'var(--padding-card-m)'
   color: theme.colorGrayText, // 'var(--color-gray-text)'
-  borderRadius: '4px',
+  borderRadius: theme.borderRadiusControlBase, // 'var(--border-radius-control-base)'
 };
 ```
 
-### 在 React 组件中使用
+## 在 React 组件中使用
 
 ```tsx | pure
 import React from 'react';
@@ -48,7 +35,7 @@ const MyComponent: React.FC = () => {
   // 注入 CSS 变量
   useCSSVariables('MyComponent', {
     '--margin-none': '0',
-    '--margin-component-base': '8px',
+    '--padding-card-m': '16px',
     '--color-gray-text': '#333',
   });
 
@@ -56,8 +43,9 @@ const MyComponent: React.FC = () => {
     <div
       style={{
         margin: theme.marginNone,
-        padding: theme.marginComponentBase,
+        padding: theme.paddingCardM,
         color: theme.colorGrayText,
+        borderRadius: theme.borderRadiusControlBase,
       }}
     >
       使用 theme 对象的组件
@@ -66,7 +54,47 @@ const MyComponent: React.FC = () => {
 };
 ```
 
-### 主题切换
+## 在 styled-components 中使用
+
+```tsx | pure
+import styled from 'styled-components';
+import { theme } from '@ant-design/theme-token';
+
+const StyledButton = styled.button`
+  margin: ${theme.marginComponentBase};
+  padding: ${theme.paddingControlM32};
+  background-color: ${theme.colorBlueControlFillPrimary};
+  border-radius: ${theme.borderRadiusControlBase};
+  color: ${theme.colorBlueTextContrast};
+
+  &:hover {
+    background-color: ${theme.colorBlueControlFillPrimaryHover};
+  }
+`;
+```
+
+## 在 emotion 中使用
+
+```tsx | pure
+import { css } from '@emotion/react';
+import { theme } from '@ant-design/theme-token';
+
+const buttonStyles = css`
+  margin: ${theme.marginComponentBase};
+  padding: ${theme.paddingControlM32};
+  background-color: ${theme.colorBlueControlFillPrimary};
+  border-radius: ${theme.borderRadiusControlBase};
+  color: ${theme.colorBlueTextContrast};
+
+  &:hover {
+    background-color: ${theme.colorBlueControlFillPrimaryHover};
+  }
+`;
+```
+
+## 主题切换
+
+由于 theme 对象使用的是 CSS 变量，当通过 `ThemeProvide` 切换主题时，所有使用 theme 对象的样式都会自动更新：
 
 ```tsx | pure
 import React from 'react';
@@ -86,51 +114,11 @@ const App: React.FC = () => {
 };
 ```
 
-### 在 styled-components 中使用
+## 可用的 theme 属性
 
-```tsx | pure
-import styled from 'styled-components';
-import { theme } from '@ant-design/theme-token';
+theme 对象包含以下类别的属性：
 
-const StyledButton = styled.button`
-  margin: ${theme.marginComponentBase};
-  padding: 8px 16px;
-  background-color: ${theme.colorBlueControlFillPrimary};
-  border-radius: 4px;
-  color: #ffffff;
-
-  &:hover {
-    background-color: ${theme.colorBlueControlFillPrimaryHover};
-  }
-`;
-```
-
-### 在 emotion 中使用
-
-```tsx | pure
-import { css } from '@emotion/react';
-import { theme } from '@ant-design/theme-token';
-
-const buttonStyles = css`
-  margin: ${theme.marginComponentBase};
-  padding: 8px 16px;
-  background-color: ${theme.colorBlueControlFillPrimary};
-  border-radius: 4px;
-  color: #ffffff;
-
-  &:hover {
-    background-color: ${theme.colorBlueControlFillPrimaryHover};
-  }
-`;
-```
-
-## API 参考
-
-### theme 对象
-
-`theme` 对象包含以下类别的属性：
-
-#### 间距 (Margin)
+### 间距 (Margin)
 
 - `marginNone` - 无间距
 - `marginComponentXs` - 组件内小间距
@@ -148,7 +136,7 @@ const buttonStyles = css`
 - `marginSectionLg` - 区块间大间距
 - `marginSectionXl` - 区块间超大间距
 
-#### 颜色 (Color)
+### 颜色 (Color)
 
 - `colorGrayText` - 灰色文本
 - `colorGrayTextSecondary` - 灰色次要文本
@@ -159,28 +147,35 @@ const buttonStyles = css`
 - `colorBlueControlFillPrimary` - 蓝色主按钮填充
 - `colorBlueControlFillPrimaryHover` - 蓝色主按钮悬停填充
 
-### useCSSVariables
+### 内边距 (Padding)
 
-用于注入 CSS 变量的 React Hook。
+- `paddingNone` - 无内边距
+- `paddingCardM` - 卡片中等内边距
+- `paddingCardL` - 卡片大内边距
+- `paddingControlM32` - 控件中等内边距
+- `paddingDialog` - 对话框内边距
 
-```typescript
-useCSSVariables(componentName: string, cssVariables: CSSVariables)
-```
+### 圆角 (Border Radius)
 
-### ThemeProvide
+- `borderRadiusControlXs` - 控件超小圆角
+- `borderRadiusControlSm` - 控件小圆角
+- `borderRadiusControlBase` - 控件基础圆角
+- `borderRadiusCardM` - 卡片中等圆角
+- `borderRadiusCardLg` - 卡片大圆角
 
-用于提供主题上下文的 React 组件。
+### 阴影 (Shadow)
 
-```tsx | pure
-<ThemeProvide className={className}>{children}</ThemeProvide>
-```
+- `shadowBorderL1` - 边框阴影
+- `shadowControlB1` - 控件底部阴影
+- `shadowCardL1` - 卡片阴影
+- `shadowDialogL3` - 对话框阴影
 
 ## 类型支持
 
 TypeScript 用户可以获得完整的类型支持：
 
 ```tsx | pure
-import { theme, Theme } from '@ant-design/theme-token';
+import { theme, Theme } from 'theme-token';
 
 // theme 对象有完整的类型定义
 const margin: string = theme.marginNone; // ✅ 类型安全
@@ -188,7 +183,7 @@ const margin: string = theme.marginNone; // ✅ 类型安全
 // 可以定义使用 theme 的样式对象类型
 type MyStyles = {
   margin: Theme['marginNone'];
-  padding: Theme['marginComponentBase'];
+  padding: Theme['paddingCardM'];
   color: Theme['colorGrayText'];
 };
 ```
@@ -199,20 +194,3 @@ type MyStyles = {
 2. 所有属性值都是 CSS 变量引用，格式为 `var(--variable-name)`
 3. 确保在使用 theme 对象之前已经通过 `useCSSVariables` 或 `ThemeProvide` 注入了相应的 CSS 变量
 4. theme 对象会自动包含 global 对象中的所有 CSS 变量，无需手动维护
-
-## 开发
-
-```bash
-# 安装依赖
-npm install
-
-# 运行测试
-npm test
-
-# 构建
-npm run build
-```
-
-## 许可证
-
-MIT

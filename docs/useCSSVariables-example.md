@@ -1,3 +1,10 @@
+---
+order: 2
+title: useCSSVariables
+nav:
+  title: utils
+---
+
 # useCSSVariables Hooks 使用示例
 
 ## 概述

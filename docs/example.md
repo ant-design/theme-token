@@ -322,7 +322,11 @@ export default App;
 ### 可复用的样式生成函数
 
 ```tsx
-import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
+import {
+  ConfigProvider as AntdConfigProvider,
+  Space,
+  theme as antdTheme,
+} from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
@@ -408,12 +412,32 @@ const SecondaryButton = () => {
 
 export default () => {
   return (
-    <>
+    <Space>
       <PrimaryButton />
       <SecondaryButton />
-    </>
+    </Space>
   );
 };
 ```
 
-这些示例展示了如何使用 `@ant-design/theme-token` 创建各种类型的组件，从简单的按钮到复杂的响应式网格布局。每个示例都包含了完整的代码和最佳实践。
+## Theme 对象示例
+
+### Theme 对象基本使用
+
+Theme 对象是基于 global 对象自动生成的，它将 CSS 变量名转换为驼峰命名法的属性名，方便在 CSS-in-JS 中使用。
+
+<code src="../examples/theme-example.tsx"></code>
+
+### 使用 theme 对象的样式
+
+<code src="../examples/theme-usage.tsx"></code>
+
+## GlobalToAntd Token 转换示例
+
+### 将 Global Token 转换为 Ant Design Token
+
+使用 `convertGlobalToAntdToken()` 函数将 global token 转换为 Ant Design token 格式，可以直接在 ConfigProvider 中使用。
+
+<code src="../examples/globalToAntd-example.tsx"></code>
+
+这些示例展示了如何使用 `@ant-design/theme-token` 的 theme 对象和 globalToAntd 转换功能，从简单的 CSS 变量使用到复杂的 Ant Design token 集成。

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useThemeContext } from '../ThemeProvide';
 
 // CSS变量类型
@@ -27,8 +28,10 @@ export function insertCSSVariables(
     .map(([key, value]) => `${key}: ${value};`)
     .join('\n');
 
+  const cacheKey = className + '-' + componentName;
+
   // 检查该组件的 CSS 变量是否已插入，以及是否需要更新
-  const existingRecord = CSS_VAR_INSERT_MAP.get(componentName);
+  const existingRecord = CSS_VAR_INSERT_MAP.get(cacheKey);
   const needsUpdate =
     !existingRecord || existingRecord.cssVariables !== currentCssVariables;
 
@@ -57,7 +60,7 @@ export function insertCSSVariables(
       document.head?.insertBefore(style, document.head?.firstChild);
 
       // 更新记录
-      CSS_VAR_INSERT_MAP.set(componentName, {
+      CSS_VAR_INSERT_MAP.set(cacheKey, {
         inserted: true,
         cssVariables: currentCssVariables,
       });
@@ -76,6 +79,20 @@ export function useCSSVariables(
   componentName: string,
   cssVariables: CSSVariables,
 ) {
-  const { className } = useThemeContext();
-  insertCSSVariables(componentName, cssVariables, className);
+  const { className, cssVariables: contextCssVariables } = useThemeContext();
+  useEffect(() => {
+    insertCSSVariables(
+      componentName,
+      {
+        ...(contextCssVariables || {}),
+        ...(cssVariables || {}),
+      } as CSSVariables,
+      className,
+    );
+  }, [
+    componentName,
+    JSON.stringify(cssVariables || {}),
+    JSON.stringify(contextCssVariables || {}),
+    className,
+  ]);
 }
