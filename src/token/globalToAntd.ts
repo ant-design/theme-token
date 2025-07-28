@@ -1,8 +1,12 @@
 import { global } from './global';
 import { themeCssVar } from './theme';
-
+export interface GlobalToken {
+  [key: string]: string;
+}
 // 处理所有 token 的映射
-const processTokenMapping = (globalConfig: any) => {
+export const processTokenMappingToAntd = (
+  globalConfig: GlobalToken,
+): GlobalToken => {
   const antdToken: any = {};
 
   // 颜色相关映射
@@ -213,9 +217,9 @@ const processTokenMapping = (globalConfig: any) => {
  * 参考: https://ant-design.antgroup.com/docs/react/customize-theme-cn#aliastoken
  */
 export const convertGlobalToAntdToken = () => {
-  return processTokenMapping(global);
+  return processTokenMappingToAntd(global);
 };
 
 export const convertGlobalToAntdCssToken = () => {
-  return processTokenMapping(themeCssVar);
+  return processTokenMappingToAntd(themeCssVar);
 };

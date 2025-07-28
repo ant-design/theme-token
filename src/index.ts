@@ -1,29 +1,19 @@
-import { ThemeProvide } from './ThemeProvide';
-import algorithm from './algorithm';
-import { useCSSVariables } from './hooks';
-import { global } from './token/global';
-import {
+export * from './ThemeProvide';
+export * from './algorithm';
+export { useCSSVariables } from './hooks';
+export {
   convertGlobalToAntdCssToken,
   convertGlobalToAntdToken,
 } from './token/globalToAntd';
-import { theme, themeCssVar } from './token/theme';
-import { createStyleRegister } from './useStyle';
+export { theme, themeCssVar } from './token/theme';
+export { createStyleRegister } from './useStyle';
+import { global } from './token/global';
 
 // 重新导出 globalThemeToken 以保持向后兼容性
 export const globalThemeToken = global;
 
 export type { UseStyleResult } from '../src/useStyle';
 
-export {
-  ThemeProvide,
-  algorithm,
-  convertGlobalToAntdCssToken,
-  convertGlobalToAntdToken,
-  createStyleRegister,
-  theme,
-  themeCssVar,
-  useCSSVariables,
-};
-
 export type { CSSVariables } from './hooks';
+export { processTokenMappingToAntd } from './token/globalToAntd';
 export type { BaseToken, ComponentToken, GenerateStyle } from './useStyle';
