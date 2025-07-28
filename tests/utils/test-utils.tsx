@@ -1,12 +1,11 @@
 import { render, RenderOptions } from '@testing-library/react';
-import { ConfigProvider } from 'antd';
 import React from 'react';
 
 // 自定义渲染器，包含必要的Provider
 const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  return <ConfigProvider>{children}</ConfigProvider>;
+  return <>{children}</>;
 };
 
 const customRender = (

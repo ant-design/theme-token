@@ -6,6 +6,19 @@ import {
   mockToken,
 } from './utils/test-utils';
 
+// 模拟 @ant-design/cssinjs 的 useStyleRegister
+jest.mock('@ant-design/cssinjs', () => ({
+  useStyleRegister: jest.fn((config, styleFn) => {
+    // 调用 styleFn 来获取样式
+    const styles = styleFn();
+    return {
+      wrapSSR: (node: any) => node,
+      hashId: config.hashId || 'mock-hash-id',
+      styles,
+    };
+  }),
+}));
+
 describe('createStyleRegister', () => {
   beforeEach(() => {
     cleanupDOM();
@@ -147,5 +160,364 @@ describe('createStyleRegister', () => {
     });
 
     expect(useStyle).toBeInstanceOf(Function);
+  });
+
+  describe('返回的样式注册函数', () => {
+    it('应该正确设置 componentCls', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      const result = useStyle('test-component', styleFn);
+
+      expect(result).toHaveProperty('wrapSSR');
+      expect(result).toHaveProperty('hashId');
+      expect(result.hashId).toBe('test-hash');
+    });
+
+    it('应该正确注入CSS变量到DOM', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      useStyle('test-component', styleFn);
+
+      // 检查是否插入了样式标签
+      const styleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      expect(styleElement).toBeTruthy();
+      expect(styleElement?.tagName).toBe('STYLE');
+      expect(styleElement?.innerHTML).toContain(':root{');
+      expect(styleElement?.innerHTML).toContain(
+        '--test-color-primary: #1890ff;',
+      );
+    });
+
+    it('应该避免重复插入相同的CSS变量', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      // 第一次调用
+      useStyle('test-component', styleFn);
+      const firstStyleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      const firstInnerHTML = firstStyleElement?.innerHTML;
+
+      // 第二次调用相同的组件
+      useStyle('test-component', styleFn);
+      const secondStyleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      const secondInnerHTML = secondStyleElement?.innerHTML;
+
+      // 应该只有一个样式元素，内容相同
+      expect(firstStyleElement).toBe(secondStyleElement);
+      expect(firstInnerHTML).toBe(secondInnerHTML);
+    });
+
+    it('应该更新已存在的CSS变量', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      // 第一次调用
+      useStyle('test-component', styleFn);
+      const firstStyleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      const firstInnerHTML = firstStyleElement?.innerHTML;
+
+      // 使用不同的CSS变量再次调用
+      const useStyle2 = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: {
+          '--updated-color': '#ff0000',
+        },
+      });
+
+      useStyle2('test-component', styleFn);
+      const secondStyleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      const secondInnerHTML = secondStyleElement?.innerHTML;
+
+      // 内容应该不同
+      expect(firstInnerHTML).not.toBe(secondInnerHTML);
+      expect(secondInnerHTML).toContain('--updated-color: #ff0000;');
+    });
+
+    it('应该处理空的CSS变量对象', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: {},
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      const result = useStyle('test-component', styleFn);
+
+      // 不应该插入样式标签
+      const styleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      expect(styleElement).toBeNull();
+
+      expect(result).toHaveProperty('wrapSSR');
+      expect(result).toHaveProperty('hashId');
+    });
+
+    it('应该处理复杂的CSS变量值', () => {
+      const complexCssVariables = {
+        '--simple': 'red',
+        '--with-quotes': '"quoted value"',
+        '--with-spaces': 'rgba(0, 0, 0, 0.5)',
+        '--with-semicolons': 'url("data:image/png;base64,abc123")',
+      };
+
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: complexCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      useStyle('test-component', styleFn);
+
+      const styleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      expect(styleElement).toBeTruthy();
+      expect(styleElement?.innerHTML).toContain('--simple: red;');
+      expect(styleElement?.innerHTML).toContain(
+        '--with-quotes: "quoted value";',
+      );
+      expect(styleElement?.innerHTML).toContain(
+        '--with-spaces: rgba(0, 0, 0, 0.5);',
+      );
+      expect(styleElement?.innerHTML).toContain(
+        '--with-semicolons: url("data:image/png;base64,abc123");',
+      );
+    });
+
+    it('应该处理document.head为null的情况', () => {
+      // 模拟document.head为null的情况
+      const originalHead = document.head;
+      Object.defineProperty(document, 'head', {
+        value: null,
+        writable: true,
+      });
+
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      // 不应该抛出错误
+      expect(() => {
+        useStyle('test-component', styleFn);
+      }).not.toThrow();
+
+      // 恢复document.head
+      Object.defineProperty(document, 'head', {
+        value: originalHead,
+        writable: true,
+      });
+    });
+
+    it('应该处理样式插入失败的情况', () => {
+      // 模拟insertBefore失败
+      const originalInsertBefore = document.head.insertBefore;
+      document.head.insertBefore = jest.fn().mockImplementation(() => {
+        throw new Error('Insert failed');
+      });
+
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      // 不应该抛出错误
+      expect(() => {
+        useStyle('test-component', styleFn);
+      }).not.toThrow();
+
+      // 恢复insertBefore
+      document.head.insertBefore = originalInsertBefore;
+    });
+
+    it('应该处理样式删除失败的情况', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      const styleFn = (token: any) => ({
+        [token.componentCls]: {
+          color: 'red',
+        },
+      });
+
+      // 第一次调用创建样式
+      useStyle('test-component', styleFn);
+
+      // 模拟remove方法失败
+      const styleElement = document.getElementById(
+        'test-component-css-variables',
+      );
+      const originalRemove = styleElement?.remove;
+      if (styleElement) {
+        styleElement.remove = jest.fn().mockImplementation(() => {
+          throw new Error('Remove failed');
+        });
+      }
+
+      // 使用不同的CSS变量再次调用
+      const useStyle2 = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: {
+          '--updated-color': '#ff0000',
+        },
+      });
+
+      // 不应该抛出错误
+      expect(() => {
+        useStyle2('test-component', styleFn);
+      }).not.toThrow();
+
+      // 恢复remove方法
+      if (styleElement && originalRemove) {
+        styleElement.remove = originalRemove;
+      }
+    });
+
+    it('应该正确设置token的componentCls属性', () => {
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: mockToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      let capturedToken: any = null;
+      const styleFn = (token: any) => {
+        capturedToken = token;
+        return {
+          [token.componentCls]: {
+            color: 'red',
+          },
+        };
+      };
+
+      useStyle('my-component', styleFn);
+
+      expect(capturedToken).toBeTruthy();
+      expect(capturedToken.componentCls).toBe('.my-component');
+    });
+
+    it('应该保持原有token的其他属性', () => {
+      const originalToken = {
+        ...mockToken,
+        customProperty: 'custom value',
+        nestedObject: { key: 'value' },
+      };
+
+      const useStyle = createStyleRegister({
+        theme: mockTheme,
+        token: originalToken,
+        hashId: 'test-hash',
+        cssVariables: mockCssVariables,
+      });
+
+      let capturedToken: any = null;
+      const styleFn = (token: any) => {
+        capturedToken = token;
+        return {
+          [token.componentCls]: {
+            color: 'red',
+          },
+        };
+      };
+
+      useStyle('my-component', styleFn);
+
+      expect(capturedToken).toBeTruthy();
+      expect(capturedToken.componentCls).toBe('.my-component');
+      expect(capturedToken.customProperty).toBe('custom value');
+      expect(capturedToken.nestedObject).toEqual({ key: 'value' });
+      expect(capturedToken.colorPrimary).toBe(mockToken.colorPrimary);
+    });
   });
 });
