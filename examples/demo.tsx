@@ -84,7 +84,7 @@ const Demo: React.FC = () => {
             fontSize: '14px',
           }}
         >
-          {`import { theme } from 'theme-token';
+          {`import { theme } from '@ant-design/theme-token';
 
 const styles = {
   margin: theme.marginComponentBase,     // 'var(--margin-component-base)'

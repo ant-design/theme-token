@@ -175,7 +175,7 @@ theme 对象包含以下类别的属性：
 TypeScript 用户可以获得完整的类型支持：
 
 ```tsx | pure
-import { theme, Theme } from 'theme-token';
+import { theme, Theme } from '@ant-design/theme-token';
 
 // theme 对象有完整的类型定义
 const margin: string = theme.marginNone; // ✅ 类型安全

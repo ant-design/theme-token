@@ -15,7 +15,7 @@ nav:
 
 ```tsx | pure
 import React from 'react';
-import { useCSSVariables } from 'theme-token';
+import { useCSSVariables } from '@ant-design/theme-token';
 
 const MyComponent: React.FC = () => {
   const cssVariables = {
@@ -39,7 +39,7 @@ const MyComponent: React.FC = () => {
 ## 在 createStyleRegister 中使用
 
 ```tsx | pure
-import { createStyleRegister } from 'theme-token';
+import { createStyleRegister } from '@ant-design/theme-token';
 
 const useStyle = createStyleRegister({
   theme: theme,

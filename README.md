@@ -13,11 +13,11 @@
 ## 安装
 
 ```bash
-npm install theme-token
+npm install @ant-design/theme-token
 # 或
-yarn add theme-token
+yarn add @ant-design/theme-token
 # 或
-pnpm add theme-token
+pnpm add @ant-design/theme-token
 ```
 
 ## 基本用法
