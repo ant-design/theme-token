@@ -3,11 +3,11 @@
 ## 安装
 
 ```bash
-npm install @ant-desgin/theme-token
+npm install @ant-design/theme-token
 # 或
-yarn add @ant-desgin/theme-token
+yarn add @ant-design/theme-token
 # 或
-pnpm add @ant-desgin/theme-token
+pnpm add @ant-design/theme-token
 ```
 
 ## 依赖
@@ -34,7 +34,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 ```
 
 ### 2. 获取 antd 配置

@@ -1,7 +1,7 @@
-# @ant-desgin/theme-token
+# @ant-design/theme-token
 
-[![NPM version](https://img.shields.io/npm/v/@ant-desgin/theme-token.svg?style=flat)](https://npmjs.org/package/@ant-desgin/theme-token)
-[![NPM downloads](http://img.shields.io/npm/dm/@ant-desgin/theme-token.svg?style=flat)](https://npmjs.org/package/@ant-desgin/theme-token)
+[![NPM version](https://img.shields.io/npm/v/@ant-design/theme-token.svg?style=flat)](https://npmjs.org/package/@ant-design/theme-token)
+[![NPM downloads](http://img.shields.io/npm/dm/@ant-design/theme-token.svg?style=flat)](https://npmjs.org/package/@ant-design/theme-token)
 [![Run Vitest and upload coverage to Codecov](https://github.com/ant-design/theme-token/actions/workflows/codecov.yml/badge.svg)](https://github.com/ant-design/theme-token/actions/workflows/codecov.yml)
 
 一个基于 `@ant-design/cssinjs` 的 React 样式主题系统，提供灵活的样式注册和主题 token 管理功能。支持 CSS 变量注入和 SSR 渲染。
@@ -9,11 +9,11 @@
 ## 安装
 
 ```bash
-npm install @ant-desgin/theme-token
+npm install @ant-design/theme-token
 # 或
-yarn add @ant-desgin/theme-token
+yarn add @ant-design/theme-token
 # 或
-pnpm add @ant-desgin/theme-token
+pnpm add @ant-design/theme-token
 ```
 
 ## 使用方法
@@ -28,7 +28,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 const MyComponent: React.FC = () => {
   // 获取 antd 的配置

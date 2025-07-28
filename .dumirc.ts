@@ -3,6 +3,6 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
-    name: '@ant-desgin/theme-token',
+    name: '@ant-design/theme-token',
   },
 });

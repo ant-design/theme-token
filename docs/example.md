@@ -10,7 +10,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 const CustomButton: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -72,7 +72,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 interface CardProps {
   title: string;
@@ -166,7 +166,7 @@ import {
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 const ThemeSwitcher: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
@@ -237,7 +237,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 const ResponsiveGrid: React.FC = () => {
   const { getPrefixCls } = useContext(AntdConfigProvider.ConfigContext);
@@ -326,7 +326,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 import React, { useContext } from 'react';
 
 const useStyle = (
@@ -416,4 +416,4 @@ export default () => {
 };
 ```
 
-这些示例展示了如何使用 `@ant-desgin/theme-token` 创建各种类型的组件，从简单的按钮到复杂的响应式网格布局。每个示例都包含了完整的代码和最佳实践。
+这些示例展示了如何使用 `@ant-design/theme-token` 创建各种类型的组件，从简单的按钮到复杂的响应式网格布局。每个示例都包含了完整的代码和最佳实践。

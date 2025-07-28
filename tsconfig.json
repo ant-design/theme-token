@@ -8,8 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "@ant-desgin/theme-token": ["src"],
-      "@ant-desgin/theme-token/*": ["src/*", "*"]
+      "@ant-design/theme-token": ["src"],
+      "@ant-design/theme-token/*": ["src/*", "*"]
     }
   },
   "include": [".dumirc.ts", "src/**/*"]

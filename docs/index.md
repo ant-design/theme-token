@@ -1,6 +1,6 @@
 ---
 hero:
-  title: @ant-desgin/theme-token
+  title: @ant-design/theme-token
   description: 一个基于 @ant-design/cssinjs 的 React 样式主题系统，提供灵活的样式注册和主题 token 管理功能
   actions:
     - text: 快速开始
@@ -28,7 +28,7 @@ features:
     description: 支持自定义 token、CSS 变量和样式生成函数
 ---
 
-# @ant-desgin/theme-token
+# @ant-design/theme-token
 
 一个基于 `@ant-design/cssinjs` 的 React 样式主题系统，提供灵活的样式注册和主题 token 管理功能。支持 CSS 变量注入和 SSR 渲染。
 
@@ -43,11 +43,11 @@ features:
 ## 快速开始
 
 ```bash
-npm install @ant-desgin/theme-token
+npm install @ant-design/theme-token
 # 或
-yarn add @ant-desgin/theme-token
+yarn add @ant-design/theme-token
 # 或
-pnpm add @ant-desgin/theme-token
+pnpm add @ant-design/theme-token
 ```
 
 ## 基础用法
@@ -58,7 +58,7 @@ import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
   createStyleRegister,
   type ComponentToken,
-} from '@ant-desgin/theme-token';
+} from '@ant-design/theme-token';
 
 const MyComponent: React.FC = () => {
   // 获取 antd 的配置

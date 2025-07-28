@@ -1,6 +1,6 @@
 # 测试文档
 
-本项目参考 [ant-design/md-editor](https://github.com/ant-design/md-editor) 的项目结构，为 `@ant-desgin/theme-token` 库添加了完整的测试套件。
+本项目参考 [ant-design/md-editor](https://github.com/ant-design/md-editor) 的项目结构，为 `@ant-design/theme-token` 库添加了完整的测试套件。
 
 ## 测试结构
 
