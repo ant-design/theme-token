@@ -11,13 +11,17 @@ export { createStyleRegister } from './useStyle';
 
 // 导出 hooks
 export { useCSSVariables } from './hooks';
+export { globalThemeToken } from './token/global';
 
 // 导出 theme 相关
 export { theme } from './token/theme';
 export type { Theme } from './token/theme';
 
 // 导出 globalToAntd 相关
-export { convertGlobalToAntdToken } from './token/globalToAntd';
+export {
+  convertGlobalToAntdCssToken,
+  convertGlobalToAntdToken,
+} from './token/globalToAntd';
 
 // 导出 ThemeProvide
 export { ThemeProvide } from './ThemeProvide';
