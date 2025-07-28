@@ -215,7 +215,7 @@ export const global = {
 
 ### 在 React 组件中使用
 
-```tsx
+```tsx | pure
 import { global, scrollbarHidden, showScrollLine } from './global';
 
 function MyComponent() {

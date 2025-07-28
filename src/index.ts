@@ -8,3 +8,6 @@ export type {
 } from './useStyle';
 
 export { createStyleRegister } from './useStyle';
+
+// 导出 hooks
+export { useCSSVariables } from './hooks';

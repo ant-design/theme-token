@@ -1,6 +1,7 @@
 import type { CSSInterpolation } from '@ant-design/cssinjs';
 import { useStyleRegister as useDefaultStyleRegister } from '@ant-design/cssinjs';
 import type React from 'react';
+import { useCSSVariables, type CSSVariables } from './hooks';
 
 // 基础token类型定义
 export interface BaseToken {
@@ -22,11 +23,6 @@ export type GenerateStyle<T = ComponentToken> = (
   token: T,
 ) => Record<string, any>;
 
-// CSS变量类型
-export interface CSSVariables {
-  [key: string]: string;
-}
-
 // 使用样式的结果类型
 export interface UseStyleResult<T extends ComponentToken> {
   wrapSSR: (node: React.ReactElement) => React.ReactElement;
@@ -35,11 +31,8 @@ export interface UseStyleResult<T extends ComponentToken> {
   token: T;
 }
 
-// 用于跟踪每个组件的 CSS 变量是否已插入，以及当前的 CSS 变量内容
-const CSS_VAR_INSERT_MAP = new Map<
-  string,
-  { inserted: boolean; cssVariables: string }
->();
+// 重新导出 CSSVariables 类型
+export type { CSSVariables };
 
 /**
  * 生成一个useStyle注册函数
@@ -76,42 +69,13 @@ export function createStyleRegister<T extends ComponentToken>(
   const { token = {}, theme, hashId = '', cssVariables = {} } = options;
 
   return (componentName: string, styleFn: (token: T) => CSSInterpolation) => {
-    // 生成当前的 CSS 变量字符串
-    const currentCssVariables = Object.entries(cssVariables)
-      .map(([key, value]) => `${key}: ${value};`)
-      .join('\n');
-
-    // 检查该组件的 CSS 变量是否已插入，以及是否需要更新
-    const existingRecord = CSS_VAR_INSERT_MAP.get(componentName);
-    const needsUpdate =
-      !existingRecord || existingRecord.cssVariables !== currentCssVariables;
-
-    if (needsUpdate && cssVariables && Object.keys(cssVariables).length > 0) {
-      // 如果已存在样式，先删除旧的
-      if (existingRecord?.inserted) {
-        try {
-          const existingStyle = document.getElementById(
-            `${componentName}-css-variables`,
-          );
-          if (existingStyle) {
-            existingStyle.remove();
-          }
-        } catch (error) {}
-      }
-
-      // 插入新的 CSS 变量
-      try {
-        const style = document.createElement('style');
-        style.innerHTML = `:root{${currentCssVariables}}`;
-        style.id = `${componentName}-css-variables`;
-        document.head?.insertBefore(style, document.head?.firstChild);
-
-        // 更新记录
-        CSS_VAR_INSERT_MAP.set(componentName, {
-          inserted: true,
-          cssVariables: currentCssVariables,
-        });
-      } catch (error) {}
+    // 在 React 环境中使用 hooks，在非 React 环境中直接调用内部函数
+    try {
+      useCSSVariables(componentName, cssVariables);
+    } catch (error) {
+      // 在非 React 环境中，直接调用内部函数
+      const { insertCSSVariables } = require('./hooks/useCSSVariables');
+      insertCSSVariables(componentName, cssVariables, '');
     }
     token.componentCls = `.${componentName}`;
     return {

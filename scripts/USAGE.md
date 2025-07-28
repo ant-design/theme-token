@@ -94,7 +94,7 @@ export const scrollbarHidden = () => {
 
 ### 在 React 中使用
 
-```tsx
+```tsx | pure
 import { global, scrollbarHidden } from './global';
 
 function MyComponent() {

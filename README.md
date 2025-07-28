@@ -22,7 +22,7 @@ pnpm add @ant-desgin/theme-token
 
 基于代码注释中的示例，这里展示如何与 antd 集成使用：
 
-```tsx
+```tsx | pure
 import React, { useContext } from 'react';
 import { ConfigProvider as AntdConfigProvider, theme as antdTheme } from 'antd';
 import {
@@ -101,7 +101,7 @@ const MyComponent: React.FC = () => {
 
 ### 类型定义
 
-```tsx
+```tsx | pure
 // 基础token类型定义
 interface BaseToken {
   colorText?: string; // 文字颜色
