@@ -1,4 +1,4 @@
-import { generateColorPalettes, generateNeutralColorPalettes } from './colors';
+import { generateColorPalettes } from './colors';
 import type { MapToken, PresetColorType, SeedToken } from './types';
 
 // 预设颜色映射
@@ -195,100 +195,6 @@ const defaultPresetColors: Record<string, string> = {
   gold: '#faad14',
 };
 
-/**
- * 生成颜色映射令牌
- */
-function genColorMapToken(
-  token: SeedToken,
-  options: {
-    generateColorPalettes: (color: string) => Record<string, string>;
-    generateNeutralColorPalettes: (
-      bgColor: string,
-      textColor: string,
-    ) => Record<string, string>;
-  },
-) {
-  const { generateColorPalettes, generateNeutralColorPalettes } = options;
-
-  // 生成主色调色板
-  const primaryColor = token.colorPrimary || '#1890ff';
-  const primaryPalettes = generateColorPalettes(primaryColor);
-
-  // 生成中性色调色板
-  const neutralPalettes = generateNeutralColorPalettes(
-    token.colorBgBase || '#ffffff',
-    token.colorTextBase || '#000000',
-  );
-
-  return {
-    ...primaryPalettes,
-    ...neutralPalettes,
-  };
-}
-
-/**
- * 生成字体映射令牌
- */
-function genFontMapToken(fontSize: any) {
-  return {
-    fontSize: fontSize || 14,
-    fontSizeSM: 12,
-    fontSizeLG: 16,
-    fontSizeXL: 20,
-    fontSizeHeading1: 38,
-    fontSizeHeading2: 30,
-    fontSizeHeading3: 24,
-    fontSizeHeading4: 20,
-    fontSizeHeading5: 16,
-  };
-}
-
-/**
- * 生成尺寸映射令牌
- */
-function genSizeMapToken() {
-  return {
-    sizeUnit: 4,
-    sizeStep: 4,
-    sizePopupArrow: 16,
-    controlHeight: 32,
-    controlHeightSM: 24,
-    controlHeightLG: 40,
-    borderRadius: 6,
-    borderRadiusSM: 4,
-    borderRadiusLG: 8,
-    borderRadiusXL: 12,
-    borderRadiusOuter: 4,
-  };
-}
-
-/**
- * 生成控件高度映射令牌
- */
-function genControlHeight() {
-  return {
-    controlHeight: 32,
-    controlHeightSM: 24,
-    controlHeightLG: 40,
-  };
-}
-
-/**
- * 生成通用映射令牌
- */
-function genCommonMapToken() {
-  return {
-    motionDurationFast: '0.1s',
-    motionDurationMid: '0.2s',
-    motionDurationSlow: '0.3s',
-    motionEaseInOut: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-    motionEaseOut: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-    motionEaseIn: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)',
-    motionEaseInBack: 'cubic-bezier(0.6, -0.28, 0.735, 0.045)',
-    motionEaseOutBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-  };
-}
-
 export default function derivative(token: SeedToken): MapToken {
   // pink 是 magenta 的已弃用名称，保持向后兼容性
   presetPrimaryColors.pink = presetPrimaryColors.magenta;
@@ -328,18 +234,5 @@ export default function derivative(token: SeedToken): MapToken {
   return {
     ...token,
     ...colorPalettes,
-    // Colors
-    ...genColorMapToken(token, {
-      generateColorPalettes,
-      generateNeutralColorPalettes,
-    }),
-    // Font
-    ...genFontMapToken(token.fontSize),
-    // Size
-    ...genSizeMapToken(),
-    // Height
-    ...genControlHeight(),
-    // Others
-    ...genCommonMapToken(),
   };
 }

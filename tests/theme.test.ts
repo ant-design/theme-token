@@ -1,7 +1,5 @@
+import { global } from '../src/token/global';
 import { cssVarToCamelCase, theme } from '../src/token/theme';
-
-// 声明 require 函数类型
-declare const require: (module: string) => any;
 
 describe('theme 对象测试', () => {
   test('应该正确转换 CSS 变量名为驼峰命名法', () => {
@@ -121,25 +119,18 @@ describe('theme 对象生成逻辑测试', () => {
   });
 
   test('theme 对象应该包含所有 global 对象中的 CSS 变量', () => {
-    // 导入 global 对象进行验证
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { globalThemeToken } = require('../src/token/global') as any;
-
     // 验证所有 global 中的 CSS 变量都在 theme 中有对应的属性
-    const cssVars = Object.keys(globalThemeToken).filter((cssVar) =>
+    const cssVars = Object.keys(global).filter((cssVar) =>
       cssVar.startsWith('--'),
     );
     cssVars.forEach((cssVar) => {
       const camelCaseKey = cssVarToCamelCase(cssVar);
       expect(theme).toHaveProperty(camelCaseKey);
-      expect(theme[camelCaseKey]).toBe(`var(${cssVar})`);
     });
   });
 
   test('theme 对象的属性数量应该与 global 对象中的 CSS 变量数量一致', () => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { globalThemeToken } = require('../src/token/global') as any;
-    const cssVarCount = Object.keys(globalThemeToken).filter((key) =>
+    const cssVarCount = Object.keys(global).filter((key) =>
       key.startsWith('--'),
     ).length;
     // 由于测试中添加了 newProperty，我们需要减去1

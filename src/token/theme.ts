@@ -1,4 +1,4 @@
-import { globalThemeToken } from './global';
+import { global } from './global';
 
 /**
  * 将 CSS 变量名转换为驼峰命名法
@@ -19,7 +19,7 @@ export const theme = (() => {
   const themeObj: Record<string, string> = {};
 
   // 遍历 global 对象，为每个 CSS 变量创建对应的 theme 属性
-  Object.keys(globalThemeToken).forEach((cssVar) => {
+  Object.keys(global).forEach((cssVar) => {
     const camelCaseKey = cssVarToCamelCase(cssVar);
     if (cssVar.startsWith('--')) {
       themeObj[camelCaseKey] = `var(${cssVar})`;
@@ -35,12 +35,9 @@ export const themeCssVar = (() => {
   const themeObj: Record<string, string> = {};
 
   // 遍历 global 对象，为每个 CSS 变量创建对应的 theme 属性
-  Object.keys(globalThemeToken).forEach((cssVar) => {
-    if (cssVar.startsWith('--')) {
-      themeObj[cssVar] = `var(${cssVar})`;
-    } else {
-      themeObj[cssVar] = cssVar;
-    }
+  Object.keys(global).forEach((cssVar) => {
+    const camelCaseKey = cssVarToCamelCase(cssVar);
+    themeObj[camelCaseKey] = cssVar;
   });
 
   return themeObj;

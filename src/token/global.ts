@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const globalThemeToken = {
+export const global = {
   '--name': 'text-code-s',
   /** 无间距-none 0 */
   '--margin-none': '0',
@@ -1041,30 +1041,20 @@ export const globalThemeToken = {
   '--color-custom-text-secondary': 'var(--color-sub3-text-secondary)',
   '--color-custom-text-light': 'var(--color-sub3-text-light)',
   '--color-custom-text-disabled': 'var(--color-sub3-text-disabled)',
-  '--color-custom-control-fill-primary':
-    'var(--color-sub3-control-fill-primary)',
+  '--color-custom-control-fill-primary': 'var(--color-sub3-control-fill-primary)',
   '--color-custom-control-fill-main': 'var(--color-sub3-control-fill-primary)',
-  '--color-custom-control-fill-primary-hover':
-    'var(--color-sub3-control-fill-primary-hover)',
-  '--color-custom-control-fill-main-hover':
-    'var(--color-sub3-control-fill-primary-hover)',
-  '--color-custom-control-fill-primary-active':
-    'var(--color-sub3-control-fill-primary-active)',
-  '--color-custom-control-fill-main-active':
-    'var(--color-sub3-control-fill-primary-active)',
-  '--color-custom-control-fill-secondary':
-    'var(--color-sub3-control-fill-secondary)',
-  '--color-custom-control-fill-secondary-hover':
-    'var(--color-sub3-control-fill-secondary-hover)',
-  '--color-custom-control-fill-secondary-active':
-    'var(--color-sub3-control-fill-secondary-active)',
-  '--color-custom-control-fill-ghost-active':
-    'var(--color-sub3-control-fill-ghost-active)',
+  '--color-custom-control-fill-primary-hover': 'var(--color-sub3-control-fill-primary-hover)',
+  '--color-custom-control-fill-main-hover': 'var(--color-sub3-control-fill-primary-hover)',
+  '--color-custom-control-fill-primary-active': 'var(--color-sub3-control-fill-primary-active)',
+  '--color-custom-control-fill-main-active': 'var(--color-sub3-control-fill-primary-active)',
+  '--color-custom-control-fill-secondary': 'var(--color-sub3-control-fill-secondary)',
+  '--color-custom-control-fill-secondary-hover': 'var(--color-sub3-control-fill-secondary-hover)',
+  '--color-custom-control-fill-secondary-active': 'var(--color-sub3-control-fill-secondary-active)',
+  '--color-custom-control-fill-ghost-active': 'var(--color-sub3-control-fill-ghost-active)',
   /** 语义化颜色映射 */
   '--color-custom-control-fill-tag': 'var(--color-sub3-control-fill-tag)',
   '--color-custom-control-fill-active': 'var(--color-sub3-control-fill-active)',
-  '--color-custom-control-fill-disabled':
-    'var(--color-sub3-control-fill-disabled)',
+  '--color-custom-control-fill-disabled': 'var(--color-sub3-control-fill-disabled)',
   '--color-custom-control-fill-hover': 'var(--color-sub3-control-fill-hover)',
   '--color-custom-border-active': 'var(--color-sub3-border-active)',
   '--color-custom-border-control-active': 'var(--color-sub3-border-active)',
@@ -1324,15 +1314,12 @@ export const globalThemeToken = {
   '--color-primary-indicator': '#1E1F24',
   '--color-primary-track': '#1E1F24',
   /** 特殊变量 */
-  '--color-brand-gradient':
-    'linear-gradient(135deg, @color-blue-9 0%, @color-primary-9 100%)',
+  '--color-brand-gradient': 'linear-gradient(135deg, @color-blue-9 0%, @color-primary-9 100%)',
   '--color-transparent': 'transparent',
   /** 渐变/AI 内容 */
-  '--color-brand-gradient-fill':
-    'linear-gradient(46deg, @color-purple-9 13%, @color-blue-9 56%, @color-lightBlue-9 96%)',
+  '--color-brand-gradient-fill': 'linear-gradient(46deg, @color-purple-9 13%, @color-blue-9 56%, @color-lightBlue-9 96%)',
   /** 渐变/AI-文字 */
-  '--color-brand-gradient-text':
-    'linear-gradient(90deg, @color-purple-9 4%, @color-lightBlue-9 100%)',
+  '--color-brand-gradient-text': 'linear-gradient(90deg, @color-purple-9 4%, @color-lightBlue-9 100%)',
   /** SubBlue 基础色板 (映射到 sub1) */
   '--color-sub-blue-1': 'var(--color-sub1-1)',
   '--color-sub-blue-2': 'var(--color-sub1-2)',
@@ -1391,7 +1378,7 @@ export const globalThemeToken = {
   '--color-aux-5-4': 'var(--color-sub5-4)',
 } as const;
 
-export default globalThemeToken;
+export default global;
 
 // === Mixins 函数 ===
 
@@ -1698,32 +1685,44 @@ export const textNum4xl = () => {
 
 /** 风格化/H6 */
 export const textH6Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 风格化/H5 */
 export const textH5Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 风格化/H4 */
 export const textH4Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 风格化/H3 */
 export const textH3Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 风格化/H2 */
 export const textH2Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 风格化/H1 */
 export const textH1Promotion = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** === 特效样式 === 投影-描边-L1 */
@@ -1736,8 +1735,7 @@ export const shadowBorderL1 = () => {
 /** 投影-控件-B1 */
 export const shadowControlB1 = () => {
   return {
-    boxShadow:
-      '0 0 1px 0 rgba(0, 1, 3, 20%), 0 1.5px 4px -1px rgba(0, 1, 3, 4%)',
+    boxShadow: '0 0 1px 0 rgba(0, 1, 3, 20%), 0 1.5px 4px -1px rgba(0, 1, 3, 4%)',
   };
 };
 
@@ -1751,8 +1749,7 @@ export const shadowControlL0 = () => {
 /** 投影-控件-L1 */
 export const shadowControlL1 = () => {
   return {
-    boxShadow:
-      '0 0 1px 0 rgba(0, 1, 3, 5%), 0 2px 7px 0 rgba(0, 1, 3, 5%), 0 2px 5px -2px rgba(0, 1, 3, 6%)',
+    boxShadow: '0 0 1px 0 rgba(0, 1, 3, 5%), 0 2px 7px 0 rgba(0, 1, 3, 5%), 0 2px 5px -2px rgba(0, 1, 3, 6%)',
   };
 };
 
@@ -1773,14 +1770,15 @@ export const shadowHoverControlL2 = () => {
 /** 投影-弹窗-L3 */
 export const shadowDialogL3 = () => {
   return {
-    boxShadow:
-      '0 0 3px -1px rgba(0, 1, 3, 4%), 0 32px 33px -15px rgba(0, 1, 3, 17%)',
+    boxShadow: '0 0 3px -1px rgba(0, 1, 3, 4%), 0 32px 33px -15px rgba(0, 1, 3, 17%)',
   };
 };
 
 /** 投影-弥散-L4 */
 export const shadowDiffusionL4 = () => {
-  return {};
+  return {
+
+  };
 };
 
 /** 无边距-none 0 */
@@ -1994,21 +1992,21 @@ export const scrollbar = () => {
     overflowY: 'auto',
     overscrollBehavior: 'contain',
     '&::-webkit-scrollbar': {
-      width: '10px',
-      backgroundColor: '@color-transparent',
+          width: '10px',
+          backgroundColor: '@color-transparent',
     },
     '&::-webkit-scrollbar-thumb': {
-      width: '4px',
-      backgroundColor: '@color-transparent',
-      border: '2px solid @color-transparent',
-      backgroundClip: 'padding-box',
-      borderRadius: '72px',
+          width: '4px',
+          backgroundColor: '@color-transparent',
+          border: '2px solid @color-transparent',
+          backgroundClip: 'padding-box',
+          borderRadius: '72px',
     },
     '&:hover::-webkit-scrollbar-thumb': {
-      backgroundColor: '@color-gray-border-light',
-      '&:hover': {
-        backgroundColor: '@color-gray-text-disabled',
-      },
+          backgroundColor: '@color-gray-border-light',
+          '&:hover': {
+                backgroundColor: '@color-gray-text-disabled',
+          },
     },
   };
 };
@@ -2029,7 +2027,8 @@ export const scrollbarHidden = () => {
     overflowY: 'auto',
     scrollbarWidth: 'none',
     '&::-webkit-scrollbar': {
-      display: 'none',
+          display: 'none',
     },
   };
 };
+

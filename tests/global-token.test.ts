@@ -1,8 +1,7 @@
-import {
-  globalThemeToken,
-  scrollbar,
-  scrollbarHidden,
-} from '../src/token/global';
+import { global, scrollbar, scrollbarHidden } from '../src/token/global';
+
+// 为了向后兼容，重新导出 globalThemeToken
+const globalThemeToken = global;
 
 describe('Global Token', () => {
   describe('global 对象', () => {
@@ -150,23 +149,21 @@ describe('Global Token', () => {
           !value.includes('linear-gradient'), // 排除线性渐变
       );
 
-      if (colorValues.length > 0) {
-        colorValues.forEach((value) => {
-          // 支持十六进制（3位、6位、8位）、rgba、rgb 格式（包括带百分比的rgba）
-          const isValidColor =
-            /^#[0-9A-Fa-f]{3,8}$/.test(value) || /^rgba?\([^)]+\)$/.test(value);
-          if (!isValidColor) {
-            console.log(`Invalid color value: "${value}"`);
-          }
-          expect(isValidColor).toBe(true);
-        });
-      } else {
-        // 如果没有直接的颜色值，至少应该有变量引用
-        const referenceValues = Object.values(globalThemeToken).filter(
-          (value) => typeof value === 'string' && value.startsWith('@'),
-        );
-        expect(referenceValues.length).toBeGreaterThan(0);
-      }
+      // 支持十六进制（3位、6位、8位）、rgba、rgb 格式（包括带百分比的rgba）
+      colorValues.forEach((value) => {
+        const isValidColor =
+          /^#[0-9A-Fa-f]{3,8}$/.test(value) || /^rgba?\([^)]+\)$/.test(value);
+        if (!isValidColor) {
+          console.log(`Invalid color value: "${value}"`);
+        }
+        expect(isValidColor).toBe(true);
+      });
+
+      // 如果没有直接的颜色值，至少应该有变量引用
+      const referenceValues = Object.values(globalThemeToken).filter(
+        (value) => typeof value === 'string' && value.startsWith('var('),
+      );
+      expect(referenceValues.length).toBeGreaterThan(0);
     });
 
     it('应该包含有效的尺寸值', () => {
@@ -178,11 +175,9 @@ describe('Global Token', () => {
             value.includes('rem')),
       );
 
-      if (sizeValues.length > 0) {
-        sizeValues.forEach((value) => {
-          expect(value).toMatch(/^\d+(\.\d+)?(px|em|rem)$/);
-        });
-      }
+      sizeValues.forEach((value) => {
+        expect(value).toMatch(/^\d+(\.\d+)?(px|em|rem)$/);
+      });
     });
 
     it('应该包含有效的透明值', () => {
@@ -213,15 +208,13 @@ describe('Global Token', () => {
           !value.includes('linear-gradient'), // 排除线性渐变
       );
 
-      if (percentageValues.length > 0) {
-        percentageValues.forEach((value) => {
-          // 支持纯百分比值或 rgba 中的百分比（如 rgba(0, 9, 50, 12.16%)）
-          const isValidPercentage =
-            /^\d+(\.\d+)?%$/.test(value) ||
-            /^rgba?\([^)]*,\s*\d+(\.\d+)?%[^)]*\)$/.test(value);
-          expect(isValidPercentage).toBe(true);
-        });
-      }
+      // 支持纯百分比值或 rgba 中的百分比（如 rgba(0, 9, 50, 12.16%)）
+      percentageValues.forEach((value) => {
+        const isValidPercentage =
+          /^\d+(\.\d+)?%$/.test(value) ||
+          /^rgba?\([^)]*,\s*\d+(\.\d+)?%[^)]*\)$/.test(value);
+        expect(isValidPercentage).toBe(true);
+      });
     });
   });
 
@@ -253,6 +246,8 @@ describe('Global Token', () => {
 
   describe('默认导出', () => {
     it('应该提供默认导出', () => {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      //@ts-ignore
       const defaultExport = require('../src/token/global').default;
       expect(defaultExport).toBeDefined();
       expect(defaultExport).toBe(globalThemeToken);

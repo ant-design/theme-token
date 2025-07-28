@@ -1,23 +1,47 @@
-// 颜色映射生成器类型
-export type GenerateColorMap = (baseColor: string) => Record<string, string>;
-
-// 中性色映射生成器类型
-export type GenerateNeutralColorMap = (
-  bgBaseColor: string,
-  textBaseColor: string,
-) => Record<string, string>;
-
-// 种子令牌类型
+// 基础类型定义
 export interface SeedToken {
+  colorPrimary?: string;
+  colorBgBase?: string;
+  colorTextBase?: string;
+  fontSize?: number;
+  controlHeight?: number;
+  controlHeightSM?: number;
+  controlHeightLG?: number;
+  borderRadius?: number;
+  borderRadiusSM?: number;
+  borderRadiusLG?: number;
+  borderRadiusXL?: number;
+  borderRadiusOuter?: number;
+  sizeUnit?: number;
+  sizeStep?: number;
+  motionDurationFast?: string;
+  motionDurationMid?: string;
+  motionDurationSlow?: string;
+  motionEaseInOut?: string;
+  motionEaseOut?: string;
+  motionEaseIn?: string;
+  motionEaseInBack?: string;
+  motionEaseOutBack?: string;
   [key: string]: any;
 }
 
-// 映射令牌类型
-export interface MapToken {
+export interface MapToken extends SeedToken {
   [key: string]: any;
 }
 
-// 预设颜色类型
 export interface PresetColorType {
-  [key: string]: string;
+  blue?: string;
+  purple?: string;
+  cyan?: string;
+  green?: string;
+  magenta?: string;
+  pink?: string;
+  red?: string;
+  orange?: string;
+  yellow?: string;
+  volcano?: string;
+  geekblue?: string;
+  lime?: string;
+  gold?: string;
+  [key: string]: any;
 }

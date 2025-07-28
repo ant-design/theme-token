@@ -1,4 +1,4 @@
-import { globalThemeToken } from './global';
+import { global } from './global';
 import { themeCssVar } from './theme';
 
 // 处理所有 token 的映射
@@ -60,55 +60,48 @@ const processTokenMapping = (globalConfig: any) => {
     { key: '--color-orange-2', tokens: ['colorWarningBorder'] },
     { key: '--color-orange-3', tokens: ['colorWarningBorderHover'] },
 
-    { key: '--color-red-9', tokens: ['colorError', 'colorErrorTextActive'] },
+    {
+      key: '--color-red-9',
+      tokens: ['colorError', 'colorErrorTextActive'],
+    },
     { key: '--color-red-10', tokens: ['colorErrorHover'] },
     { key: '--color-red-11', tokens: ['colorErrorActive'] },
-    { key: '--color-red-6', tokens: ['colorErrorBg', 'colorErrorActive'] },
+    {
+      key: '--color-red-6',
+      tokens: ['colorErrorBg', 'colorErrorActive'],
+    },
     { key: '--color-red-1', tokens: ['colorErrorBgHover'] },
     { key: '--color-red-2', tokens: ['colorErrorBorder'] },
     { key: '--color-red-3', tokens: ['colorErrorBorderHover'] },
 
+    // 中性色映射
+    { key: '--color-gray-text', tokens: ['colorText'] },
+    { key: '--color-gray-text-secondary', tokens: ['colorTextSecondary'] },
+    { key: '--color-gray-text-tertiary', tokens: ['colorTextTertiary'] },
+    { key: '--color-gray-text-quaternary', tokens: ['colorTextQuaternary'] },
+
+    { key: '--color-gray-bg-page', tokens: ['colorBgLayout'] },
+    { key: '--color-gray-bg-card-light', tokens: ['colorBgContainer'] },
+    { key: '--color-gray-bg-card-white', tokens: ['colorBgElevated'] },
+
+    { key: '--color-gray-border-light', tokens: ['colorBorder'] },
+    { key: '--color-gray-border-dark', tokens: ['colorBorderSecondary'] },
+
+    { key: '--color-gray-control-fill', tokens: ['colorFill'] },
     {
-      key: '--color-gray-a12',
-      tokens: ['colorText', 'colorTextPlaceholder'],
+      key: '--color-gray-control-fill-secondary',
+      tokens: ['colorFillSecondary'],
     },
-    { key: '--color-gray-a11', tokens: ['colorTextSecondary'] },
-    { key: '--color-gray-a9', tokens: ['colorTextTertiary'] },
-    { key: '--color-gray-a8', tokens: ['colorTextQuaternary'] },
     {
-      key: '--color-gray-a6',
-      tokens: ['colorTextDisabled', 'colorControlItemBgActive'],
+      key: '--color-gray-control-fill-tertiary',
+      tokens: ['colorFillTertiary'],
+    },
+    {
+      key: '--color-gray-control-fill-quaternary',
+      tokens: ['colorFillQuaternary'],
     },
 
-    {
-      key: '--color-gray-1',
-      tokens: ['colorBgContainer', 'colorBgSpotlight'],
-    },
-    { key: '--color-gray-2', tokens: ['colorBgElevated'] },
-    { key: '--color-gray-3', tokens: ['colorBgLayout'] },
-    { key: '--color-gray-4', tokens: ['colorBgSpotlight'] },
-    { key: '--color-gray-5', tokens: ['colorBgMask'] },
-    { key: '--color-gray-6', tokens: ['colorBgBlur'] },
-
-    {
-      key: '--color-gray-a3',
-      tokens: [
-        'colorBorder',
-        'colorControl',
-        'colorSplit',
-        'colorBgContainerDisabled',
-        'colorBorderDisabled',
-      ],
-    },
-    {
-      key: '--color-gray-a4',
-      tokens: ['colorBorderSecondary', 'colorControlItemBg'],
-    },
-    {
-      key: '--color-gray-a5',
-      tokens: ['colorBorderTertiary', 'colorControlItemBgHover'],
-    },
-
+    { key: '--color-gray-a1', tokens: ['colorFill'] },
     { key: '--color-gray-a2', tokens: ['colorFill', 'colorFillContent'] },
     {
       key: '--color-gray-a3',
@@ -151,7 +144,6 @@ const processTokenMapping = (globalConfig: any) => {
     { key: '--shadow-card-l1', tokens: ['boxShadowTertiary'] },
     { key: '--shadow-dialog-l3', tokens: ['boxShadowCard'] },
 
-    { key: '--line-width-base', tokens: ['lineWidth'] },
     { key: '--line-width-bold', tokens: ['lineWidthBold'] },
     { key: '--line-width-focus', tokens: ['lineWidthFocus'] },
 
@@ -214,13 +206,14 @@ const processTokenMapping = (globalConfig: any) => {
   });
   return antdToken;
 };
+
 /**
  * 将 global token 转换为 Ant Design token 格式
  * 支持 SeedToken、MapToken 和 AliasToken
  * 参考: https://ant-design.antgroup.com/docs/react/customize-theme-cn#aliastoken
  */
 export const convertGlobalToAntdToken = () => {
-  return processTokenMapping(globalThemeToken);
+  return processTokenMapping(global);
 };
 
 export const convertGlobalToAntdCssToken = () => {

@@ -7,13 +7,14 @@ jest.mock('@ant-design/cssinjs', () => ({
 }));
 
 import {
-  createStyleRegister,
   BaseToken,
+  CSSVariables,
   ComponentToken,
   GenerateStyle,
-  CSSVariables,
-  UseStyleResult,
+  createStyleRegister,
 } from '../src/index';
+
+import type { UseStyleResult } from '../src/useStyle';
 
 describe('Index Exports', () => {
   describe('createStyleRegister', () => {
@@ -147,7 +148,7 @@ describe('Index Exports', () => {
   describe('UseStyleResult 类型', () => {
     it('应该能够创建符合 UseStyleResult 的对象', () => {
       const mockReactElement = { type: 'div', props: {} } as any;
-      
+
       const result: UseStyleResult<ComponentToken> = {
         wrapSSR: (node) => node,
         hashId: 'test-hash',
@@ -242,4 +243,4 @@ describe('Index Exports', () => {
       expect(result.hashId).toBe('test-hash');
     });
   });
-}); 
+});

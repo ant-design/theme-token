@@ -1,6 +1,5 @@
 import React from 'react';
-import { ThemeProvide, theme, useCSSVariables } from '../src';
-import globalThemeToken from '../src/token/global';
+import { ThemeProvide, globalThemeToken, theme, useCSSVariables } from '../src';
 
 const ThemeExample: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   // 注入 CSS 变量

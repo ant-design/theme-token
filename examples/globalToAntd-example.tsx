@@ -1,6 +1,12 @@
 import { Button, Card, ConfigProvider, Space, Typography } from 'antd';
 import React from 'react';
-import { convertGlobalToAntdCssToken, convertGlobalToAntdToken } from '../src';
+import {
+  algorithm,
+  convertGlobalToAntdCssToken,
+  convertGlobalToAntdToken,
+  globalThemeToken,
+  useCSSVariables,
+} from '../src';
 
 const { Title, Paragraph } = Typography;
 
@@ -9,6 +15,7 @@ const GlobalToAntdExample: React.FC = () => {
   const antdToken = convertGlobalToAntdToken();
   const antdTokenCssVar = convertGlobalToAntdCssToken();
 
+  useCSSVariables('my-component', globalThemeToken);
   return (
     <div
       className="my-component"
@@ -52,6 +59,10 @@ const GlobalToAntdExample: React.FC = () => {
           theme={{
             hashed: true,
             token: antdTokenCssVar,
+            algorithm: (token) => {
+              console.log(token, algorithm(token));
+              return algorithm(token) as any;
+            },
           }}
         >
           <Card

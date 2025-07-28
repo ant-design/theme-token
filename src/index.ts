@@ -1,27 +1,29 @@
-// 导出所有类型和函数
-export type {
-  BaseToken,
-  CSSVariables,
-  ComponentToken,
-  GenerateStyle,
-  UseStyleResult,
-} from './useStyle';
-
-export { createStyleRegister } from './useStyle';
-
-// 导出 hooks
-export { useCSSVariables } from './hooks';
-export { globalThemeToken } from './token/global';
-
-// 导出 theme 相关
-export { theme } from './token/theme';
-export type { Theme } from './token/theme';
-
-// 导出 globalToAntd 相关
-export {
+import { ThemeProvide } from './ThemeProvide';
+import algorithm from './algorithm';
+import { useCSSVariables } from './hooks';
+import { global } from './token/global';
+import {
   convertGlobalToAntdCssToken,
   convertGlobalToAntdToken,
 } from './token/globalToAntd';
+import { theme, themeCssVar } from './token/theme';
+import { createStyleRegister } from './useStyle';
 
-// 导出 ThemeProvide
-export { ThemeProvide } from './ThemeProvide';
+// 重新导出 globalThemeToken 以保持向后兼容性
+export const globalThemeToken = global;
+
+export type { UseStyleResult } from '../src/useStyle';
+
+export {
+  ThemeProvide,
+  algorithm,
+  convertGlobalToAntdCssToken,
+  convertGlobalToAntdToken,
+  createStyleRegister,
+  theme,
+  themeCssVar,
+  useCSSVariables,
+};
+
+export type { CSSVariables } from './hooks';
+export type { BaseToken, ComponentToken, GenerateStyle } from './useStyle';
