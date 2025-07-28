@@ -36,11 +36,11 @@ describe('Global Methods Test', () => {
 
   it('应该能够访问 global 对象', () => {
     // 验证 global 对象存在
-    expect(globalModule.global).toBeDefined();
-    expect(typeof globalModule.global).toBe('object');
+    expect(globalModule.globalThemeToken).toBeDefined();
+    expect(typeof globalModule.globalThemeToken).toBe('object');
 
     // 验证 global 对象有属性
-    const globalKeys = Object.keys(globalModule.global);
+    const globalKeys = Object.keys(globalModule.globalThemeToken);
     expect(globalKeys.length).toBeGreaterThan(0);
 
     console.log(`Global 对象包含 ${globalKeys.length} 个属性`);

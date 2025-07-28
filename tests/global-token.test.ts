@@ -1,14 +1,18 @@
-import { global, scrollbar, scrollbarHidden } from '../src/token/global';
+import {
+  globalThemeToken,
+  scrollbar,
+  scrollbarHidden,
+} from '../src/token/global';
 
 describe('Global Token', () => {
   describe('global 对象', () => {
     it('应该导出 global 对象', () => {
-      expect(global).toBeDefined();
-      expect(typeof global).toBe('object');
+      expect(globalThemeToken).toBeDefined();
+      expect(typeof globalThemeToken).toBe('object');
     });
 
     it('应该包含 CSS 变量', () => {
-      const keys = Object.keys(global);
+      const keys = Object.keys(globalThemeToken);
       expect(keys.length).toBeGreaterThan(0);
 
       // 检查所有键都是 CSS 变量格式
@@ -18,7 +22,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含颜色相关的变量', () => {
-      const colorKeys = Object.keys(global).filter(
+      const colorKeys = Object.keys(globalThemeToken).filter(
         (key) =>
           key.includes('color') ||
           key.includes('Color') ||
@@ -29,7 +33,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含间距变量', () => {
-      const marginKeys = Object.keys(global).filter(
+      const marginKeys = Object.keys(globalThemeToken).filter(
         (key) =>
           key.includes('margin') ||
           key.includes('Margin') ||
@@ -40,14 +44,16 @@ describe('Global Token', () => {
     });
 
     it('应该包含透明色变量', () => {
-      const transparentKeys = Object.keys(global).filter(
+      const transparentKeys = Object.keys(globalThemeToken).filter(
         (key) => key.includes('transparent') || key.includes('Transparent'),
       );
       expect(transparentKeys.length).toBeGreaterThan(0);
     });
 
     it('应该包含数字相关的变量', () => {
-      const numberKeys = Object.keys(global).filter((key) => /\d/.test(key));
+      const numberKeys = Object.keys(globalThemeToken).filter((key) =>
+        /\d/.test(key),
+      );
       expect(numberKeys.length).toBeGreaterThan(0);
     });
   });
@@ -133,7 +139,7 @@ describe('Global Token', () => {
 
   describe('CSS 变量值', () => {
     it('应该包含有效的颜色值', () => {
-      const colorValues = Object.values(global).filter(
+      const colorValues = Object.values(globalThemeToken).filter(
         (value) =>
           typeof value === 'string' &&
           (value.startsWith('#') ||
@@ -156,7 +162,7 @@ describe('Global Token', () => {
         });
       } else {
         // 如果没有直接的颜色值，至少应该有变量引用
-        const referenceValues = Object.values(global).filter(
+        const referenceValues = Object.values(globalThemeToken).filter(
           (value) => typeof value === 'string' && value.startsWith('@'),
         );
         expect(referenceValues.length).toBeGreaterThan(0);
@@ -164,7 +170,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含有效的尺寸值', () => {
-      const sizeValues = Object.values(global).filter(
+      const sizeValues = Object.values(globalThemeToken).filter(
         (value) =>
           typeof value === 'string' &&
           (value.includes('px') ||
@@ -180,7 +186,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含有效的透明值', () => {
-      const transparentValues = Object.values(global).filter(
+      const transparentValues = Object.values(globalThemeToken).filter(
         (value) => typeof value === 'string' && value === 'transparent',
       );
 
@@ -188,7 +194,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含有效的变量引用', () => {
-      const referenceValues = Object.values(global).filter(
+      const referenceValues = Object.values(globalThemeToken).filter(
         (value) => typeof value === 'string' && value.startsWith('@'),
       );
 
@@ -199,7 +205,7 @@ describe('Global Token', () => {
     });
 
     it('应该包含有效的百分比值', () => {
-      const percentageValues = Object.values(global).filter(
+      const percentageValues = Object.values(globalThemeToken).filter(
         (value) =>
           typeof value === 'string' &&
           value.includes('%') &&
@@ -221,7 +227,7 @@ describe('Global Token', () => {
 
   describe('变量命名规范', () => {
     it('所有变量名应该遵循 kebab-case 格式', () => {
-      const keys = Object.keys(global);
+      const keys = Object.keys(globalThemeToken);
 
       keys.forEach((key) => {
         // 移除 -- 前缀后检查格式
@@ -231,7 +237,7 @@ describe('Global Token', () => {
     });
 
     it('变量名应该有意义', () => {
-      const keys = Object.keys(global);
+      const keys = Object.keys(globalThemeToken);
 
       // 检查是否包含常见的命名模式
       const hasColorVars = keys.some(
@@ -249,7 +255,7 @@ describe('Global Token', () => {
     it('应该提供默认导出', () => {
       const defaultExport = require('../src/token/global').default;
       expect(defaultExport).toBeDefined();
-      expect(defaultExport).toBe(global);
+      expect(defaultExport).toBe(globalThemeToken);
     });
   });
 });
