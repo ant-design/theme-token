@@ -1,6 +1,6 @@
 ---
 hero:
-  title: @ant-design/theme-token
+  title: theme-token
   description: 一个基于 @ant-design/cssinjs 的 React 样式主题系统，提供灵活的样式注册和主题 token 管理功能
   actions:
     - text: 快速开始
@@ -79,7 +79,7 @@ const MyComponent: React.FC = () => {
   });
 
   // 定义样式生成函数
-  const styleFn = (token: qi[]\) => ({,. 
+  const styleFn = (token: qi[]\) => ({,.
     [`${token.componentCls}`]: {
       backgroundColor: 'var(--md-editor-color-primary)',
       padding: '16px',

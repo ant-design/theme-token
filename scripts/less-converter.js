@@ -533,9 +533,10 @@ ${this.processMixinContent(mixinData.content)}
 
   // 处理值
   processValue(value) {
-    // 如果是变量引用，转换为 CSS 变量格式
+    // 如果是变量引用，转换为 CSS 变量格式并包装在 var() 中
     if (this.isVariableReference(value)) {
-      return this.convertVariableReferenceToCSS(value);
+      const cssVar = this.convertVariableReferenceToCSS(value);
+      return `var(${cssVar})`;
     }
 
     // 处理颜色值
@@ -974,6 +975,56 @@ function generateExample() {
   );
 }
 
+// 修复CSS变量引用的函数
+function fixCSSVariableReferences(filePath) {
+  try {
+    console.log(`🔧 开始修复CSS变量引用: ${filePath}`);
+
+    // 读取文件内容
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    // 正则表达式匹配所有需要修复的模式
+    // 匹配: '--color-xxx': '--color-yyy' 的模式
+    const regex = /('--color-[^']+':\s*)('--color-[^']+')/g;
+
+    // 替换函数
+    function replaceMatch(match, key, value) {
+      // 如果值已经是var()格式，则跳过
+      if (
+        value.startsWith("'var(") ||
+        value.startsWith("'rgba(") ||
+        value.startsWith("'#")
+      ) {
+        return match;
+      }
+      // 将值包装在var()中
+      return key + "'var(" + value.slice(1, -1) + ")'";
+    }
+
+    // 执行替换
+    const originalContent = content;
+    content = content.replace(regex, replaceMatch);
+
+    // 检查是否有变化
+    if (content === originalContent) {
+      console.log('ℹ️  没有发现需要修复的CSS变量引用');
+      return;
+    }
+
+    // 写回文件
+    fs.writeFileSync(filePath, content, 'utf8');
+
+    console.log('✅ CSS变量引用修复完成！');
+
+    // 统计修复的数量
+    const matches = originalContent.match(regex) || [];
+    console.log(`📊 修复了 ${matches.length} 个CSS变量引用`);
+  } catch (error) {
+    console.error('❌ 修复CSS变量引用失败:', error.message);
+    process.exit(1);
+  }
+}
+
 // 主转换函数
 function convertLessToTs(inputFile, outputFile, options = {}) {
   try {
@@ -1042,6 +1093,13 @@ function main() {
       generateExample();
       break;
 
+    case 'fix': {
+      const targetFile =
+        args[1] || path.join(__dirname, '../src/token/global.ts');
+      fixCSSVariableReferences(targetFile);
+      break;
+    }
+
     case 'convert':
     default: {
       const inputFile =
@@ -1068,4 +1126,5 @@ module.exports = {
   EnhancedLessASTParser,
   runTests,
   generateExample,
+  fixCSSVariableReferences,
 };

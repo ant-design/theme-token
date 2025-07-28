@@ -1,26 +1,22 @@
 # LESS 到 TypeScript 转换报告
 
 ## 统计信息
-
 - 总变量数: 982
 - 引用变量数: 559
-- Mixins 数: 76
+- Mixins数: 76
 - 导入文件: 0
 - 错误数: 0
 - 警告数: 726
 
 ## 变量引用信息
-
-- 有 559 个变量保持为 CSS 变量引用格式
-- 这些变量将在运行时通过 CSS 变量系统解析
+- 有 559 个变量保持为CSS变量引用格式
+- 这些变量将在运行时通过CSS变量系统解析
 
 ## Mixin 信息
-
 - 有 76 个 mixins 转换为函数
 - 这些函数可以在 TypeScript 中直接调用
 
 ## 警告
-
 - 变量 color-gray-text 引用了其他变量: @color-gray-a12
 - 变量 color-gray-text-default 引用了其他变量: @color-gray-text
 - 变量 color-gray-text-secondary 引用了其他变量: @color-gray-a11
@@ -747,3 +743,4 @@
 - 变量 color-subRed-1 引用了其他变量: @color-sub6-1
 - 变量 color-subRed-2 引用了其他变量: @color-sub6-2
 - 变量 color-subRed-3 引用了其他变量: @color-sub6-3
+
