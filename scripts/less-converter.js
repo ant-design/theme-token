@@ -306,11 +306,41 @@ class EnhancedLessASTParser {
       content += `/** ${mixinData.comment} */\n`;
     }
 
-    content += `export const ${functionName} = () => {
+    // 检查是否是单个值的 mixin
+    if (this.isSingleValueMixin(mixinName)) {
+      const singleValue = this.getMixinSingleValue(mixinName);
+      if (singleValue) {
+        // 处理包含单引号的字符串
+        let processedValue = singleValue.value;
+        let formattedValue;
+        if (
+          typeof processedValue === 'string' &&
+          processedValue.includes("'")
+        ) {
+          // 如果值包含单引号，使用双引号包装，并转义内部的双引号
+          formattedValue = `"${processedValue.replace(/"/g, '\\"')}"`;
+        } else {
+          // 否则使用双引号
+          formattedValue = `"${processedValue}"`;
+        }
+
+        content += `export const ${functionName} = () => ${formattedValue};`;
+      } else {
+        // 回退到原来的对象格式
+        content += `export const ${functionName} = () => {
   return {
 ${this.processMixinContent(mixinData.content)}
   };
 };`;
+      }
+    } else {
+      // 多个值的 mixin，使用对象格式
+      content += `export const ${functionName} = () => {
+  return {
+${this.processMixinContent(mixinData.content)}
+  };
+};`;
+    }
 
     return content;
   }
@@ -464,7 +494,29 @@ ${this.processMixinContent(mixinData.content)}
 
     // 添加 mixin 调用
     for (const mixinCall of ast.mixinCalls) {
-      lines.push(`    ...${mixinCall.functionName}(),`);
+      // 检查是否是单个值的 mixin
+      if (this.isSingleValueMixin(mixinCall.name)) {
+        const singleValue = this.getMixinSingleValue(mixinCall.name);
+        if (singleValue) {
+          // 处理包含单引号的字符串
+          let processedValue = singleValue.value;
+          let formattedValue;
+          if (
+            typeof processedValue === 'string' &&
+            processedValue.includes("'")
+          ) {
+            // 如果值包含单引号，使用双引号包装，并转义内部的双引号
+            formattedValue = `"${processedValue.replace(/"/g, '\\"')}"`;
+          } else {
+            // 否则使用双引号
+            formattedValue = `"${processedValue}"`;
+          }
+          lines.push(`    ${singleValue.name}: ${formattedValue},`);
+        }
+      } else {
+        // 多个值的 mixin，使用展开语法
+        lines.push(`    ...${mixinCall.functionName}(),`);
+      }
     }
 
     // 添加嵌套选择器
@@ -483,6 +535,43 @@ ${this.processMixinContent(mixinData.content)}
     }
 
     return lines.join('\n');
+  }
+
+  // 检查 mixin 是否只返回一个值
+  isSingleValueMixin(mixinName) {
+    const mixinData = this.mixins.get(mixinName);
+    if (!mixinData) return false;
+
+    const ast = this.parseMixinAST(mixinData.content);
+
+    // 如果只有属性，没有嵌套选择器和 mixin 调用，且只有一个属性
+    return (
+      ast.properties.length === 1 &&
+      ast.nestedSelectors.length === 0 &&
+      ast.mixinCalls.length === 0
+    );
+  }
+
+  // 获取 mixin 的单个值
+  getMixinSingleValue(mixinName) {
+    const mixinData = this.mixins.get(mixinName);
+    if (!mixinData) return null;
+
+    const ast = this.parseMixinAST(mixinData.content);
+
+    if (
+      ast.properties.length === 1 &&
+      ast.nestedSelectors.length === 0 &&
+      ast.mixinCalls.length === 0
+    ) {
+      const property = ast.properties[0];
+      return {
+        name: property.name,
+        value: property.value,
+      };
+    }
+
+    return null;
   }
 
   // 转换为驼峰命名
@@ -508,10 +597,22 @@ ${this.processMixinContent(mixinData.content)}
     return content;
   }
 
+  // 生成多个值的 mixin 函数
+  generateMultipleValueMixinsFunctions(multipleValueMixins) {
+    let content = '\n// === 多个值 Mixins 函数 ===\n\n';
+
+    for (const [name, data] of multipleValueMixins) {
+      content += this.generateMixinFunction(name, data) + '\n\n';
+    }
+
+    return content;
+  }
+
   // 生成 TypeScript 对象
   generateTypeScriptObject() {
     let content = 'export const global = {\n';
 
+    // 添加变量
     for (const [name, variableData] of this.variables) {
       const cssVarName = this.convertToCSSVariable(name);
       const processedValue = this.processValue(variableData.value);
@@ -534,12 +635,50 @@ ${this.processMixinContent(mixinData.content)}
       content += `  '${cssVarName}': ${formattedValue},\n`;
     }
 
+    // 添加单个值的 mixins
+    for (const [name, mixinData] of this.mixins) {
+      if (this.isSingleValueMixin(name)) {
+        const singleValue = this.getMixinSingleValue(name);
+        if (singleValue) {
+          // 添加注释
+          if (mixinData.comment) {
+            content += `  /** ${mixinData.comment} */\n`;
+          }
+
+          // 处理包含单引号的字符串
+          let processedValue = singleValue.value;
+          let formattedValue;
+          if (
+            typeof processedValue === 'string' &&
+            processedValue.includes("'")
+          ) {
+            // 如果值包含单引号，使用双引号包装，并转义内部的双引号
+            formattedValue = `"${processedValue.replace(/"/g, '\\"')}"`;
+          } else {
+            // 否则使用双引号
+            formattedValue = `"${processedValue}"`;
+          }
+
+          // 使用 CSS 变量格式作为 key
+          const mixinKey = this.convertToCSSVariable(name);
+          content += `  '${mixinKey}': ${formattedValue},\n`;
+        }
+      }
+    }
+
     content += '} as const;\n\n';
     content += 'export default global;\n';
 
-    // 添加 mixin 函数
-    if (this.mixins.size > 0) {
-      content += this.generateAllMixinsFunctions();
+    // 添加多个值的 mixin 函数
+    const multipleValueMixins = [];
+    for (const [name, mixinData] of this.mixins) {
+      if (!this.isSingleValueMixin(name)) {
+        multipleValueMixins.push([name, mixinData]);
+      }
+    }
+
+    if (multipleValueMixins.length > 0) {
+      content += this.generateMultipleValueMixinsFunctions(multipleValueMixins);
     }
 
     return content;
@@ -778,6 +917,32 @@ const testCases = [
     },
   },
   {
+    name: '单个值 Mixin 测试',
+    input: `
+       .single-color() {
+         color: #ff0000;
+       }
+       
+       .single-font-size() {
+         font-size: 16px;
+       }
+       
+       .multiple-properties() {
+         color: #ff0000;
+         font-size: 16px;
+       }
+       
+       .composite-mixin() {
+         .single-color();
+         .single-font-size();
+         border: 1px solid black;
+       }
+     `,
+    expected: {
+      // 这个测试主要验证单个值的 mixin 处理
+    },
+  },
+  {
     name: '注释测试',
     input: `
        // 主要文本颜色
@@ -875,6 +1040,35 @@ function runTests() {
             } else {
               console.log(`   ✅ 总共发现 ${totalCalls} 个 mixin 调用`);
             }
+          } else {
+            console.log('   ⚠️  mixin 解析可能有问题');
+          }
+        }
+
+        // 如果是单个值 mixin 测试，额外检查单个值 mixin 处理
+        if (testCase.name === '单个值 Mixin 测试') {
+          const mixins = parser.parseMixins(testCase.input);
+          if (mixins.size >= 4) {
+            console.log(`   ✅ 解析了 ${mixins.size} 个 mixins`);
+
+            // 检查单个值 mixin
+            let singleValueMixins = 0;
+            let multipleValueMixins = 0;
+            for (const [name, data] of mixins) {
+              if (parser.isSingleValueMixin(name)) {
+                singleValueMixins++;
+                const singleValue = parser.getMixinSingleValue(name);
+                console.log(
+                  `   ✅ 单个值 mixin: ${name} -> ${singleValue.name}: ${singleValue.value}`,
+                );
+              } else {
+                multipleValueMixins++;
+              }
+            }
+
+            console.log(
+              `   ✅ 单个值 mixins: ${singleValueMixins}, 多个值 mixins: ${multipleValueMixins}`,
+            );
           } else {
             console.log('   ⚠️  mixin 解析可能有问题');
           }
@@ -1001,6 +1195,61 @@ function generateExample() {
   console.log(
     `\n📊 统计: 总共 ${variables.size} 个变量，其中 ${referenceCount} 个是引用变量`,
   );
+
+  // 展示单个值 mixin 功能
+  console.log('\n🎯 单个值 Mixin 功能示例:');
+
+  const mixinExample = `
+// 单个值的 mixins
+.single-color() {
+  color: #ff0000;
+}
+
+.single-font-size() {
+  font-size: 16px;
+}
+
+.single-border() {
+  border: 1px solid #ccc;
+}
+
+// 多个值的 mixin
+.multiple-properties() {
+  color: #ff0000;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+// 使用单个值 mixins 的组合
+.composite-mixin() {
+  .single-color();
+  .single-font-size();
+  .single-border();
+  padding: 8px;
+}
+`;
+
+  console.log('📝 Mixin 输入示例:');
+  console.log(mixinExample);
+
+  const mixinParser = new EnhancedLessASTParser();
+  mixinParser.parse(mixinExample);
+
+  console.log('\n📤 Mixin 输出示例:');
+
+  // 生成包含单个值 mixin 的 global 对象
+  const globalWithMixins = mixinParser.generateTypeScriptObject();
+  console.log(globalWithMixins);
+
+  console.log('\n🔍 单个值 Mixin 分析:');
+  for (const [name, data] of mixinParser.mixins) {
+    if (mixinParser.isSingleValueMixin(name)) {
+      const singleValue = mixinParser.getMixinSingleValue(name);
+      console.log(`  ✅ ${name} -> ${singleValue.name}: ${singleValue.value}`);
+    } else {
+      console.log(`  📦 ${name} -> 多个属性`);
+    }
+  }
 }
 
 // 修复CSS变量引用的函数

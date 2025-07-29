@@ -11,7 +11,6 @@ import {
 import React, { useMemo, useState } from 'react';
 import {
   ThemeProvide,
-  algorithm,
   convertGlobalToAntdCssToken,
   globalThemeToken,
   processTokenMappingToAntd,
@@ -52,6 +51,12 @@ const GlobalToAntdExample: React.FC = () => {
   };
 
   useCSSVariables('my-component', parsedThemeToken);
+
+  console.log(parsedThemeToken, 'parsedThemeToken');
+  console.log(
+    processTokenMappingToAntd(parsedThemeToken),
+    'processTokenMappingToAntd',
+  );
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -332,14 +337,20 @@ const GlobalToAntdExample: React.FC = () => {
               </Space>
             </Card>
           </ConfigProvider>
+
+          <Card title="antd 默认" style={{ marginBottom: '16px' }}>
+            <Space>
+              <Button type="primary">主要按钮</Button>
+              <Button type="default">默认按钮</Button>
+              <Button type="dashed">虚线按钮</Button>
+              <Button type="text">文本按钮</Button>
+              <Button type="link">链接按钮</Button>
+            </Space>
+          </Card>
           <ConfigProvider
             theme={{
               hashed: true,
               token: antdTokenCssVar,
-              algorithm: (token) => {
-                console.log(token, algorithm(token));
-                return algorithm(token) as any;
-              },
             }}
           >
             <Card
