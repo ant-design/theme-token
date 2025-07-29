@@ -15,6 +15,7 @@ import {
   convertGlobalToAntdCssToken,
   globalThemeToken,
   processTokenMappingToAntd,
+  useCSSVariables,
 } from '../src';
 
 const { Title, Paragraph, Text } = Typography;
@@ -49,6 +50,8 @@ const GlobalToAntdExample: React.FC = () => {
   const handleReset = () => {
     setCustomThemeToken(JSON.stringify(globalThemeToken, null, 2));
   };
+
+  useCSSVariables('my-component', parsedThemeToken);
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
