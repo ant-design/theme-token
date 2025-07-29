@@ -1,5 +1,5 @@
 export * from './ThemeProvide';
-export * from './algorithm';
+export { default as algorithm } from './algorithm';
 export { useCSSVariables } from './hooks';
 export {
   convertGlobalToAntdCssToken,
