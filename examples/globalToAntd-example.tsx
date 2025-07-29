@@ -329,10 +329,6 @@ const GlobalToAntdExample: React.FC = () => {
               </Space>
             </Card>
           </ConfigProvider>
-
-          <Title level={3}>使用 css 变量</Title>
-          <Paragraph>使用原生的 css 来实现</Paragraph>
-
           <ConfigProvider
             theme={{
               hashed: true,
