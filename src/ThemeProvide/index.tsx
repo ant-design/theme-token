@@ -1,5 +1,5 @@
 ﻿import React, { createContext, useContext, useMemo } from 'react';
-import { CSSVariables } from '../hooks/useCSSVariables';
+import { CSSVariables, useCSSVariables } from '../hooks/useCSSVariables';
 
 /**
  * 主题上下文类型定义
@@ -45,6 +45,8 @@ export const ThemeProvide: React.FC<ThemeProvideProps> = ({
 }) => {
   // 获取当前上下文中的类名
   const { className: contextClassName } = useContext(ThemeContext);
+
+  useCSSVariables(className, cssVariables as CSSVariables);
 
   /**
    * 检查DOM中是否已存在相同类名的元素

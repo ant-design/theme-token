@@ -449,7 +449,17 @@ ${this.processMixinContent(mixinData.content)}
 
     // 添加普通属性
     for (const property of ast.properties) {
-      lines.push(`    ${property.name}: '${property.value}',`);
+      // 处理包含单引号的字符串
+      let processedValue = property.value;
+      let formattedValue;
+      if (typeof processedValue === 'string' && processedValue.includes("'")) {
+        // 如果值包含单引号，使用双引号包装，并转义内部的双引号
+        formattedValue = `"${processedValue.replace(/"/g, '\\"')}"`;
+      } else {
+        // 否则使用双引号
+        formattedValue = `"${processedValue}"`;
+      }
+      lines.push(`    ${property.name}: ${formattedValue},`);
     }
 
     // 添加 mixin 调用
@@ -510,7 +520,18 @@ ${this.processMixinContent(mixinData.content)}
       if (variableData.comment) {
         content += `  /** ${variableData.comment} */\n`;
       }
-      content += `  '${cssVarName}': '${processedValue}',\n`;
+
+      // 处理包含单引号的字符串
+      let formattedValue;
+      if (typeof processedValue === 'string' && processedValue.includes("'")) {
+        // 如果值包含单引号，使用双引号包装，并转义内部的双引号
+        formattedValue = `"${processedValue.replace(/"/g, '\\"')}"`;
+      } else {
+        // 否则使用双引号
+        formattedValue = `"${processedValue}"`;
+      }
+
+      content += `  '${cssVarName}': ${formattedValue},\n`;
     }
 
     content += '} as const;\n\n';
@@ -533,6 +554,13 @@ ${this.processMixinContent(mixinData.content)}
 
   // 处理值
   processValue(value) {
+    // 处理单引号转双引号，但保持字符串的完整性
+    if (typeof value === 'string' && value.includes("'")) {
+      // 如果字符串包含单引号，我们需要特殊处理
+      // 对于包含单引号的字符串，我们应该保持原样，因为它们在 TypeScript 中会被正确处理
+      // 例如：'Roboto Mono', monospace 应该保持为 'Roboto Mono', monospace
+    }
+
     // 如果是变量引用，转换为 CSS 变量格式并包装在 var() 中
     if (this.isVariableReference(value)) {
       const cssVar = this.convertVariableReferenceToCSS(value);
@@ -1089,6 +1117,10 @@ function main() {
       runTests();
       break;
 
+    case 'test-quotes':
+      testQuoteConversion();
+      break;
+
     case 'example':
       generateExample();
       break;
@@ -1121,10 +1153,35 @@ if (require.main === module) {
   main();
 }
 
+// 测试单引号转双引号功能
+function testQuoteConversion() {
+  console.log('🧪 测试单引号转双引号功能...\n');
+
+  const parser = new EnhancedLessASTParser();
+
+  // 测试包含单引号的内容
+  const testContent = `
+    @font-family: 'Roboto Mono', monospace;
+    @font-family-secondary: 'Arial', sans-serif;
+    @text-with-quotes: 'Hello World';
+    @normal-text: normal text;
+  `;
+
+  const result = parser.parse(testContent);
+
+  console.log('解析结果:');
+  for (const [name, data] of result) {
+    console.log(`  ${name}: "${data.value}"`);
+  }
+
+  console.log('\n✅ 单引号转双引号测试完成');
+}
+
 module.exports = {
   convertLessToTs,
   EnhancedLessASTParser,
   runTests,
   generateExample,
   fixCSSVariableReferences,
+  testQuoteConversion,
 };
