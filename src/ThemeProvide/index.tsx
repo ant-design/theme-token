@@ -53,7 +53,10 @@ export const ThemeProvide: React.FC<ThemeProvideProps> = ({
    * 使用 useMemo 优化性能，避免重复查询DOM
    */
   const hasProviderDom = useMemo(() => {
-    return document.querySelector(`.${className}`) !== null;
+    if (typeof document !== 'undefined' && className) {
+      return document.querySelector(`.${className}`) !== null;
+    }
+    return false;
   }, [className]);
 
   /**
