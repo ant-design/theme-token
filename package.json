@@ -9,11 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run convert:less && father build",
+    "build": "npm run convert:less && father build && prettier --write ./src",
     "build:watch": "father dev",
     "convert:less": "node scripts/less-converter.js",
     "dev": "dumi dev",
-    "docs:build": "dumi build && prettier --write ./src",
+    "docs:build": "dumi build",
     "docs:preview": "dumi preview",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",

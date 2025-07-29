@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { ThemeProvide } from '../src/ThemeProvide';
+import { ThemeProvider } from '../src/ThemeProvider';
 
-describe('ThemeProvide', () => {
+describe('ThemeProvider', () => {
   it('应该在没有现有 context 时创建新的 Provider', () => {
     render(
-      <ThemeProvide className="test-theme">
+      <ThemeProvider className="test-theme">
         <div data-testid="child">测试内容</div>
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     const child = screen.getByTestId('child');
@@ -21,21 +21,21 @@ describe('ThemeProvide', () => {
 
   it('应该在 className 相同时直接返回 children', () => {
     const TestComponent = () => (
-      <ThemeProvide className="same-theme">
+      <ThemeProvider className="same-theme">
         <div data-testid="inner-child">内部内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(
-      <ThemeProvide className="same-theme">
+      <ThemeProvider className="same-theme">
         <TestComponent />
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     const innerChild = screen.getByTestId('inner-child');
     expect(innerChild).toBeInTheDocument();
 
-    // 当 className 相同时，内层的 ThemeProvide 应该直接返回 children
+    // 当 className 相同时，内层的 ThemeProvider 应该直接返回 children
     // 所以 innerChild 的父元素应该是外层的 div
     const wrapper = innerChild.parentElement;
     expect(wrapper).toHaveClass('same-theme');
@@ -43,15 +43,15 @@ describe('ThemeProvide', () => {
 
   it('应该在 className 不同时创建新的 Provider', () => {
     const TestComponent = () => (
-      <ThemeProvide className="different-theme">
+      <ThemeProvider className="different-theme">
         <div data-testid="inner-child">内部内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(
-      <ThemeProvide className="original-theme">
+      <ThemeProvider className="original-theme">
         <TestComponent />
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     const innerChild = screen.getByTestId('inner-child');
@@ -64,15 +64,15 @@ describe('ThemeProvide', () => {
 
   it('应该在 contextClassName 为空时创建新的 Provider', () => {
     const TestComponent = () => (
-      <ThemeProvide className="new-theme">
+      <ThemeProvider className="new-theme">
         <div data-testid="inner-child">内部内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(
-      <ThemeProvide className="">
+      <ThemeProvider className="">
         <TestComponent />
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     const innerChild = screen.getByTestId('inner-child');
@@ -85,21 +85,21 @@ describe('ThemeProvide', () => {
 
   it('应该在嵌套的相同 className 中避免重复包装', () => {
     const InnerComponent = () => (
-      <ThemeProvide className="nested-theme">
+      <ThemeProvider className="nested-theme">
         <div data-testid="deep-child">深层内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     const MiddleComponent = () => (
-      <ThemeProvide className="nested-theme">
+      <ThemeProvider className="nested-theme">
         <InnerComponent />
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(
-      <ThemeProvide className="nested-theme">
+      <ThemeProvider className="nested-theme">
         <MiddleComponent />
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     const deepChild = screen.getByTestId('deep-child');
@@ -120,9 +120,9 @@ describe('ThemeProvide', () => {
     );
 
     render(
-      <ThemeProvide className="complex-theme">
+      <ThemeProvider className="complex-theme">
         <ComplexChildren />
-      </ThemeProvide>,
+      </ThemeProvider>,
     );
 
     expect(screen.getByTestId('child1')).toBeInTheDocument();
@@ -133,9 +133,9 @@ describe('ThemeProvide', () => {
   it('应该测试 contextClassName 为空字符串的情况', () => {
     // 创建一个没有 ThemeContext 的环境
     const TestComponent = () => (
-      <ThemeProvide className="standalone-theme">
+      <ThemeProvider className="standalone-theme">
         <div data-testid="standalone-child">独立内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(<TestComponent />);
@@ -150,9 +150,9 @@ describe('ThemeProvide', () => {
 
   it('应该测试 contextClassName 为 undefined 的情况', () => {
     const TestComponent = () => (
-      <ThemeProvide className="undefined-theme">
+      <ThemeProvider className="undefined-theme">
         <div data-testid="undefined-child">未定义内容</div>
-      </ThemeProvide>
+      </ThemeProvider>
     );
 
     render(<TestComponent />);

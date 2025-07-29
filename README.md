@@ -70,18 +70,18 @@ const MyComponent: React.FC = () => {
 
 ```tsx | pure
 import React from 'react';
-import { ThemeProvide } from '@ant-design/theme-token';
+import { ThemeProvider } from '@ant-design/theme-token';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = React.useState(false);
 
   return (
-    <ThemeProvide className={isDark ? 'dark-theme' : 'light-theme'}>
+    <ThemeProvider className={isDark ? 'dark-theme' : 'light-theme'}>
       <div>
         <button onClick={() => setIsDark(!isDark)}>切换主题</button>
         <MyComponent />
       </div>
-    </ThemeProvide>
+    </ThemeProvider>
   );
 };
 ```
@@ -167,12 +167,12 @@ const buttonStyles = css`
 useCSSVariables(componentName: string, cssVariables: CSSVariables)
 ```
 
-### ThemeProvide
+### ThemeProvider
 
 用于提供主题上下文的 React 组件。
 
 ```tsx | pure
-<ThemeProvide className={className}>{children}</ThemeProvide>
+<ThemeProvider className={className}>{children}</ThemeProvider>
 ```
 
 ## 类型支持
@@ -197,7 +197,7 @@ type MyStyles = {
 
 1. theme 对象是只读的，不要尝试修改其属性
 2. 所有属性值都是 CSS 变量引用，格式为 `var(--variable-name)`
-3. 确保在使用 theme 对象之前已经通过 `useCSSVariables` 或 `ThemeProvide` 注入了相应的 CSS 变量
+3. 确保在使用 theme 对象之前已经通过 `useCSSVariables` 或 `ThemeProvider` 注入了相应的 CSS 变量
 4. theme 对象会自动包含 global 对象中的所有 CSS 变量，无需手动维护
 
 ## 开发

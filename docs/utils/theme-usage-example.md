@@ -94,22 +94,22 @@ const buttonStyles = css`
 
 ## 主题切换
 
-由于 theme 对象使用的是 CSS 变量，当通过 `ThemeProvide` 切换主题时，所有使用 theme 对象的样式都会自动更新：
+由于 theme 对象使用的是 CSS 变量，当通过 `ThemeProvider` 切换主题时，所有使用 theme 对象的样式都会自动更新：
 
 ```tsx | pure
 import React from 'react';
-import { ThemeProvide } from '@ant-design/theme-token';
+import { ThemeProvider } from '@ant-design/theme-token';
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = React.useState(false);
 
   return (
-    <ThemeProvide className={isDark ? 'dark-theme' : 'light-theme'}>
+    <ThemeProvider className={isDark ? 'dark-theme' : 'light-theme'}>
       <div>
         <button onClick={() => setIsDark(!isDark)}>切换主题</button>
         <MyComponent />
       </div>
-    </ThemeProvide>
+    </ThemeProvider>
   );
 };
 ```
@@ -192,5 +192,5 @@ type MyStyles = {
 
 1. theme 对象是只读的，不要尝试修改其属性
 2. 所有属性值都是 CSS 变量引用，格式为 `var(--variable-name)`
-3. 确保在使用 theme 对象之前已经通过 `useCSSVariables` 或 `ThemeProvide` 注入了相应的 CSS 变量
+3. 确保在使用 theme 对象之前已经通过 `useCSSVariables` 或 `ThemeProvider` 注入了相应的 CSS 变量
 4. theme 对象会自动包含 global 对象中的所有 CSS 变量，无需手动维护

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useThemeContext } from '../ThemeProvide';
+import { useThemeContext } from '../ThemeProvider';
 
 // CSS变量类型
 export interface CSSVariables {

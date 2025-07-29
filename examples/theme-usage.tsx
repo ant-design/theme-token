@@ -1,5 +1,10 @@
 import React from 'react';
-import { ThemeProvide, globalThemeToken, theme, useCSSVariables } from '../src';
+import {
+  ThemeProvider,
+  globalThemeToken,
+  theme,
+  useCSSVariables,
+} from '../src';
 
 const ThemeExample: React.FC<{ isDark: boolean }> = ({ isDark }) => {
   // 注入 CSS 变量
@@ -90,7 +95,7 @@ const App: React.FC = () => {
   const [isDark, setIsDark] = React.useState(false);
 
   return (
-    <ThemeProvide
+    <ThemeProvider
       className={'theme'}
       cssVariables={{
         ...globalThemeToken,
@@ -114,7 +119,7 @@ const App: React.FC = () => {
         </button>
         <ThemeExample isDark={isDark} />
       </div>
-    </ThemeProvide>
+    </ThemeProvider>
   );
 };
 

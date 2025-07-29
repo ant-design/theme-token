@@ -1,4 +1,4 @@
-export * from './ThemeProvide';
+export * from './ThemeProvider';
 export { default as algorithm } from './algorithm';
 export { useCSSVariables } from './hooks';
 export {

@@ -26,7 +26,7 @@ const ThemeContext = createContext<ThemeContextType>({
 export const useThemeContext = () => useContext(ThemeContext);
 
 /**
- * ThemeProvide 组件的属性接口
+ * ThemeProvider 组件的属性接口
  */
 interface ThemeProvideProps {
   children: React.ReactNode; // 子组件
@@ -38,7 +38,7 @@ interface ThemeProvideProps {
  * 主题提供者组件
  * 用于在组件树中提供主题上下文，避免重复创建相同主题的DOM节点
  */
-export const ThemeProvide: React.FC<ThemeProvideProps> = ({
+export const ThemeProvider: React.FC<ThemeProvideProps> = ({
   children,
   className,
   cssVariables = {},

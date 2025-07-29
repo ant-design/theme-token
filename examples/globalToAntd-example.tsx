@@ -10,7 +10,7 @@ import {
 } from 'antd';
 import React, { useMemo, useState } from 'react';
 import {
-  ThemeProvide,
+  ThemeProvider,
   convertGlobalToAntdCssToken,
   globalThemeToken,
   processTokenMappingToAntd,
@@ -60,7 +60,7 @@ const GlobalToAntdExample: React.FC = () => {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <ThemeProvide className="my-component" cssVariables={globalThemeToken}>
+      <ThemeProvider className="my-component" cssVariables={globalThemeToken}>
         <Title level={2}>GlobalToAntd Token 转换示例</Title>
 
         {/* 主题编辑器 */}
@@ -367,7 +367,7 @@ const GlobalToAntdExample: React.FC = () => {
             </Card>
           </ConfigProvider>
         </div>
-      </ThemeProvide>
+      </ThemeProvider>
     </div>
   );
 };
