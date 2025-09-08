@@ -77,11 +77,11 @@ export function createStyleRegister<T extends ComponentToken>(
   return (componentName: string, styleFn: (token: T) => CSSInterpolation) => {
     // 在 React 环境中使用 hooks，在非 React 环境中直接调用内部函数
     try {
-      useCSSVariables(componentName, cssVariables);
+      useCSSVariables(hashId, cssVariables);
     } catch (error) {
       // 在非 React 环境中，直接调用内部函数
       const { insertCSSVariables } = require('./hooks/useCSSVariables');
-      insertCSSVariables(componentName, cssVariables, '');
+      insertCSSVariables(hashId, cssVariables, '');
     }
     token.componentCls = `.${componentName}`;
     return {
