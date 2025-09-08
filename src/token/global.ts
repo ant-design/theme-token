@@ -1,987 +1,1063 @@
 /* eslint-disable */
 export const global = {
   '--name': 'text-code-s',
-  /** 无间距-none 0 */
-  '--margin-none': '0',
-  /** 组件内-xs 2 */
-  '--margin-component-xs': '2px',
-  /** 组件内-sm 4 */
-  '--margin-component-sm': '4px',
-  /** 组件内-base 8 */
-  '--margin-component-base': '8px',
-  /** 组件内-lg 12 */
-  '--margin-component-lg': '12px',
-  /** 区块内-xs 4 */
-  '--margin-block-xs': '4px',
-  /** 区块内-sm 8 */
-  '--margin-block-sm': '8px',
-  /** 区块内-base 12 */
-  '--margin-block-base': '12px',
-  /** 区块内-xl 16 */
-  '--margin-block-xl': '16px',
-  /** 区块间-2xs 4 */
-  '--margin-section-2xs': '4px',
-  /** 区块间-xs 8 */
-  '--margin-section-xs': '8px',
-  /** 区块间-sm 16 */
-  '--margin-section-sm': '16px',
-  /** 区块间-base 24 */
-  '--margin-section-base': '24px',
-  /** 区块间-lg 32 */
-  '--margin-section-lg': '32px',
-  /** 区块间-xl 40 */
-  '--margin-section-xl': '40px',
-  /** --gray-文本/默认 */
-  '--color-gray-text': 'var(--color-gray-a12)',
-  /** --gray-文本-兼容旧版 */
-  '--color-gray-text-default': 'var(--color-gray-text)',
-  /** --gray-文本/次要 */
-  '--color-gray-text-secondary': 'var(--color-gray-a11)',
-  /** --gray-文本/浅色注释 */
-  '--color-gray-text-light': 'var(--color-gray-a9)',
-  /** --gray-文本/不可用 */
-  '--color-gray-text-disabled': 'var(--color-gray-a8)',
-  /** --gray-控件填充/主按钮 */
-  '--color-gray-control-fill-primary': 'var(--color-gray-9)',
-  /** --gray-控件填充/主按钮-悬停 */
-  '--color-gray-control-fill-primary-hover': 'var(--color-gray-10)',
-  /** --gray-控件填充/主按钮-按下.激活 */
-  '--color-gray-control-fill-primary-active': 'var(--color-gray-10)',
-  /** --gray-控件填充/次按钮 */
-  '--color-gray-control-fill-secondary': 'var(--color-gray-a3)',
-  /** --gray-控件填充/次按钮-悬停 */
-  '--color-gray-control-fill-secondary-hover': 'var(--color-gray-a4)',
-  /** --gray-控件填充/次按钮-按下.激活 */
-  '--color-gray-control-fill-secondary-active': 'var(--color-gray-a5)',
-  /** --gray-控件填充/gost按钮-按下.激活 */
-  '--color-gray-control-fill-ghost-active': 'var(--color-gray-a4)',
-  /** --gray-控件填充/标签 */
-  '--color-gray-control-fill-tag': 'var(--color-gray-4)',
-  /** --gray-控件填充/按下.激活 */
-  '--color-gray-control-fill-active': 'var(--color-gray-a3)',
-  /** --gray-控件填充/不可用 */
-  '--color-gray-control-fill-disabled': 'var(--color-gray-3)',
-  /** --gray-控件填充/悬停 */
-  '--color-gray-control-fill-hover': 'var(--color-gray-a3)',
-  /** --gray-边线/控件按下.激活 */
-  '--color-gray-border-active': 'var(--color-gray-9)',
-  /** Gray 兼容性变量 (直接使用 globalReccomend.less 中的值) */
-  '--color-gray-border-dark': 'rgba(0, 9, 50, 12.16%)',
-  /** --gray-边线/浅 */
-  '--color-gray-border-light': 'var(--color-gray-a3)',
-  /** --gray-背景/提示块 */
-  '--color-gray-bg-tip': 'var(--color-gray-a3)',
-  '--color-gray-bg-page-dark': 'rgba(239, 240, 243, 100%)',
-  /** --gray-背景/浅色卡片 */
-  '--color-gray-bg-card-light': 'var(--color-gray-a2)',
-  /** --gray-背景/白色卡片 */
-  '--color-gray-bg-card-white': '#FFFFFF',
-  /** --gray-背景/页面 */
-  '--color-gray-bg-page': 'var(--color-gray-2)',
-  /** --gray-背景/页面-浅 */
-  '--color-gray-bg-page-light': 'var(--color-gray-1)',
-  /** --blue-文本/反色 */
-  '--color-blue-text-contrast': '#FFFFFF',
-  '--color-blue-text': 'rgba(0, 147, 237, 100%)',
-  /** --blue-文本/次要 */
-  '--color-blue-text-secondary': 'var(--color-blue-a11)',
-  /** --blue-文本/浅色注释 */
-  '--color-blue-text-light': 'var(--color-blue-a9)',
-  /** --blue-文本/不可用 */
-  '--color-blue-text-disabled': 'var(--color-blue-a8)',
-  /** --blue-控件填充/主按钮 */
-  '--color-blue-control-fill-primary': 'var(--color-blue-9)',
-  /** --blue-控件填充/主按钮-悬停 */
-  '--color-blue-control-fill-primary-hover': 'var(--color-blue-10)',
-  /** --blue-控件填充/主按钮-按下.激活 */
-  '--color-blue-control-fill-primary-active': 'var(--color-blue-10)',
-  /** --blue-控件填充/次按钮 */
-  '--color-blue-control-fill-secondary': 'var(--color-blue-a3)',
-  /** --blue-控件填充/次按钮-悬停 */
-  '--color-blue-control-fill-secondary-hover': 'var(--color-blue-a4)',
-  /** --blue-控件填充/次按钮-按下.激活 */
-  '--color-blue-control-fill-secondary-active': 'var(--color-blue-a5)',
-  /** --blue-控件填充/gost按钮-按下.激活 */
-  '--color-blue-control-fill-ghost-active': 'var(--color-blue-a4)',
-  /** --blue-控件填充/标签 */
-  '--color-blue-control-fill-tag': 'var(--color-blue-4)',
-  /** --blue-控件填充/按下.激活 */
-  '--color-blue-control-fill-active': 'var(--color-blue-a3)',
-  /** --blue-控件填充/不可用 */
-  '--color-blue-control-fill-disabled': 'var(--color-blue-3)',
-  /** --blue-控件填充/悬停 */
-  '--color-blue-control-fill-hover': 'var(--color-blue-a3)',
-  /** --blue-边线/控件按下.激活 */
-  '--color-blue-border-active': 'var(--color-blue-9)',
-  /** --blue-边线/深 */
-  '--color-blue-border-dark': 'var(--color-blue-a5)',
-  /** --blue-边线/浅 */
-  '--color-blue-border-light': 'var(--color-blue-a3)',
-  /** --blue-背景/提示块 */
-  '--color-blue-bg-tip': 'var(--color-blue-a3)',
-  /** --blue-背景/页面深 */
-  '--color-blue-bg-page-dark': 'var(--color-blue-3)',
-  /** --blue-背景/浅色卡片 */
+
+  // 颜色相关
+  /** blue/blue-背景-浅色卡片 */
   '--color-blue-bg-card-light': 'var(--color-blue-a2)',
-  /** --blue-背景/页面 */
+  /** blue/blue-背景-页面 */
   '--color-blue-bg-page': 'var(--color-blue-2)',
-  /** --blue-背景/页面-浅 */
-  '--color-blue-bg-page-light': 'var(--color-blue-1)',
-  '--color-green-text': 'rgba(32, 150, 119, 100%)',
-  /** --green-文本/次要 */
-  '--color-green-text-secondary': 'var(--color-green-a11)',
-  /** --green-文本/浅色注释 */
-  '--color-green-text-light': 'var(--color-green-a9)',
-  /** --green-文本/不可用 */
-  '--color-green-text-disabled': 'var(--color-green-a8)',
-  /** --green-控件填充/主按钮 */
-  '--color-green-control-fill-primary': 'var(--color-green-9)',
-  /** --green-控件填充/主按钮-悬停 */
-  '--color-green-control-fill-primary-hover': 'var(--color-green-10)',
-  /** --green-控件填充/主按钮-按下.激活 */
-  '--color-green-control-fill-primary-active': 'var(--color-green-10)',
-  /** --green-控件填充/次按钮 */
-  '--color-green-control-fill-secondary': 'var(--color-green-a3)',
-  /** --green-控件填充/次按钮-悬停 */
-  '--color-green-control-fill-secondary-hover': 'var(--color-green-a4)',
-  /** --green-控件填充/次按钮-按下.激活 */
-  '--color-green-control-fill-secondary-active': 'var(--color-green-a5)',
-  /** --green-控件填充/gost按钮-按下.激活 */
-  '--color-green-control-fill-ghost-active': 'var(--color-green-a4)',
-  /** --green-控件填充/标签 */
-  '--color-green-control-fill-tag': 'var(--color-green-4)',
-  /** --green-控件填充/按下.激活 */
-  '--color-green-control-fill-active': 'var(--color-green-a3)',
-  /** --green-控件填充/不可用 */
-  '--color-green-control-fill-disabled': 'var(--color-green-3)',
-  /** --green-控件填充/悬停 */
-  '--color-green-control-fill-hover': 'var(--color-green-a3)',
-  /** --green-边线/控件按下.激活 */
-  '--color-green-border-active': 'var(--color-green-9)',
-  /** --green-边线/深 */
-  '--color-green-border-dark': 'var(--color-green-a5)',
-  /** --green-边线/浅 */
-  '--color-green-border-light': 'var(--color-green-a3)',
-  /** --green-背景/提示块 */
-  '--color-green-bg-tip': 'var(--color-green-a3)',
-  /** --green-背景/页面深 */
-  '--color-green-bg-page-dark': 'var(--color-green-3)',
-  /** --green-背景/浅色卡片 */
+  /** blue/blue-背景-页面深 */
+  '--color-blue-bg-page-dark': 'var(--color-blue-3)',
+  /** blue/blue-背景-页面-浅 */
+  '--color-blue-bg-page-light': 'var(--color-blue-a1)',
+  /** blue/blue-背景-提示块 */
+  '--color-blue-bg-tip': 'var(--color-blue-a3)',
+  /** blue/blue-边线-深 */
+  '--color-blue-border-dark': 'var(--color-blue-a5)',
+  /** blue/blue-边线-浅 */
+  '--color-blue-border-light': 'var(--color-blue-a3)',
+  /** blue/blue-控件填充-按下.激活 */
+  '--color-blue-control-fill-active': 'var(--color-blue-a3)',
+  /** blue/blue-控件填充-不可用 */
+  '--color-blue-control-fill-disabled': 'var(--color-blue-3)',
+  /** blue/blue-控件填充-ghost按钮-按下.激活 */
+  '--color-blue-control-fill-ghost-active': 'var(--color-blue-a4)',
+  /** blue/blue-控件填充-悬停 */
+  '--color-blue-control-fill-hover': 'var(--color-blue-a2)',
+  /** blue/blue-控件填充-主按钮 */
+  '--color-blue-control-fill-primary': 'var(--color-blue-9)',
+  /** blue/blue-控件填充-主按钮-按下.激活 */
+  '--color-blue-control-fill-primary-active': 'var(--color-blue-10)',
+  /** blue/blue-控件填充-主按钮-悬停 */
+  '--color-blue-control-fill-primary-hover': 'var(--color-blue-8)',
+  /** blue/blue-控件填充-次按钮 */
+  '--color-blue-control-fill-secondary': 'var(--color-blue-a3)',
+  /** blue/blue-控件填充-次按钮-按下.激活 */
+  '--color-blue-control-fill-secondary-active': 'var(--color-blue-a5)',
+  /** blue/blue-控件填充-次按钮-悬停 */
+  '--color-blue-control-fill-secondary-hover': 'var(--color-blue-a4)',
+  /** blue/blue-控件填充-标签 */
+  '--color-blue-control-fill-tag': 'var(--color-blue-4)',
+  /** blue/blue-文本-默认 */
+  '--color-blue-text-default': 'var(--color-blue-a12)',
+  /** blue/blue-文本-不可用 */
+  '--color-blue-text-disabled': 'var(--color-blue-a7)',
+  /** blue/blue-文本-次要 */
+  '--color-blue-text-secondary': 'var(--color-blue-a11)',
+  /** blue/blue-文本-浅色注释 */
+  '--color-blue-text-tertiary': 'var(--color-blue-a8)',
+  /** gray/gray-背景-浅色卡片 */
+  '--color-gray-bg-card-light': 'var(--color-gray-a2)',
+  /** gray/gray-背景-白色卡片 */
+  '--color-gray-bg-card-white': 'var(--color-gray-contrast)',
+  /** gray/gray-背景-页面 */
+  '--color-gray-bg-page': 'var(--color-gray-2)',
+  /** gray/gray-背景-页面深 */
+  '--color-gray-bg-page-dark': 'var(--color-gray-3)',
+  /** gray/gray-背景-页面-浅 */
+  '--color-gray-bg-page-light': 'var(--color-gray-a1)',
+  /** gray/gray-背景-提示块 */
+  '--color-gray-bg-tip': 'var(--color-gray-a3)',
+  /** gray/gray-边线-深 */
+  '--color-gray-border-dark': 'var(--color-gray-a5)',
+  /** gray/gray-边线-浅 */
+  '--color-gray-border-light': 'var(--color-gray-a3)',
+  /** gray/gray-文本-反色 */
+  '--color-gray-contrast': '#fff',
+  /** gray/gray-控件填充-按下.激活 */
+  '--color-gray-control-fill-active': 'var(--color-gray-a3)',
+  /** gray/gray-控件填充-不可用 */
+  '--color-gray-control-fill-disabled': 'var(--color-gray-3)',
+  /** gray/gray-控件填充-ghost按钮-按下.激活 */
+  '--color-gray-control-fill-ghost-active': 'var(--color-gray-a4)',
+  /** gray/gray-控件填充-悬停 */
+  '--color-gray-control-fill-hover': 'var(--color-gray-a2)',
+  /** gray/gray-控件填充-主按钮 */
+  '--color-gray-control-fill-primary': 'var(--color-gray-9)',
+  /** gray/gray-控件填充-主按钮-按下.激活 */
+  '--color-gray-control-fill-primary-active': 'var(--color-gray-10)',
+  /** gray/gray-控件填充-主按钮-悬停 */
+  '--color-gray-control-fill-primary-hover': 'var(--color-gray-8)',
+  /** gray/gray-控件填充-次按钮 */
+  '--color-gray-control-fill-secondary': 'var(--color-gray-a3)',
+  /** gray/gray-控件填充-次按钮-按下.激活 */
+  '--color-gray-control-fill-secondary-active': 'var(--color-gray-a5)',
+  /** gray/gray-控件填充-次按钮-悬停 */
+  '--color-gray-control-fill-secondary-hover': 'var(--color-gray-a4)',
+  /** gray/gray-控件填充-标签 */
+  '--color-gray-control-fill-tag': 'var(--color-gray-4)',
+  /** gray/gray-文本-默认 */
+  '--color-gray-text-default': 'var(--color-gray-a12)',
+  /** gray/gray-文本-不可用 */
+  '--color-gray-text-disabled': 'var(--color-gray-a7)',
+  /** gray/gray-文本-次要 */
+  '--color-gray-text-secondary': 'var(--color-gray-a11)',
+  /** gray/gray-文本-浅色注释 */
+  '--color-gray-text-tertiary': 'var(--color-gray-a8)',
+  /** green/green-背景-浅色卡片 */
   '--color-green-bg-card-light': 'var(--color-green-a2)',
-  /** --green-背景/页面 */
+  /** green/green-背景-页面 */
   '--color-green-bg-page': 'var(--color-green-2)',
-  /** --green-背景/页面-浅 */
-  '--color-green-bg-page-light': 'var(--color-green-1)',
-  '--color-orange-text': 'rgba(228, 158, 0, 100%)',
-  /** --orange-文本/次要 */
-  '--color-orange-text-secondary': 'var(--color-orange-a11)',
-  /** --orange-文本/浅色注释 */
-  '--color-orange-text-light': 'var(--color-orange-a9)',
-  /** --orange-文本/不可用 */
-  '--color-orange-text-disabled': 'var(--color-orange-a8)',
-  /** --orange-控件填充/主按钮 */
-  '--color-orange-control-fill-primary': 'var(--color-orange-9)',
-  /** --orange-控件填充/主按钮-悬停 */
-  '--color-orange-control-fill-primary-hover': 'var(--color-orange-10)',
-  /** --orange-控件填充/主按钮-按下.激活 */
-  '--color-orange-control-fill-primary-active': 'var(--color-orange-10)',
-  /** --orange-控件填充/次按钮 */
-  '--color-orange-control-fill-secondary': 'var(--color-orange-a3)',
-  /** --orange-控件填充/次按钮-悬停 */
-  '--color-orange-control-fill-secondary-hover': 'var(--color-orange-a4)',
-  /** --orange-控件填充/次按钮-按下.激活 */
-  '--color-orange-control-fill-secondary-active': 'var(--color-orange-a5)',
-  /** --orange-控件填充/gost按钮-按下.激活 */
-  '--color-orange-control-fill-ghost-active': 'var(--color-orange-a4)',
-  /** --orange-控件填充/标签 */
-  '--color-orange-control-fill-tag': 'var(--color-orange-4)',
-  /** --orange-控件填充/按下.激活 */
-  '--color-orange-control-fill-active': 'var(--color-orange-a3)',
-  /** --orange-控件填充/不可用 */
-  '--color-orange-control-fill-disabled': 'var(--color-orange-3)',
-  /** --orange-控件填充/悬停 */
-  '--color-orange-control-fill-hover': 'var(--color-orange-a3)',
-  /** --orange-边线/控件按下.激活 */
-  '--color-orange-border-active': 'var(--color-orange-9)',
-  /** --orange-边线/深 */
-  '--color-orange-border-dark': 'var(--color-orange-a5)',
-  /** --orange-边线/浅 */
-  '--color-orange-border-light': 'var(--color-orange-a3)',
-  /** --orange-背景/提示块 */
-  '--color-orange-bg-tip': 'var(--color-orange-a3)',
-  /** --orange-背景/页面深 */
-  '--color-orange-bg-page-dark': 'var(--color-orange-3)',
-  /** --orange-背景/浅色卡片 */
+  /** green/green-背景-页面深 */
+  '--color-green-bg-page-dark': 'var(--color-green-3)',
+  /** green/green-背景-页面-浅 */
+  '--color-green-bg-page-light': 'var(--color-green-a1)',
+  /** green/green-背景-提示块 */
+  '--color-green-bg-tip': 'var(--color-green-a3)',
+  /** green/green-边线-深 */
+  '--color-green-border-dark': 'var(--color-green-a5)',
+  /** green/green-边线-浅 */
+  '--color-green-border-light': 'var(--color-green-a3)',
+  /** green/green-控件填充-按下.激活 */
+  '--color-green-control-fill-active': 'var(--color-green-a3)',
+  /** green/green-控件填充-不可用 */
+  '--color-green-control-fill-disabled': 'var(--color-green-3)',
+  /** green/green-控件填充-ghost按钮-按下.激活 */
+  '--color-green-control-fill-ghost-active': 'var(--color-green-a4)',
+  /** green/green-控件填充-悬停 */
+  '--color-green-control-fill-hover': 'var(--color-green-a2)',
+  /** green/green-控件填充-主按钮 */
+  '--color-green-control-fill-primary': 'var(--color-green-9)',
+  /** green/green-控件填充-主按钮-按下.激活 */
+  '--color-green-control-fill-primary-active': 'var(--color-green-10)',
+  /** green/green-控件填充-主按钮-悬停 */
+  '--color-green-control-fill-primary-hover': 'var(--color-green-8)',
+  /** green/green-控件填充-次按钮 */
+  '--color-green-control-fill-secondary': 'var(--color-green-a3)',
+  /** green/green-控件填充-次按钮-按下.激活 */
+  '--color-green-control-fill-secondary-active': 'var(--color-green-a5)',
+  /** green/green-控件填充-次按钮-悬停 */
+  '--color-green-control-fill-secondary-hover': 'var(--color-green-a4)',
+  /** green/green-控件填充-标签 */
+  '--color-green-control-fill-tag': 'var(--color-green-4)',
+  /** green/green-文本-默认 */
+  '--color-green-text-default': 'var(--color-green-a12)',
+  /** green/green-文本-不可用 */
+  '--color-green-text-disabled': 'var(--color-green-a7)',
+  /** green/green-文本-次要 */
+  '--color-green-text-secondary': 'var(--color-green-a11)',
+  /** green/green-文本-浅色注释 */
+  '--color-green-text-tertiary': 'var(--color-green-a8)',
+  /** orange/orange-背景-浅色卡片 */
   '--color-orange-bg-card-light': 'var(--color-orange-a2)',
-  /** --orange-背景/页面 */
+  /** orange/orange-背景-页面 */
   '--color-orange-bg-page': 'var(--color-orange-2)',
-  /** --orange-背景/页面-浅 */
-  '--color-orange-bg-page-light': 'var(--color-orange-1)',
-  '--color-red-text': 'rgba(215, 56, 64, 100%)',
-  /** --red-文本/次要 */
-  '--color-red-text-secondary': 'var(--color-red-a11)',
-  /** --red-文本/浅色注释 */
-  '--color-red-text-light': 'var(--color-red-a9)',
-  /** --red-文本/不可用 */
-  '--color-red-text-disabled': 'var(--color-red-a8)',
-  /** --red-控件填充/主按钮 */
-  '--color-red-control-fill-primary': 'var(--color-red-9)',
-  /** --red-控件填充/主按钮-悬停 */
-  '--color-red-control-fill-primary-hover': 'var(--color-red-10)',
-  /** --red-控件填充/主按钮-按下.激活 */
-  '--color-red-control-fill-primary-active': 'var(--color-red-10)',
-  /** --red-控件填充/次按钮 */
-  '--color-red-control-fill-secondary': 'var(--color-red-a3)',
-  /** --red-控件填充/次按钮-悬停 */
-  '--color-red-control-fill-secondary-hover': 'var(--color-red-a4)',
-  /** --red-控件填充/次按钮-按下.激活 */
-  '--color-red-control-fill-secondary-active': 'var(--color-red-a5)',
-  /** --red-控件填充/gost按钮-按下.激活 */
-  '--color-red-control-fill-ghost-active': 'var(--color-red-a4)',
-  /** --red-控件填充/标签 */
-  '--color-red-control-fill-tag': 'var(--color-red-4)',
-  /** --red-控件填充/按下.激活 */
-  '--color-red-control-fill-active': 'var(--color-red-a3)',
-  /** --red-控件填充/不可用 */
-  '--color-red-control-fill-disabled': 'var(--color-red-3)',
-  /** --red-控件填充/悬停 */
-  '--color-red-control-fill-hover': 'var(--color-red-a3)',
-  /** --red-边线/控件按下.激活 */
-  '--color-red-border-active': 'var(--color-red-9)',
-  /** --red-边线/深 */
-  '--color-red-border-dark': 'var(--color-red-a5)',
-  /** --red-边线/浅 */
-  '--color-red-border-light': 'var(--color-red-a3)',
-  /** --red-背景/提示块 */
-  '--color-red-bg-tip': 'var(--color-red-a3)',
-  /** --red-背景/页面深 */
-  '--color-red-bg-page-dark': 'var(--color-red-3)',
-  /** --red-背景/浅色卡片 */
+  /** orange/orange-背景-页面深 */
+  '--color-orange-bg-page-dark': 'var(--color-orange-3)',
+  /** orange/orange-背景-页面-浅 */
+  '--color-orange-bg-page-light': 'var(--color-orange-a1)',
+  /** orange/orange-背景-提示块 */
+  '--color-orange-bg-tip': 'var(--color-orange-a3)',
+  /** orange/orange-边线-深 */
+  '--color-orange-border-dark': 'var(--color-orange-a5)',
+  /** orange/orange-边线-浅 */
+  '--color-orange-border-light': 'var(--color-orange-a3)',
+  /** orange/orange-控件填充-按下.激活 */
+  '--color-orange-control-fill-active': 'var(--color-orange-a3)',
+  /** orange/orange-控件填充-不可用 */
+  '--color-orange-control-fill-disabled': 'var(--color-orange-3)',
+  /** orange/orange-控件填充-ghost按钮-按下.激活 */
+  '--color-orange-control-fill-ghost-active': 'var(--color-orange-a4)',
+  /** orange/orange-控件填充-悬停 */
+  '--color-orange-control-fill-hover': 'var(--color-orange-a2)',
+  /** orange/orange-控件填充-主按钮 */
+  '--color-orange-control-fill-primary': 'var(--color-orange-9)',
+  /** orange/orange-控件填充-主按钮-按下.激活 */
+  '--color-orange-control-fill-primary-active': 'var(--color-orange-10)',
+  /** orange/orange-控件填充-主按钮-悬停 */
+  '--color-orange-control-fill-primary-hover': 'var(--color-orange-8)',
+  /** orange/orange-控件填充-次按钮 */
+  '--color-orange-control-fill-secondary': 'var(--color-orange-a3)',
+  /** orange/orange-控件填充-次按钮-按下.激活 */
+  '--color-orange-control-fill-secondary-active': 'var(--color-orange-a5)',
+  /** orange/orange-控件填充-次按钮-悬停 */
+  '--color-orange-control-fill-secondary-hover': 'var(--color-orange-a4)',
+  /** orange/orange-控件填充-标签 */
+  '--color-orange-control-fill-tag': 'var(--color-orange-4)',
+  /** orange/orange-文本-默认 */
+  '--color-orange-text-default': 'var(--color-orange-a12)',
+  /** orange/orange-文本-不可用 */
+  '--color-orange-text-disabled': 'var(--color-orange-a7)',
+  /** orange/orange-文本-次要 */
+  '--color-orange-text-secondary': 'var(--color-orange-a11)',
+  /** orange/orange-文本-浅色注释 */
+  '--color-orange-text-tertiary': 'var(--color-orange-a8)',
+  /** primary/primary-背景-浅色卡片 */
+  '--color-primary-bg-card-light': 'var(--color-primary-a2)',
+  /** primary/primary-背景-页面 */
+  '--color-primary-bg-page': 'var(--color-primary-2)',
+  /** primary/primary-背景-页面深 */
+  '--color-primary-bg-page-dark': 'var(--color-primary-3)',
+  /** primary/primary-背景-页面-浅 */
+  '--color-primary-bg-page-light': 'var(--color-primary-a1)',
+  /** primary/primary-背景-提示块 */
+  '--color-primary-bg-tip': 'var(--color-primary-a3)',
+  /** primary/primary-边线-深 */
+  '--color-primary-border-dark': 'var(--color-primary-a5)',
+  /** primary/primary-边线-浅 */
+  '--color-primary-border-light': 'var(--color-primary-a3)',
+  /** primary/primary-控件填充-按下.激活 */
+  '--color-primary-control-fill-active': 'var(--color-primary-a3)',
+  /** primary/primary-控件填充-不可用 */
+  '--color-primary-control-fill-disabled': 'var(--color-primary-3)',
+  /** primary/primary-控件填充-ghost按钮-按下.激活 */
+  '--color-primary-control-fill-ghost-active': 'var(--color-primary-a4)',
+  /** primary/primary-控件填充-悬停 */
+  '--color-primary-control-fill-hover': 'var(--color-primary-a2)',
+  /** primary/primary-控件填充-主按钮 */
+  '--color-primary-control-fill-primary': 'var(--color-primary-9)',
+  /** primary/primary-控件填充-主按钮-按下.激活 */
+  '--color-primary-control-fill-primary-active': 'var(--color-primary-10)',
+  /** primary/primary-控件填充-主按钮-悬停 */
+  '--color-primary-control-fill-primary-hover': 'var(--color-primary-8)',
+  /** primary/primary-控件填充-次按钮 */
+  '--color-primary-control-fill-secondary': 'var(--color-primary-a3)',
+  /** primary/primary-控件填充-次按钮-按下.激活 */
+  '--color-primary-control-fill-secondary-active': 'var(--color-primary-a5)',
+  /** primary/primary-控件填充-次按钮-悬停 */
+  '--color-primary-control-fill-secondary-hover': 'var(--color-primary-a4)',
+  /** primary/primary-控件填充-标签 */
+  '--color-primary-control-fill-tag': 'var(--color-primary-4)',
+  /** primary/primary-文本-默认 */
+  '--color-primary-text-default': 'var(--color-primary-a12)',
+  /** primary/primary-文本-不可用 */
+  '--color-primary-text-disabled': 'var(--color-primary-a7)',
+  /** primary/primary-文本-次要 */
+  '--color-primary-text-secondary': 'var(--color-primary-a11)',
+  /** primary/primary-文本-浅色注释 */
+  '--color-primary-text-tertiary': 'var(--color-primary-a8)',
+  /** red/red-背景-浅色卡片 */
   '--color-red-bg-card-light': 'var(--color-red-a2)',
-  /** --red-背景/页面 */
+  /** red/red-背景-页面 */
   '--color-red-bg-page': 'var(--color-red-2)',
-  /** --red-背景/页面-浅 */
-  '--color-red-bg-page-light': 'var(--color-red-1)',
-  /** --sub0-文本/默认 */
-  '--color-sub0-text': 'var(--color-sub0-a12)',
-  /** --sub0-文本/次要 */
-  '--color-sub0-text-secondary': 'var(--color-sub0-a11)',
-  /** --sub0-文本/浅色注释 */
-  '--color-sub0-text-light': 'var(--color-sub0-a9)',
-  /** --sub0-文本/不可用 */
-  '--color-sub0-text-disabled': 'var(--color-sub0-a8)',
-  /** --sub0-控件填充/主按钮 */
-  '--color-sub0-control-fill-primary': 'var(--color-sub0-9)',
-  /** --sub0-控件填充/主按钮-悬停 */
-  '--color-sub0-control-fill-primary-hover': 'var(--color-sub0-10)',
-  /** --sub0-控件填充/主按钮-按下.激活 */
-  '--color-sub0-control-fill-primary-active': 'var(--color-sub0-10)',
-  /** --sub0-控件填充/次按钮 */
-  '--color-sub0-control-fill-secondary': 'var(--color-sub0-a3)',
-  /** --sub0-控件填充/次按钮-悬停 */
-  '--color-sub0-control-fill-secondary-hover': 'var(--color-sub0-a4)',
-  /** --sub0-控件填充/次按钮-按下.激活 */
-  '--color-sub0-control-fill-secondary-active': 'var(--color-sub0-a5)',
-  /** --sub0-控件填充/gost按钮-按下.激活 */
-  '--color-sub0-control-fill-ghost-active': 'var(--color-sub0-a4)',
-  /** --sub0-控件填充/标签 */
-  '--color-sub0-control-fill-tag': 'var(--color-sub0-4)',
-  /** --sub0-控件填充/按下.激活 */
-  '--color-sub0-control-fill-active': 'var(--color-sub0-a3)',
-  /** --sub0-控件填充/不可用 */
-  '--color-sub0-control-fill-disabled': 'var(--color-sub0-3)',
-  /** --sub0-控件填充/悬停 */
-  '--color-sub0-control-fill-hover': 'var(--color-sub0-a3)',
-  /** --sub0-边线/控件按下.激活 */
-  '--color-sub0-border-active': 'var(--color-sub0-9)',
-  /** --sub0-边线/深 */
-  '--color-sub0-border-dark': 'var(--color-sub0-a5)',
-  /** --sub0-边线/浅 */
-  '--color-sub0-border-light': 'var(--color-sub0-a3)',
-  /** --sub0-背景/提示块 */
-  '--color-sub0-bg-tip': 'var(--color-sub0-a3)',
-  /** --sub0-背景/页面深 */
-  '--color-sub0-bg-page-dark': 'var(--color-sub0-3)',
-  /** --sub0-背景/浅色卡片 */
+  /** red/red-背景-页面深 */
+  '--color-red-bg-page-dark': 'var(--color-red-3)',
+  /** red/red-背景-页面-浅 */
+  '--color-red-bg-page-light': 'var(--color-red-a1)',
+  /** red/red-背景-提示块 */
+  '--color-red-bg-tip': 'var(--color-red-a3)',
+  /** red/red-边线-深 */
+  '--color-red-border-dark': 'var(--color-red-a5)',
+  /** red/red-边线-浅 */
+  '--color-red-border-light': 'var(--color-red-a3)',
+  /** red/red-控件填充-按下.激活 */
+  '--color-red-control-fill-active': 'var(--color-red-a3)',
+  /** red/red-控件填充-不可用 */
+  '--color-red-control-fill-disabled': 'var(--color-red-3)',
+  /** red/red-控件填充-ghost按钮-按下.激活 */
+  '--color-red-control-fill-ghost-active': 'var(--color-red-a4)',
+  /** red/red-控件填充-悬停 */
+  '--color-red-control-fill-hover': 'var(--color-red-a2)',
+  /** red/red-控件填充-主按钮 */
+  '--color-red-control-fill-primary': 'var(--color-red-9)',
+  /** red/red-控件填充-主按钮-按下.激活 */
+  '--color-red-control-fill-primary-active': 'var(--color-red-10)',
+  /** red/red-控件填充-主按钮-悬停 */
+  '--color-red-control-fill-primary-hover': 'var(--color-red-8)',
+  /** red/red-控件填充-次按钮 */
+  '--color-red-control-fill-secondary': 'var(--color-red-a3)',
+  /** red/red-控件填充-次按钮-按下.激活 */
+  '--color-red-control-fill-secondary-active': 'var(--color-red-a5)',
+  /** red/red-控件填充-次按钮-悬停 */
+  '--color-red-control-fill-secondary-hover': 'var(--color-red-a4)',
+  /** red/red-控件填充-标签 */
+  '--color-red-control-fill-tag': 'var(--color-red-4)',
+  /** red/red-文本-默认 */
+  '--color-red-text-default': 'var(--color-red-a12)',
+  /** red/red-文本-不可用 */
+  '--color-red-text-disabled': 'var(--color-red-a7)',
+  /** red/red-文本-次要 */
+  '--color-red-text-secondary': 'var(--color-red-a11)',
+  /** red/red-文本-浅色注释 */
+  '--color-red-text-tertiary': 'var(--color-red-a8)',
+  /** 辅0/辅0-背景-浅色卡片 */
   '--color-sub0-bg-card-light': 'var(--color-sub0-a2)',
-  /** --sub0-背景/页面 */
+  /** 辅0/辅0-背景-页面 */
   '--color-sub0-bg-page': 'var(--color-sub0-2)',
-  /** --sub0-背景/页面-浅 */
-  '--color-sub0-bg-page-light': 'var(--color-sub0-1)',
-  /** --sub1-文本/默认 */
-  '--color-sub1-text': 'var(--color-sub1-a12)',
-  /** --sub1-文本/次要 */
-  '--color-sub1-text-secondary': 'var(--color-sub1-a11)',
-  /** --sub1-文本/浅色注释 */
-  '--color-sub1-text-light': 'var(--color-sub1-a9)',
-  /** --sub1-文本/不可用 */
-  '--color-sub1-text-disabled': 'var(--color-sub1-a8)',
-  /** --sub1-控件填充/主按钮 */
-  '--color-sub1-control-fill-primary': 'var(--color-sub1-9)',
-  /** --sub1-控件填充/主按钮-悬停 */
-  '--color-sub1-control-fill-primary-hover': 'var(--color-sub1-10)',
-  /** --sub1-控件填充/主按钮-按下.激活 */
-  '--color-sub1-control-fill-primary-active': 'var(--color-sub1-10)',
-  /** --sub1-控件填充/次按钮 */
-  '--color-sub1-control-fill-secondary': 'var(--color-sub1-a3)',
-  /** --sub1-控件填充/次按钮-悬停 */
-  '--color-sub1-control-fill-secondary-hover': 'var(--color-sub1-a4)',
-  /** --sub1-控件填充/次按钮-按下.激活 */
-  '--color-sub1-control-fill-secondary-active': 'var(--color-sub1-a5)',
-  /** --sub1-控件填充/gost按钮-按下.激活 */
-  '--color-sub1-control-fill-ghost-active': 'var(--color-sub1-a4)',
-  /** --sub1-控件填充/标签 */
-  '--color-sub1-control-fill-tag': 'var(--color-sub1-4)',
-  /** --sub1-控件填充/按下.激活 */
-  '--color-sub1-control-fill-active': 'var(--color-sub1-a3)',
-  /** --sub1-控件填充/不可用 */
-  '--color-sub1-control-fill-disabled': 'var(--color-sub1-3)',
-  /** --sub1-控件填充/悬停 */
-  '--color-sub1-control-fill-hover': 'var(--color-sub1-a3)',
-  /** --sub1-边线/控件按下.激活 */
-  '--color-sub1-border-active': 'var(--color-sub1-9)',
-  /** --sub1-边线/深 */
-  '--color-sub1-border-dark': 'var(--color-sub1-a5)',
-  /** --sub1-边线/浅 */
-  '--color-sub1-border-light': 'var(--color-sub1-a3)',
-  /** --sub1-背景/提示块 */
-  '--color-sub1-bg-tip': 'var(--color-sub1-a3)',
-  /** --sub1-背景/页面深 */
-  '--color-sub1-bg-page-dark': 'var(--color-sub1-3)',
-  /** --sub1-背景/浅色卡片 */
+  /** 辅0/辅0-背景-页面深 */
+  '--color-sub0-bg-page-dark': 'var(--color-sub0-3)',
+  /** 辅0/辅0-背景-页面-浅 */
+  '--color-sub0-bg-page-light': 'var(--color-sub0-a1)',
+  /** 辅0/辅0-背景-提示块 */
+  '--color-sub0-bg-tip': 'var(--color-sub0-a3)',
+  /** 辅0/辅0-边线-深 */
+  '--color-sub0-border-dark': 'var(--color-sub0-a5)',
+  /** 辅0/辅0-边线-浅 */
+  '--color-sub0-border-light': 'var(--color-sub0-a3)',
+  /** 辅0/辅0-控件填充-按下.激活 */
+  '--color-sub0-control-fill-active': 'var(--color-sub0-a3)',
+  /** 辅0/辅0-控件填充-不可用 */
+  '--color-sub0-control-fill-disabled': 'var(--color-sub0-3)',
+  /** 辅0/辅0-控件填充-ghost按钮-按下.激活 */
+  '--color-sub0-control-fill-ghost-active': 'var(--color-sub0-a4)',
+  /** 辅0/辅0-控件填充-悬停 */
+  '--color-sub0-control-fill-hover': 'var(--color-sub0-a2)',
+  /** 辅0/辅0-控件填充-主按钮 */
+  '--color-sub0-control-fill-primary': 'var(--color-sub0-9)',
+  /** 辅0/辅0-控件填充-主按钮-按下.激活 */
+  '--color-sub0-control-fill-primary-active': 'var(--color-sub0-10)',
+  /** 辅0/辅0-控件填充-主按钮-悬停 */
+  '--color-sub0-control-fill-primary-hover': 'var(--color-sub0-8)',
+  /** 辅0/辅0-控件填充-次按钮 */
+  '--color-sub0-control-fill-secondary': 'var(--color-sub0-a3)',
+  /** 辅0/辅0-控件填充-次按钮-按下.激活 */
+  '--color-sub0-control-fill-secondary-active': 'var(--color-sub0-a5)',
+  /** 辅0/辅0-控件填充-次按钮-悬停 */
+  '--color-sub0-control-fill-secondary-hover': 'var(--color-sub0-a4)',
+  /** 辅0/辅0-控件填充-标签 */
+  '--color-sub0-control-fill-tag': 'var(--color-sub0-4)',
+  /** 辅0/辅0-文本-默认 */
+  '--color-sub0-text-default': 'var(--color-sub0-a12)',
+  /** 辅0/辅0-文本-不可用 */
+  '--color-sub0-text-disabled': 'var(--color-sub0-a7)',
+  /** 辅0/辅0-文本-次要 */
+  '--color-sub0-text-secondary': 'var(--color-sub0-a11)',
+  /** 辅0/辅0-文本-浅色注释 */
+  '--color-sub0-text-tertiary': 'var(--color-sub0-a8)',
+  /** 辅1/辅1-背景-浅色卡片 */
   '--color-sub1-bg-card-light': 'var(--color-sub1-a2)',
-  /** --sub1-背景/页面 */
+  /** 辅1/辅1-背景-页面 */
   '--color-sub1-bg-page': 'var(--color-sub1-2)',
-  /** --sub1-背景/页面-浅 */
-  '--color-sub1-bg-page-light': 'var(--color-sub1-1)',
-  /** --sub2-文本/默认 */
-  '--color-sub2-text': 'var(--color-sub2-a12)',
-  /** --sub2-文本/次要 */
-  '--color-sub2-text-secondary': 'var(--color-sub2-a11)',
-  /** --sub2-文本/浅色注释 */
-  '--color-sub2-text-light': 'var(--color-sub2-a9)',
-  /** --sub2-文本/不可用 */
-  '--color-sub2-text-disabled': 'var(--color-sub2-a8)',
-  /** --sub2-控件填充/主按钮 */
-  '--color-sub2-control-fill-primary': 'var(--color-sub2-9)',
-  /** --sub2-控件填充/主按钮-悬停 */
-  '--color-sub2-control-fill-primary-hover': 'var(--color-sub2-10)',
-  /** --sub2-控件填充/主按钮-按下.激活 */
-  '--color-sub2-control-fill-primary-active': 'var(--color-sub2-10)',
-  /** --sub2-控件填充/次按钮 */
-  '--color-sub2-control-fill-secondary': 'var(--color-sub2-a3)',
-  /** --sub2-控件填充/次按钮-悬停 */
-  '--color-sub2-control-fill-secondary-hover': 'var(--color-sub2-a4)',
-  /** --sub2-控件填充/次按钮-按下.激活 */
-  '--color-sub2-control-fill-secondary-active': 'var(--color-sub2-a5)',
-  /** --sub2-控件填充/gost按钮-按下.激活 */
-  '--color-sub2-control-fill-ghost-active': 'var(--color-sub2-a4)',
-  /** --sub2-控件填充/标签 */
-  '--color-sub2-control-fill-tag': 'var(--color-sub2-4)',
-  /** --sub2-控件填充/按下.激活 */
-  '--color-sub2-control-fill-active': 'var(--color-sub2-a3)',
-  /** --sub2-控件填充/不可用 */
-  '--color-sub2-control-fill-disabled': 'var(--color-sub2-3)',
-  /** --sub2-控件填充/悬停 */
-  '--color-sub2-control-fill-hover': 'var(--color-sub2-a3)',
-  /** --sub2-边线/控件按下.激活 */
-  '--color-sub2-border-active': 'var(--color-sub2-9)',
-  /** --sub2-边线/深 */
-  '--color-sub2-border-dark': 'var(--color-sub2-a5)',
-  /** --sub2-边线/浅 */
-  '--color-sub2-border-light': 'var(--color-sub2-a3)',
-  /** --sub2-背景/提示块 */
-  '--color-sub2-bg-tip': 'var(--color-sub2-a3)',
-  /** --sub2-背景/页面深 */
-  '--color-sub2-bg-page-dark': 'var(--color-sub2-3)',
-  /** --sub2-背景/浅色卡片 */
+  /** 辅1/辅1-背景-页面深 */
+  '--color-sub1-bg-page-dark': 'var(--color-sub1-3)',
+  /** 辅1/辅1-背景-页面-浅 */
+  '--color-sub1-bg-page-light': 'var(--color-sub1-a1)',
+  /** 辅1/辅1-背景-提示块 */
+  '--color-sub1-bg-tip': 'var(--color-sub1-a3)',
+  /** 辅1/辅1-边线-深 */
+  '--color-sub1-border-dark': 'var(--color-sub1-a5)',
+  /** 辅1/辅1-边线-浅 */
+  '--color-sub1-border-light': 'var(--color-sub1-a3)',
+  /** 辅1/辅1-控件填充-按下.激活 */
+  '--color-sub1-control-fill-active': 'var(--color-sub1-a3)',
+  /** 辅1/辅1-控件填充-不可用 */
+  '--color-sub1-control-fill-disabled': 'var(--color-sub1-3)',
+  /** 辅1/辅1-控件填充-ghost按钮-按下.激活 */
+  '--color-sub1-control-fill-ghost-active': 'var(--color-sub1-a4)',
+  /** 辅1/辅1-控件填充-悬停 */
+  '--color-sub1-control-fill-hover': 'var(--color-sub1-a2)',
+  /** 辅1/辅1-控件填充-主按钮 */
+  '--color-sub1-control-fill-primary': 'var(--color-sub1-9)',
+  /** 辅1/辅1-控件填充-主按钮-按下.激活 */
+  '--color-sub1-control-fill-primary-active': 'var(--color-sub1-10)',
+  /** 辅1/辅1-控件填充-主按钮-悬停 */
+  '--color-sub1-control-fill-primary-hover': 'var(--color-sub1-8)',
+  /** 辅1/辅1-控件填充-次按钮 */
+  '--color-sub1-control-fill-secondary': 'var(--color-sub1-a3)',
+  /** 辅1/辅1-控件填充-次按钮-按下.激活 */
+  '--color-sub1-control-fill-secondary-active': 'var(--color-sub1-a5)',
+  /** 辅1/辅1-控件填充-次按钮-悬停 */
+  '--color-sub1-control-fill-secondary-hover': 'var(--color-sub1-a4)',
+  /** 辅1/辅1-控件填充-标签 */
+  '--color-sub1-control-fill-tag': 'var(--color-sub1-4)',
+  /** 辅1/辅1-文本-默认 */
+  '--color-sub1-text-default': 'var(--color-sub1-a12)',
+  /** 辅1/辅1-文本-不可用 */
+  '--color-sub1-text-disabled': 'var(--color-sub1-a7)',
+  /** 辅1/辅1-文本-次要 */
+  '--color-sub1-text-secondary': 'var(--color-sub1-a11)',
+  /** 辅1/辅1-文本-浅色注释 */
+  '--color-sub1-text-tertiary': 'var(--color-sub1-a8)',
+  /** 辅2/辅2-背景-浅色卡片 */
   '--color-sub2-bg-card-light': 'var(--color-sub2-a2)',
-  /** --sub2-背景/页面 */
+  /** 辅2/辅2-背景-页面 */
   '--color-sub2-bg-page': 'var(--color-sub2-2)',
-  /** --sub2-背景/页面-浅 */
-  '--color-sub2-bg-page-light': 'var(--color-sub2-1)',
-  /** --sub3-文本/默认 */
-  '--color-sub3-text': 'var(--color-sub3-a12)',
-  /** --sub3-文本/次要 */
-  '--color-sub3-text-secondary': 'var(--color-sub3-a11)',
-  /** --sub3-文本/浅色注释 */
-  '--color-sub3-text-light': 'var(--color-sub3-a9)',
-  /** --sub3-文本/不可用 */
-  '--color-sub3-text-disabled': 'var(--color-sub3-a8)',
-  /** --sub3-控件填充/主按钮 */
-  '--color-sub3-control-fill-primary': 'var(--color-sub3-9)',
-  /** --sub3-控件填充/主按钮-悬停 */
-  '--color-sub3-control-fill-primary-hover': 'var(--color-sub3-10)',
-  /** --sub3-控件填充/主按钮-按下.激活 */
-  '--color-sub3-control-fill-primary-active': 'var(--color-sub3-10)',
-  /** --sub3-控件填充/次按钮 */
-  '--color-sub3-control-fill-secondary': 'var(--color-sub3-a3)',
-  /** --sub3-控件填充/次按钮-悬停 */
-  '--color-sub3-control-fill-secondary-hover': 'var(--color-sub3-a4)',
-  /** --sub3-控件填充/次按钮-按下.激活 */
-  '--color-sub3-control-fill-secondary-active': 'var(--color-sub3-a5)',
-  /** --sub3-控件填充/gost按钮-按下.激活 */
-  '--color-sub3-control-fill-ghost-active': 'var(--color-sub3-a4)',
-  /** --sub3-控件填充/标签 */
-  '--color-sub3-control-fill-tag': 'var(--color-sub3-4)',
-  /** --sub3-控件填充/按下.激活 */
-  '--color-sub3-control-fill-active': 'var(--color-sub3-a3)',
-  /** --sub3-控件填充/不可用 */
-  '--color-sub3-control-fill-disabled': 'var(--color-sub3-3)',
-  /** --sub3-控件填充/悬停 */
-  '--color-sub3-control-fill-hover': 'var(--color-sub3-a3)',
-  /** --sub3-边线/控件按下.激活 */
-  '--color-sub3-border-active': 'var(--color-sub3-9)',
-  /** --sub3-边线/深 */
-  '--color-sub3-border-dark': 'var(--color-sub3-a5)',
-  /** --sub3-边线/浅 */
-  '--color-sub3-border-light': 'var(--color-sub3-a3)',
-  /** --sub3-背景/提示块 */
-  '--color-sub3-bg-tip': 'var(--color-sub3-a3)',
-  /** --sub3-背景/页面深 */
-  '--color-sub3-bg-page-dark': 'var(--color-sub3-3)',
-  /** --sub3-背景/浅色卡片 */
+  /** 辅2/辅2-背景-页面深 */
+  '--color-sub2-bg-page-dark': 'var(--color-sub2-3)',
+  /** 辅2/辅2-背景-页面-浅 */
+  '--color-sub2-bg-page-light': 'var(--color-sub2-a1)',
+  /** 辅2/辅2-背景-提示块 */
+  '--color-sub2-bg-tip': 'var(--color-sub2-a3)',
+  /** 辅2/辅2-边线-深 */
+  '--color-sub2-border-dark': 'var(--color-sub2-a5)',
+  /** 辅2/辅2-边线-浅 */
+  '--color-sub2-border-light': 'var(--color-sub2-a3)',
+  /** 辅2/辅2-控件填充-按下.激活 */
+  '--color-sub2-control-fill-active': 'var(--color-sub2-a3)',
+  /** 辅2/辅2-控件填充-不可用 */
+  '--color-sub2-control-fill-disabled': 'var(--color-sub2-3)',
+  /** 辅2/辅2-控件填充-ghost按钮-按下.激活 */
+  '--color-sub2-control-fill-ghost-active': 'var(--color-sub2-a4)',
+  /** 辅2/辅2-控件填充-悬停 */
+  '--color-sub2-control-fill-hover': 'var(--color-sub2-a2)',
+  /** 辅2/辅2-控件填充-主按钮 */
+  '--color-sub2-control-fill-primary': 'var(--color-sub2-9)',
+  /** 辅2/辅2-控件填充-主按钮-按下.激活 */
+  '--color-sub2-control-fill-primary-active': 'var(--color-sub2-10)',
+  /** 辅2/辅2-控件填充-主按钮-悬停 */
+  '--color-sub2-control-fill-primary-hover': 'var(--color-sub2-8)',
+  /** 辅2/辅2-控件填充-次按钮 */
+  '--color-sub2-control-fill-secondary': 'var(--color-sub2-a3)',
+  /** 辅2/辅2-控件填充-次按钮-按下.激活 */
+  '--color-sub2-control-fill-secondary-active': 'var(--color-sub2-a5)',
+  /** 辅2/辅2-控件填充-次按钮-悬停 */
+  '--color-sub2-control-fill-secondary-hover': 'var(--color-sub2-a4)',
+  /** 辅2/辅2-控件填充-标签 */
+  '--color-sub2-control-fill-tag': 'var(--color-sub2-4)',
+  /** 辅2/辅2-文本-默认 */
+  '--color-sub2-text-default': 'var(--color-sub2-a12)',
+  /** 辅2/辅2-文本-不可用 */
+  '--color-sub2-text-disabled': 'var(--color-sub2-a7)',
+  /** 辅2/辅2-文本-次要 */
+  '--color-sub2-text-secondary': 'var(--color-sub2-a11)',
+  /** 辅2/辅2-文本-浅色注释 */
+  '--color-sub2-text-tertiary': 'var(--color-sub2-a8)',
+  /** 辅3/辅3-背景-浅色卡片 */
   '--color-sub3-bg-card-light': 'var(--color-sub3-a2)',
-  /** --sub3-背景/页面 */
+  /** 辅3/辅3-背景-页面 */
   '--color-sub3-bg-page': 'var(--color-sub3-2)',
-  /** --sub3-背景/页面-浅 */
-  '--color-sub3-bg-page-light': 'var(--color-sub3-1)',
-  /** --sub4-文本/默认 */
-  '--color-sub4-text': 'var(--color-sub4-a12)',
-  /** --sub4-文本/次要 */
-  '--color-sub4-text-secondary': 'var(--color-sub4-a11)',
-  /** --sub4-文本/浅色注释 */
-  '--color-sub4-text-light': 'var(--color-sub4-a9)',
-  /** --sub4-文本/不可用 */
-  '--color-sub4-text-disabled': 'var(--color-sub4-a8)',
-  /** --sub4-控件填充/主按钮 */
-  '--color-sub4-control-fill-primary': 'var(--color-sub4-9)',
-  /** --sub4-控件填充/主按钮-悬停 */
-  '--color-sub4-control-fill-primary-hover': 'var(--color-sub4-10)',
-  /** --sub4-控件填充/主按钮-按下.激活 */
-  '--color-sub4-control-fill-primary-active': 'var(--color-sub4-10)',
-  /** --sub4-控件填充/次按钮 */
-  '--color-sub4-control-fill-secondary': 'var(--color-sub4-a3)',
-  /** --sub4-控件填充/次按钮-悬停 */
-  '--color-sub4-control-fill-secondary-hover': 'var(--color-sub4-a4)',
-  /** --sub4-控件填充/次按钮-按下.激活 */
-  '--color-sub4-control-fill-secondary-active': 'var(--color-sub4-a5)',
-  /** --sub4-控件填充/gost按钮-按下.激活 */
-  '--color-sub4-control-fill-ghost-active': 'var(--color-sub4-a4)',
-  /** --sub4-控件填充/标签 */
-  '--color-sub4-control-fill-tag': 'var(--color-sub4-4)',
-  /** --sub4-控件填充/按下.激活 */
-  '--color-sub4-control-fill-active': 'var(--color-sub4-a3)',
-  /** --sub4-控件填充/不可用 */
-  '--color-sub4-control-fill-disabled': 'var(--color-sub4-3)',
-  /** --sub4-控件填充/悬停 */
-  '--color-sub4-control-fill-hover': 'var(--color-sub4-a3)',
-  /** --sub4-边线/控件按下.激活 */
-  '--color-sub4-border-active': 'var(--color-sub4-9)',
-  /** --sub4-边线/深 */
-  '--color-sub4-border-dark': 'var(--color-sub4-a5)',
-  /** --sub4-边线/浅 */
-  '--color-sub4-border-light': 'var(--color-sub4-a3)',
-  /** --sub4-背景/提示块 */
-  '--color-sub4-bg-tip': 'var(--color-sub4-a3)',
-  /** --sub4-背景/页面深 */
-  '--color-sub4-bg-page-dark': 'var(--color-sub4-3)',
-  /** --sub4-背景/浅色卡片 */
+  /** 辅3/辅3-背景-页面深 */
+  '--color-sub3-bg-page-dark': 'var(--color-sub3-3)',
+  /** 辅3/辅3-背景-页面-浅 */
+  '--color-sub3-bg-page-light': 'var(--color-sub3-a1)',
+  /** 辅3/辅3-背景-提示块 */
+  '--color-sub3-bg-tip': 'var(--color-sub3-a3)',
+  /** 辅3/辅3-边线-深 */
+  '--color-sub3-border-dark': 'var(--color-sub3-a5)',
+  /** 辅3/辅3-边线-浅 */
+  '--color-sub3-border-light': 'var(--color-sub3-a3)',
+  /** 辅3/辅3-控件填充-按下.激活 */
+  '--color-sub3-control-fill-active': 'var(--color-sub3-a3)',
+  /** 辅3/辅3-控件填充-不可用 */
+  '--color-sub3-control-fill-disabled': 'var(--color-sub3-3)',
+  /** 辅3/辅3-控件填充-ghost按钮-按下.激活 */
+  '--color-sub3-control-fill-ghost-active': 'var(--color-sub3-a4)',
+  /** 辅3/辅3-控件填充-悬停 */
+  '--color-sub3-control-fill-hover': 'var(--color-sub3-a2)',
+  /** 辅3/辅3-控件填充-主按钮 */
+  '--color-sub3-control-fill-primary': 'var(--color-sub3-9)',
+  /** 辅3/辅3-控件填充-主按钮-按下.激活 */
+  '--color-sub3-control-fill-primary-active': 'var(--color-sub3-10)',
+  /** 辅3/辅3-控件填充-主按钮-悬停 */
+  '--color-sub3-control-fill-primary-hover': 'var(--color-sub3-8)',
+  /** 辅3/辅3-控件填充-次按钮 */
+  '--color-sub3-control-fill-secondary': 'var(--color-sub3-a3)',
+  /** 辅3/辅3-控件填充-次按钮-按下.激活 */
+  '--color-sub3-control-fill-secondary-active': 'var(--color-sub3-a5)',
+  /** 辅3/辅3-控件填充-次按钮-悬停 */
+  '--color-sub3-control-fill-secondary-hover': 'var(--color-sub3-a4)',
+  /** 辅3/辅3-控件填充-标签 */
+  '--color-sub3-control-fill-tag': 'var(--color-sub3-4)',
+  /** 辅3/辅3-文本-默认 */
+  '--color-sub3-text-default': 'var(--color-sub3-a12)',
+  /** 辅3/辅3-文本-不可用 */
+  '--color-sub3-text-disabled': 'var(--color-sub3-a7)',
+  /** 辅3/辅3-文本-次要 */
+  '--color-sub3-text-secondary': 'var(--color-sub3-a11)',
+  /** 辅3/辅3-文本-浅色注释 */
+  '--color-sub3-text-tertiary': 'var(--color-sub3-a8)',
+  /** 辅4/辅4-背景-浅色卡片 */
   '--color-sub4-bg-card-light': 'var(--color-sub4-a2)',
-  /** --sub4-背景/页面 */
+  /** 辅4/辅4-背景-页面 */
   '--color-sub4-bg-page': 'var(--color-sub4-2)',
-  /** --sub4-背景/页面-浅 */
-  '--color-sub4-bg-page-light': 'var(--color-sub4-1)',
-  /** --sub5-文本/默认 */
-  '--color-sub5-text': 'var(--color-sub5-a12)',
-  /** --sub5-文本/次要 */
-  '--color-sub5-text-secondary': 'var(--color-sub5-a11)',
-  /** --sub5-文本/浅色注释 */
-  '--color-sub5-text-light': 'var(--color-sub5-a9)',
-  /** --sub5-文本/不可用 */
-  '--color-sub5-text-disabled': 'var(--color-sub5-a8)',
-  /** --sub5-控件填充/主按钮 */
-  '--color-sub5-control-fill-primary': 'var(--color-sub5-9)',
-  /** --sub5-控件填充/主按钮-悬停 */
-  '--color-sub5-control-fill-primary-hover': 'var(--color-sub5-10)',
-  /** --sub5-控件填充/主按钮-按下.激活 */
-  '--color-sub5-control-fill-primary-active': 'var(--color-sub5-10)',
-  /** --sub5-控件填充/次按钮 */
-  '--color-sub5-control-fill-secondary': 'var(--color-sub5-a3)',
-  /** --sub5-控件填充/次按钮-悬停 */
-  '--color-sub5-control-fill-secondary-hover': 'var(--color-sub5-a4)',
-  /** --sub5-控件填充/次按钮-按下.激活 */
-  '--color-sub5-control-fill-secondary-active': 'var(--color-sub5-a5)',
-  /** --sub5-控件填充/gost按钮-按下.激活 */
-  '--color-sub5-control-fill-ghost-active': 'var(--color-sub5-a4)',
-  /** --sub5-控件填充/标签 */
-  '--color-sub5-control-fill-tag': 'var(--color-sub5-4)',
-  /** --sub5-控件填充/按下.激活 */
-  '--color-sub5-control-fill-active': 'var(--color-sub5-a3)',
-  /** --sub5-控件填充/不可用 */
-  '--color-sub5-control-fill-disabled': 'var(--color-sub5-3)',
-  /** --sub5-控件填充/悬停 */
-  '--color-sub5-control-fill-hover': 'var(--color-sub5-a3)',
-  /** --sub5-边线/控件按下.激活 */
-  '--color-sub5-border-active': 'var(--color-sub5-9)',
-  /** --sub5-边线/深 */
-  '--color-sub5-border-dark': 'var(--color-sub5-a5)',
-  /** --sub5-边线/浅 */
-  '--color-sub5-border-light': 'var(--color-sub5-a3)',
-  /** --sub5-背景/提示块 */
-  '--color-sub5-bg-tip': 'var(--color-sub5-a3)',
-  /** --sub5-背景/页面深 */
-  '--color-sub5-bg-page-dark': 'var(--color-sub5-3)',
-  /** --sub5-背景/浅色卡片 */
+  /** 辅4/辅4-背景-页面深 */
+  '--color-sub4-bg-page-dark': 'var(--color-sub4-3)',
+  /** 辅4/辅4-背景-页面-浅 */
+  '--color-sub4-bg-page-light': 'var(--color-sub4-a1)',
+  /** 辅4/辅4-背景-提示块 */
+  '--color-sub4-bg-tip': 'var(--color-sub4-a3)',
+  /** 辅4/辅4-边线-深 */
+  '--color-sub4-border-dark': 'var(--color-sub4-a5)',
+  /** 辅4/辅4-边线-浅 */
+  '--color-sub4-border-light': 'var(--color-sub4-a3)',
+  /** 辅4/辅4-控件填充-按下.激活 */
+  '--color-sub4-control-fill-active': 'var(--color-sub4-a3)',
+  /** 辅4/辅4-控件填充-不可用 */
+  '--color-sub4-control-fill-disabled': 'var(--color-sub4-3)',
+  /** 辅4/辅4-控件填充-ghost按钮-按下.激活 */
+  '--color-sub4-control-fill-ghost-active': 'var(--color-sub4-a4)',
+  /** 辅4/辅4-控件填充-悬停 */
+  '--color-sub4-control-fill-hover': 'var(--color-sub4-a2)',
+  /** 辅4/辅4-控件填充-主按钮 */
+  '--color-sub4-control-fill-primary': 'var(--color-sub4-9)',
+  /** 辅4/辅4-控件填充-主按钮-按下.激活 */
+  '--color-sub4-control-fill-primary-active': 'var(--color-sub4-10)',
+  /** 辅4/辅4-控件填充-主按钮-悬停 */
+  '--color-sub4-control-fill-primary-hover': 'var(--color-sub4-8)',
+  /** 辅4/辅4-控件填充-次按钮 */
+  '--color-sub4-control-fill-secondary': 'var(--color-sub4-a3)',
+  /** 辅4/辅4-控件填充-次按钮-按下.激活 */
+  '--color-sub4-control-fill-secondary-active': 'var(--color-sub4-a5)',
+  /** 辅4/辅4-控件填充-次按钮-悬停 */
+  '--color-sub4-control-fill-secondary-hover': 'var(--color-sub4-a4)',
+  /** 辅4/辅4-控件填充-标签 */
+  '--color-sub4-control-fill-tag': 'var(--color-sub4-4)',
+  /** 辅4/辅4-文本-默认 */
+  '--color-sub4-text-default': 'var(--color-sub4-a12)',
+  /** 辅4/辅4-文本-不可用 */
+  '--color-sub4-text-disabled': 'var(--color-sub4-a7)',
+  /** 辅4/辅4-文本-次要 */
+  '--color-sub4-text-secondary': 'var(--color-sub4-a11)',
+  /** 辅4/辅4-文本-浅色注释 */
+  '--color-sub4-text-tertiary': 'var(--color-sub4-a8)',
+  /** 辅5/辅5-背景-浅色卡片 */
   '--color-sub5-bg-card-light': 'var(--color-sub5-a2)',
-  /** --sub5-背景/页面 */
+  /** 辅5/辅5-背景-页面 */
   '--color-sub5-bg-page': 'var(--color-sub5-2)',
-  /** --sub5-背景/页面-浅 */
-  '--color-sub5-bg-page-light': 'var(--color-sub5-1)',
-  /** --sub6-文本/默认 */
-  '--color-sub6-text': 'var(--color-sub6-a12)',
-  /** --sub6-文本/次要 */
-  '--color-sub6-text-secondary': 'var(--color-sub6-a11)',
-  /** --sub6-文本/浅色注释 */
-  '--color-sub6-text-light': 'var(--color-sub6-a9)',
-  /** --sub6-文本/不可用 */
-  '--color-sub6-text-disabled': 'var(--color-sub6-a8)',
-  /** --sub6-控件填充/主按钮 */
-  '--color-sub6-control-fill-primary': 'var(--color-sub6-9)',
-  /** --sub6-控件填充/主按钮-悬停 */
-  '--color-sub6-control-fill-primary-hover': 'var(--color-sub6-10)',
-  /** --sub6-控件填充/主按钮-按下.激活 */
-  '--color-sub6-control-fill-primary-active': 'var(--color-sub6-10)',
-  /** --sub6-控件填充/次按钮 */
-  '--color-sub6-control-fill-secondary': 'var(--color-sub6-a3)',
-  /** --sub6-控件填充/次按钮-悬停 */
-  '--color-sub6-control-fill-secondary-hover': 'var(--color-sub6-a4)',
-  /** --sub6-控件填充/次按钮-按下.激活 */
-  '--color-sub6-control-fill-secondary-active': 'var(--color-sub6-a5)',
-  /** --sub6-控件填充/gost按钮-按下.激活 */
-  '--color-sub6-control-fill-ghost-active': 'var(--color-sub6-a4)',
-  /** --sub6-控件填充/标签 */
-  '--color-sub6-control-fill-tag': 'var(--color-sub6-4)',
-  /** --sub6-控件填充/按下.激活 */
-  '--color-sub6-control-fill-active': 'var(--color-sub6-a3)',
-  /** --sub6-控件填充/不可用 */
-  '--color-sub6-control-fill-disabled': 'var(--color-sub6-3)',
-  /** --sub6-控件填充/悬停 */
-  '--color-sub6-control-fill-hover': 'var(--color-sub6-a3)',
-  /** --sub6-边线/控件按下.激活 */
-  '--color-sub6-border-active': 'var(--color-sub6-9)',
-  /** --sub6-边线/深 */
-  '--color-sub6-border-dark': 'var(--color-sub6-a5)',
-  /** --sub6-边线/浅 */
-  '--color-sub6-border-light': 'var(--color-sub6-a3)',
-  /** --sub6-背景/提示块 */
-  '--color-sub6-bg-tip': 'var(--color-sub6-a3)',
-  /** --sub6-背景/页面深 */
-  '--color-sub6-bg-page-dark': 'var(--color-sub6-3)',
-  /** --sub6-背景/浅色卡片 */
+  /** 辅5/辅5-背景-页面深 */
+  '--color-sub5-bg-page-dark': 'var(--color-sub5-3)',
+  /** 辅5/辅5-背景-页面-浅 */
+  '--color-sub5-bg-page-light': 'var(--color-sub5-a1)',
+  /** 辅5/辅5-背景-提示块 */
+  '--color-sub5-bg-tip': 'var(--color-sub5-a3)',
+  /** 辅5/辅5-边线-深 */
+  '--color-sub5-border-dark': 'var(--color-sub5-a5)',
+  /** 辅5/辅5-边线-浅 */
+  '--color-sub5-border-light': 'var(--color-sub5-a3)',
+  /** 辅5/辅5-控件填充-按下.激活 */
+  '--color-sub5-control-fill-active': 'var(--color-sub5-a3)',
+  /** 辅5/辅5-控件填充-不可用 */
+  '--color-sub5-control-fill-disabled': 'var(--color-sub5-3)',
+  /** 辅5/辅5-控件填充-ghost按钮-按下.激活 */
+  '--color-sub5-control-fill-ghost-active': 'var(--color-sub5-a4)',
+  /** 辅5/辅5-控件填充-悬停 */
+  '--color-sub5-control-fill-hover': 'var(--color-sub5-a2)',
+  /** 辅5/辅5-控件填充-主按钮 */
+  '--color-sub5-control-fill-primary': 'var(--color-sub5-9)',
+  /** 辅5/辅5-控件填充-主按钮-按下.激活 */
+  '--color-sub5-control-fill-primary-active': 'var(--color-sub5-10)',
+  /** 辅5/辅5-控件填充-主按钮-悬停 */
+  '--color-sub5-control-fill-primary-hover': 'var(--color-sub5-8)',
+  /** 辅5/辅5-控件填充-次按钮 */
+  '--color-sub5-control-fill-secondary': 'var(--color-sub5-a3)',
+  /** 辅5/辅5-控件填充-次按钮-按下.激活 */
+  '--color-sub5-control-fill-secondary-active': 'var(--color-sub5-a5)',
+  /** 辅5/辅5-控件填充-次按钮-悬停 */
+  '--color-sub5-control-fill-secondary-hover': 'var(--color-sub5-a4)',
+  /** 辅5/辅5-控件填充-标签 */
+  '--color-sub5-control-fill-tag': 'var(--color-sub5-4)',
+  /** 辅5/辅5-文本-默认 */
+  '--color-sub5-text-default': 'var(--color-sub5-a12)',
+  /** 辅5/辅5-文本-不可用 */
+  '--color-sub5-text-disabled': 'var(--color-sub5-a7)',
+  /** 辅5/辅5-文本-次要 */
+  '--color-sub5-text-secondary': 'var(--color-sub5-a11)',
+  /** 辅5/辅5-文本-浅色注释 */
+  '--color-sub5-text-tertiary': 'var(--color-sub5-a8)',
+  /** 辅6/辅6-背景-浅色卡片 */
   '--color-sub6-bg-card-light': 'var(--color-sub6-a2)',
-  /** --sub6-背景/页面 */
+  /** 辅6/辅6-背景-页面 */
   '--color-sub6-bg-page': 'var(--color-sub6-2)',
-  /** --sub6-背景/页面-浅 */
-  '--color-sub6-bg-page-light': 'var(--color-sub6-1)',
-  /** --sub7-文本/默认 */
-  '--color-sub7-text': 'var(--color-sub7-a12)',
-  /** --sub7-文本/次要 */
-  '--color-sub7-text-secondary': 'var(--color-sub7-a11)',
-  /** --sub7-文本/浅色注释 */
-  '--color-sub7-text-light': 'var(--color-sub7-a9)',
-  /** --sub7-文本/不可用 */
-  '--color-sub7-text-disabled': 'var(--color-sub7-a8)',
-  /** --sub7-控件填充/主按钮 */
-  '--color-sub7-control-fill-primary': 'var(--color-sub7-9)',
-  /** --sub7-控件填充/主按钮-悬停 */
-  '--color-sub7-control-fill-primary-hover': 'var(--color-sub7-10)',
-  /** --sub7-控件填充/主按钮-按下.激活 */
-  '--color-sub7-control-fill-primary-active': 'var(--color-sub7-10)',
-  /** --sub7-控件填充/次按钮 */
-  '--color-sub7-control-fill-secondary': 'var(--color-sub7-a3)',
-  /** --sub7-控件填充/次按钮-悬停 */
-  '--color-sub7-control-fill-secondary-hover': 'var(--color-sub7-a4)',
-  /** --sub7-控件填充/次按钮-按下.激活 */
-  '--color-sub7-control-fill-secondary-active': 'var(--color-sub7-a5)',
-  /** --sub7-控件填充/gost按钮-按下.激活 */
-  '--color-sub7-control-fill-ghost-active': 'var(--color-sub7-a4)',
-  /** --sub7-控件填充/标签 */
-  '--color-sub7-control-fill-tag': 'var(--color-sub7-4)',
-  /** --sub7-控件填充/按下.激活 */
-  '--color-sub7-control-fill-active': 'var(--color-sub7-a3)',
-  /** --sub7-控件填充/不可用 */
-  '--color-sub7-control-fill-disabled': 'var(--color-sub7-3)',
-  /** --sub7-控件填充/悬停 */
-  '--color-sub7-control-fill-hover': 'var(--color-sub7-a3)',
-  /** --sub7-边线/控件按下.激活 */
-  '--color-sub7-border-active': 'var(--color-sub7-9)',
-  /** --sub7-边线/深 */
-  '--color-sub7-border-dark': 'var(--color-sub7-a5)',
-  /** --sub7-边线/浅 */
-  '--color-sub7-border-light': 'var(--color-sub7-a3)',
-  /** --sub7-背景/提示块 */
-  '--color-sub7-bg-tip': 'var(--color-sub7-a3)',
-  /** --sub7-背景/页面深 */
-  '--color-sub7-bg-page-dark': 'var(--color-sub7-3)',
-  /** --sub7-背景/浅色卡片 */
+  /** 辅6/辅6-背景-页面深 */
+  '--color-sub6-bg-page-dark': 'var(--color-sub6-3)',
+  /** 辅6/辅6-背景-页面-浅 */
+  '--color-sub6-bg-page-light': 'var(--color-sub6-a1)',
+  /** 辅6/辅6-背景-提示块 */
+  '--color-sub6-bg-tip': 'var(--color-sub6-a3)',
+  /** 辅6/辅6-边线-深 */
+  '--color-sub6-border-dark': 'var(--color-sub6-a5)',
+  /** 辅6/辅6-边线-浅 */
+  '--color-sub6-border-light': 'var(--color-sub6-a3)',
+  /** 辅6/辅6-控件填充-按下.激活 */
+  '--color-sub6-control-fill-active': 'var(--color-sub6-a3)',
+  /** 辅6/辅6-控件填充-不可用 */
+  '--color-sub6-control-fill-disabled': 'var(--color-sub6-3)',
+  /** 辅6/辅6-控件填充-ghost按钮-按下.激活 */
+  '--color-sub6-control-fill-ghost-active': 'var(--color-sub6-a4)',
+  /** 辅6/辅6-控件填充-悬停 */
+  '--color-sub6-control-fill-hover': 'var(--color-sub6-a2)',
+  /** 辅6/辅6-控件填充-主按钮 */
+  '--color-sub6-control-fill-primary': 'var(--color-sub6-9)',
+  /** 辅6/辅6-控件填充-主按钮-按下.激活 */
+  '--color-sub6-control-fill-primary-active': 'var(--color-sub6-10)',
+  /** 辅6/辅6-控件填充-主按钮-悬停 */
+  '--color-sub6-control-fill-primary-hover': 'var(--color-sub6-8)',
+  /** 辅6/辅6-控件填充-次按钮 */
+  '--color-sub6-control-fill-secondary': 'var(--color-sub6-a3)',
+  /** 辅6/辅6-控件填充-次按钮-按下.激活 */
+  '--color-sub6-control-fill-secondary-active': 'var(--color-sub6-a5)',
+  /** 辅6/辅6-控件填充-次按钮-悬停 */
+  '--color-sub6-control-fill-secondary-hover': 'var(--color-sub6-a4)',
+  /** 辅6/辅6-控件填充-标签 */
+  '--color-sub6-control-fill-tag': 'var(--color-sub6-4)',
+  /** 辅6/辅6-文本-默认 */
+  '--color-sub6-text-default': 'var(--color-sub6-a12)',
+  /** 辅6/辅6-文本-不可用 */
+  '--color-sub6-text-disabled': 'var(--color-sub6-a7)',
+  /** 辅6/辅6-文本-次要 */
+  '--color-sub6-text-secondary': 'var(--color-sub6-a11)',
+  /** 辅6/辅6-文本-浅色注释 */
+  '--color-sub6-text-tertiary': 'var(--color-sub6-a8)',
+  /** 辅7/辅7-背景-浅色卡片 */
   '--color-sub7-bg-card-light': 'var(--color-sub7-a2)',
-  /** --sub7-背景/页面 */
+  /** 辅7/辅7-背景-页面 */
   '--color-sub7-bg-page': 'var(--color-sub7-2)',
-  /** --sub7-背景/页面-浅 */
-  '--color-sub7-bg-page-light': 'var(--color-sub7-1)',
-  /** Gray 色板 */
-  '--color-gray-1': '#FDFEFE',
-  '--color-gray-2': '#F7F8F9',
-  '--color-gray-3': '#F1F2F3',
-  '--color-gray-4': '#EAECEE',
-  '--color-gray-5': '#E2E5E8',
-  '--color-gray-6': '#D9DDE2',
-  '--color-gray-7': '#C7CCD3',
-  '--color-gray-8': '#B6BCC5',
-  '--color-gray-9': '#14161C',
-  '--color-gray-10': '#232831',
-  '--color-gray-11': '#767E8B',
-  '--color-gray-12': '#343A45',
-  /** Gray 透明度色板 */
-  '--color-gray-a1': 'rgba(20, 22, 28, 0.01)',
-  '--color-gray-a2': 'rgba(20, 22, 28, 0.03)',
-  '--color-gray-a3': 'rgba(20, 22, 28, 0.06)',
-  '--color-gray-a4': 'rgba(20, 22, 28, 0.08)',
-  '--color-gray-a5': 'rgba(20, 22, 28, 0.1)',
-  '--color-gray-a6': '#rgba(20, 22, 28, 0.12)',
-  '--color-gray-a7': '#C7CCD3',
-  '--color-gray-a8': '#B6BCC5',
-  '--color-gray-a9': '#14161C',
-  '--color-gray-a10': '#232831',
-  '--color-gray-a11': '#767E8B',
-  '--color-gray-a12': '#343A45',
-  /** Blue 色板 */
-  '--color-blue-1': 'rgba(250, 253, 255, 1)',
-  '--color-blue-2': 'rgba(242, 249, 255, 1)',
-  '--color-blue-3': 'rgba(229, 242, 255, 1)',
-  '--color-blue-4': 'rgba(218, 235, 255, 1)',
-  '--color-blue-5': '#C7E2FF',
-  '--color-blue-6': '#B2D5FF',
-  '--color-blue-7': '#97C3FF',
-  '--color-blue-8': 'rgba(119, 165, 255, 1)',
-  '--color-blue-9': 'rgba(5, 24, 168, 1)',
-  '--color-blue-10': 'rgba(15, 52, 191, 1)',
-  '--color-blue-11': 'rgba(34, 88, 255, 1)',
-  '--color-blue-12': 'rgba(4, 6, 159, 1)',
-  /** Blue 透明度色板 */
-  '--color-blue-a1': '#0080ff04',
-  '--color-blue-a2': 'rgba(0, 138, 255, 0.05)',
-  '--color-blue-a3': 'rgba(0, 128, 255, 0.1)',
-  '--color-blue-a4': 'rgba(0, 118, 255, 0.15)',
-  '--color-blue-a5': 'rgba(0, 103, 255, 0.2)',
-  '--color-blue-a6': '#0074ff4d',
-  '--color-blue-a7': '#006cff68',
-  '--color-blue-a8': 'rgba(0, 87, 255, 0.53)',
-  '--color-blue-a9': 'rgba(0, 19, 166, 0.98)',
-  '--color-blue-a10': '#0077F4',
-  '--color-blue-a11': '#006EE6',
-  '--color-blue-a12': '#003066fc',
-  /** Green 色板 */
-  '--color-green-1': '#FAFFFB',
-  '--color-green-2': '#F3FCF5',
-  '--color-green-3': '#E3F9E8',
-  '--color-green-4': '#D1F4DA',
-  '--color-green-5': '#BBEDC8',
-  '--color-green-6': '#9FE3B2',
-  '--color-green-7': '#76D595',
-  '--color-green-8': '#21C26C',
-  '--color-green-9': '#1FC16B',
-  '--color-green-10': '#00B560',
-  '--color-green-11': '#008438',
-  '--color-green-12': '#0E3F22',
-  /** Green 透明度色板 */
-  '--color-green-a1': '#00ff3305',
-  '--color-green-a2': '#00c02b0c',
-  '--color-green-a3': '#00c92e1c',
-  '--color-green-a4': '#00c3322e',
-  '--color-green-a5': '#00bc3144',
-  '--color-green-a6': '#00b53360',
-  '--color-green-a7': '#00b13a89',
-  '--color-green-a8': '#00b956de',
-  '--color-green-a9': '#00b857e0',
-  '--color-green-a10': '#00B560',
-  '--color-green-a11': '#008438',
-  '--color-green-a12': '#003415f1',
-  /** Orange 色板 */
-  '--color-orange-1': '#FEFCFB',
-  '--color-orange-2': '#FFF5F0',
-  '--color-orange-3': '#FFEADD',
-  '--color-orange-4': '#FFD7C0',
-  '--color-orange-5': '#FFCAAC',
-  '--color-orange-6': '#FFBA95',
-  '--color-orange-7': '#FCA882',
-  '--color-orange-8': '#F19063',
-  '--color-orange-9': '#F76B15',
-  '--color-orange-10': '#EB5D00',
-  '--color-orange-11': '#D24D00',
-  '--color-orange-12': '#572E1A',
-  /** Orange 透明度色板 */
-  '--color-orange-a1': '#c0400004',
-  '--color-orange-a2': '#ff55000f',
-  '--color-orange-a3': '#ff620022',
-  '--color-orange-a4': '#ff5e003f',
-  '--color-orange-a5': '#ff5d0053',
-  '--color-orange-a6': '#ff5a016a',
-  '--color-orange-a7': '#f94e007d',
-  '--color-orange-a8': '#e84a009c',
-  '--color-orange-a9': '#f65e00ea',
-  '--color-orange-a10': '#EB5D00',
-  '--color-orange-a11': '#D24D00',
-  '--color-orange-a12': '#441600e5',
-  /** Red 色板 */
-  '--color-red-1': '#FFFCFB',
-  '--color-red-2': '#FFF7F4',
-  '--color-red-3': '#FFEBE4',
-  '--color-red-4': '#FFD9CB',
-  '--color-red-5': '#FFCAB7',
-  '--color-red-6': '#FFBBA7',
-  '--color-red-7': '#F8A892',
-  '--color-red-8': '#EE8F74',
-  '--color-red-9': '#EB572B',
-  '--color-red-10': '#DE4817',
-  '--color-red-11': '#D23F08',
-  '--color-red-12': '#5A2A1D',
-  /** Red 透明度色板 */
-  '--color-red-a1': '#ff400004',
-  '--color-red-a2': '#ff46000b',
-  '--color-red-a3': '#ff43001b',
-  '--color-red-a4': '#ff450034',
-  '--color-red-a5': '#ff440048',
-  '--color-red-a6': '#ff3a0058',
-  '--color-red-a7': '#ef34006d',
-  '--color-red-a8': '#e032008b',
-  '--color-red-a9': '#e73500d4',
-  '--color-red-a10': '#db3600e8',
-  '--color-red-a11': '#d13900f7',
-  '--color-red-a12': '#450f00e2',
-  /** 辅助色板 辅0 sub0 */
-  '--color-sub0-1': 'rgba(250, 253, 255, 1)',
-  '--color-sub0-2': 'rgba(242, 249, 255, 1)',
-  '--color-sub0-3': 'rgba(229, 242, 255, 1)',
-  '--color-sub0-4': 'rgba(218, 235, 255, 1)',
-  '--color-sub0-5': '#C7E2FF',
-  '--color-sub0-6': '#B2D5FF',
-  '--color-sub0-7': '#97C3FF',
-  '--color-sub0-8': 'rgba(119, 165, 255, 1)',
-  '--color-sub0-9': 'rgba(5, 24, 168, 1)',
-  '--color-sub0-10': 'rgba(15, 52, 191, 1)',
-  '--color-sub0-11': 'rgba(34, 88, 255, 1)',
-  '--color-sub0-12': 'rgba(4, 6, 159, 1)',
-  /** 辅助色板 辅0 sub0 透明度 */
-  '--color-sub0-a1': '#0080ff04',
-  '--color-sub0-a2': 'rgba(0, 138, 255, 0.05)',
-  '--color-sub0-a3': 'rgba(0, 128, 255, 0.1)',
-  '--color-sub0-a4': 'rgba(0, 118, 255, 0.15)',
-  '--color-sub0-a5': 'rgba(0, 103, 255, 0.2)',
-  '--color-sub0-a6': '#0074ff4d',
-  '--color-sub0-a7': '#006cff68',
-  '--color-sub0-a8': 'rgba(0, 87, 255, 0.53)',
-  '--color-sub0-a9': 'rgba(0, 19, 166, 0.98)',
-  '--color-sub0-a10': '#0077F4',
-  '--color-sub0-a11': '#006EE6',
-  '--color-sub0-a12': '#003066fc',
-  /** 辅助色板 辅1 sub1 */
-  '--color-sub1-1': '#FDFDFE',
-  '--color-sub1-2': '#F7F9FF',
-  '--color-sub1-3': '#EDF2FF',
-  '--color-sub1-4': '#E0E9FF',
-  '--color-sub1-5': '#D0DEFF',
-  '--color-sub1-6': '#BED0FF',
-  '--color-sub1-7': '#A8BDFE',
-  '--color-sub1-8': '#89A3F5',
-  '--color-sub1-9': '#4762EA',
-  '--color-sub1-10': '#3F57CF',
-  '--color-sub1-11': '#3F57CF',
-  '--color-sub1-12': '#1F2C60',
-  /** 辅助色板 辅1 sub1 透明度 */
-  '--color-sub1-a1': '#00008002',
-  '--color-sub1-a2': '#0040ff08',
-  '--color-sub1-a3': '#0047ff12',
-  '--color-sub1-a4': '#004bff1f',
-  '--color-sub1-a5': '#004cff2f',
-  '--color-sub1-a6': '#0047ff41',
-  '--color-sub1-a7': '#003efd57',
-  '--color-sub1-a8': '#0039ea76',
-  '--color-sub1-a9': '#0026e2b8',
-  '--color-sub1-a10': '#0020bfc0',
-  '--color-sub1-a11': '#0020bfc0',
-  '--color-sub1-a12': '#000f4ae0',
-  /** 辅助色板 辅2 sub2 */
-  '--color-sub2-1': '#FAFDFF',
-  '--color-sub2-2': '#F1FAFF',
-  '--color-sub2-3': '#E2F5FF',
-  '--color-sub2-4': '#CDF0FF',
-  '--color-sub2-5': '#B4E8FF',
-  '--color-sub2-6': '#98DCFF',
-  '--color-sub2-7': '#71CCFF',
-  '--color-sub2-8': '#06B6FE',
-  '--color-sub2-9': '#00B5FD',
-  '--color-sub2-10': '#00A9F1',
-  '--color-sub2-11': '#007EBD',
-  '--color-sub2-12': '#00395D',
-  /** 辅助色板 辅2 sub2 透明度 */
-  '--color-sub2-a1': '#0099ff05',
-  '--color-sub2-a2': '#00a4ff0e',
-  '--color-sub2-a3': '#00a8ff1d',
-  '--color-sub2-a4': '#00b3ff32',
-  '--color-sub2-a5': '#01b1ff4b',
-  '--color-sub2-a6': '#00a9ff67',
-  '--color-sub2-a7': '#00a4ff8e',
-  '--color-sub2-a8': '#00b4fef9',
-  '--color-sub2-a9': '#00B5FD',
-  '--color-sub2-a10': '#00A9F1',
-  '--color-sub2-a11': '#007EBD',
-  '--color-sub2-a12': '#00395D',
-  /** 辅助色板 辅3 sub3 */
-  '--color-sub3-1': '#FCFCFD',
-  '--color-sub3-2': '#F9F9FB',
-  '--color-sub3-3': '#F0F0F4',
-  '--color-sub3-4': '#E7E8ED',
-  '--color-sub3-5': '#E0E1E7',
-  '--color-sub3-6': '#D8D9E0',
-  '--color-sub3-7': '#CDCED7',
-  '--color-sub3-8': '#B9BBC6',
-  '--color-sub3-9': '#62636C',
-  '--color-sub3-10': '#54555E',
-  '--color-sub3-11': '#62636C',
-  '--color-sub3-12': '#1F1F25',
-  /** 辅助色板 辅3 sub3 透明度 */
-  '--color-sub3-a1': '#00005503',
-  '--color-sub3-a2': '#00005506',
-  '--color-sub3-a3': '#0000440f',
-  '--color-sub3-a4': '#000b4018',
-  '--color-sub3-a5': '#00093a1f',
-  '--color-sub3-a6': '#00073527',
-  '--color-sub3-a7': '#00063332',
-  '--color-sub3-a8': '#00083046',
-  '--color-sub3-a9': '#0002119d',
-  '--color-sub3-a10': '#00020fab',
-  '--color-sub3-a11': '#0002119d',
-  '--color-sub3-a12': '#000007e0',
-  /** 辅助色板 辅4 sub4 */
-  '--color-sub4-1': '#F9FEFD',
-  '--color-sub4-2': '#F1FCFA',
-  '--color-sub4-3': '#DAFAF5',
-  '--color-sub4-4': '#C2F5ED',
-  '--color-sub4-5': '#AAEDE4',
-  '--color-sub4-6': '#91E1D7',
-  '--color-sub4-7': '#6ED1C5',
-  '--color-sub4-8': '#26BDAF',
-  '--color-sub4-9': '#24BCAE',
-  '--color-sub4-10': '#00B0A3',
-  '--color-sub4-11': '#007B6F',
-  '--color-sub4-12': '#08433E',
-  /** 辅助色板 辅4 sub4 透明度 */
-  '--color-sub4-a1': '#00d5aa06',
-  '--color-sub4-a2': '#00c9a40e',
-  '--color-sub4-a3': '#00ddbb25',
-  '--color-sub4-a4': '#00d6b43d',
-  '--color-sub4-a5': '#00c9ae55',
-  '--color-sub4-a6': '#00baa36e',
-  '--color-sub4-a7': '#00ae9991',
-  '--color-sub4-a8': '#00b2a1d9',
-  '--color-sub4-a9': '#00b1a1db',
-  '--color-sub4-a10': '#00B0A3',
-  '--color-sub4-a11': '#007B6F',
-  '--color-sub4-a12': '#003d38f7',
-  /** 辅助色板 辅5 sub5 */
-  '--color-sub5-1': '#FFFCFE',
-  '--color-sub5-2': '#FDF7FC',
-  '--color-sub5-3': '#FCEAF8',
-  '--color-sub5-4': '#F9DEF3',
-  '--color-sub5-5': '#F3D0EC',
-  '--color-sub5-6': '#ECC1E3',
-  '--color-sub5-7': '#E2ADD8',
-  '--color-sub5-8': '#D692CA',
-  '--color-sub5-9': '#BA4AAB',
-  '--color-sub5-10': '#A9409B',
-  '--color-sub5-11': '#A43C97',
-  '--color-sub5-12': '#5A1952',
-  /** 辅助色板 辅5 sub5 透明度 */
-  '--color-sub5-a1': '#ff00aa03',
-  '--color-sub5-a2': '#c000a008',
-  '--color-sub5-a3': '#db00aa15',
-  '--color-sub5-a4': '#d100a321',
-  '--color-sub5-a5': '#be00982f',
-  '--color-sub5-a6': '#b1008c3e',
-  '--color-sub5-a7': '#a5008652',
-  '--color-sub5-a8': '#a000846d',
-  '--color-sub5-a9': '#9e0089b5',
-  '--color-sub5-a10': '#8c007abf',
-  '--color-sub5-a11': '#880077c3',
-  '--color-sub5-a12': '#48003fe6',
-  /** 辅助色板 辅6 sub6 */
-  '--color-sub6-1': '#FEFCFB',
-  '--color-sub6-2': '#FFF5F0',
-  '--color-sub6-3': '#FFEADD',
-  '--color-sub6-4': '#FFD7C0',
-  '--color-sub6-5': '#FFCAAC',
-  '--color-sub6-6': '#FFBA95',
-  '--color-sub6-7': '#FCA882',
-  '--color-sub6-8': '#F19063',
-  '--color-sub6-9': '#F76B15',
-  '--color-sub6-10': '#EB5D00',
-  '--color-sub6-11': '#D24D00',
-  '--color-sub6-12': '#572E1A',
-  /** 辅助色板 辅6 sub6 透明度 */
-  '--color-sub6-a1': '#c0400004',
-  '--color-sub6-a2': '#ff55000f',
-  '--color-sub6-a3': '#ff620022',
-  '--color-sub6-a4': '#ff5e003f',
-  '--color-sub6-a5': '#ff5d0053',
-  '--color-sub6-a6': '#ff5a016a',
-  '--color-sub6-a7': '#f94e007d',
-  '--color-sub6-a8': '#e84a009c',
-  '--color-sub6-a9': '#f65e00ea',
-  '--color-sub6-a10': '#EB5D00',
-  '--color-sub6-a11': '#D24D00',
-  '--color-sub6-a12': '#441600e5',
-  /** 辅助色板 辅7 sub7 */
-  '--color-sub7-1': '#FBFEFC',
-  '--color-sub7-2': '#F4FBF7',
-  '--color-sub7-3': '#E5F6EB',
-  '--color-sub7-4': '#D6F1DF',
-  '--color-sub7-5': '#C4E8D1',
-  '--color-sub7-6': '#ADDDC0',
-  '--color-sub7-7': '#8FCEA8',
-  '--color-sub7-8': '#60B887',
-  '--color-sub7-9': '#30A46C',
-  '--color-sub7-10': '#289662',
-  '--color-sub7-11': '#00814C',
-  '--color-sub7-12': '#1D3B2A',
-  /** 辅助色板 辅7 sub7 透明度 */
-  '--color-sub7-a1': '#00c04004',
-  '--color-sub7-a2': '#00a3460b',
-  '--color-sub7-a3': '#00a73b1a',
-  '--color-sub7-a4': '#00a83829',
-  '--color-sub7-a5': '#019c393b',
-  '--color-sub7-a6': '#00963c52',
-  '--color-sub7-a7': '#00903970',
-  '--color-sub7-a8': '#008d3f9f',
-  '--color-sub7-a9': '#008f4acf',
-  '--color-sub7-a10': '#008345d7',
-  '--color-sub7-a11': '#00814C',
-  '--color-sub7-a12': '#00220fe2',
-  /** Yellow 色板 */
-  '--color-yellow-1': '#FEFDFB',
-  '--color-yellow-2': '#FFF9E6',
-  '--color-yellow-3': '#FFF0C7',
-  '--color-yellow-4': '#FFE6B0',
-  '--color-yellow-5': '#FFDB93',
-  '--color-yellow-6': '#FFCB66',
-  '--color-yellow-7': '#FBB94E',
-  '--color-yellow-8': '#EB9F00',
-  '--color-yellow-9': '#F3A700',
-  '--color-yellow-10': '#E79C00',
-  '--color-yellow-11': '#A56900',
-  '--color-yellow-12': '#4C3715',
-  /** Yellow 透明度色板 */
+  /** 辅7/辅7-背景-页面深 */
+  '--color-sub7-bg-page-dark': 'var(--color-sub7-3)',
+  /** 辅7/辅7-背景-页面-浅 */
+  '--color-sub7-bg-page-light': 'var(--color-sub7-a1)',
+  /** 辅7/辅7-背景-提示块 */
+  '--color-sub7-bg-tip': 'var(--color-sub7-a3)',
+  /** 辅7/辅7-边线-深 */
+  '--color-sub7-border-dark': 'var(--color-sub7-a5)',
+  /** 辅7/辅7-边线-浅 */
+  '--color-sub7-border-light': 'var(--color-sub7-a3)',
+  /** 辅7/辅7-控件填充-按下.激活 */
+  '--color-sub7-control-fill-active': 'var(--color-sub7-a3)',
+  /** 辅7/辅7-控件填充-不可用 */
+  '--color-sub7-control-fill-disabled': 'var(--color-sub7-3)',
+  /** 辅7/辅7-控件填充-ghost按钮-按下.激活 */
+  '--color-sub7-control-fill-ghost-active': 'var(--color-sub7-a4)',
+  /** 辅7/辅7-控件填充-悬停 */
+  '--color-sub7-control-fill-hover': 'var(--color-sub7-a2)',
+  /** 辅7/辅7-控件填充-主按钮 */
+  '--color-sub7-control-fill-primary': 'var(--color-sub7-9)',
+  /** 辅7/辅7-控件填充-主按钮-按下.激活 */
+  '--color-sub7-control-fill-primary-active': 'var(--color-sub7-10)',
+  /** 辅7/辅7-控件填充-主按钮-悬停 */
+  '--color-sub7-control-fill-primary-hover': 'var(--color-sub7-8)',
+  /** 辅7/辅7-控件填充-次按钮 */
+  '--color-sub7-control-fill-secondary': 'var(--color-sub7-a3)',
+  /** 辅7/辅7-控件填充-次按钮-按下.激活 */
+  '--color-sub7-control-fill-secondary-active': 'var(--color-sub7-a5)',
+  /** 辅7/辅7-控件填充-次按钮-悬停 */
+  '--color-sub7-control-fill-secondary-hover': 'var(--color-sub7-a4)',
+  /** 辅7/辅7-控件填充-标签 */
+  '--color-sub7-control-fill-tag': 'var(--color-sub7-4)',
+  /** 辅7/辅7-文本-默认 */
+  '--color-sub7-text-default': 'var(--color-sub7-a12)',
+  /** 辅7/辅7-文本-不可用 */
+  '--color-sub7-text-disabled': 'var(--color-sub7-a7)',
+  /** 辅7/辅7-文本-次要 */
+  '--color-sub7-text-secondary': 'var(--color-sub7-a11)',
+  /** 辅7/辅7-文本-浅色注释 */
+  '--color-sub7-text-tertiary': 'var(--color-sub7-a8)',
+  /** yellow/yellow-背景-浅色卡片 */
+  '--color-yellow-bg-card-light': 'var(--color-yellow-a2)',
+  /** yellow/yellow-背景-页面 */
+  '--color-yellow-bg-page': 'var(--color-yellow-2)',
+  /** yellow/yellow-背景-页面深 */
+  '--color-yellow-bg-page-dark': 'var(--color-yellow-3)',
+  /** yellow/yellow-背景-页面-浅 */
+  '--color-yellow-bg-page-light': 'var(--color-yellow-a1)',
+  /** yellow/yellow-背景-提示块 */
+  '--color-yellow-bg-tip': 'var(--color-yellow-a3)',
+  /** yellow/yellow-边线-深 */
+  '--color-yellow-border-dark': 'var(--color-yellow-a5)',
+  /** yellow/yellow-边线-浅 */
+  '--color-yellow-border-light': 'var(--color-yellow-a3)',
+  /** yellow/yellow-控件填充-按下.激活 */
+  '--color-yellow-control-fill-active': 'var(--color-yellow-a3)',
+  /** yellow/yellow-控件填充-不可用 */
+  '--color-yellow-control-fill-disabled': 'var(--color-yellow-3)',
+  /** yellow/yellow-控件填充-ghost按钮-按下.激活 */
+  '--color-yellow-control-fill-ghost-active': 'var(--color-yellow-a4)',
+  /** yellow/yellow-控件填充-悬停 */
+  '--color-yellow-control-fill-hover': 'var(--color-yellow-a2)',
+  /** yellow/yellow-控件填充-主按钮 */
+  '--color-yellow-control-fill-primary': 'var(--color-yellow-9)',
+  /** yellow/yellow-控件填充-主按钮-按下.激活 */
+  '--color-yellow-control-fill-primary-active': 'var(--color-yellow-10)',
+  /** yellow/yellow-控件填充-主按钮-悬停 */
+  '--color-yellow-control-fill-primary-hover': 'var(--color-yellow-8)',
+  /** yellow/yellow-控件填充-次按钮 */
+  '--color-yellow-control-fill-secondary': 'var(--color-yellow-a3)',
+  /** yellow/yellow-控件填充-次按钮-按下.激活 */
+  '--color-yellow-control-fill-secondary-active': 'var(--color-yellow-a5)',
+  /** yellow/yellow-控件填充-次按钮-悬停 */
+  '--color-yellow-control-fill-secondary-hover': 'var(--color-yellow-a4)',
+  /** yellow/yellow-控件填充-标签 */
+  '--color-yellow-control-fill-tag': 'var(--color-yellow-4)',
+  /** yellow/yellow-文本-默认 */
+  '--color-yellow-text-default': 'var(--color-yellow-a12)',
+  /** yellow/yellow-文本-不可用 */
+  '--color-yellow-text-disabled': 'var(--color-yellow-a7)',
+  /** yellow/yellow-文本-次要 */
+  '--color-yellow-text-secondary': 'var(--color-yellow-a11)',
+  /** yellow/yellow-文本-浅色注释 */
+  '--color-yellow-text-tertiary': 'var(--color-yellow-a8)',
+
+  // 字体相关
+  /** 正文/正文-base */
+  '--font-text-body-base':
+    'var(--font-weight-base) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
+  /** 正文/正文-lg */
+  '--font-text-body-lg':
+    'var(--font-weight-base) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
+  /** 正文/正文-sm */
+  '--font-text-body-sm':
+    'var(--font-weight-base) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
+  /** 正文/正文-xl */
+  '--font-text-body-xl':
+    'var(--font-weight-base) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
+  /** 正文/正文-xs */
+  '--font-text-body-xs':
+    'var(--font-weight-base) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
+  /** 正文/正文-base-强调 */
+  '--font-text-bodyEmphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
+  /** 正文/正文-lg-强调 */
+  '--font-text-bodyEmphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
+  /** 正文/正文-sm-强调 */
+  '--font-text-bodyEmphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
+  /** 正文/正文-xl-强调 */
+  '--font-text-bodyEmphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
+  /** 正文/正文-xs-强调 */
+  '--font-text-bodyEmphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
+  /** 代码/代码-base */
+  '--font-text-code-base':
+    'var(--font-weight-base) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
+  /** 代码/代码-lg */
+  '--font-text-code-lg':
+    'var(--font-weight-base) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
+  /** 代码/代码-base-强调 */
+  '--font-text-codeEmphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
+  /** 代码/代码-lg-强调 */
+  '--font-text-codeEmphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
+  /** 标题/H1 */
+  '--font-text-h1-base':
+    'var(--font-weight-heading) var(--font-size-H1)/var(--line-height-4xl) var(--font-family-text)',
+  /** 标题/H2 */
+  '--font-text-h2-base':
+    'var(--font-weight-heading) var(--font-size-H2)/var(--line-height-3xl) var(--font-family-text)',
+  /** 标题/H3 */
+  '--font-text-h3-base':
+    'var(--font-weight-heading) var(--font-size-H3)/var(--line-height-2xl) var(--font-family-text)',
+  /** 标题/H4 */
+  '--font-text-h4-base':
+    'var(--font-weight-heading) var(--font-size-H4)/var(--line-height-xl) var(--font-family-text)',
+  /** 标题/H5 */
+  '--font-text-h5-base':
+    'var(--font-weight-heading) var(--font-size-H5)/var(--line-height-lg) var(--font-family-text)',
+  /** 标题/H6 */
+  '--font-text-h6-base':
+    'var(--font-weight-heading) var(--font-size-H6)/var(--line-height-base) var(--font-family-text)',
+  /** 数值/数值-2xl */
+  '--font-text-number-2xl':
+    'var(--font-weight-emphasized) var(--font-size-2xl)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-3xl */
+  '--font-text-number-3xl':
+    'var(--font-weight-emphasized) var(--font-size-3xl)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-4xl */
+  '--font-text-number-4xl':
+    'var(--font-weight-emphasized) var(--font-size-4xl)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-base */
+  '--font-text-number-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-lg */
+  '--font-text-number-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-sm */
+  '--font-text-number-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-xl */
+  '--font-text-number-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-none) var(--font-family-number)',
+  /** 数值/数值-xs */
+  '--font-text-number-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-none) var(--font-family-number)',
+  /** 段落/段落-base */
+  '--font-text-paragraph-base':
+    'var(--font-weight-base) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-lg */
+  '--font-text-paragraph-lg':
+    'var(--font-weight-base) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-sm */
+  '--font-text-paragraph-sm':
+    'var(--font-weight-base) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-xl */
+  '--font-text-paragraph-xl':
+    'var(--font-weight-base) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-xs */
+  '--font-text-paragraph-xs':
+    'var(--font-weight-base) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-base-强调 */
+  '--font-text-paragraphEmphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-lg-强调 */
+  '--font-text-paragraphEmphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-sm-强调 */
+  '--font-text-paragraphEmphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-xl-强调 */
+  '--font-text-paragraphEmphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
+  /** 段落/段落-xs-强调 */
+  '--font-text-paragraphEmphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
+  /** 风格化/风格化-H1 */
+  '--font-text-stylishH1-base':
+    'var(--font-weight-heading) var(--font-size-H1)/var(--line-height-4xl) var(--font-family-stylish)',
+  /** 风格化/风格化-H2 */
+  '--font-text-stylishH2-base':
+    'var(--font-weight-heading) var(--font-size-H2)/var(--line-height-3xl) var(--font-family-stylish)',
+  /** 风格化/风格化-H3 */
+  '--font-text-stylishH3-base':
+    'var(--font-weight-heading) var(--font-size-H3)/var(--line-height-2xl) var(--font-family-stylish)',
+  /** 风格化/风格化-H4 */
+  '--font-text-stylishH4-base':
+    'var(--font-weight-heading) var(--font-size-H4)/var(--line-height-xl) var(--font-family-stylish)',
+  /** 风格化/风格化-H5 */
+  '--font-text-stylishH5-base':
+    'var(--font-weight-heading) var(--font-size-H5)/var(--line-height-lg) var(--font-family-stylish)',
+  /** 风格化/风格化-H6 */
+  '--font-text-stylishH6-base':
+    'var(--font-weight-heading) var(--font-size-H6)/var(--line-height-base) var(--font-family-stylish)',
+  /** 标题/H1-letter-spacing */
+  '--letter-spacing-h1-base': 'var(--letter-spacing-loose)',
+  /** 标题/H4-letter-spacing */
+  '--letter-spacing-h4-base': 'var(--letter-spacing-loose)',
+  /** 风格化/风格化-H1-letter-spacing */
+  '--letter-spacing-stylishH1-base': 'var(--letter-spacing-loose)',
+  /** 风格化/风格化-H4-letter-spacing */
+  '--letter-spacing-stylishH4-base': 'var(--letter-spacing-loose)',
+
+  // 圆角相关
+  /** 圆角-卡片-base */
+  '--radius-card-base': 'var(--radius-lg)',
+  /** 圆角-卡片-lg */
+  '--radius-card-lg': 'var(--radius-xl)',
+  /** 圆角-全圆角-base */
+  '--radius-circle-base': 'var(--radius-circle)',
+  /** 圆角-控件-base */
+  '--radius-control-base': 'var(--radius-base)',
+  /** 圆角-控件-lg */
+  '--radius-control-lg': 'var(--radius-xl)',
+  /** 圆角-控件-sm */
+  '--radius-control-sm': 'var(--radius-sm)',
+  /** 圆角-控件-xs */
+  '--radius-control-xs': 'var(--radius-xs)',
+  /** 圆角-弹窗-base */
+  '--radius-modal-base': 'var(--radius-2xl)',
+
+  // 阴影相关
+  /** 投影-描边-base */
+  '--shadow-border-base': 'var(--shadow-hard-xs)',
+  /** 投影-描边-lg */
+  '--shadow-border-lg': 'var(--shadow-hard-sm)',
+  /** 投影-卡片-base */
+  '--shadow-card-base': 'var(--shadow-soft-base)',
+  /** 投影-卡片-lg */
+  '--shadow-card-lg': 'var(--shadow-soft-lg)',
+  /** 投影-控件-base */
+  '--shadow-control-base': 'var(--shadow-hard-base)',
+  /** 投影-控件-lg */
+  '--shadow-control-lg': 'var(--shadow-hard-lg)',
+  /** 投影-弹窗-base */
+  '--shadow-modal-base': 'var(--shadow-soft-2xl)',
+  /** 投影-气泡-base */
+  '--shadow-popover-base': 'var(--shadow-soft-xl)',
+  /** 投影-风格化-base */
+  '--shadow-stylish-base': 'var(--shadow-stylish)',
+
+  // 其他
+  /** 间距-组件-base */
+  '--margin-component-base': 'var(--margin-2x)',
+  /** 间距-组件-lg */
+  '--margin-component-lg': 'var(--margin-3x)',
+  /** 间距-组件-sm */
+  '--margin-component-sm': 'var(--margin-1x)',
+  /** 间距-组件-xs */
+  '--margin-component-xs': 'var(--margin-0-5x)',
+  /** 间距-布局-2xs */
+  '--margin-layout-2xs': 'var(--margin-1x)',
+  /** 间距-布局-base */
+  '--margin-layout-base': 'var(--margin-6x)',
+  /** 间距-布局-lg */
+  '--margin-layout-lg': 'var(--margin-8x)',
+  /** 间距-布局-sm */
+  '--margin-layout-sm': 'var(--margin-4x)',
+  /** 间距-布局-xl */
+  '--margin-layout-xl': 'var(--margin-10x)',
+  /** 间距-布局-xs */
+  '--margin-layout-xs': 'var(--margin-2x)',
+  /** 间距-模块-base */
+  '--margin-module-base': 'var(--margin-3x)',
+  /** 间距-模块-lg */
+  '--margin-module-lg': 'var(--margin-4x)',
+  /** 间距-模块-sm */
+  '--margin-module-sm': 'var(--margin-2x)',
+  /** 间距-模块-xs */
+  '--margin-module-xs': 'var(--margin-1x)',
+  /** 间距-卡片-base */
+  '--padding-card-base': 'var(--padding-3x)',
+  /** 间距-卡片-lg */
+  '--padding-card-lg': 'var(--padding-4x)',
+  /** 间距-卡片-sm */
+  '--padding-card-sm': 'var(--padding-2x)',
+  /** 间距-卡片-xl */
+  '--padding-card-xl': 'var(--padding-5x)',
+  /** 间距-卡片-xs */
+  '--padding-card-xs': 'var(--padding-1x)',
+  /** 间距-控件-base */
+  '--padding-control-base': 'var(--padding-1x) var(--padding-3x)',
+  /** 间距-控件-sm */
+  '--padding-control-sm': 'var(--padding-1-5x) var(--padding-2x)',
+  /** 间距-控件-xs */
+  '--padding-control-xs': 'var(--padding-1x) var(--padding-1-5x)',
+  /** 间距-弹窗-base */
+  '--padding-modal-base':
+    'var(--padding-3x) var(--padding-5x) var(--padding-5x) var(--padding-5x)',
+  /** 间距-页面-base */
+  '--padding-page-base': 'var(--padding-4x) var(--padding-10x)',
+  /** 间距-页面-sm */
+  '--padding-page-sm': 'var(--padding-4x) var(--padding-6x)',
+
+  // 其他未分类的 token
+  '--color-primary-1': '#fcfdff',
+  '--color-primary-2': '#f5f9ff',
+  '--color-primary-3': '#e9f3ff',
+  '--color-primary-4': '#daecff',
+  '--color-primary-5': '#c8e2ff',
+  '--color-primary-6': '#b4d4ff',
+  '--color-primary-7': '#9ac2ff',
+  '--color-primary-8': '#73aafc',
+  '--color-primary-9': '#1d7afc',
+  '--color-primary-10': '#066ced',
+  '--color-primary-11': '#0068e8',
+  '--color-primary-12': '#0a3068',
+  '--color-primary-a1': '#0055ff03',
+  '--color-primary-a2': '#0066ff0a',
+  '--color-primary-a3': '#0074ff16',
+  '--color-primary-a4': '#007dff25',
+  '--color-primary-a5': '#0079ff37',
+  '--color-primary-a6': '#016dff4b',
+  '--color-primary-a7': '#0065ff65',
+  '--color-primary-a8': '#0065fa8c',
+  '--color-primary-a9': '#0069fce2',
+  '--color-primary-a10': '#0068edf9',
+  '--color-primary-a11': '#0068e8',
+  '--color-primary-a12': '#002862f5',
+  '--color-gray-1': '#fcfdff',
+  '--color-gray-2': '#f6faff',
+  '--color-gray-3': '#eaf1fd',
+  '--color-gray-4': '#ddeafe',
+  '--color-gray-5': '#cfe1ff',
+  '--color-gray-6': '#c0d8ff',
+  '--color-gray-7': '#adcafa',
+  '--color-gray-8': '#8fb5f3',
+  '--color-gray-9': '#091e42',
+  '--color-gray-10': '#1e355b',
+  '--color-gray-11': '#43649d',
+  '--color-gray-12': '#10254a',
+  '--color-gray-a1': '#0055ff03',
+  '--color-gray-a2': '#0072ff09',
+  '--color-gray-a3': '#0055e715',
+  '--color-gray-a4': '#0062f822',
+  '--color-gray-a5': '#0060ff30',
+  '--color-gray-a6': '#0062ff3f',
+  '--color-gray-a7': '#005bf052',
+  '--color-gray-a8': '#0057e470',
+  '--color-gray-a9': '#00163bf6',
+  '--color-gray-a10': '#001a45e1',
+  '--color-gray-a11': '#002d7abc',
+  '--color-gray-a12': '#00163eef',
+  '--color-blue-1': '#fcfdff',
+  '--color-blue-2': '#f5f9ff',
+  '--color-blue-3': '#e9f3ff',
+  '--color-blue-4': '#daecff',
+  '--color-blue-5': '#c8e2ff',
+  '--color-blue-6': '#b4d4ff',
+  '--color-blue-7': '#9ac2ff',
+  '--color-blue-8': '#73aafc',
+  '--color-blue-9': '#1d7afc',
+  '--color-blue-10': '#066ced',
+  '--color-blue-11': '#0068e8',
+  '--color-blue-12': '#0a3068',
+  '--color-blue-a1': '#0055ff03',
+  '--color-blue-a2': '#0066ff0a',
+  '--color-blue-a3': '#0074ff16',
+  '--color-blue-a4': '#007dff25',
+  '--color-blue-a5': '#0079ff37',
+  '--color-blue-a6': '#016dff4b',
+  '--color-blue-a7': '#0065ff65',
+  '--color-blue-a8': '#0065fa8c',
+  '--color-blue-a9': '#0069fce2',
+  '--color-blue-a10': '#0068edf9',
+  '--color-blue-a11': '#0068e8',
+  '--color-blue-a12': '#002862f5',
+  '--color-red-1': '#fffcfc',
+  '--color-red-2': '#fff8f7',
+  '--color-red-3': '#feebe9',
+  '--color-red-4': '#ffdcd7',
+  '--color-red-5': '#ffcec7',
+  '--color-red-6': '#fcbeb5',
+  '--color-red-7': '#f3aaa0',
+  '--color-red-8': '#ea9085',
+  '--color-red-9': '#f15b50',
+  '--color-red-10': '#e44d43',
+  '--color-red-11': '#cc3730',
+  '--color-red-12': '#5f211d',
+  '--color-red-a1': '#ff000003',
+  '--color-red-a2': '#ff200008',
+  '--color-red-a3': '#f4180016',
+  '--color-red-a4': '#ff200028',
+  '--color-red-a5': '#ff200038',
+  '--color-red-a6': '#f520014a',
+  '--color-red-a7': '#df1b005f',
+  '--color-red-a8': '#d417017a',
+  '--color-red-a9': '#eb1000af',
+  '--color-red-a10': '#db0e00bc',
+  '--color-red-a11': '#c00900cf',
+  '--color-red-a12': '#4b0500e2',
+  '--color-green-1': '#fafefc',
+  '--color-green-2': '#f3fbf6',
+  '--color-green-3': '#e3f8eb',
+  '--color-green-4': '#d1f3df',
+  '--color-green-5': '#bbecd0',
+  '--color-green-6': '#a0e1be',
+  '--color-green-7': '#7ad3a5',
+  '--color-green-8': '#30bf83',
+  '--color-green-9': '#2abb7f',
+  '--color-green-10': '#10af74',
+  '--color-green-11': '#00834d',
+  '--color-green-12': '#113d29',
+  '--color-green-a1': '#00cc6605',
+  '--color-green-a2': '#00aa400c',
+  '--color-green-a3': '#00c0491c',
+  '--color-green-a4': '#00bd4e2e',
+  '--color-green-a5': '#00b84f44',
+  '--color-green-a6': '#00af515f',
+  '--color-green-a7': '#00ab5385',
+  '--color-green-a8': '#00b066cf',
+  '--color-green-a9': '#00ae66d5',
+  '--color-green-a10': '#00aa6bef',
+  '--color-green-a11': '#00834d',
+  '--color-green-a12': '#002f1aee',
+  '--color-orange-1': '#fefcfa',
+  '--color-orange-2': '#fff5ec',
+  '--color-orange-3': '#ffead4',
+  '--color-orange-4': '#ffd9b5',
+  '--color-orange-5': '#ffcb9e',
+  '--color-orange-6': '#ffbc83',
+  '--color-orange-7': '#ffa55d',
+  '--color-orange-8': '#fb8b2b',
+  '--color-orange-9': '#f78826',
+  '--color-orange-10': '#ea7d10',
+  '--color-orange-11': '#c65b00',
+  '--color-orange-12': '#5c2c00',
+  '--color-orange-a1': '#cc660005',
+  '--color-orange-a2': '#ff790013',
+  '--color-orange-a3': '#ff83012b',
+  '--color-orange-a4': '#ff7d014a',
+  '--color-orange-a5': '#ff770061',
+  '--color-orange-a6': '#ff76007c',
+  '--color-orange-a7': '#ff7200a2',
+  '--color-orange-a8': '#fa7400d4',
+  '--color-orange-a9': '#f67300d9',
+  '--color-orange-a10': '#e97400ef',
+  '--color-orange-a11': '#c65b00',
+  '--color-orange-a12': '#5c2c00',
+  '--color-yellow-1': '#fefdfb',
+  '--color-yellow-2': '#fff9e6',
+  '--color-yellow-3': '#fff0c7',
+  '--color-yellow-4': '#ffe6b0',
+  '--color-yellow-5': '#ffdb93',
+  '--color-yellow-6': '#ffcb66',
+  '--color-yellow-7': '#fbb94e',
+  '--color-yellow-8': '#eb9f00',
+  '--color-yellow-9': '#f3a700',
+  '--color-yellow-10': '#e79c00',
+  '--color-yellow-11': '#a56900',
+  '--color-yellow-12': '#4c3715',
   '--color-yellow-a1': '#c0800004',
   '--color-yellow-a2': '#ffc20019',
   '--color-yellow-a3': '#ffbb0038',
@@ -989,900 +1065,330 @@ export const global = {
   '--color-yellow-a5': '#ffaa006c',
   '--color-yellow-a6': '#ffa90099',
   '--color-yellow-a7': '#f99a00b1',
-  '--color-yellow-a8': '#EB9F00',
-  '--color-yellow-a9': '#F3A700',
-  '--color-yellow-a10': '#E79C00',
-  '--color-yellow-a11': '#A56900',
+  '--color-yellow-a8': '#eb9f00',
+  '--color-yellow-a9': '#f3a700',
+  '--color-yellow-a10': '#e79c00',
+  '--color-yellow-a11': '#a56900',
   '--color-yellow-a12': '#3c2500ea',
-  /** 元素内-XS 2 */
-  '--margin-element-xs': 'var(--margin-component-xs)',
-  /** 元素内-S 4 */
-  '--margin-element-s': 'var(--margin-component-sm)',
-  /** 元素内-M 8 */
-  '--margin-element-m': 'var(--margin-component-base)',
-  /** 模块内-列表间距-S 4 */
-  '--margin-module-list-s': 'var(--margin-block-xs)',
-  /** 模块内-列表间距-M 8 */
-  '--margin-module-list-m': 'var(--margin-block-sm)',
-  /** 模块内-信息组间距-M 12 */
-  '--margin-module-info-group-m': 'var(--margin-block-base)',
-  /** 模块间-M 24 */
-  '--margin-module-m': 'var(--margin-section-base)',
-  /** 模块间-L 32 */
-  '--margin-module-l': 'var(--margin-section-lg)',
-  /** 基础色板映射 */
-  '--color-custom-1': 'var(--color-sub3-1)',
-  '--color-custom-2': 'var(--color-sub3-2)',
-  '--color-custom-3': 'var(--color-sub3-3)',
-  '--color-custom-4': 'var(--color-sub3-4)',
-  '--color-custom-5': 'var(--color-sub3-5)',
-  '--color-custom-6': 'var(--color-sub3-6)',
-  '--color-custom-7': 'var(--color-sub3-7)',
-  '--color-custom-8': 'var(--color-sub3-8)',
-  '--color-custom-9': 'var(--color-sub3-9)',
-  '--color-custom-10': 'var(--color-sub3-10)',
-  '--color-custom-11': 'var(--color-sub3-11)',
-  '--color-custom-12': 'var(--color-sub3-12)',
-  /** 透明度色板映射 */
-  '--color-custom-a1': 'var(--color-sub3-a1)',
-  '--color-custom-a2': 'var(--color-sub3-a2)',
-  '--color-custom-a3': 'var(--color-sub3-a3)',
-  '--color-custom-a4': 'var(--color-sub3-a4)',
-  '--color-custom-a5': 'var(--color-sub3-a5)',
-  '--color-custom-a6': 'var(--color-sub3-a6)',
-  '--color-custom-a7': 'var(--color-sub3-a7)',
-  '--color-custom-a8': 'var(--color-sub3-a8)',
-  '--color-custom-a9': 'var(--color-sub3-a9)',
-  '--color-custom-a10': 'var(--color-sub3-a10)',
-  '--color-custom-a11': 'var(--color-sub3-a11)',
-  '--color-custom-a12': 'var(--color-sub3-a12)',
-  /** Custom 语义化颜色 (映射到 sub3) */
-  '--color-custom-text': 'var(--color-sub3-text)',
-  '--color-custom-text-secondary': 'var(--color-sub3-text-secondary)',
-  '--color-custom-text-light': 'var(--color-sub3-text-light)',
-  '--color-custom-text-disabled': 'var(--color-sub3-text-disabled)',
-  '--color-custom-control-fill-primary':
-    'var(--color-sub3-control-fill-primary)',
-  '--color-custom-control-fill-main': 'var(--color-sub3-control-fill-primary)',
-  '--color-custom-control-fill-primary-hover':
-    'var(--color-sub3-control-fill-primary-hover)',
-  '--color-custom-control-fill-main-hover':
-    'var(--color-sub3-control-fill-primary-hover)',
-  '--color-custom-control-fill-primary-active':
-    'var(--color-sub3-control-fill-primary-active)',
-  '--color-custom-control-fill-main-active':
-    'var(--color-sub3-control-fill-primary-active)',
-  '--color-custom-control-fill-secondary':
-    'var(--color-sub3-control-fill-secondary)',
-  '--color-custom-control-fill-secondary-hover':
-    'var(--color-sub3-control-fill-secondary-hover)',
-  '--color-custom-control-fill-secondary-active':
-    'var(--color-sub3-control-fill-secondary-active)',
-  '--color-custom-control-fill-ghost-active':
-    'var(--color-sub3-control-fill-ghost-active)',
-  /** 语义化颜色映射 */
-  '--color-custom-control-fill-tag': 'var(--color-sub3-control-fill-tag)',
-  '--color-custom-control-fill-active': 'var(--color-sub3-control-fill-active)',
-  '--color-custom-control-fill-disabled':
-    'var(--color-sub3-control-fill-disabled)',
-  '--color-custom-control-fill-hover': 'var(--color-sub3-control-fill-hover)',
-  '--color-custom-border-active': 'var(--color-sub3-border-active)',
-  '--color-custom-border-control-active': 'var(--color-sub3-border-active)',
-  '--color-custom-border-dark': 'var(--color-sub3-border-dark)',
-  '--color-custom-border-light': 'var(--color-sub3-border-light)',
-  '--color-custom-border': 'var(--color-sub3-border-light)',
-  '--color-custom-bg-tip': 'var(--color-sub3-bg-tip)',
-  '--color-custom-bg-page-dark': 'var(--color-sub3-bg-page-dark)',
-  '--color-custom-bg-card-light': 'var(--color-sub3-bg-card-light)',
-  '--color-custom-bg-page': 'var(--color-sub3-bg-page)',
-  '--color-custom-bg-page-light': 'var(--color-sub3-bg-page-light)',
-  /** 特殊用途颜色 */
-  '--color-custom-contrast': 'var(--color-sub3-text)',
-  '--color-custom-surface': 'var(--color-sub3-bg-card-light)',
-  '--color-custom-indicator': 'var(--color-sub3-9)',
-  '--color-custom-track': 'var(--color-sub3-9)',
-  /** Teal 基础色板映射 */
-  '--color-teal-1': 'var(--color-sub2-1)',
-  '--color-teal-2': 'var(--color-sub2-2)',
-  '--color-teal-3': 'var(--color-sub2-3)',
-  '--color-teal-4': 'var(--color-sub2-4)',
-  '--color-teal-5': 'var(--color-sub2-5)',
-  '--color-teal-6': 'var(--color-sub2-6)',
-  '--color-teal-7': 'var(--color-sub2-7)',
-  '--color-teal-8': 'var(--color-sub2-8)',
-  '--color-teal-9': 'var(--color-sub2-9)',
-  '--color-teal-10': 'var(--color-sub2-10)',
-  '--color-teal-11': 'var(--color-sub2-11)',
-  '--color-teal-12': 'var(--color-sub2-12)',
-  /** Teal 透明度色板映射 */
-  '--color-teal-a1': 'var(--color-sub2-a1)',
-  '--color-teal-a2': 'var(--color-sub2-a2)',
-  '--color-teal-a3': 'var(--color-sub2-a3)',
-  '--color-teal-a4': 'var(--color-sub2-a4)',
-  '--color-teal-a5': 'var(--color-sub2-a5)',
-  '--color-teal-a6': 'var(--color-sub2-a6)',
-  '--color-teal-a7': 'var(--color-sub2-a7)',
-  '--color-teal-a8': 'var(--color-sub2-a8)',
-  '--color-teal-a9': 'var(--color-sub2-a9)',
-  '--color-teal-a10': 'var(--color-sub2-a10)',
-  '--color-teal-a11': 'var(--color-sub2-a11)',
-  '--color-teal-a12': 'var(--color-sub2-a12)',
-  /** Teal 语义化颜色映射 */
-  '--color-teal-text': 'var(--color-sub2-text)',
-  '--color-teal-control-fill': 'var(--color-sub2-control-fill-primary)',
-  '--color-teal-control-fill-tag': 'var(--color-sub2-control-fill-tag)',
-  '--color-teal-control-fill-hover': 'var(--color-sub2-control-fill-hover)',
-  '--color-teal-control-fill-active': 'var(--color-sub2-control-fill-active)',
-  '--color-teal-border': 'var(--color-sub2-border-light)',
-  '--color-teal-bg-tip': 'var(--color-sub2-bg-tip)',
-  '--color-teal-bg-page': 'var(--color-sub2-bg-page)',
-  /** Teal 特殊用途颜色 */
-  '--color-teal-contrast': 'var(--color-sub2-text)',
-  '--color-teal-surface': 'var(--color-sub2-bg-card-light)',
-  '--color-teal-indicator': 'var(--color-sub2-9)',
-  '--color-teal-track': 'var(--color-sub2-9)',
-  /** AuxBlue 基础色板映射 */
-  '--color-aux-blue-1': 'var(--color-sub0-1)',
-  '--color-aux-blue-2': 'var(--color-sub0-2)',
-  '--color-aux-blue-3': 'var(--color-sub0-3)',
-  '--color-aux-blue-4': 'var(--color-sub0-4)',
-  '--color-aux-blue-5': 'var(--color-sub0-5)',
-  '--color-aux-blue-6': 'var(--color-sub0-6)',
-  '--color-aux-blue-7': 'var(--color-sub0-7)',
-  '--color-aux-blue-8': 'var(--color-sub0-8)',
-  '--color-aux-blue-9': 'var(--color-sub0-9)',
-  '--color-aux-blue-10': 'var(--color-sub0-10)',
-  '--color-aux-blue-11': 'var(--color-sub0-11)',
-  '--color-aux-blue-12': 'var(--color-sub0-12)',
-  /** AuxBlue 透明度色板映射 */
-  '--color-aux-blue-a1': 'var(--color-sub0-a1)',
-  '--color-aux-blue-a2': 'var(--color-sub0-a2)',
-  '--color-aux-blue-a3': 'var(--color-sub0-a3)',
-  '--color-aux-blue-a4': 'var(--color-sub0-a4)',
-  '--color-aux-blue-a5': 'var(--color-sub0-a5)',
-  '--color-aux-blue-a6': 'var(--color-sub0-a6)',
-  '--color-aux-blue-a7': 'var(--color-sub0-a7)',
-  '--color-aux-blue-a8': 'var(--color-sub0-a8)',
-  '--color-aux-blue-a9': 'var(--color-sub0-a9)',
-  '--color-aux-blue-a10': 'var(--color-sub0-a10)',
-  '--color-aux-blue-a11': 'var(--color-sub0-a11)',
-  '--color-aux-blue-a12': 'var(--color-sub0-a12)',
-  /** AuxBlue 特殊用途颜色 */
-  '--color-aux-blue-contrast': 'var(--color-sub0-text)',
-  '--color-aux-blue-surface': 'var(--color-sub0-bg-card-light)',
-  '--color-aux-blue-indicator': 'var(--color-sub0-9)',
-  '--color-aux-blue-track': 'var(--color-sub0-9)',
-  /** LightBlue 基础色板映射 */
-  '--color-light-blue-1': 'var(--color-sub1-1)',
-  '--color-light-blue-2': 'var(--color-sub1-2)',
-  '--color-light-blue-3': 'var(--color-sub1-3)',
-  '--color-light-blue-4': 'var(--color-sub1-4)',
-  '--color-light-blue-5': 'var(--color-sub1-5)',
-  '--color-light-blue-6': 'var(--color-sub1-6)',
-  '--color-light-blue-7': 'var(--color-sub1-7)',
-  '--color-light-blue-8': 'var(--color-sub1-8)',
-  '--color-light-blue-9': 'var(--color-sub1-9)',
-  '--color-light-blue-10': 'var(--color-sub1-10)',
-  '--color-light-blue-11': 'var(--color-sub1-11)',
-  '--color-light-blue-12': 'var(--color-sub1-12)',
-  /** LightBlue 透明度色板映射 */
-  '--color-light-blue-a1': 'var(--color-sub1-a1)',
-  '--color-light-blue-a2': 'var(--color-sub1-a2)',
-  '--color-light-blue-a3': 'var(--color-sub1-a3)',
-  '--color-light-blue-a4': 'var(--color-sub1-a4)',
-  '--color-light-blue-a5': 'var(--color-sub1-a5)',
-  '--color-light-blue-a6': 'var(--color-sub1-a6)',
-  '--color-light-blue-a7': 'var(--color-sub1-a7)',
-  '--color-light-blue-a8': 'var(--color-sub1-a8)',
-  '--color-light-blue-a9': 'var(--color-sub1-a9)',
-  '--color-light-blue-a10': 'var(--color-sub1-a10)',
-  '--color-light-blue-a11': 'var(--color-sub1-a11)',
-  '--color-light-blue-a12': 'var(--color-sub1-a12)',
-  /** LightBlue 特殊用途颜色 */
-  '--color-light-blue-contrast': 'var(--color-sub1-text)',
-  '--color-light-blue-surface': 'var(--color-sub1-bg-card-light)',
-  '--color-light-blue-indicator': 'var(--color-sub1-9)',
-  '--color-light-blue-track': 'var(--color-sub1-9)',
-  /** Purple 基础色板映射 */
-  '--color-purple-1': 'var(--color-sub5-1)',
-  '--color-purple-2': 'var(--color-sub5-2)',
-  '--color-purple-3': 'var(--color-sub5-3)',
-  '--color-purple-4': 'var(--color-sub5-4)',
-  '--color-purple-5': 'var(--color-sub5-5)',
-  '--color-purple-6': 'var(--color-sub5-6)',
-  '--color-purple-7': 'var(--color-sub5-7)',
-  '--color-purple-8': 'var(--color-sub5-8)',
-  '--color-purple-9': 'var(--color-sub5-9)',
-  '--color-purple-10': 'var(--color-sub5-10)',
-  '--color-purple-11': 'var(--color-sub5-11)',
-  '--color-purple-12': 'var(--color-sub5-12)',
-  /** Purple 透明度色板映射 */
-  '--color-purple-a1': 'var(--color-sub5-a1)',
-  '--color-purple-a2': 'var(--color-sub5-a2)',
-  '--color-purple-a3': 'var(--color-sub5-a3)',
-  '--color-purple-a4': 'var(--color-sub5-a4)',
-  '--color-purple-a5': 'var(--color-sub5-a5)',
-  '--color-purple-a6': 'var(--color-sub5-a6)',
-  '--color-purple-a7': 'var(--color-sub5-a7)',
-  '--color-purple-a8': 'var(--color-sub5-a8)',
-  '--color-purple-a9': 'var(--color-sub5-a9)',
-  '--color-purple-a10': 'var(--color-sub5-a10)',
-  '--color-purple-a11': 'var(--color-sub5-a11)',
-  '--color-purple-a12': 'var(--color-sub5-a12)',
-  /** Purple 特殊用途颜色 */
-  '--color-purple-contrast': 'var(--color-sub5-text)',
-  '--color-purple-surface': 'var(--color-sub5-bg-card-light)',
-  '--color-purple-indicator': 'var(--color-sub5-9)',
-  '--color-purple-track': 'var(--color-sub5-9)',
-  /** SubRed 基础色板映射 */
-  '--color-sub-red-1': 'var(--color-sub6-1)',
-  '--color-sub-red-2': 'var(--color-sub6-2)',
-  '--color-sub-red-3': 'var(--color-sub6-3)',
-  '--color-sub-red-4': 'var(--color-sub6-4)',
-  '--color-sub-red-5': 'var(--color-sub6-5)',
-  '--color-sub-red-6': 'var(--color-sub6-6)',
-  '--color-sub-red-7': 'var(--color-sub6-7)',
-  '--color-sub-red-8': 'var(--color-sub6-8)',
-  '--color-sub-red-9': 'var(--color-sub6-9)',
-  '--color-sub-red-10': 'var(--color-sub6-10)',
-  '--color-sub-red-11': 'var(--color-sub6-11)',
-  '--color-sub-red-12': 'var(--color-sub6-12)',
-  /** SubRed 透明度色板 (映射到 sub6) */
-  '--color-sub-red-a1': 'var(--color-sub6-a1)',
-  '--color-sub-red-a2': 'var(--color-sub6-a2)',
-  '--color-sub-red-a3': 'var(--color-sub6-a3)',
-  '--color-sub-red-a4': 'var(--color-sub6-a4)',
-  '--color-sub-red-a5': 'var(--color-sub6-a5)',
-  '--color-sub-red-a6': 'var(--color-sub6-a6)',
-  '--color-sub-red-a7': 'var(--color-sub6-a7)',
-  '--color-sub-red-a8': 'var(--color-sub6-a8)',
-  '--color-sub-red-a9': 'var(--color-sub6-a9)',
-  '--color-sub-red-a10': 'var(--color-sub6-a10)',
-  '--color-sub-red-a11': 'var(--color-sub6-a11)',
-  '--color-sub-red-a12': 'var(--color-sub6-a12)',
-  /** SubRed 特殊用途颜色 */
-  '--color-sub-red-contrast': 'var(--color-sub6-text)',
-  '--color-sub-red-surface': 'var(--color-sub6-bg-card-light)',
-  '--color-sub-red-indicator': 'var(--color-sub6-9)',
-  '--color-sub-red-track': 'var(--color-sub6-9)',
-  '--color-gray-bg-card-white-text': '#FFFFFF',
-  /** Blue 兼容性变量 (直接使用 globalReccomend.less 中的值) */
-  '--color-blue-control-fill': 'rgba(6, 159, 255, 100%)',
-  '--color-blue-control-fill-main': 'rgba(6, 159, 255, 100%)',
-  '--color-blue-control-fill-main-hover': 'rgba(0, 147, 237, 100%)',
-  '--color-blue-control-fill-main-active': '#0076CF',
-  '--color-blue-text-strong': 'rgba(0, 54, 93, 100%)',
-  '--color-blue-border': 'rgba(0, 137, 255, 22.8%)',
-  /** Green 兼容性变量 (直接使用 globalReccomend.less 中的值) */
-  '--color-green-control-fill': 'rgba(41, 163, 131, 100%)',
-  '--color-green-border': 'rgba(0, 165, 103, 24%)',
-  /** Orange 兼容性变量 (直接使用 globalReccomend.less 中的值) */
-  '--color-orange-control-fill': 'rgba(243, 167, 0, 100%)',
-  '--color-orange-border': 'rgba(255, 152, 0, 39%)',
-  /** Red 兼容性变量 (直接使用 globalReccomend.less 中的值) */
-  '--color-red-control-fill': 'rgba(229, 72, 77, 100%)',
-  '--color-red-border': 'rgba(255, 15, 0, 21%)',
-  /** Gray 特殊用途颜色 */
-  '--color-gray-contrast': '#FFFFFF',
-  '--color-gray-surface': '#ffffffcc',
-  '--color-gray-indicator': '#8B8D97',
-  '--color-gray-track': '#8B8D97',
-  /** Blue 特殊用途颜色 */
-  '--color-blue-contrast': '#FFFFFF',
-  '--color-blue-surface': '#f1f9ffcc',
-  '--color-blue-indicator': '#069FFF',
-  '--color-blue-track': '#069FFF',
-  /** Green 特殊用途颜色 */
-  '--color-green-contrast': '#FFFFFF',
-  '--color-green-surface': '#f0faf6cc',
-  '--color-green-indicator': '#29A383',
-  '--color-green-track': '#29A383',
-  /** Orange 特殊用途颜色 */
-  '--color-orange-contrast': '#FFFFFF',
-  '--color-orange-surface': '#fff3eccc',
-  '--color-orange-indicator': '#F66009',
-  '--color-orange-track': '#F66009',
-  /** Red 特殊用途颜色 */
-  '--color-red-contrast': '#FFFFFF',
-  '--color-red-surface': '#fff5f5cc',
-  '--color-red-indicator': '#E5484D',
-  '--color-red-track': '#E5484D',
-  /** Yellow 特殊用途颜色 */
-  '--color-yellow-contrast': '#2D1F09',
-  '--color-yellow-surface': '#fff8e0cc',
-  '--color-yellow-indicator': '#F3A700',
-  '--color-yellow-track': '#F3A700',
-  /** Primary 色板 (直接使用 globalReccomend.less 中的值) */
-  '--color-primary-1': 'rgba(250, 253, 255, 1)',
-  '--color-primary-2': 'rgba(242, 249, 255, 1)',
-  '--color-primary-3': 'rgba(229, 242, 255, 1)',
-  '--color-primary-4': 'rgba(218, 235, 255, 1)',
-  '--color-primary-5': '#E0E1E6',
-  '--color-primary-6': '#D8D9E0',
-  '--color-primary-7': '#CDCED6',
-  '--color-primary-8': 'rgba(119, 165, 255, 1)',
-  '--color-primary-9': 'rgba(5, 24, 168, 1)',
-  '--color-primary-10': 'rgba(15, 52, 191, 1)',
-  '--color-primary-11': 'rgba(34, 88, 255, 1)',
-  '--color-primary-12': 'rgba(4, 6, 159, 1)',
-  /** Primary 透明度色板 */
-  '--color-primary-a1': '#00005503',
-  '--color-primary-a2': 'rgba(0, 138, 255, 0.05)',
-  '--color-primary-a3': 'rgba(0, 128, 255, 0.1)',
-  '--color-primary-a4': 'rgba(0, 118, 255, 0.15)',
-  '--color-primary-a5': 'rgba(0, 103, 255, 0.2)',
-  '--color-primary-a6': '#00073527',
-  '--color-primary-a7': '#00062e32',
-  '--color-primary-a8': 'rgba(0, 87, 255, 0.53)',
-  '--color-primary-a9': 'rgba(0, 19, 166, 0.98)',
-  '--color-primary-a10': '#000108cb',
-  '--color-primary-a11': '#0002119d',
-  '--color-primary-a12': '#000107e1',
-  /** Primary 特殊用途颜色 */
-  '--color-primary-contrast': '#FFFFFF',
-  '--color-primary-surface': '#f8f8facc',
-  '--color-primary-indicator': '#1E1F24',
-  '--color-primary-track': '#1E1F24',
-  /** 特殊变量 */
-  '--color-brand-gradient': 'linear-gradient(',
-  '--color-transparent': 'transparent',
-  /** 渐变/AI 内容 */
-  '--color-brand-gradient-fill': 'linear-gradient(',
-  /** 渐变/AI-文字 */
-  '--color-brand-gradient-text': 'linear-gradient(',
-  /** SubBlue 基础色板 (映射到 sub1) */
-  '--color-sub-blue-1': 'var(--color-sub1-1)',
-  '--color-sub-blue-2': 'var(--color-sub1-2)',
-  '--color-sub-blue-3': 'var(--color-sub1-3)',
-  '--color-sub-blue-4': 'var(--color-sub1-4)',
-  '--color-sub-blue-5': 'var(--color-sub1-5)',
-  '--color-sub-blue-6': 'var(--color-sub1-6)',
-  '--color-sub-blue-7': 'var(--color-sub1-7)',
-  '--color-sub-blue-8': 'var(--color-sub1-8)',
-  '--color-sub-blue-9': 'var(--color-sub1-9)',
-  '--color-sub-blue-10': 'var(--color-sub1-10)',
-  '--color-sub-blue-11': 'var(--color-sub1-11)',
-  '--color-sub-blue-12': 'var(--color-sub1-12)',
-  /** SubBlue 透明度色板 (映射到 sub1) */
-  '--color-sub-blue-a1': 'var(--color-sub1-a1)',
-  '--color-sub-blue-a2': 'var(--color-sub1-a2)',
-  '--color-sub-blue-a3': 'var(--color-sub1-a3)',
-  '--color-sub-blue-a4': 'var(--color-sub1-a4)',
-  '--color-sub-blue-a5': 'var(--color-sub1-a5)',
-  '--color-sub-blue-a6': 'var(--color-sub1-a6)',
-  '--color-sub-blue-a7': 'var(--color-sub1-a7)',
-  '--color-sub-blue-a8': 'var(--color-sub1-a8)',
-  '--color-sub-blue-a9': 'var(--color-sub1-a9)',
-  '--color-sub-blue-a10': 'var(--color-sub1-a10)',
-  '--color-sub-blue-a11': 'var(--color-sub1-a11)',
-  '--color-sub-blue-a12': 'var(--color-sub1-a12)',
-  /** SubBlue 特殊用途颜色 */
-  '--color-sub-blue-contrast': 'var(--color-sub1-text)',
-  '--color-sub-blue-surface': 'var(--color-sub1-bg-card-light)',
-  '--color-sub-blue-indicator': 'var(--color-sub1-9)',
-  '--color-sub-blue-track': 'var(--color-sub1-9)',
-  /** Aux-0 (映射到 sub0) */
-  '--color-aux-0-1': 'var(--color-sub0-1)',
-  '--color-aux-0-2': 'var(--color-sub0-2)',
-  '--color-aux-0-3': 'var(--color-sub0-3)',
-  /** Aux-1 (映射到 sub1) */
-  '--color-aux-1-1': 'var(--color-sub1-1)',
-  '--color-aux-1-2': 'var(--color-sub1-2)',
-  '--color-aux-1-3': 'var(--color-sub1-3)',
-  '--color-aux-1-4': 'var(--color-sub1-4)',
-  /** Aux-2 (映射到 sub2) */
-  '--color-aux-2-1': 'var(--color-sub2-1)',
-  '--color-aux-2-2': 'var(--color-sub2-2)',
-  '--color-aux-2-4': 'var(--color-sub2-4)',
-  /** Aux-3 (映射到 sub3) */
-  '--color-aux-3': 'var(--color-sub3-9)',
-  /** Aux-4 (映射到 sub4) */
-  '--color-aux-4-1': 'var(--color-sub4-1)',
-  '--color-aux-4-2': 'var(--color-sub4-2)',
-  '--color-aux-4-3': 'var(--color-sub4-3)',
-  '--color-aux-4-4': 'var(--color-sub4-4)',
-  /** Aux-5 (映射到 sub5) */
-  '--color-aux-5-1': 'var(--color-sub5-1)',
-  '--color-aux-5-2': 'var(--color-sub5-2)',
-  '--color-aux-5-3': 'var(--color-sub5-3)',
-  '--color-aux-5-4': 'var(--color-sub5-4)',
-  /** === 特效样式 === 投影-描边-L1 */
-  '--shadow-border-l1': 'inset 0 0 1px 0 rgba(0, 0, 0, 15%)',
-  /** 投影-控件-B1 */
-  '--shadow-control-b1':
-    '0 0 1px 0 rgba(0, 1, 3, 20%), 0 1.5px 4px -1px rgba(0, 1, 3, 4%)',
-  /** 投影-控件-L1 */
-  '--shadow-control-l1':
-    '0 0 1px 0 rgba(0, 1, 3, 5%), 0 2px 7px 0 rgba(0, 1, 3, 5%),',
-  /** 投影-卡片-L1 */
-  '--shadow-card-l1': '0px 1.5px 2px -1px rgba(0, 19, 41, 0.07)',
-  /** 投影-气泡-L2 .shadow-hover-control-l2---》shadow-bubble-l2 */
-  '--shadow-hover-control-l2':
-    '0 0 1px 0 rgba(0, 1, 3, 5%), 0 6px 16px 0 rgba(0, 1, 3, 8%)',
-  /** 投影-弹窗-L3 */
-  '--shadow-dialog-l3': '0 0 3px -1px rgba(0, 1, 3, 4%),',
-  /** 无边距-none 0 */
-  '--padding-none': '0',
-  /** 卡片-描边感 */
-  '--padding-card-m-cover': '4px',
-  /** 卡片-sm */
-  '--padding-card-sm': '8px',
-  /** 卡片-base */
-  '--padding-card-m': '12px',
-  /** 卡片-lg */
-  '--padding-card-l': '16px',
-  /** 弹窗-base */
-  '--padding-dialog': '24px 32px',
-  /** 页容器-sm */
-  '--padding-page-sm': '16px 24px',
-  /** 页容器-base */
-  '--padding-page-base': '16px 40px',
-  /** 控件-sm */
-  '--padding-control-s-28': '3px 8px',
-  /** 控件-S-28-图标 */
-  '--padding-control-s-28-icon': '6px 8px 6px 6px',
-  /** 控件-base */
-  '--padding-control-m-32': '5px 12px',
-  /** 标签-24 0,6,0,6 */
-  '--padding-tag-24': '0 6px',
-  /** 表格-sm-32 */
-  '--padding-table-s-32': '5px 0',
-  /** 表格-base-40 */
-  '--padding-table-m-40': '9px 0',
-  /** 表格-lg-60 */
-  '--padding-table-lg-60': '19px 0',
-  /** 控件-xs */
-  '--border-radius-control-xs': '4px',
-  /** 控件-sm */
-  '--border-radius-control-sm': '6px',
-  /** 控件-base */
-  '--border-radius-control-base': '8px',
-  /** 卡片-base */
-  '--border-radius-card-m': '12px',
-  /** 卡片-lg */
-  '--border-radius-card-lg': '16px',
-  /** 弹窗-base */
-  '--border-radius-dialog-m': '20px',
-  /** 全圆角-full */
-  '--border-radius-capsule': '72px',
-  /** 无圆角-none */
-  '--border-radius-none': '0',
-} as const;
+  '--color-sub0-1': '#fbfdff',
+  '--color-sub0-2': '#f5f9ff',
+  '--color-sub0-3': '#eaf3ff',
+  '--color-sub0-4': '#dcecff',
+  '--color-sub0-5': '#cbe2ff',
+  '--color-sub0-6': '#b7d4ff',
+  '--color-sub0-7': '#9ec3f9',
+  '--color-sub0-8': '#79abf3',
+  '--color-sub0-9': '#388bff',
+  '--color-sub0-10': '#307fec',
+  '--color-sub0-11': '#1a6edd',
+  '--color-sub0-12': '#103263',
+  '--color-sub0-a1': '#0080ff04',
+  '--color-sub0-a2': '#0066ff0a',
+  '--color-sub0-a3': '#006eff15',
+  '--color-sub0-a4': '#0075ff23',
+  '--color-sub0-a5': '#0071ff34',
+  '--color-sub0-a6': '#0067ff48',
+  '--color-sub0-a7': '#0062f061',
+  '--color-sub0-a8': '#0060e986',
+  '--color-sub0-a9': '#006affc7',
+  '--color-sub0-a10': '#0061e8cf',
+  '--color-sub0-a11': '#005ed9e5',
+  '--color-sub0-a12': '#002459ef',
+  '--color-sub1-1': '#fcfcff',
+  '--color-sub1-2': '#f9f8ff',
+  '--color-sub1-3': '#f1f0ff',
+  '--color-sub1-4': '#e7e4ff',
+  '--color-sub1-5': '#dcd9ff',
+  '--color-sub1-6': '#cfc9ff',
+  '--color-sub1-7': '#bcb2ff',
+  '--color-sub1-8': '#a492ff',
+  '--color-sub1-9': '#917ef7',
+  '--color-sub1-10': '#8672e9',
+  '--color-sub1-11': '#654dc1',
+  '--color-sub1-12': '#321973',
+  '--color-sub1-a1': '#0000ff03',
+  '--color-sub1-a2': '#2500ff07',
+  '--color-sub1-a3': '#1100ff0f',
+  '--color-sub1-a4': '#1d00ff1b',
+  '--color-sub1-a5': '#1500ff26',
+  '--color-sub1-a6': '#1d00ff36',
+  '--color-sub1-a7': '#2200ff4d',
+  '--color-sub1-a8': '#2b00ff6d',
+  '--color-sub1-a9': '#2600f081',
+  '--color-sub1-a10': '#2500d88d',
+  '--color-sub1-a11': '#2300a6b2',
+  '--color-sub1-a12': '#1c0064e6',
+  '--color-sub2-1': '#f8feff',
+  '--color-sub2-2': '#f0fbfe',
+  '--color-sub2-3': '#dbf8ff',
+  '--color-sub2-4': '#c7f2fe',
+  '--color-sub2-5': '#b0eaf9',
+  '--color-sub2-6': '#96def2',
+  '--color-sub2-7': '#71cfe7',
+  '--color-sub2-8': '#0fbada',
+  '--color-sub2-9': '#2ad8fc',
+  '--color-sub2-10': '#13cdf0',
+  '--color-sub2-11': '#007b95',
+  '--color-sub2-12': '#004251',
+  '--color-sub2-a1': '#00dbff07',
+  '--color-sub2-a2': '#00bbee0f',
+  '--color-sub2-a3': '#00ceff24',
+  '--color-sub2-a4': '#00c4fb38',
+  '--color-sub2-a5': '#00bcec4f',
+  '--color-sub2-a6': '#00afe069',
+  '--color-sub2-a7': '#00a9d48e',
+  '--color-sub2-a8': '#00b6d8f0',
+  '--color-sub2-a9': '#00d0fcd5',
+  '--color-sub2-a10': '#00c9efec',
+  '--color-sub2-a11': '#007b95',
+  '--color-sub2-a12': '#004251',
+  '--color-sub3-1': '#fbfcfe',
+  '--color-sub3-2': '#f7f9fd',
+  '--color-sub3-3': '#ebf1fb',
+  '--color-sub3-4': '#e0e9f8',
+  '--color-sub3-5': '#d5e1f5',
+  '--color-sub3-6': '#c8d7f1',
+  '--color-sub3-7': '#b8caea',
+  '--color-sub3-8': '#9cb5e1',
+  '--color-sub3-9': '#718ab6',
+  '--color-sub3-10': '#657ea9',
+  '--color-sub3-11': '#516892',
+  '--color-sub3-12': '#1e2839',
+  '--color-sub3-a1': '#0040c004',
+  '--color-sub3-a2': '#0040c008',
+  '--color-sub3-a3': '#004dcc14',
+  '--color-sub3-a4': '#004bc61f',
+  '--color-sub3-a5': '#0049c32a',
+  '--color-sub3-a6': '#0046bf37',
+  '--color-sub3-a7': '#0041b447',
+  '--color-sub3-a8': '#0041b263',
+  '--color-sub3-a9': '#002d7c8e',
+  '--color-sub3-a10': '#002a719a',
+  '--color-sub3-a11': '#00225fae',
+  '--color-sub3-a12': '#000b1fe1',
+  '--color-sub4-1': '#fbfdfa',
+  '--color-sub4-2': '#f6fbf3',
+  '--color-sub4-3': '#e5fad7',
+  '--color-sub4-4': '#d4f5bd',
+  '--color-sub4-5': '#c3eca6',
+  '--color-sub4-6': '#b1df8f',
+  '--color-sub4-7': '#9bce74',
+  '--color-sub4-8': '#7dba47',
+  '--color-sub4-9': '#84dc18',
+  '--color-sub4-10': '#7ad100',
+  '--color-sub4-11': '#507f22',
+  '--color-sub4-12': '#2d431b',
+  '--color-sub4-a1': '#33990005',
+  '--color-sub4-a2': '#40aa000c',
+  '--color-sub4-a3': '#5ae00028',
+  '--color-sub4-a4': '#59d90042',
+  '--color-sub4-a5': '#54c90059',
+  '--color-sub4-a6': '#4eb70070',
+  '--color-sub4-a7': '#48a6008b',
+  '--color-sub4-a8': '#4ba000b8',
+  '--color-sub4-a9': '#77d800e7',
+  '--color-sub4-a10': '#7ad100',
+  '--color-sub4-a11': '#356b00dd',
+  '--color-sub4-a12': '#142d00e4',
+  '--color-sub5-1': '#fffbfe',
+  '--color-sub5-2': '#fff6fc',
+  '--color-sub5-3': '#ffe5f7',
+  '--color-sub5-4': '#ffd6f1',
+  '--color-sub5-5': '#ffc6e9',
+  '--color-sub5-6': '#ffb5e0',
+  '--color-sub5-7': '#fb9ed5',
+  '--color-sub5-8': '#f57fc7',
+  '--color-sub5-9': '#e873bb',
+  '--color-sub5-10': '#db67af',
+  '--color-sub5-11': '#b14089',
+  '--color-sub5-12': '#6e004e',
+  '--color-sub5-a1': '#ff00c004',
+  '--color-sub5-a2': '#ff00aa09',
+  '--color-sub5-a3': '#ff00b11a',
+  '--color-sub5-a4': '#ff00a829',
+  '--color-sub5-a5': '#ff009d39',
+  '--color-sub5-a6': '#ff01954a',
+  '--color-sub5-a7': '#f5009161',
+  '--color-sub5-a8': '#ec009080',
+  '--color-sub5-a9': '#d600848c',
+  '--color-sub5-a10': '#c3007998',
+  '--color-sub5-a11': '#970062bf',
+  '--color-sub5-a12': '#6e004e',
+  '--color-sub6-1': '#fefdfb',
+  '--color-sub6-2': '#fff8ec',
+  '--color-sub6-3': '#fec',
+  '--color-sub6-4': '#ffe3b3',
+  '--color-sub6-5': '#ffd799',
+  '--color-sub6-6': '#ffc984',
+  '--color-sub6-7': '#f3b873',
+  '--color-sub6-8': '#e3a04c',
+  '--color-sub6-9': '#f8a530',
+  '--color-sub6-10': '#e29f4b',
+  '--color-sub6-11': '#ad6600',
+  '--color-sub6-12': '#4c361d',
+  '--color-sub6-a1': '#c0800004',
+  '--color-sub6-a2': '#ffa20013',
+  '--color-sub6-a3': '#ffaa0033',
+  '--color-sub6-a4': '#ffa2004c',
+  '--color-sub6-a5': '#ff9b0066',
+  '--color-sub6-a6': '#ff90017b',
+  '--color-sub6-a7': '#ea7e008c',
+  '--color-sub6-a8': '#d77800b3',
+  '--color-sub6-a9': '#f69000cf',
+  '--color-sub6-a10': '#d67700b4',
+  '--color-sub6-a11': '#ad6600',
+  '--color-sub6-a12': '#351c00e2',
+  '--color-sub7-1': '#fafefa',
+  '--color-sub7-2': '#f4fcf4',
+  '--color-sub7-3': '#e2fae3',
+  '--color-sub7-4': '#d0f5d1',
+  '--color-sub7-5': '#baeebc',
+  '--color-sub7-6': '#a0e4a3',
+  '--color-sub7-7': '#7bd681',
+  '--color-sub7-8': '#38c24d',
+  '--color-sub7-9': '#49d05b',
+  '--color-sub7-10': '#3bc450',
+  '--color-sub7-11': '#008604',
+  '--color-sub7-12': '#144019',
+  '--color-sub7-a1': '#00cc0005',
+  '--color-sub7-a2': '#00ba000b',
+  '--color-sub7-a3': '#00d4091d',
+  '--color-sub7-a4': '#00c9062f',
+  '--color-sub7-a5': '#00c10845',
+  '--color-sub7-a6': '#00b7095f',
+  '--color-sub7-a7': '#00b00c84',
+  '--color-sub7-a8': '#00b11bc7',
+  '--color-sub7-a9': '#00bd19b6',
+  '--color-sub7-a10': '#00b21bc4',
+  '--color-sub7-a11': '#008604',
+  '--color-sub7-a12': '#003005eb',
+  '--font-family-text':
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-family-number':
+    "Rubik, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  '--font-family-stylish':
+    "'DingTalk JinBuTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  '--font-family-code':
+    "'Roboto Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Liberation Mono', 'Courier New', monospace",
+  '--font-family-document':
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-size-xs': '10px',
+  '--font-size-sm': '12px',
+  '--font-size-base': '13px',
+  '--font-size-lg': '15px',
+  '--font-size-xl': '18px',
+  '--font-size-2xl': '24px',
+  '--font-size-3xl': '30px',
+  '--font-size-4xl': '56px',
+  '--font-size-H1': '56px',
+  '--font-size-H2': '30px',
+  '--font-size-H3': '24px',
+  '--font-size-H4': '18px',
+  '--font-size-H5': '15px',
+  '--font-size-H6': '13px',
+  '--line-height-xs': '18px',
+  '--line-height-sm': '20px',
+  '--line-height-base': '22px',
+  '--line-height-lg': '24px',
+  '--line-height-xl': '26px',
+  '--line-height-2xl': '32px',
+  '--line-height-3xl': '36px',
+  '--line-height-4xl': '64px',
+  '--line-height-none': '100%',
+  '--line-height-tight': '120%',
+  '--line-height-loose': '160%',
+  '--line-height-wide': '180%',
+  '--font-weight-light': '300',
+  '--font-weight-base': '400',
+  '--font-weight-emphasized': '500',
+  '--font-weight-heading': '600',
+  '--letter-spacing-tight': '-0.02em',
+  '--letter-spacing-base': 'normal',
+  '--letter-spacing-loose': '0.04em',
+  '--shadow-hard-xs': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.15)',
+  '--shadow-hard-sm': 'inset 0px 0px 1px 0px rgba(0, 0, 0, 0.25)',
+  '--shadow-hard-base': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.25)',
+  '--shadow-hard-lg':
+    '0px 0px 1px 0px rgba(0, 19, 41, 0.05), 0px 2px 7px 0px rgba(0, 19, 41, 0.05), 0px 2px 5px -2px rgba(0, 19, 41, 0.06)',
+  '--shadow-hard-xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 2px 7px 0px rgba(0, 15, 41, 0.05), 0px 2px 5px -2px rgba(0, 15, 41, 0.06)',
+  '--shadow-hard-2xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 4px 14px 0px rgba(0, 15, 41, 0.05), 0px 4px 10px -4px rgba(0, 15, 41, 0.06)',
+  '--shadow-soft-xs': '0px 1.5px 4px -1px rgba(10, 9, 11, 0.07)',
+  '--shadow-soft-sm':
+    '0px 2px 4px -1px rgba(10, 9, 11, 0.02), 0px 5px 13px -5px rgba(10, 9, 11, 0.05)',
+  '--shadow-soft-base': '0px 1.5px 4px -1px rgba(0, 1, 3, 0.07)',
+  '--shadow-soft-lg': '0px 2px 6px -1px rgba(0, 19, 41, 0.07)',
+  '--shadow-soft-xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 6px 16px 0px rgba(0, 15, 41, 0.08)',
+  '--shadow-soft-2xl':
+    '0px 0px 3px -1px rgba(0, 15, 41, 0.04), 0px 32px 33px -15px rgba(0, 15, 41, 0.17)',
+  '--padding-unit': '4px',
+  '--padding-0-25x': '1px',
+  '--padding-0-5x': '2px',
+  '--padding-1x': '4px',
+  '--padding-1-5x': '6px',
+  '--padding-2x': '8px',
+  '--padding-3x': '12px',
+  '--padding-4x': '16px',
+  '--padding-5x': '20px',
+  '--padding-6x': '24px',
+  '--padding-7x': '28px',
+  '--padding-8x': '32px',
+  '--padding-9x': '36px',
+  '--padding-10x': '40px',
+  '--padding-11x': '44px',
+  '--padding-12x': '48px',
+  '--padding-13x': '52px',
+  '--padding-14x': '56px',
+  '--padding-15x': '60px',
+  '--padding-16x': '64px',
+  '--padding-17x': '68px',
+  '--padding-18x': '72px',
+  '--padding-19x': '76px',
+  '--padding-20x': '80px',
+  '--margin-unit': '4px',
+  '--margin-0-25x': '1px',
+  '--margin-0-5x': '2px',
+  '--margin-1x': '4px',
+  '--margin-1-5x': '6px',
+  '--margin-2x': '8px',
+  '--margin-3x': '12px',
+  '--margin-4x': '16px',
+  '--margin-5x': '20px',
+  '--margin-6x': '24px',
+  '--margin-7x': '28px',
+  '--margin-8x': '32px',
+  '--margin-9x': '36px',
+  '--margin-10x': '40px',
+  '--margin-11x': '44px',
+  '--margin-12x': '48px',
+  '--margin-13x': '52px',
+  '--margin-14x': '56px',
+  '--margin-15x': '60px',
+  '--margin-16x': '64px',
+  '--margin-17x': '68px',
+  '--margin-18x': '72px',
+  '--margin-19x': '76px',
+  '--margin-20x': '80px',
+  '--radius-none': '0px',
+  '--radius-2xs': '2px',
+  '--radius-xs': '4px',
+  '--radius-sm': '6px',
+  '--radius-base': '8px',
+  '--radius-lg': '12px',
+  '--radius-xl': '16px',
+  '--radius-2xl': '20px',
+  '--radius-3xl': '24px',
+  '--radius-circle': '50%',
+  '--height-control-xs': '24px',
+  '--height-control-sm': '28px',
+  '--height-control-base': '32px',
+  '--height-control-lg': '36px',
+  '--height-control-alias-xs': 'var(--height-control-xs)',
+  '--height-control-alias-sm': 'var(--height-control-sm)',
+  '--height-control-alias-base': 'var(--height-control-base)',
+  '--height-control-alias-lg': 'var(--height-control-lg)',
+};
 
 export default global;
-
-// === 多个值 Mixins 函数 ===
-
-/** === 图标样式 === */
-export const iconSS = () => {
-  return {
-    fontSize: '16px',
-    width: '16px',
-    height: '16px',
-  };
-};
-
-export const iconSM = () => {
-  return {
-    fontSize: '18px',
-    width: '18px',
-    height: '18px',
-  };
-};
-
-/** === 文字样式 === */
-export const textBase = () => {
-  return {
-    fontFamily: 'AlibabaPuHuiTi',
-    fontVariationSettings: "'opsz' auto",
-    fontFeatureSettings: "'kern' on",
-  };
-};
-
-/** H1 */
-export const textH1Mega = () => {
-  return {
-    fontSize: '56px',
-    lineHeight: '64px',
-    letterSpacing: '4%',
-  };
-};
-
-/** H2 */
-export const textH2Slogan = () => {
-  return {
-    fontSize: '30px',
-    lineHeight: '38px',
-  };
-};
-
-/** H3 */
-export const textH3Theme = () => {
-  return {
-    fontSize: '24px',
-    lineHeight: '32px',
-  };
-};
-
-/** H4 */
-export const textH4PageTitle = () => {
-  return {
-    fontSize: '18px',
-    lineHeight: '26px',
-  };
-};
-
-/** H5 */
-export const textH5CardTitle = () => {
-  return {
-    fontSize: '15px',
-    lineHeight: '24px',
-  };
-};
-
-/** H6 */
-export const textH6Subtitle = () => {
-  return {
-    fontSize: '13px',
-    lineHeight: '20px',
-  };
-};
-
-/** 紧凑正文/微小字号-xs */
-export const textBodyXs = () => {
-  return {
-    fontSize: '10px',
-    lineHeight: '18px',
-  };
-};
-
-/** 紧凑正文/小字号-sm */
-export const textBodySm = () => {
-  return {
-    fontSize: '12px',
-    lineHeight: '20px',
-  };
-};
-
-/** 紧凑正文/小字号-强调-sm */
-export const textBodySmBold = () => {
-  return {
-    fontSize: '12px',
-    lineHeight: '20px',
-    fontWeight: '500',
-  };
-};
-
-/** 紧凑正文/基础字号-base */
-export const textBodyM = () => {
-  return {
-    fontSize: '13px',
-    lineHeight: '20px',
-  };
-};
-
-/** 紧凑正文/基础字号-强调-base */
-export const textBodyMBold = () => {
-  return {
-    fontSize: '13px',
-    lineHeight: '20px',
-    fontWeight: '500',
-  };
-};
-
-/** 紧凑正文/基础字号-lg */
-export const textBodyL = () => {
-  return {
-    fontSize: '15px',
-    lineHeight: '24px',
-  };
-};
-
-export const textCodeS = () => {
-  return {
-    fontSize: '12px',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-    fontFamily: "'Roboto Mono', monospace",
-    fontOpticalSizing: 'auto',
-    fontWeight: '400',
-    fontStyle: 'normal',
-  };
-};
-
-/** 段落/微小字号-xs */
-export const textCaptionXs = () => {
-  return {
-    fontSize: '10px',
-    fontWeight: 'normal',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 段落/小字号-sm */
-export const textCaptionS = () => {
-  return {
-    fontSize: '12px',
-    fontWeight: 'normal',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 段落/小字号-强调-sm */
-export const textCaptionSBold = () => {
-  return {
-    fontSize: '12px',
-    fontWeight: '500',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 段落/基础字号-base */
-export const textParagraphBase = () => {
-  return {
-    fontSize: '13px',
-    fontWeight: 'normal',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 段落/基础字号-强调-base */
-export const textParagraphBaseBold = () => {
-  return {
-    fontSize: '13px',
-    fontWeight: '500',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 段落/大字号-lg */
-export const textParagraphLg = () => {
-  return {
-    fontSize: '15px',
-    fontWeight: 'normal',
-    lineHeight: '1.6',
-    letterSpacing: '0',
-  };
-};
-
-/** 数值/num-xs */
-export const textNumXs = () => {
-  return {
-    fontSize: '10px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '500',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-sm */
-export const textNumS = () => {
-  return {
-    fontSize: '12px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '500',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-base */
-export const textNumM = () => {
-  return {
-    fontSize: '13px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '500',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-lg */
-export const textNumLg = () => {
-  return {
-    fontSize: '15px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '600',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-xl */
-export const textNumXl = () => {
-  return {
-    fontSize: '18px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '600',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-2xl */
-export const textNum2xl = () => {
-  return {
-    fontSize: '24px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '600',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-3xl */
-export const textNum3xl = () => {
-  return {
-    fontSize: '30px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '600',
-    fontStyle: 'normal',
-  };
-};
-
-/** 数值/num-4xl */
-export const textNum4xl = () => {
-  return {
-    fontSize: '56px',
-    lineHeight: '100%',
-    letterSpacing: '4%',
-    fontFamily: 'Rubik, sans-serif',
-    fontOpticalSizing: 'auto',
-    fontWeight: '600',
-    fontStyle: 'normal',
-  };
-};
-
-/** 风格化/H6 */
-export const textH6Promotion = () => {
-  return {};
-};
-
-/** 风格化/H5 */
-export const textH5Promotion = () => {
-  return {};
-};
-
-/** 风格化/H4 */
-export const textH4Promotion = () => {
-  return {};
-};
-
-/** 风格化/H3 */
-export const textH3Promotion = () => {
-  return {};
-};
-
-/** 风格化/H2 */
-export const textH2Promotion = () => {
-  return {};
-};
-
-/** 风格化/H1 */
-export const textH1Promotion = () => {
-  return {};
-};
-
-/** L0-控件-兼容 */
-export const shadowControlL0 = () => {
-  return {
-    boxShadow:
-      '0 0 1px 0 rgba(0, 1, 3, 20%), 0 1.5px 4px -1px rgba(0, 1, 3, 4%)',
-  };
-};
-
-/** 投影-弥散-L4 */
-export const shadowDiffusionL4 = () => {
-  return {};
-};
-
-/** 兼容-XS-微小控件-勿新增使用 */
-export const borderRadiusXs = () => {
-  return {
-    borderRadius: '4px',
-  };
-};
-
-/** 兼容-S-小控件-勿新增使用 */
-export const borderRadiusS = () => {
-  return {
-    borderRadius: '6px',
-  };
-};
-
-/** 兼容-M-控件 6-勿新增使用 */
-export const borderRadiusM = () => {
-  return {
-    borderRadius: '8px',
-  };
-};
-
-/** 兼容-L-卡片 8-勿新增使用 */
-export const borderRadiusL = () => {
-  return {
-    borderRadius: '12px',
-  };
-};
-
-/** 兼容-L-弹窗 16-勿新增使用 */
-export const borderRadiusDialog = () => {
-  return {
-    borderRadius: '20px',
-  };
-};
-
-/** === 样式组件 === 文本省略 */
-export const textEllipsis = () => {
-  return {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-  };
-};
-
-/** 滚动条 */
-export const scrollbar = () => {
-  return {
-    overflowY: 'auto',
-    overscrollBehavior: 'contain',
-    '&::-webkit-scrollbar': {
-      width: '10px',
-      backgroundColor: '@color-transparent',
-    },
-    '&::-webkit-scrollbar-thumb': {
-      width: '4px',
-      backgroundColor: '@color-transparent',
-      border: '2px solid @color-transparent',
-      backgroundClip: 'padding-box',
-      borderRadius: '72px',
-    },
-    '&:hover::-webkit-scrollbar-thumb': {
-      backgroundColor: '@color-gray-border-light',
-      '&:hover': {
-        backgroundColor: '@color-gray-text-disabled',
-      },
-    },
-  };
-};
-
-/** 显示滚动边缘 */
-export const showScrollLine = () => {
-  return {
-    borderTop: '1px solid @color-transparent',
-    borderBottom: '1px solid @color-transparent',
-    borderTopColor: '@color-gray-border-light',
-    borderBottomColor: '@color-gray-border-light',
-  };
-};
-
-/** 允许滚动，但隐藏滚动条 */
-export const scrollbarHidden = () => {
-  return {
-    overflowY: 'auto',
-    scrollbarWidth: 'none',
-    '&::-webkit-scrollbar': {
-      display: 'none',
-    },
-  };
-};
