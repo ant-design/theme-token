@@ -9,13 +9,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run convert:less && father build && prettier --write ./src",
+    "build": "npm run generate:global && father build && prettier --write ./src",
     "build:watch": "father dev",
     "convert:less": "node scripts/less-converter.js",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
-    "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,ts,tsx,css,less,json,md}\"",
     "doctor": "father doctor",
     "generate:global": "node scripts/generate-global.js",
     "lint": "npm run lint:es && npm run lint:css",
@@ -23,6 +22,7 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "dumi setup",
     "prepublishOnly": "father doctor && npm run build",
+    "prettier": "prettier --write \"{src,test}/**/*.{js,jsx,ts,tsx,css,less,json,md}\"",
     "start": "npm run dev",
     "test": "jest",
     "test:coverage": "jest --coverage",
