@@ -11,7 +11,6 @@
   "scripts": {
     "build": "npm run generate:global && father build && prettier --write ./src",
     "build:watch": "father dev",
-    "convert:less": "node scripts/less-converter.js",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
