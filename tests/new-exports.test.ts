@@ -18,7 +18,7 @@ describe('新的导出测试', () => {
 
     expect(antdToken).toBeDefined();
     expect(typeof antdToken).toBe('object');
-    
+
     // 使用 snapshot 测试返回的 token 对象结构
     expect(antdToken).toMatchSnapshot();
   });

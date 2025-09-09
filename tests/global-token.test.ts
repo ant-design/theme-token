@@ -52,7 +52,7 @@ describe('Global Token', () => {
       );
       // 如果没有透明色变量，检查是否有 var() 引用
       const varRefs = Object.values(globalThemeToken).filter(
-        (value) => typeof value === 'string' && value.includes('transparent')
+        (value) => typeof value === 'string' && value.includes('transparent'),
       );
       expect(transparentKeys.length + varRefs.length).toBeGreaterThanOrEqual(0);
     });
@@ -119,7 +119,7 @@ describe('Global Token', () => {
 
       // 如果没有直接的透明值，至少应该有变量引用
       const hasTransparentRefs = Object.values(globalThemeToken).some(
-        (value) => typeof value === 'string' && value.includes('transparent')
+        (value) => typeof value === 'string' && value.includes('transparent'),
       );
       expect(transparentValues.length >= 0 || hasTransparentRefs).toBe(true);
     });

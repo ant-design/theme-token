@@ -9,7 +9,9 @@ describe('theme 对象测试', () => {
 
   test('应该正确转换 CSS 变量名为驼峰命名法', () => {
     // 测试 cssVarToCamelCase 函数
-    expect(cssVarToCamelCase('--margin-component-xs')).toBe('marginComponentXs');
+    expect(cssVarToCamelCase('--margin-component-xs')).toBe(
+      'marginComponentXs',
+    );
     expect(cssVarToCamelCase('--color-gray-text')).toBe('colorGrayText');
     expect(cssVarToCamelCase('--font-size-base')).toBe('fontSizeBase');
   });
@@ -31,9 +33,11 @@ describe('theme 对象测试', () => {
 
   test('应该正确处理复杂的 CSS 变量名', () => {
     // 测试实际存在的复杂变量名
-    const complexKeys = Object.keys(theme).filter(key => key.includes('ControlFill'));
+    const complexKeys = Object.keys(theme).filter((key) =>
+      key.includes('ControlFill'),
+    );
     expect(complexKeys.length).toBeGreaterThan(0);
-    
+
     // 检查第一个复杂变量名的格式
     const key = complexKeys[0];
     expect(theme[key]).toMatch(/^var\(--[a-zA-Z0-9-]+\)$/);
@@ -116,12 +120,12 @@ describe('theme 对象实际使用场景测试', () => {
   test('应该能够用于 CSS-in-JS 样式', () => {
     // 获取实际存在的变量进行测试
     const themeKeys = Object.keys(theme);
-    const marginKeys = themeKeys.filter(key => key.includes('margin'));
-    const colorKeys = themeKeys.filter(key => key.includes('color'));
-    
+    const marginKeys = themeKeys.filter((key) => key.includes('margin'));
+    const colorKeys = themeKeys.filter((key) => key.includes('color'));
+
     expect(marginKeys.length).toBeGreaterThan(0);
     expect(colorKeys.length).toBeGreaterThan(0);
-    
+
     // 模拟在 CSS-in-JS 中使用实际存在的 theme 变量
     const mockStyle = {
       margin: theme[marginKeys[0]],
