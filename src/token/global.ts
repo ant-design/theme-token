@@ -920,7 +920,7 @@ export const global = {
   '--color-gray-a6': '#0062ff3f',
   '--color-gray-a7': '#005bf052',
   '--color-gray-a8': '#0057e470',
-  '--color-gray-a9': '#00163bf6',
+  '--color-gray-a9': 'rgba(0, 25, 61, 0.3255)',
   '--color-gray-a10': '#001a45e1',
   '--color-gray-a11': '#002d7abc',
   '--color-gray-a12': '#00163eef',
