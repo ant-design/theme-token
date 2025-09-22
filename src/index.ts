@@ -17,3 +17,5 @@ export type { UseStyleResult } from '../src/useStyle';
 export type { CSSVariables } from './hooks';
 export { processTokenMappingToAntd } from './token/globalToAntd';
 export type { BaseToken, ComponentToken, GenerateStyle } from './useStyle';
+
+export * from './token/globalToAntd';

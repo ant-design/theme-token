@@ -1,878 +1,370 @@
-// 根据 global.less 变量更新的 colorMappings
-export const colorMappings = [
-  // 主色调相关映射
-  {
-    key: '--color-primary-9',
-    tokens: ['colorPrimary', 'colorPrimaryActive'],
-  },
-  {
-    key: '--color-primary-10',
-    tokens: ['colorPrimaryHover'],
-  },
-  {
-    key: '--color-primary-2',
-    tokens: ['colorPrimaryBg'],
-  },
-  {
-    key: '--color-primary-a3',
-    tokens: ['colorPrimaryBgHover', 'controlOutline'],
-  },
-  {
-    key: '--color-primary-a5',
-    tokens: ['colorPrimaryBorder'],
-  },
-  {
-    key: '--color-primary-a6',
-    tokens: ['colorPrimaryBorderHover'],
-  },
-  {
-    key: '--color-primary-a11',
-    tokens: ['colorPrimaryText'],
-  },
-  {
-    key: '--color-primary-a10',
-    tokens: ['colorPrimaryTextActive'],
-  },
-  {
-    key: '--color-primary-3',
-    tokens: ['controlItemBgActive'],
-  },
-  {
-    key: '--color-primary-4',
-    tokens: ['controlItemBgActiveHover'],
-  },
+// 反向映射：global CSS变量 -> antToken
+export const globalToAntTokenMappings = {
+  // 基础颜色映射
+  '--color-blue-1': ['blue-1', 'blue1'],
+  '--color-blue-2': ['blue-2', 'blue2'],
+  '--color-blue-3': ['blue-3', 'blue3'],
+  '--color-blue-4': ['blue-4', 'blue4'],
+  '--color-blue-5': ['blue-5', 'blue5'],
+  '--color-blue-6': ['blue-6', 'blue6'],
+  '--color-blue-7': ['blue-7', 'blue7'],
+  '--color-blue-8': ['blue-8', 'blue8', 'colorPrimaryTextHover'],
+  '--color-blue-9': ['blue-9', 'blue9', 'colorInfo', 'colorInfoActive'],
+  '--color-blue-10': ['blue-10', 'blue10', 'colorInfoHover', 'colorLinkActive'],
+  '--color-blue-a2': ['colorInfoBgHover'],
+  '--color-blue-a5': ['colorInfoBorder'],
+  '--color-blue-a6': ['colorInfoBorderHover'],
+  '--color-blue-a10': ['colorInfoTextHover', 'colorLinkHover'],
+  '--color-blue-a11': ['colorLink', 'colorInfoText', 'colorInfoTextActive'],
 
-  // 蓝色相关映射
-  {
-    key: '--color-blue-9',
-    tokens: ['colorInfo', 'colorInfoActive'],
-  },
-  {
-    key: '--color-blue-10',
-    tokens: ['colorInfoHover', 'colorLinkActive'],
-  },
-  {
-    key: '--color-blue-2',
-    tokens: ['colorInfoBg'],
-  },
-  {
-    key: '--color-blue-a2',
-    tokens: ['colorInfoBgHover'],
-  },
-  {
-    key: '--color-blue-a5',
-    tokens: ['colorInfoBorder'],
-  },
-  {
-    key: '--color-blue-a6',
-    tokens: ['colorInfoBorderHover'],
-  },
-  {
-    key: '--color-blue-a11',
-    tokens: ['colorLink', 'colorInfoText', 'colorInfoTextActive'],
-  },
-  {
-    key: '--color-blue-a10',
-    tokens: ['colorInfoTextHover', 'colorLinkHover'],
-  },
+  '--color-purple-1': ['purple-1', 'purple1'],
+  '--color-purple-2': ['purple-2', 'purple2'],
+  '--color-purple-3': ['purple-3', 'purple3'],
+  '--color-purple-4': ['purple-4', 'purple4'],
+  '--color-purple-5': ['purple-5', 'purple5'],
+  '--color-purple-6': ['purple-6', 'purple6'],
+  '--color-purple-7': ['purple-7', 'purple7'],
+  '--color-purple-8': ['purple-8', 'purple8'],
+  '--color-purple-9': ['purple-9', 'purple9'],
+  '--color-purple-10': ['purple-10', 'purple10'],
 
-  // 绿色相关映射
-  {
-    key: '--color-green-9',
-    tokens: ['colorSuccess', 'colorSuccessActive'],
-  },
-  {
-    key: '--color-green-10',
-    tokens: ['colorSuccessHover'],
-  },
-  {
-    key: '--color-green-2',
-    tokens: ['colorSuccessBg'],
-  },
-  {
-    key: '--color-green-a2',
-    tokens: ['colorSuccessBgHover'],
-  },
-  {
-    key: '--color-green-a5',
-    tokens: ['colorSuccessBorder'],
-  },
-  {
-    key: '--color-green-a6',
-    tokens: ['colorSuccessBorderHover'],
-  },
-  {
-    key: '--color-green-a11',
-    tokens: ['colorSuccessText', 'colorSuccessTextActive'],
-  },
-  {
-    key: '--color-green-a10',
-    tokens: ['colorSuccessTextHover'],
-  },
+  '--color-cyan-1': ['cyan-1', 'cyan1'],
+  '--color-cyan-2': ['cyan-2', 'cyan2'],
+  '--color-cyan-3': ['cyan-3', 'cyan3'],
+  '--color-cyan-4': ['cyan-4', 'cyan4'],
+  '--color-cyan-5': ['cyan-5', 'cyan5'],
+  '--color-cyan-6': ['cyan-6', 'cyan6'],
+  '--color-cyan-7': ['cyan-7', 'cyan7'],
+  '--color-cyan-8': ['cyan-8', 'cyan8'],
+  '--color-cyan-9': ['cyan-9', 'cyan9'],
+  '--color-cyan-10': ['cyan-10', 'cyan10'],
 
-  // 黄色/警告相关映射
-  {
-    key: '--color-yellow-9',
-    tokens: ['colorWarning', 'colorWarningActive', 'colorWarningTextHover'],
-  },
-  {
-    key: '--color-yellow-10',
-    tokens: ['colorWarningHover', 'colorWarningTextActive'],
-  },
-  {
-    key: '--color-yellow-2',
-    tokens: ['colorWarningBg'],
-  },
-  {
-    key: '--color-yellow-a3',
-    tokens: ['colorWarningBgHover'],
-  },
-  {
-    key: '--color-yellow-a5',
-    tokens: ['colorWarningBorder', 'colorWarningOutline'],
-  },
-  {
-    key: '--color-yellow-a6',
-    tokens: ['colorWarningBorderHover'],
-  },
-  {
-    key: '--color-yellow-a11',
-    tokens: ['colorWarningText'],
-  },
+  '--color-green-1': ['green-1', 'green1'],
+  '--color-green-2': ['green-2', 'green2', 'colorSuccessBg'],
+  '--color-green-3': ['green-3', 'green3'],
+  '--color-green-4': ['green-4', 'green4'],
+  '--color-green-5': ['green-5', 'green5'],
+  '--color-green-6': ['green-6', 'green6'],
+  '--color-green-7': ['green-7', 'green7'],
+  '--color-green-8': ['green-8', 'green8'],
+  '--color-green-9': [
+    'green-9',
+    'green9',
+    'colorSuccess',
+    'colorSuccessActive',
+  ],
+  '--color-green-10': ['green-10', 'green10', 'colorSuccessHover'],
+  '--color-green-a2': ['colorSuccessBgHover'],
+  '--color-green-a5': ['colorSuccessBorder'],
+  '--color-green-a6': ['colorSuccessBorderHover'],
+  '--color-green-a10': ['colorSuccessTextHover'],
+  '--color-green-a11': ['colorSuccessText', 'colorSuccessTextActive'],
 
-  // 红色/错误相关映射
-  {
-    key: '--color-red-9',
-    tokens: ['colorError', 'colorErrorActive'],
-  },
-  {
-    key: '--color-red-10',
-    tokens: ['colorErrorHover'],
-  },
-  {
-    key: '--color-red-2',
-    tokens: ['colorErrorBg'],
-  },
-  {
-    key: '--color-red-a2',
-    tokens: ['colorErrorBgHover'],
-  },
-  {
-    key: '--color-red-a3',
-    tokens: ['colorErrorBgActive'],
-  },
-  {
-    key: '--color-red-a4',
-    tokens: ['colorErrorBgFilledHover'],
-  },
-  {
-    key: '--color-red-a5',
-    tokens: ['colorErrorBorder', 'colorErrorOutline'],
-  },
-  {
-    key: '--color-red-a6',
-    tokens: ['colorErrorBorderHover'],
-  },
-  {
-    key: '--color-red-a11',
-    tokens: ['colorErrorText', 'colorErrorTextActive'],
-  },
-  {
-    key: '--color-red-a10',
-    tokens: ['colorErrorTextHover'],
-  },
+  '--color-magenta-1': ['magenta-1', 'magenta1'],
+  '--color-magenta-2': ['magenta-2', 'magenta2'],
+  '--color-magenta-3': ['magenta-3', 'magenta3'],
+  '--color-magenta-4': ['magenta-4', 'magenta4'],
+  '--color-magenta-5': ['magenta-5', 'magenta5'],
+  '--color-magenta-6': ['magenta-6', 'magenta6'],
+  '--color-magenta-7': ['magenta-7', 'magenta7'],
+  '--color-magenta-8': ['magenta-8', 'magenta8'],
+  '--color-magenta-9': ['magenta-9', 'magenta9'],
+  '--color-magenta-10': ['magenta-10', 'magenta10'],
 
-  // 中性色映射
-  {
-    key: '--color-gray-a12',
-    tokens: ['colorText', 'colorTextHeading', 'colorIconHover'],
-  },
-  {
-    key: '--color-gray-a11',
-    tokens: ['colorTextSecondary', 'colorTextLabel', 'colorBgMask'],
-  },
-  {
-    key: '--color-gray-a9',
-    tokens: ['colorTextTertiary', 'colorIcon', 'colorTextDescription'],
-  },
-  {
-    key: '--color-gray-a8',
-    tokens: [
-      'colorTextQuaternary',
-      'colorTextDisabled',
-      'colorTextPlaceholder',
-    ],
-  },
+  '--color-pink-1': ['pink-1', 'pink1'],
+  '--color-pink-2': ['pink-2', 'pink2'],
+  '--color-pink-3': ['pink-3', 'pink3'],
+  '--color-pink-4': ['pink-4', 'pink4'],
+  '--color-pink-5': ['pink-5', 'pink5'],
+  '--color-pink-6': ['pink-6', 'pink6'],
+  '--color-pink-7': ['pink-7', 'pink7'],
+  '--color-pink-8': ['pink-8', 'pink8'],
+  '--color-pink-9': ['pink-9', 'pink9'],
+  '--color-pink-10': ['pink-10', 'pink10'],
 
-  // 背景色映射
-  {
-    key: '--color-gray-2',
-    tokens: ['colorBgLayout'],
-  },
-  {
-    key: '--color-gray-a12',
-    tokens: ['colorBgSpotlight'],
-  },
+  '--color-red-1': ['red-1', 'red1'],
+  '--color-red-2': ['red-2', 'red2', 'colorErrorBg'],
+  '--color-red-3': ['red-3', 'red3'],
+  '--color-red-4': ['red-4', 'red4'],
+  '--color-red-5': ['red-5', 'red5'],
+  '--color-red-6': ['red-6', 'red6'],
+  '--color-red-7': ['red-7', 'red7'],
+  '--color-red-8': ['red-8', 'red8'],
+  '--color-red-9': ['red-9', 'red9', 'colorError', 'colorErrorActive'],
+  '--color-red-10': ['red-10', 'red10', 'colorErrorHover'],
+  '--color-red-a2': ['colorErrorBgHover'],
+  '--color-red-a3': ['colorErrorBgActive'],
+  '--color-red-a4': ['colorErrorBgFilledHover'],
+  '--color-red-a5': ['colorErrorBorder', 'colorErrorOutline'],
+  '--color-red-a6': ['colorErrorBorderHover'],
+  '--color-red-a10': ['colorErrorTextHover'],
+  '--color-red-a11': ['colorErrorText', 'colorErrorTextActive'],
 
-  // 边框色映射
-  {
-    key: '--color-gray-a5',
-    tokens: [
-      'colorBorder',
-      'colorFill',
-      'colorBgTextActive',
-      'colorSplit',
-      'colorFillContentHover',
-      'controlItemBgActiveDisabled',
-    ],
-  },
-  {
-    key: '--color-gray-a3',
-    tokens: [
-      'colorBorderSecondary',
-      'colorFillSecondary',
-      'colorFillContent',
-      'colorBgTextHover',
-      'controlItemBgHover',
-    ],
-  },
+  '--color-orange-1': ['orange-1', 'orange1'],
+  '--color-orange-2': ['orange-2', 'orange2'],
+  '--color-orange-3': ['orange-3', 'orange3'],
+  '--color-orange-4': ['orange-4', 'orange4'],
+  '--color-orange-5': ['orange-5', 'orange5'],
+  '--color-orange-6': ['orange-6', 'orange6'],
+  '--color-orange-7': ['orange-7', 'orange7'],
+  '--color-orange-8': ['orange-8', 'orange8'],
+  '--color-orange-9': ['orange-9', 'orange9'],
+  '--color-orange-10': ['orange-10', 'orange10'],
 
-  // 填充色映射
-  {
-    key: '--color-gray-a2',
-    tokens: ['colorFillTertiary', 'colorFillAlter', 'colorBgContainerDisabled'],
-  },
-  {
-    key: '--color-gray-a1',
-    tokens: ['colorFillQuaternary'],
-  },
+  '--color-yellow-1': ['yellow-1', 'yellow1'],
+  '--color-yellow-2': ['yellow-2', 'yellow2', 'colorWarningBg'],
+  '--color-yellow-3': ['yellow-3', 'yellow3'],
+  '--color-yellow-4': ['yellow-4', 'yellow4'],
+  '--color-yellow-5': ['yellow-5', 'yellow5'],
+  '--color-yellow-6': ['yellow-6', 'yellow6'],
+  '--color-yellow-7': ['yellow-7', 'yellow7'],
+  '--color-yellow-8': ['yellow-8', 'yellow8'],
+  '--color-yellow-9': [
+    'yellow-9',
+    'yellow9',
+    'colorWarning',
+    'colorWarningActive',
+    'colorWarningTextHover',
+  ],
+  '--color-yellow-10': [
+    'yellow-10',
+    'yellow10',
+    'colorWarningHover',
+    'colorWarningTextActive',
+  ],
+  '--color-yellow-a3': ['colorWarningBgHover'],
+  '--color-yellow-a5': ['colorWarningBorder', 'colorWarningOutline'],
+  '--color-yellow-a6': ['colorWarningBorderHover'],
+  '--color-yellow-a11': ['colorWarningText'],
 
-  // 基础文本色映射
-  {
-    key: '--color-gray-12',
-    tokens: ['colorTextBase'],
-  },
-  // 阴影映射 (根据 global.ts 修正)
-  {
-    key: '--shadow-control-b1',
-    tokens: ['boxShadow'],
-  },
-  {
-    key: '--shadow-control-l1',
-    tokens: ['boxShadowSecondary'],
-  },
-  {
-    key: '--shadow-card-l1',
-    tokens: ['boxShadowTertiary'],
-  },
-  {
-    key: '--shadow-hover-control-l2',
-    tokens: ['boxShadowForm'],
-  },
+  '--color-volcano-1': ['volcano-1', 'volcano1'],
+  '--color-volcano-2': ['volcano-2', 'volcano2'],
+  '--color-volcano-3': ['volcano-3', 'volcano3'],
+  '--color-volcano-4': ['volcano-4', 'volcano4'],
+  '--color-volcano-5': ['volcano-5', 'volcano5'],
+  '--color-volcano-6': ['volcano-6', 'volcano6'],
+  '--color-volcano-7': ['volcano-7', 'volcano7'],
+  '--color-volcano-8': ['volcano-8', 'volcano8'],
+  '--color-volcano-9': ['volcano-9', 'volcano9'],
+  '--color-volcano-10': ['volcano-10', 'volcano10'],
 
-  // 间距映射 (根据 global.ts 修正)
-  {
-    key: '--padding-control-m-32',
-    tokens: ['paddingContentHorizontal'],
-  },
+  '--color-geekblue-1': ['geekblue-1', 'geekblue1'],
+  '--color-geekblue-2': ['geekblue-2', 'geekblue2'],
+  '--color-geekblue-3': ['geekblue-3', 'geekblue3'],
+  '--color-geekblue-4': ['geekblue-4', 'geekblue4'],
+  '--color-geekblue-5': ['geekblue-5', 'geekblue5'],
+  '--color-geekblue-6': ['geekblue-6', 'geekblue6'],
+  '--color-geekblue-7': ['geekblue-7', 'geekblue7'],
+  '--color-geekblue-8': ['geekblue-8', 'geekblue8'],
+  '--color-geekblue-9': ['geekblue-9', 'geekblue9'],
+  '--color-geekblue-10': ['geekblue-10', 'geekblue10'],
 
-  // 颜色色板映射 - Gray (根据 global.ts 修正)
-  {
-    key: '--color-gray-1',
-    tokens: ['gray1'],
-  },
-  {
-    key: '--color-gray-2',
-    tokens: ['gray2'],
-  },
-  {
-    key: '--color-gray-3',
-    tokens: ['gray3'],
-  },
-  {
-    key: '--color-gray-4',
-    tokens: ['gray4'],
-  },
-  {
-    key: '--color-gray-5',
-    tokens: ['gray5'],
-  },
-  {
-    key: '--color-gray-6',
-    tokens: ['gray6'],
-  },
-  {
-    key: '--color-gray-7',
-    tokens: ['gray7'],
-  },
-  {
-    key: '--color-gray-8',
-    tokens: ['gray8'],
-  },
-  {
-    key: '--color-gray-9',
-    tokens: ['gray9'],
-  },
-  {
-    key: '--color-gray-10',
-    tokens: ['gray10'],
-  },
-  {
-    key: '--color-gray-11',
-    tokens: ['gray11'],
-  },
-  {
-    key: '--color-gray-12',
-    tokens: ['gray12'],
-  },
+  '--color-gold-1': ['gold-1', 'gold1'],
+  '--color-gold-2': ['gold-2', 'gold2'],
+  '--color-gold-3': ['gold-3', 'gold3'],
+  '--color-gold-4': ['gold-4', 'gold4'],
+  '--color-gold-5': ['gold-5', 'gold5'],
+  '--color-gold-6': ['gold-6', 'gold6'],
+  '--color-gold-7': ['gold-7', 'gold7'],
+  '--color-gold-8': ['gold-8', 'gold8'],
+  '--color-gold-9': ['gold-9', 'gold9'],
+  '--color-gold-10': ['gold-10', 'gold10'],
 
-  // 颜色透明度色板映射 - Gray (根据 global.ts 修正)
-  {
-    key: '--color-gray-a1',
-    tokens: ['grayA1'],
-  },
-  {
-    key: '--color-gray-a2',
-    tokens: ['grayA2'],
-  },
-  {
-    key: '--color-gray-a3',
-    tokens: ['grayA3'],
-  },
-  {
-    key: '--color-gray-a4',
-    tokens: ['grayA4'],
-  },
-  {
-    key: '--color-gray-a5',
-    tokens: ['grayA5'],
-  },
-  {
-    key: '--color-gray-a6',
-    tokens: ['grayA6'],
-  },
-  {
-    key: '--color-gray-a7',
-    tokens: ['grayA7'],
-  },
-  {
-    key: '--color-gray-a8',
-    tokens: ['grayA8'],
-  },
-  {
-    key: '--color-gray-a9',
-    tokens: ['grayA9'],
-  },
-  {
-    key: '--color-gray-a10',
-    tokens: ['grayA10'],
-  },
-  {
-    key: '--color-gray-a11',
-    tokens: ['grayA11'],
-  },
-  {
-    key: '--color-gray-a12',
-    tokens: ['grayA12'],
-  },
+  '--color-lime-1': ['lime-1', 'lime1'],
+  '--color-lime-2': ['lime-2', 'lime2'],
+  '--color-lime-3': ['lime-3', 'lime3'],
+  '--color-lime-4': ['lime-4', 'lime4'],
+  '--color-lime-5': ['lime-5', 'lime5'],
+  '--color-lime-6': ['lime-6', 'lime6'],
+  '--color-lime-7': ['lime-7', 'lime7'],
+  '--color-lime-8': ['lime-8', 'lime8'],
+  '--color-lime-9': ['lime-9', 'lime9'],
+  '--color-lime-10': ['lime-10', 'lime10'],
 
-  // 颜色色板映射 - Blue (根据 global.ts 修正)
-  {
-    key: '--color-blue-1',
-    tokens: ['blue1'],
-  },
-  {
-    key: '--color-blue-2',
-    tokens: ['blue2'],
-  },
-  {
-    key: '--color-blue-3',
-    tokens: ['blue3'],
-  },
-  {
-    key: '--color-blue-4',
-    tokens: ['blue4'],
-  },
-  {
-    key: '--color-blue-5',
-    tokens: ['blue5'],
-  },
-  {
-    key: '--color-blue-6',
-    tokens: ['blue6'],
-  },
-  {
-    key: '--color-blue-7',
-    tokens: ['blue7'],
-  },
-  {
-    key: '--color-blue-8',
-    tokens: ['blue8'],
-  },
-  {
-    key: '--color-blue-9',
-    tokens: ['blue9'],
-  },
-  {
-    key: '--color-blue-10',
-    tokens: ['blue10'],
-  },
-  {
-    key: '--color-blue-11',
-    tokens: ['blue11'],
-  },
-  {
-    key: '--color-blue-12',
-    tokens: ['blue12'],
-  },
+  // 主色调映射
+  '--color-primary-2': ['colorPrimaryBg'],
+  '--color-primary-3': ['controlItemBgActive'],
+  '--color-primary-4': ['controlItemBgActiveHover'],
+  '--color-primary-9': ['colorPrimary', 'colorPrimaryActive'],
+  '--color-primary-10': ['colorPrimaryHover'],
+  '--color-primary-a3': ['colorPrimaryBgHover', 'controlOutline'],
+  '--color-primary-a5': ['colorPrimaryBorder'],
+  '--color-primary-a6': ['colorPrimaryBorderHover'],
+  '--color-primary-a10': ['colorPrimaryTextActive'],
+  '--color-primary-a11': ['colorPrimaryText'],
 
-  // 颜色透明度色板映射 - Blue (根据 global.ts 修正)
-  {
-    key: '--color-blue-a1',
-    tokens: ['blueA1'],
-  },
-  {
-    key: '--color-blue-a2',
-    tokens: ['blueA2'],
-  },
-  {
-    key: '--color-blue-a3',
-    tokens: ['blueA3'],
-  },
-  {
-    key: '--color-blue-a4',
-    tokens: ['blueA4'],
-  },
-  {
-    key: '--color-blue-a5',
-    tokens: ['blueA5'],
-  },
-  {
-    key: '--color-blue-a6',
-    tokens: ['blueA6'],
-  },
-  {
-    key: '--color-blue-a7',
-    tokens: ['blueA7'],
-  },
-  {
-    key: '--color-blue-a8',
-    tokens: ['blueA8'],
-  },
-  {
-    key: '--color-blue-a9',
-    tokens: ['blueA9'],
-  },
-  {
-    key: '--color-blue-a10',
-    tokens: ['blueA10'],
-  },
-  {
-    key: '--color-blue-a11',
-    tokens: ['blueA11'],
-  },
-  {
-    key: '--color-blue-a12',
-    tokens: ['blueA12'],
-  },
+  // 中性色/灰色映射
+  '--color-gray-2': ['colorBgLayout'],
+  '--color-gray-12': ['colorTextBase'],
+  '--color-gray-a1': ['colorFillQuaternary'],
+  '--color-gray-a2': [
+    'colorFillTertiary',
+    'colorFillAlter',
+    'colorBgContainerDisabled',
+  ],
+  '--color-gray-a3': [
+    'colorBorderSecondary',
+    'colorFillSecondary',
+    'colorFillContent',
+    'colorBgTextHover',
+    'controlItemBgHover',
+  ],
+  '--color-gray-a5': [
+    'colorBorder',
+    'colorFill',
+    'colorBgTextActive',
+    'colorSplit',
+    'colorFillContentHover',
+    'controlItemBgActiveDisabled',
+  ],
+  '--color-gray-a8': [
+    'colorTextQuaternary',
+    'colorTextDisabled',
+    'colorTextPlaceholder',
+  ],
+  '--color-gray-a9': ['colorTextTertiary', 'colorIcon', 'colorTextDescription'],
+  '--color-gray-a11': ['colorTextSecondary', 'colorTextLabel', 'colorBgMask'],
+  '--color-gray-a12': [
+    'colorText',
+    'colorTextHeading',
+    'colorIconHover',
+    'colorBgSpotlight',
+  ],
 
-  // 颜色色板映射 - Green (根据 global.ts 修正)
-  {
-    key: '--color-green-1',
-    tokens: ['green1'],
-  },
-  {
-    key: '--color-green-2',
-    tokens: ['green2'],
-  },
-  {
-    key: '--color-green-3',
-    tokens: ['green3'],
-  },
-  {
-    key: '--color-green-4',
-    tokens: ['green4'],
-  },
-  {
-    key: '--color-green-5',
-    tokens: ['green5'],
-  },
-  {
-    key: '--color-green-6',
-    tokens: ['green6'],
-  },
-  {
-    key: '--color-green-7',
-    tokens: ['green7'],
-  },
-  {
-    key: '--color-green-8',
-    tokens: ['green8'],
-  },
-  {
-    key: '--color-green-9',
-    tokens: ['green9'],
-  },
-  {
-    key: '--color-green-10',
-    tokens: ['green10'],
-  },
-  {
-    key: '--color-green-11',
-    tokens: ['green11'],
-  },
-  {
-    key: '--color-green-12',
-    tokens: ['green12'],
-  },
+  // 基础色值映射
+  '--color-white': [
+    'colorWhite',
+    'colorBgBase',
+    'colorBgContainer',
+    'colorBgElevated',
+  ],
+  '--color-black': ['colorTextBase'],
 
-  // 颜色透明度色板映射 - Green (根据 global.ts 修正)
-  {
-    key: '--color-green-a1',
-    tokens: ['greenA1'],
-  },
-  {
-    key: '--color-green-a2',
-    tokens: ['greenA2'],
-  },
-  {
-    key: '--color-green-a3',
-    tokens: ['greenA3'],
-  },
-  {
-    key: '--color-green-a4',
-    tokens: ['greenA4'],
-  },
-  {
-    key: '--color-green-a5',
-    tokens: ['greenA5'],
-  },
-  {
-    key: '--color-green-a6',
-    tokens: ['greenA6'],
-  },
-  {
-    key: '--color-green-a7',
-    tokens: ['greenA7'],
-  },
-  {
-    key: '--color-green-a8',
-    tokens: ['greenA8'],
-  },
-  {
-    key: '--color-green-a9',
-    tokens: ['greenA9'],
-  },
-  {
-    key: '--color-green-a10',
-    tokens: ['greenA10'],
-  },
-  {
-    key: '--color-green-a11',
-    tokens: ['greenA11'],
-  },
-  {
-    key: '--color-green-a12',
-    tokens: ['greenA12'],
-  },
+  // 补充基础颜色名称映射
+  '--color-blue': ['blue'],
+  '--color-purple': ['purple'],
+  '--color-cyan': ['cyan'],
+  '--color-green': ['green'],
+  '--color-magenta': ['magenta'],
+  '--color-pink': ['pink'],
+  '--color-red': ['red'],
+  '--color-orange': ['orange'],
+  '--color-yellow': ['yellow'],
+  '--color-volcano': ['volcano'],
+  '--color-geekblue': ['geekblue'],
+  '--color-gold': ['gold'],
+  '--color-lime': ['lime'],
 
-  // 颜色色板映射 - Red (根据 global.ts 修正)
-  {
-    key: '--color-red-1',
-    tokens: ['red1'],
-  },
-  {
-    key: '--color-red-2',
-    tokens: ['red2'],
-  },
-  {
-    key: '--color-red-3',
-    tokens: ['red3'],
-  },
-  {
-    key: '--color-red-4',
-    tokens: ['red4'],
-  },
-  {
-    key: '--color-red-5',
-    tokens: ['red5'],
-  },
-  {
-    key: '--color-red-6',
-    tokens: ['red6'],
-  },
-  {
-    key: '--color-red-7',
-    tokens: ['red7'],
-  },
-  {
-    key: '--color-red-8',
-    tokens: ['red8'],
-  },
-  {
-    key: '--color-red-9',
-    tokens: ['red9'],
-  },
-  {
-    key: '--color-red-10',
-    tokens: ['red10'],
-  },
-  {
-    key: '--color-red-11',
-    tokens: ['red11'],
-  },
-  {
-    key: '--color-red-12',
-    tokens: ['red12'],
-  },
+  // 字体相关映射
+  '--font-family': ['fontFamily'],
+  '--font-family-code': ['fontFamilyCode'],
+  '--font-size': ['fontSize'],
+  '--font-size-sm': ['fontSizeSM'],
+  '--font-size-lg': ['fontSizeLG'],
+  '--font-size-xl': ['fontSizeXL'],
+  '--font-size-heading1': ['fontSizeHeading1'],
+  '--font-size-heading2': ['fontSizeHeading2'],
+  '--font-size-heading3': ['fontSizeHeading3'],
+  '--font-size-heading4': ['fontSizeHeading4'],
+  '--font-size-heading5': ['fontSizeHeading5'],
+  '--font-size-icon': ['fontSizeIcon'],
+  '--font-weight-strong': ['fontWeightStrong'],
+  '--font-height': ['fontHeight'],
+  '--font-height-lg': ['fontHeightLG'],
+  '--font-height-sm': ['fontHeightSM'],
 
-  // 颜色透明度色板映射 - Red (根据 global.ts 修正)
-  {
-    key: '--color-red-a1',
-    tokens: ['redA1'],
-  },
-  {
-    key: '--color-red-a2',
-    tokens: ['redA2'],
-  },
-  {
-    key: '--color-red-a3',
-    tokens: ['redA3'],
-  },
-  {
-    key: '--color-red-a4',
-    tokens: ['redA4'],
-  },
-  {
-    key: '--color-red-a5',
-    tokens: ['redA5'],
-  },
-  {
-    key: '--color-red-a6',
-    tokens: ['redA6'],
-  },
-  {
-    key: '--color-red-a7',
-    tokens: ['redA7'],
-  },
-  {
-    key: '--color-red-a8',
-    tokens: ['redA8'],
-  },
-  {
-    key: '--color-red-a9',
-    tokens: ['redA9'],
-  },
-  {
-    key: '--color-red-a10',
-    tokens: ['redA10'],
-  },
-  {
-    key: '--color-red-a11',
-    tokens: ['redA11'],
-  },
-  {
-    key: '--color-red-a12',
-    tokens: ['redA12'],
-  },
+  // 行高映射
+  '--line-height': ['lineHeight'],
+  '--line-height-lg': ['lineHeightLG'],
+  '--line-height-sm': ['lineHeightSM'],
+  '--line-height-heading1': ['lineHeightHeading1'],
+  '--line-height-heading2': ['lineHeightHeading2'],
+  '--line-height-heading3': ['lineHeightHeading3'],
+  '--line-height-heading4': ['lineHeightHeading4'],
+  '--line-height-heading5': ['lineHeightHeading5'],
 
-  // 颜色色板映射 - Yellow (根据 global.ts 修正)
-  {
-    key: '--color-yellow-1',
-    tokens: ['yellow1'],
-  },
-  {
-    key: '--color-yellow-2',
-    tokens: ['yellow2'],
-  },
-  {
-    key: '--color-yellow-3',
-    tokens: ['yellow3'],
-  },
-  {
-    key: '--color-yellow-4',
-    tokens: ['yellow4'],
-  },
-  {
-    key: '--color-yellow-5',
-    tokens: ['yellow5'],
-  },
-  {
-    key: '--color-yellow-6',
-    tokens: ['yellow6'],
-  },
-  {
-    key: '--color-yellow-7',
-    tokens: ['yellow7'],
-  },
-  {
-    key: '--color-yellow-8',
-    tokens: ['yellow8'],
-  },
-  {
-    key: '--color-yellow-9',
-    tokens: ['yellow9'],
-  },
-  {
-    key: '--color-yellow-10',
-    tokens: ['yellow10'],
-  },
-  {
-    key: '--color-yellow-11',
-    tokens: ['yellow11'],
-  },
-  {
-    key: '--color-yellow-12',
-    tokens: ['yellow12'],
-  },
+  // 线条相关映射
+  '--line-width': ['lineWidth'],
+  '--line-width-bold': ['lineWidthBold'],
+  '--line-width-focus': ['lineWidthFocus'],
+  '--line-type': ['lineType'],
 
-  // 颜色透明度色板映射 - Yellow (根据 global.ts 修正)
-  {
-    key: '--color-yellow-a1',
-    tokens: ['yellowA1'],
-  },
-  {
-    key: '--color-yellow-a2',
-    tokens: ['yellowA2'],
-  },
-  {
-    key: '--color-yellow-a3',
-    tokens: ['yellowA3'],
-  },
-  {
-    key: '--color-yellow-a4',
-    tokens: ['yellowA4'],
-  },
-  {
-    key: '--color-yellow-a5',
-    tokens: ['yellowA5'],
-  },
-  {
-    key: '--color-yellow-a6',
-    tokens: ['yellowA6'],
-  },
-  {
-    key: '--color-yellow-a7',
-    tokens: ['yellowA7'],
-  },
-  {
-    key: '--color-yellow-a8',
-    tokens: ['yellowA8'],
-  },
-  {
-    key: '--color-yellow-a9',
-    tokens: ['yellowA9'],
-  },
-  {
-    key: '--color-yellow-a10',
-    tokens: ['yellowA10'],
-  },
-  {
-    key: '--color-yellow-a11',
-    tokens: ['yellowA11'],
-  },
-  {
-    key: '--color-yellow-a12',
-    tokens: ['yellowA12'],
-  },
+  // 动效映射
+  '--motion-unit': ['motionUnit'],
+  '--motion-base': ['motionBase'],
+  '--motion': ['motion'],
+  '--motion-ease-out-circ': ['motionEaseOutCirc'],
+  '--motion-ease-in-out-circ': ['motionEaseInOutCirc'],
+  '--motion-ease-out': ['motionEaseOut'],
+  '--motion-ease-in-out': ['motionEaseInOut'],
+  '--motion-ease-out-back': ['motionEaseOutBack'],
+  '--motion-ease-in-back': ['motionEaseInBack'],
+  '--motion-ease-in-quint': ['motionEaseInQuint'],
+  '--motion-ease-out-quint': ['motionEaseOutQuint'],
+  '--motion-duration-fast': ['motionDurationFast'],
+  '--motion-duration-mid': ['motionDurationMid'],
+  '--motion-duration-slow': ['motionDurationSlow'],
 
-  // 颜色色板映射 - Primary (根据 global.ts 修正)
-  {
-    key: '--color-primary-1',
-    tokens: ['primary1'],
-  },
-  {
-    key: '--color-primary-2',
-    tokens: ['primary2'],
-  },
-  {
-    key: '--color-primary-3',
-    tokens: ['primary3'],
-  },
-  {
-    key: '--color-primary-4',
-    tokens: ['primary4'],
-  },
-  {
-    key: '--color-primary-5',
-    tokens: ['primary5'],
-  },
-  {
-    key: '--color-primary-6',
-    tokens: ['primary6'],
-  },
-  {
-    key: '--color-primary-7',
-    tokens: ['primary7'],
-  },
-  {
-    key: '--color-primary-8',
-    tokens: ['primary8'],
-  },
-  {
-    key: '--color-primary-9',
-    tokens: ['primary9'],
-  },
-  {
-    key: '--color-primary-10',
-    tokens: ['primary10'],
-  },
-  {
-    key: '--color-primary-11',
-    tokens: ['primary11'],
-  },
-  {
-    key: '--color-primary-12',
-    tokens: ['primary12'],
-  },
+  // 边框圆角映射
+  '--radius-base': ['borderRadius', 'borderRadiusOuter'],
+  '--radius-xs': ['borderRadiusXS'],
+  '--radius-sm': ['borderRadiusSM'],
+  '--radius-lg': ['borderRadiusLG'],
 
-  // 颜色透明度色板映射 - Primary (根据 global.ts 修正)
-  {
-    key: '--color-primary-a1',
-    tokens: ['primaryA1'],
-  },
-  {
-    key: '--color-primary-a2',
-    tokens: ['primaryA2'],
-  },
-  {
-    key: '--color-primary-a3',
-    tokens: ['primaryA3'],
-  },
-  {
-    key: '--color-primary-a4',
-    tokens: ['primaryA4'],
-  },
-  {
-    key: '--color-primary-a5',
-    tokens: ['primaryA5'],
-  },
-  {
-    key: '--color-primary-a6',
-    tokens: ['primaryA6'],
-  },
-  {
-    key: '--color-primary-a7',
-    tokens: ['primaryA7'],
-  },
-  {
-    key: '--color-primary-a8',
-    tokens: ['primaryA8'],
-  },
-  {
-    key: '--color-primary-a9',
-    tokens: ['primaryA9'],
-  },
-  {
-    key: '--color-primary-a10',
-    tokens: ['primaryA10'],
-  },
-  {
-    key: '--color-primary-a11',
-    tokens: ['primaryA11'],
-  },
-  {
-    key: '--color-primary-a12',
-    tokens: ['primaryA12'],
-  },
-];
+  // 尺寸映射
+  '--padding-unit': ['sizeUnit', 'sizeStep'],
+  '--size-popup-arrow': ['sizePopupArrow'],
+  '--padding-1x': ['sizeXXS', 'paddingXXS'],
+  '--padding-2x': ['sizeXS', 'paddingXS', 'controlPaddingHorizontalSM'],
+  '--padding-3x': ['sizeSM', 'paddingSM', 'controlPaddingHorizontal'],
+  '--padding-4x': ['size', 'sizeMS', 'padding'],
+  '--padding-5x': ['sizeMD', 'paddingMD'],
+  '--padding-6x': ['sizeLG', 'paddingLG'],
+  '--padding-8x': ['sizeXL', 'paddingXL'],
+  '--padding-12x': ['sizeXXL'],
+
+  // 内边距映射
+  '--padding-content-horizontal': ['paddingContentHorizontal'],
+  '--padding-content-vertical': ['paddingContentVertical'],
+  '--padding-content-horizontal-sm': ['paddingContentHorizontalSM'],
+  '--padding-content-vertical-sm': ['paddingContentVerticalSM'],
+  '--padding-content-horizontal-lg': ['paddingContentHorizontalLG'],
+  '--padding-content-vertical-lg': ['paddingContentVerticalLG'],
+
+  // 外边距映射
+  '--margin-1x': ['marginXXS'],
+  '--margin-2x': ['marginXS'],
+  '--margin-3x': ['marginSM'],
+  '--margin-4x': ['margin', 'marginMD'],
+  '--margin-6x': ['marginLG'],
+  '--margin-8x': ['marginXL'],
+  '--margin-12x': ['marginXXL'],
+
+  // 控件高度映射
+  '-height-control-base': ['controlHeight'],
+  '--height-control-xs': ['controlHeightXS'],
+  '--height-control-sm': ['controlHeightSM'],
+  '--height-control-lg': ['controlHeightLG'],
+
+  // 阴影映射
+  '--shadow-border-base': ['boxShadow'],
+  '--shadow-hard-sm': ['boxShadowSecondary'],
+  '--shadow-hard-xs': ['boxShadowTertiary'],
+  '--shadow-card-base': ['boxShadowCard'],
+  '--shadow-popover-base': ['boxShadowPopoverArrow'],
+  '--shadow-modal-base': ['boxShadowDrawerUp', 'boxShadowDrawerDown'],
+
+  '--box-shadow-drawer-right': ['boxShadowDrawerRight'],
+  '--box-shadow-drawer-left': ['boxShadowDrawerLeft'],
+  '--box-shadow-tabs-overflow-left': ['boxShadowTabsOverflowLeft'],
+  '--box-shadow-tabs-overflow-right': ['boxShadowTabsOverflowRight'],
+  '--box-shadow-tabs-overflow-top': ['boxShadowTabsOverflowTop'],
+  '--box-shadow-tabs-overflow-bottom': ['boxShadowTabsOverflowBottom'],
+
+  // 补充未映射的 antToken
+  '--color-border-bg': ['colorBorderBg'],
+  '--color-text-light-solid': ['colorTextLightSolid'],
+  // 语义化颜色补充
+  '--color-success-hover': ['colorSuccessHover'],
+  '--color-info-hover': ['colorInfoHover'],
+};

@@ -1,4 +1,7 @@
-import { colorMappings } from './colorMappings';
+import { MappingAlgorithm, ThemeConfig } from 'antd';
+import { ComponentTokenMap } from './ComponentTokenMap';
+import { antToken } from './antToken';
+import { globalToAntTokenMappings } from './colorMappings';
 import { global } from './global';
 import { themeCssVar } from './theme';
 
@@ -9,20 +12,22 @@ export interface GlobalToken {
 export const processTokenMappingToAntd = (
   globalConfig: GlobalToken,
 ): GlobalToken => {
-  const antdToken: any = {};
+  const antdToken: any = {
+    ...antToken,
+  };
 
   // 处理映射
-  colorMappings.forEach((mapping) => {
-    const value = (globalConfig as any)[mapping.key];
+  Object.keys(globalToAntTokenMappings).forEach((mapping) => {
+    const value = (globalConfig as any)[mapping];
+
     if (value) {
-      let processedValue = value;
-      if (value.startsWith('--')) {
-        processedValue = `var(${value})`;
-      }
-      if (value.endsWith('px')) {
-        processedValue = parseInt(value);
-      }
-      mapping.tokens.forEach((token) => {
+      let processedValue = `var(${mapping})`;
+      // 可能一个 global 变量映射到多个 antd 变量
+      (
+        globalToAntTokenMappings[
+          mapping as keyof typeof globalToAntTokenMappings
+        ] as any[]
+      ).forEach((token) => {
         antdToken[token] = processedValue;
       });
     }
@@ -41,4 +46,12 @@ export const convertGlobalToAntdToken = () => {
 
 export const convertGlobalToAntdCssToken = () => {
   return processTokenMappingToAntd(themeCssVar);
+};
+
+export const themeAlgorithm = () => {
+  return convertGlobalToAntdToken() as unknown as ReturnType<MappingAlgorithm>;
+};
+
+export const genComponentsToken = (): ThemeConfig['components'] => {
+  return ComponentTokenMap as unknown as ThemeConfig['components'];
 };

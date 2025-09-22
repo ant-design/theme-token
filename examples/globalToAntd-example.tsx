@@ -1,4 +1,13 @@
 import {
+  ThemeProvider,
+  convertGlobalToAntdCssToken,
+  genComponentsToken,
+  globalThemeToken,
+  processTokenMappingToAntd,
+  themeAlgorithm,
+  useCSSVariables,
+} from '@ant-design/theme-token';
+import {
   Button,
   Card,
   ConfigProvider,
@@ -9,13 +18,6 @@ import {
   Typography,
 } from 'antd';
 import React, { useMemo, useState } from 'react';
-import {
-  ThemeProvider,
-  convertGlobalToAntdCssToken,
-  globalThemeToken,
-  processTokenMappingToAntd,
-  useCSSVariables,
-} from '../src';
 
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
@@ -324,7 +326,9 @@ const GlobalToAntdExample: React.FC = () => {
 
           <ConfigProvider
             theme={{
+              algorithm: themeAlgorithm,
               token: processTokenMappingToAntd(parsedThemeToken),
+              components: genComponentsToken(),
             }}
           >
             <Card title="使用转换后的 Token" style={{ marginBottom: '16px' }}>
