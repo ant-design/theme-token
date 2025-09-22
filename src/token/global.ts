@@ -19,6 +19,8 @@ export const global = {
   '--color-blue-border-light': 'var(--color-blue-a3)',
   /** blue/blue-控件填充-按下.激活 */
   '--color-blue-control-fill-active': 'var(--color-blue-a3)',
+  /** blue/blue-边线-控件按下.激活 */
+  '--color-blue-control-fill-border-active': 'var(--color-blue-9)',
   /** blue/blue-控件填充-不可用 */
   '--color-blue-control-fill-disabled': 'var(--color-blue-3)',
   /** blue/blue-控件填充-ghost按钮-按下.激活 */
@@ -30,9 +32,9 @@ export const global = {
   /** blue/blue-控件填充-主按钮-按下.激活 */
   '--color-blue-control-fill-primary-active': 'var(--color-blue-10)',
   /** blue/blue-控件填充-主按钮-悬停 */
-  '--color-blue-control-fill-primary-hover': 'var(--color-blue-8)',
+  '--color-blue-control-fill-primary-hover': 'var(--color-blue-10)',
   /** blue/blue-控件填充-次按钮 */
-  '--color-blue-control-fill-secondary': 'var(--color-blue-a3)',
+  '--color-blue-control-fill-secondary': 'var(--color-blue-a2)',
   /** blue/blue-控件填充-次按钮-按下.激活 */
   '--color-blue-control-fill-secondary-active': 'var(--color-blue-a5)',
   /** blue/blue-控件填充-次按钮-悬停 */
@@ -43,10 +45,10 @@ export const global = {
   '--color-blue-text-default': 'var(--color-blue-a12)',
   /** blue/blue-文本-不可用 */
   '--color-blue-text-disabled': 'var(--color-blue-a7)',
+  /** blue/blue-文本-浅色注释 */
+  '--color-blue-text-light': 'var(--color-blue-a8)',
   /** blue/blue-文本-次要 */
   '--color-blue-text-secondary': 'var(--color-blue-a11)',
-  /** blue/blue-文本-浅色注释 */
-  '--color-blue-text-tertiary': 'var(--color-blue-a8)',
   /** gray/gray-背景-浅色卡片 */
   '--color-gray-bg-card-light': 'var(--color-gray-a2)',
   /** gray/gray-背景-白色卡片 */
@@ -59,6 +61,8 @@ export const global = {
   '--color-gray-bg-page-light': 'var(--color-gray-a1)',
   /** gray/gray-背景-提示块 */
   '--color-gray-bg-tip': 'var(--color-gray-a3)',
+  /** gray/gray-背景-透明 */
+  '--color-gray-bg-transparent': 'transparent',
   /** gray/gray-边线-深 */
   '--color-gray-border-dark': 'var(--color-gray-a5)',
   /** gray/gray-边线-浅 */
@@ -67,6 +71,8 @@ export const global = {
   '--color-gray-contrast': '#fff',
   /** gray/gray-控件填充-按下.激活 */
   '--color-gray-control-fill-active': 'var(--color-gray-a3)',
+  /** gray/gray-边线-控件按下.激活 */
+  '--color-gray-control-fill-border-active': 'var(--color-gray-9)',
   /** gray/gray-控件填充-不可用 */
   '--color-gray-control-fill-disabled': 'var(--color-gray-3)',
   /** gray/gray-控件填充-ghost按钮-按下.激活 */
@@ -78,9 +84,9 @@ export const global = {
   /** gray/gray-控件填充-主按钮-按下.激活 */
   '--color-gray-control-fill-primary-active': 'var(--color-gray-10)',
   /** gray/gray-控件填充-主按钮-悬停 */
-  '--color-gray-control-fill-primary-hover': 'var(--color-gray-8)',
+  '--color-gray-control-fill-primary-hover': 'var(--color-gray-10)',
   /** gray/gray-控件填充-次按钮 */
-  '--color-gray-control-fill-secondary': 'var(--color-gray-a3)',
+  '--color-gray-control-fill-secondary': 'var(--color-gray-a2)',
   /** gray/gray-控件填充-次按钮-按下.激活 */
   '--color-gray-control-fill-secondary-active': 'var(--color-gray-a5)',
   /** gray/gray-控件填充-次按钮-悬停 */
@@ -91,10 +97,10 @@ export const global = {
   '--color-gray-text-default': 'var(--color-gray-a12)',
   /** gray/gray-文本-不可用 */
   '--color-gray-text-disabled': 'var(--color-gray-a7)',
+  /** gray/gray-文本-浅色注释 */
+  '--color-gray-text-light': 'var(--color-gray-a8)',
   /** gray/gray-文本-次要 */
   '--color-gray-text-secondary': 'var(--color-gray-a11)',
-  /** gray/gray-文本-浅色注释 */
-  '--color-gray-text-tertiary': 'var(--color-gray-a8)',
   /** green/green-背景-浅色卡片 */
   '--color-green-bg-card-light': 'var(--color-green-a2)',
   /** green/green-背景-页面 */
@@ -111,6 +117,8 @@ export const global = {
   '--color-green-border-light': 'var(--color-green-a3)',
   /** green/green-控件填充-按下.激活 */
   '--color-green-control-fill-active': 'var(--color-green-a3)',
+  /** green/green-边线-控件按下.激活 */
+  '--color-green-control-fill-border-active': 'var(--color-green-9)',
   /** green/green-控件填充-不可用 */
   '--color-green-control-fill-disabled': 'var(--color-green-3)',
   /** green/green-控件填充-ghost按钮-按下.激活 */
@@ -122,9 +130,9 @@ export const global = {
   /** green/green-控件填充-主按钮-按下.激活 */
   '--color-green-control-fill-primary-active': 'var(--color-green-10)',
   /** green/green-控件填充-主按钮-悬停 */
-  '--color-green-control-fill-primary-hover': 'var(--color-green-8)',
+  '--color-green-control-fill-primary-hover': 'var(--color-green-10)',
   /** green/green-控件填充-次按钮 */
-  '--color-green-control-fill-secondary': 'var(--color-green-a3)',
+  '--color-green-control-fill-secondary': 'var(--color-green-a2)',
   /** green/green-控件填充-次按钮-按下.激活 */
   '--color-green-control-fill-secondary-active': 'var(--color-green-a5)',
   /** green/green-控件填充-次按钮-悬停 */
@@ -135,10 +143,10 @@ export const global = {
   '--color-green-text-default': 'var(--color-green-a12)',
   /** green/green-文本-不可用 */
   '--color-green-text-disabled': 'var(--color-green-a7)',
+  /** green/green-文本-浅色注释 */
+  '--color-green-text-light': 'var(--color-green-a8)',
   /** green/green-文本-次要 */
   '--color-green-text-secondary': 'var(--color-green-a11)',
-  /** green/green-文本-浅色注释 */
-  '--color-green-text-tertiary': 'var(--color-green-a8)',
   /** orange/orange-背景-浅色卡片 */
   '--color-orange-bg-card-light': 'var(--color-orange-a2)',
   /** orange/orange-背景-页面 */
@@ -155,6 +163,8 @@ export const global = {
   '--color-orange-border-light': 'var(--color-orange-a3)',
   /** orange/orange-控件填充-按下.激活 */
   '--color-orange-control-fill-active': 'var(--color-orange-a3)',
+  /** orange/orange-边线-控件按下.激活 */
+  '--color-orange-control-fill-border-active': 'var(--color-orange-9)',
   /** orange/orange-控件填充-不可用 */
   '--color-orange-control-fill-disabled': 'var(--color-orange-3)',
   /** orange/orange-控件填充-ghost按钮-按下.激活 */
@@ -166,9 +176,9 @@ export const global = {
   /** orange/orange-控件填充-主按钮-按下.激活 */
   '--color-orange-control-fill-primary-active': 'var(--color-orange-10)',
   /** orange/orange-控件填充-主按钮-悬停 */
-  '--color-orange-control-fill-primary-hover': 'var(--color-orange-8)',
+  '--color-orange-control-fill-primary-hover': 'var(--color-orange-10)',
   /** orange/orange-控件填充-次按钮 */
-  '--color-orange-control-fill-secondary': 'var(--color-orange-a3)',
+  '--color-orange-control-fill-secondary': 'var(--color-orange-a2)',
   /** orange/orange-控件填充-次按钮-按下.激活 */
   '--color-orange-control-fill-secondary-active': 'var(--color-orange-a5)',
   /** orange/orange-控件填充-次按钮-悬停 */
@@ -179,10 +189,10 @@ export const global = {
   '--color-orange-text-default': 'var(--color-orange-a12)',
   /** orange/orange-文本-不可用 */
   '--color-orange-text-disabled': 'var(--color-orange-a7)',
+  /** orange/orange-文本-浅色注释 */
+  '--color-orange-text-light': 'var(--color-orange-a8)',
   /** orange/orange-文本-次要 */
   '--color-orange-text-secondary': 'var(--color-orange-a11)',
-  /** orange/orange-文本-浅色注释 */
-  '--color-orange-text-tertiary': 'var(--color-orange-a8)',
   /** primary/primary-背景-浅色卡片 */
   '--color-primary-bg-card-light': 'var(--color-primary-a2)',
   /** primary/primary-背景-页面 */
@@ -199,6 +209,8 @@ export const global = {
   '--color-primary-border-light': 'var(--color-primary-a3)',
   /** primary/primary-控件填充-按下.激活 */
   '--color-primary-control-fill-active': 'var(--color-primary-a3)',
+  /** primary/primary-边线-控件按下.激活 */
+  '--color-primary-control-fill-border-active': 'var(--color-primary-9)',
   /** primary/primary-控件填充-不可用 */
   '--color-primary-control-fill-disabled': 'var(--color-primary-3)',
   /** primary/primary-控件填充-ghost按钮-按下.激活 */
@@ -210,9 +222,9 @@ export const global = {
   /** primary/primary-控件填充-主按钮-按下.激活 */
   '--color-primary-control-fill-primary-active': 'var(--color-primary-10)',
   /** primary/primary-控件填充-主按钮-悬停 */
-  '--color-primary-control-fill-primary-hover': 'var(--color-primary-8)',
+  '--color-primary-control-fill-primary-hover': 'var(--color-primary-10)',
   /** primary/primary-控件填充-次按钮 */
-  '--color-primary-control-fill-secondary': 'var(--color-primary-a3)',
+  '--color-primary-control-fill-secondary': 'var(--color-primary-a2)',
   /** primary/primary-控件填充-次按钮-按下.激活 */
   '--color-primary-control-fill-secondary-active': 'var(--color-primary-a5)',
   /** primary/primary-控件填充-次按钮-悬停 */
@@ -223,10 +235,10 @@ export const global = {
   '--color-primary-text-default': 'var(--color-primary-a12)',
   /** primary/primary-文本-不可用 */
   '--color-primary-text-disabled': 'var(--color-primary-a7)',
+  /** primary/primary-文本-浅色注释 */
+  '--color-primary-text-light': 'var(--color-primary-a8)',
   /** primary/primary-文本-次要 */
   '--color-primary-text-secondary': 'var(--color-primary-a11)',
-  /** primary/primary-文本-浅色注释 */
-  '--color-primary-text-tertiary': 'var(--color-primary-a8)',
   /** red/red-背景-浅色卡片 */
   '--color-red-bg-card-light': 'var(--color-red-a2)',
   /** red/red-背景-页面 */
@@ -243,6 +255,8 @@ export const global = {
   '--color-red-border-light': 'var(--color-red-a3)',
   /** red/red-控件填充-按下.激活 */
   '--color-red-control-fill-active': 'var(--color-red-a3)',
+  /** red/red-边线-控件按下.激活 */
+  '--color-red-control-fill-border-active': 'var(--color-red-9)',
   /** red/red-控件填充-不可用 */
   '--color-red-control-fill-disabled': 'var(--color-red-3)',
   /** red/red-控件填充-ghost按钮-按下.激活 */
@@ -254,9 +268,9 @@ export const global = {
   /** red/red-控件填充-主按钮-按下.激活 */
   '--color-red-control-fill-primary-active': 'var(--color-red-10)',
   /** red/red-控件填充-主按钮-悬停 */
-  '--color-red-control-fill-primary-hover': 'var(--color-red-8)',
+  '--color-red-control-fill-primary-hover': 'var(--color-red-10)',
   /** red/red-控件填充-次按钮 */
-  '--color-red-control-fill-secondary': 'var(--color-red-a3)',
+  '--color-red-control-fill-secondary': 'var(--color-red-a2)',
   /** red/red-控件填充-次按钮-按下.激活 */
   '--color-red-control-fill-secondary-active': 'var(--color-red-a5)',
   /** red/red-控件填充-次按钮-悬停 */
@@ -267,10 +281,10 @@ export const global = {
   '--color-red-text-default': 'var(--color-red-a12)',
   /** red/red-文本-不可用 */
   '--color-red-text-disabled': 'var(--color-red-a7)',
+  /** red/red-文本-浅色注释 */
+  '--color-red-text-light': 'var(--color-red-a8)',
   /** red/red-文本-次要 */
   '--color-red-text-secondary': 'var(--color-red-a11)',
-  /** red/red-文本-浅色注释 */
-  '--color-red-text-tertiary': 'var(--color-red-a8)',
   /** 辅0/辅0-背景-浅色卡片 */
   '--color-sub0-bg-card-light': 'var(--color-sub0-a2)',
   /** 辅0/辅0-背景-页面 */
@@ -287,6 +301,8 @@ export const global = {
   '--color-sub0-border-light': 'var(--color-sub0-a3)',
   /** 辅0/辅0-控件填充-按下.激活 */
   '--color-sub0-control-fill-active': 'var(--color-sub0-a3)',
+  /** 辅0/辅0-边线-控件按下.激活 */
+  '--color-sub0-control-fill-border-active': 'var(--color-sub0-9)',
   /** 辅0/辅0-控件填充-不可用 */
   '--color-sub0-control-fill-disabled': 'var(--color-sub0-3)',
   /** 辅0/辅0-控件填充-ghost按钮-按下.激活 */
@@ -298,9 +314,9 @@ export const global = {
   /** 辅0/辅0-控件填充-主按钮-按下.激活 */
   '--color-sub0-control-fill-primary-active': 'var(--color-sub0-10)',
   /** 辅0/辅0-控件填充-主按钮-悬停 */
-  '--color-sub0-control-fill-primary-hover': 'var(--color-sub0-8)',
+  '--color-sub0-control-fill-primary-hover': 'var(--color-sub0-10)',
   /** 辅0/辅0-控件填充-次按钮 */
-  '--color-sub0-control-fill-secondary': 'var(--color-sub0-a3)',
+  '--color-sub0-control-fill-secondary': 'var(--color-sub0-a2)',
   /** 辅0/辅0-控件填充-次按钮-按下.激活 */
   '--color-sub0-control-fill-secondary-active': 'var(--color-sub0-a5)',
   /** 辅0/辅0-控件填充-次按钮-悬停 */
@@ -311,10 +327,10 @@ export const global = {
   '--color-sub0-text-default': 'var(--color-sub0-a12)',
   /** 辅0/辅0-文本-不可用 */
   '--color-sub0-text-disabled': 'var(--color-sub0-a7)',
+  /** 辅0/辅0-文本-浅色注释 */
+  '--color-sub0-text-light': 'var(--color-sub0-a8)',
   /** 辅0/辅0-文本-次要 */
   '--color-sub0-text-secondary': 'var(--color-sub0-a11)',
-  /** 辅0/辅0-文本-浅色注释 */
-  '--color-sub0-text-tertiary': 'var(--color-sub0-a8)',
   /** 辅1/辅1-背景-浅色卡片 */
   '--color-sub1-bg-card-light': 'var(--color-sub1-a2)',
   /** 辅1/辅1-背景-页面 */
@@ -331,6 +347,8 @@ export const global = {
   '--color-sub1-border-light': 'var(--color-sub1-a3)',
   /** 辅1/辅1-控件填充-按下.激活 */
   '--color-sub1-control-fill-active': 'var(--color-sub1-a3)',
+  /** 辅1/辅1-边线-控件按下.激活 */
+  '--color-sub1-control-fill-border-active': 'var(--color-sub1-9)',
   /** 辅1/辅1-控件填充-不可用 */
   '--color-sub1-control-fill-disabled': 'var(--color-sub1-3)',
   /** 辅1/辅1-控件填充-ghost按钮-按下.激活 */
@@ -342,9 +360,9 @@ export const global = {
   /** 辅1/辅1-控件填充-主按钮-按下.激活 */
   '--color-sub1-control-fill-primary-active': 'var(--color-sub1-10)',
   /** 辅1/辅1-控件填充-主按钮-悬停 */
-  '--color-sub1-control-fill-primary-hover': 'var(--color-sub1-8)',
+  '--color-sub1-control-fill-primary-hover': 'var(--color-sub1-10)',
   /** 辅1/辅1-控件填充-次按钮 */
-  '--color-sub1-control-fill-secondary': 'var(--color-sub1-a3)',
+  '--color-sub1-control-fill-secondary': 'var(--color-sub1-a2)',
   /** 辅1/辅1-控件填充-次按钮-按下.激活 */
   '--color-sub1-control-fill-secondary-active': 'var(--color-sub1-a5)',
   /** 辅1/辅1-控件填充-次按钮-悬停 */
@@ -355,10 +373,10 @@ export const global = {
   '--color-sub1-text-default': 'var(--color-sub1-a12)',
   /** 辅1/辅1-文本-不可用 */
   '--color-sub1-text-disabled': 'var(--color-sub1-a7)',
+  /** 辅1/辅1-文本-浅色注释 */
+  '--color-sub1-text-light': 'var(--color-sub1-a8)',
   /** 辅1/辅1-文本-次要 */
   '--color-sub1-text-secondary': 'var(--color-sub1-a11)',
-  /** 辅1/辅1-文本-浅色注释 */
-  '--color-sub1-text-tertiary': 'var(--color-sub1-a8)',
   /** 辅2/辅2-背景-浅色卡片 */
   '--color-sub2-bg-card-light': 'var(--color-sub2-a2)',
   /** 辅2/辅2-背景-页面 */
@@ -375,6 +393,8 @@ export const global = {
   '--color-sub2-border-light': 'var(--color-sub2-a3)',
   /** 辅2/辅2-控件填充-按下.激活 */
   '--color-sub2-control-fill-active': 'var(--color-sub2-a3)',
+  /** 辅2/辅2-边线-控件按下.激活 */
+  '--color-sub2-control-fill-border-active': 'var(--color-sub2-9)',
   /** 辅2/辅2-控件填充-不可用 */
   '--color-sub2-control-fill-disabled': 'var(--color-sub2-3)',
   /** 辅2/辅2-控件填充-ghost按钮-按下.激活 */
@@ -386,9 +406,9 @@ export const global = {
   /** 辅2/辅2-控件填充-主按钮-按下.激活 */
   '--color-sub2-control-fill-primary-active': 'var(--color-sub2-10)',
   /** 辅2/辅2-控件填充-主按钮-悬停 */
-  '--color-sub2-control-fill-primary-hover': 'var(--color-sub2-8)',
+  '--color-sub2-control-fill-primary-hover': 'var(--color-sub2-10)',
   /** 辅2/辅2-控件填充-次按钮 */
-  '--color-sub2-control-fill-secondary': 'var(--color-sub2-a3)',
+  '--color-sub2-control-fill-secondary': 'var(--color-sub2-a2)',
   /** 辅2/辅2-控件填充-次按钮-按下.激活 */
   '--color-sub2-control-fill-secondary-active': 'var(--color-sub2-a5)',
   /** 辅2/辅2-控件填充-次按钮-悬停 */
@@ -399,10 +419,10 @@ export const global = {
   '--color-sub2-text-default': 'var(--color-sub2-a12)',
   /** 辅2/辅2-文本-不可用 */
   '--color-sub2-text-disabled': 'var(--color-sub2-a7)',
+  /** 辅2/辅2-文本-浅色注释 */
+  '--color-sub2-text-light': 'var(--color-sub2-a8)',
   /** 辅2/辅2-文本-次要 */
   '--color-sub2-text-secondary': 'var(--color-sub2-a11)',
-  /** 辅2/辅2-文本-浅色注释 */
-  '--color-sub2-text-tertiary': 'var(--color-sub2-a8)',
   /** 辅3/辅3-背景-浅色卡片 */
   '--color-sub3-bg-card-light': 'var(--color-sub3-a2)',
   /** 辅3/辅3-背景-页面 */
@@ -419,6 +439,8 @@ export const global = {
   '--color-sub3-border-light': 'var(--color-sub3-a3)',
   /** 辅3/辅3-控件填充-按下.激活 */
   '--color-sub3-control-fill-active': 'var(--color-sub3-a3)',
+  /** 辅3/辅3-边线-控件按下.激活 */
+  '--color-sub3-control-fill-border-active': 'var(--color-sub3-9)',
   /** 辅3/辅3-控件填充-不可用 */
   '--color-sub3-control-fill-disabled': 'var(--color-sub3-3)',
   /** 辅3/辅3-控件填充-ghost按钮-按下.激活 */
@@ -430,9 +452,9 @@ export const global = {
   /** 辅3/辅3-控件填充-主按钮-按下.激活 */
   '--color-sub3-control-fill-primary-active': 'var(--color-sub3-10)',
   /** 辅3/辅3-控件填充-主按钮-悬停 */
-  '--color-sub3-control-fill-primary-hover': 'var(--color-sub3-8)',
+  '--color-sub3-control-fill-primary-hover': 'var(--color-sub3-10)',
   /** 辅3/辅3-控件填充-次按钮 */
-  '--color-sub3-control-fill-secondary': 'var(--color-sub3-a3)',
+  '--color-sub3-control-fill-secondary': 'var(--color-sub3-a2)',
   /** 辅3/辅3-控件填充-次按钮-按下.激活 */
   '--color-sub3-control-fill-secondary-active': 'var(--color-sub3-a5)',
   /** 辅3/辅3-控件填充-次按钮-悬停 */
@@ -443,10 +465,10 @@ export const global = {
   '--color-sub3-text-default': 'var(--color-sub3-a12)',
   /** 辅3/辅3-文本-不可用 */
   '--color-sub3-text-disabled': 'var(--color-sub3-a7)',
+  /** 辅3/辅3-文本-浅色注释 */
+  '--color-sub3-text-light': 'var(--color-sub3-a8)',
   /** 辅3/辅3-文本-次要 */
   '--color-sub3-text-secondary': 'var(--color-sub3-a11)',
-  /** 辅3/辅3-文本-浅色注释 */
-  '--color-sub3-text-tertiary': 'var(--color-sub3-a8)',
   /** 辅4/辅4-背景-浅色卡片 */
   '--color-sub4-bg-card-light': 'var(--color-sub4-a2)',
   /** 辅4/辅4-背景-页面 */
@@ -463,6 +485,8 @@ export const global = {
   '--color-sub4-border-light': 'var(--color-sub4-a3)',
   /** 辅4/辅4-控件填充-按下.激活 */
   '--color-sub4-control-fill-active': 'var(--color-sub4-a3)',
+  /** 辅4/辅4-边线-控件按下.激活 */
+  '--color-sub4-control-fill-border-active': 'var(--color-sub4-9)',
   /** 辅4/辅4-控件填充-不可用 */
   '--color-sub4-control-fill-disabled': 'var(--color-sub4-3)',
   /** 辅4/辅4-控件填充-ghost按钮-按下.激活 */
@@ -474,9 +498,9 @@ export const global = {
   /** 辅4/辅4-控件填充-主按钮-按下.激活 */
   '--color-sub4-control-fill-primary-active': 'var(--color-sub4-10)',
   /** 辅4/辅4-控件填充-主按钮-悬停 */
-  '--color-sub4-control-fill-primary-hover': 'var(--color-sub4-8)',
+  '--color-sub4-control-fill-primary-hover': 'var(--color-sub4-10)',
   /** 辅4/辅4-控件填充-次按钮 */
-  '--color-sub4-control-fill-secondary': 'var(--color-sub4-a3)',
+  '--color-sub4-control-fill-secondary': 'var(--color-sub4-a2)',
   /** 辅4/辅4-控件填充-次按钮-按下.激活 */
   '--color-sub4-control-fill-secondary-active': 'var(--color-sub4-a5)',
   /** 辅4/辅4-控件填充-次按钮-悬停 */
@@ -487,10 +511,10 @@ export const global = {
   '--color-sub4-text-default': 'var(--color-sub4-a12)',
   /** 辅4/辅4-文本-不可用 */
   '--color-sub4-text-disabled': 'var(--color-sub4-a7)',
+  /** 辅4/辅4-文本-浅色注释 */
+  '--color-sub4-text-light': 'var(--color-sub4-a8)',
   /** 辅4/辅4-文本-次要 */
   '--color-sub4-text-secondary': 'var(--color-sub4-a11)',
-  /** 辅4/辅4-文本-浅色注释 */
-  '--color-sub4-text-tertiary': 'var(--color-sub4-a8)',
   /** 辅5/辅5-背景-浅色卡片 */
   '--color-sub5-bg-card-light': 'var(--color-sub5-a2)',
   /** 辅5/辅5-背景-页面 */
@@ -507,6 +531,8 @@ export const global = {
   '--color-sub5-border-light': 'var(--color-sub5-a3)',
   /** 辅5/辅5-控件填充-按下.激活 */
   '--color-sub5-control-fill-active': 'var(--color-sub5-a3)',
+  /** 辅5/辅5-边线-控件按下.激活 */
+  '--color-sub5-control-fill-border-active': 'var(--color-sub5-9)',
   /** 辅5/辅5-控件填充-不可用 */
   '--color-sub5-control-fill-disabled': 'var(--color-sub5-3)',
   /** 辅5/辅5-控件填充-ghost按钮-按下.激活 */
@@ -518,9 +544,9 @@ export const global = {
   /** 辅5/辅5-控件填充-主按钮-按下.激活 */
   '--color-sub5-control-fill-primary-active': 'var(--color-sub5-10)',
   /** 辅5/辅5-控件填充-主按钮-悬停 */
-  '--color-sub5-control-fill-primary-hover': 'var(--color-sub5-8)',
+  '--color-sub5-control-fill-primary-hover': 'var(--color-sub5-10)',
   /** 辅5/辅5-控件填充-次按钮 */
-  '--color-sub5-control-fill-secondary': 'var(--color-sub5-a3)',
+  '--color-sub5-control-fill-secondary': 'var(--color-sub5-a2)',
   /** 辅5/辅5-控件填充-次按钮-按下.激活 */
   '--color-sub5-control-fill-secondary-active': 'var(--color-sub5-a5)',
   /** 辅5/辅5-控件填充-次按钮-悬停 */
@@ -531,10 +557,10 @@ export const global = {
   '--color-sub5-text-default': 'var(--color-sub5-a12)',
   /** 辅5/辅5-文本-不可用 */
   '--color-sub5-text-disabled': 'var(--color-sub5-a7)',
+  /** 辅5/辅5-文本-浅色注释 */
+  '--color-sub5-text-light': 'var(--color-sub5-a8)',
   /** 辅5/辅5-文本-次要 */
   '--color-sub5-text-secondary': 'var(--color-sub5-a11)',
-  /** 辅5/辅5-文本-浅色注释 */
-  '--color-sub5-text-tertiary': 'var(--color-sub5-a8)',
   /** 辅6/辅6-背景-浅色卡片 */
   '--color-sub6-bg-card-light': 'var(--color-sub6-a2)',
   /** 辅6/辅6-背景-页面 */
@@ -551,6 +577,8 @@ export const global = {
   '--color-sub6-border-light': 'var(--color-sub6-a3)',
   /** 辅6/辅6-控件填充-按下.激活 */
   '--color-sub6-control-fill-active': 'var(--color-sub6-a3)',
+  /** 辅6/辅6-边线-控件按下.激活 */
+  '--color-sub6-control-fill-border-active': 'var(--color-sub6-9)',
   /** 辅6/辅6-控件填充-不可用 */
   '--color-sub6-control-fill-disabled': 'var(--color-sub6-3)',
   /** 辅6/辅6-控件填充-ghost按钮-按下.激活 */
@@ -562,9 +590,9 @@ export const global = {
   /** 辅6/辅6-控件填充-主按钮-按下.激活 */
   '--color-sub6-control-fill-primary-active': 'var(--color-sub6-10)',
   /** 辅6/辅6-控件填充-主按钮-悬停 */
-  '--color-sub6-control-fill-primary-hover': 'var(--color-sub6-8)',
+  '--color-sub6-control-fill-primary-hover': 'var(--color-sub6-10)',
   /** 辅6/辅6-控件填充-次按钮 */
-  '--color-sub6-control-fill-secondary': 'var(--color-sub6-a3)',
+  '--color-sub6-control-fill-secondary': 'var(--color-sub6-a2)',
   /** 辅6/辅6-控件填充-次按钮-按下.激活 */
   '--color-sub6-control-fill-secondary-active': 'var(--color-sub6-a5)',
   /** 辅6/辅6-控件填充-次按钮-悬停 */
@@ -575,10 +603,10 @@ export const global = {
   '--color-sub6-text-default': 'var(--color-sub6-a12)',
   /** 辅6/辅6-文本-不可用 */
   '--color-sub6-text-disabled': 'var(--color-sub6-a7)',
+  /** 辅6/辅6-文本-浅色注释 */
+  '--color-sub6-text-light': 'var(--color-sub6-a8)',
   /** 辅6/辅6-文本-次要 */
   '--color-sub6-text-secondary': 'var(--color-sub6-a11)',
-  /** 辅6/辅6-文本-浅色注释 */
-  '--color-sub6-text-tertiary': 'var(--color-sub6-a8)',
   /** 辅7/辅7-背景-浅色卡片 */
   '--color-sub7-bg-card-light': 'var(--color-sub7-a2)',
   /** 辅7/辅7-背景-页面 */
@@ -595,6 +623,8 @@ export const global = {
   '--color-sub7-border-light': 'var(--color-sub7-a3)',
   /** 辅7/辅7-控件填充-按下.激活 */
   '--color-sub7-control-fill-active': 'var(--color-sub7-a3)',
+  /** 辅7/辅7-边线-控件按下.激活 */
+  '--color-sub7-control-fill-border-active': 'var(--color-sub7-9)',
   /** 辅7/辅7-控件填充-不可用 */
   '--color-sub7-control-fill-disabled': 'var(--color-sub7-3)',
   /** 辅7/辅7-控件填充-ghost按钮-按下.激活 */
@@ -606,9 +636,9 @@ export const global = {
   /** 辅7/辅7-控件填充-主按钮-按下.激活 */
   '--color-sub7-control-fill-primary-active': 'var(--color-sub7-10)',
   /** 辅7/辅7-控件填充-主按钮-悬停 */
-  '--color-sub7-control-fill-primary-hover': 'var(--color-sub7-8)',
+  '--color-sub7-control-fill-primary-hover': 'var(--color-sub7-10)',
   /** 辅7/辅7-控件填充-次按钮 */
-  '--color-sub7-control-fill-secondary': 'var(--color-sub7-a3)',
+  '--color-sub7-control-fill-secondary': 'var(--color-sub7-a2)',
   /** 辅7/辅7-控件填充-次按钮-按下.激活 */
   '--color-sub7-control-fill-secondary-active': 'var(--color-sub7-a5)',
   /** 辅7/辅7-控件填充-次按钮-悬停 */
@@ -619,10 +649,10 @@ export const global = {
   '--color-sub7-text-default': 'var(--color-sub7-a12)',
   /** 辅7/辅7-文本-不可用 */
   '--color-sub7-text-disabled': 'var(--color-sub7-a7)',
+  /** 辅7/辅7-文本-浅色注释 */
+  '--color-sub7-text-light': 'var(--color-sub7-a8)',
   /** 辅7/辅7-文本-次要 */
   '--color-sub7-text-secondary': 'var(--color-sub7-a11)',
-  /** 辅7/辅7-文本-浅色注释 */
-  '--color-sub7-text-tertiary': 'var(--color-sub7-a8)',
   /** yellow/yellow-背景-浅色卡片 */
   '--color-yellow-bg-card-light': 'var(--color-yellow-a2)',
   /** yellow/yellow-背景-页面 */
@@ -639,6 +669,8 @@ export const global = {
   '--color-yellow-border-light': 'var(--color-yellow-a3)',
   /** yellow/yellow-控件填充-按下.激活 */
   '--color-yellow-control-fill-active': 'var(--color-yellow-a3)',
+  /** yellow/yellow-边线-控件按下.激活 */
+  '--color-yellow-control-fill-border-active': 'var(--color-yellow-9)',
   /** yellow/yellow-控件填充-不可用 */
   '--color-yellow-control-fill-disabled': 'var(--color-yellow-3)',
   /** yellow/yellow-控件填充-ghost按钮-按下.激活 */
@@ -650,9 +682,9 @@ export const global = {
   /** yellow/yellow-控件填充-主按钮-按下.激活 */
   '--color-yellow-control-fill-primary-active': 'var(--color-yellow-10)',
   /** yellow/yellow-控件填充-主按钮-悬停 */
-  '--color-yellow-control-fill-primary-hover': 'var(--color-yellow-8)',
+  '--color-yellow-control-fill-primary-hover': 'var(--color-yellow-10)',
   /** yellow/yellow-控件填充-次按钮 */
-  '--color-yellow-control-fill-secondary': 'var(--color-yellow-a3)',
+  '--color-yellow-control-fill-secondary': 'var(--color-yellow-a2)',
   /** yellow/yellow-控件填充-次按钮-按下.激活 */
   '--color-yellow-control-fill-secondary-active': 'var(--color-yellow-a5)',
   /** yellow/yellow-控件填充-次按钮-悬停 */
@@ -663,10 +695,10 @@ export const global = {
   '--color-yellow-text-default': 'var(--color-yellow-a12)',
   /** yellow/yellow-文本-不可用 */
   '--color-yellow-text-disabled': 'var(--color-yellow-a7)',
+  /** yellow/yellow-文本-浅色注释 */
+  '--color-yellow-text-light': 'var(--color-yellow-a8)',
   /** yellow/yellow-文本-次要 */
   '--color-yellow-text-secondary': 'var(--color-yellow-a11)',
-  /** yellow/yellow-文本-浅色注释 */
-  '--color-yellow-text-tertiary': 'var(--color-yellow-a8)',
 
   // 字体相关
   /** 正文/正文-base */
@@ -684,51 +716,30 @@ export const global = {
   /** 正文/正文-xs */
   '--font-text-body-xs':
     'var(--font-weight-base) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
-  /** 正文/正文-base-强调 */
-  '--font-text-bodyEmphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
-  /** 正文/正文-lg-强调 */
-  '--font-text-bodyEmphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
-  /** 正文/正文-sm-强调 */
-  '--font-text-bodyEmphasized-sm':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
-  /** 正文/正文-xl-强调 */
-  '--font-text-bodyEmphasized-xl':
-    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
-  /** 正文/正文-xs-强调 */
-  '--font-text-bodyEmphasized-xs':
-    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
   /** 代码/代码-base */
   '--font-text-code-base':
     'var(--font-weight-base) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
   /** 代码/代码-lg */
   '--font-text-code-lg':
     'var(--font-weight-base) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
-  /** 代码/代码-base-强调 */
-  '--font-text-codeEmphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
-  /** 代码/代码-lg-强调 */
-  '--font-text-codeEmphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
   /** 标题/H1 */
   '--font-text-h1-base':
-    'var(--font-weight-heading) var(--font-size-H1)/var(--line-height-4xl) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h1)/var(--line-height-4xl) var(--font-family-text)',
   /** 标题/H2 */
   '--font-text-h2-base':
-    'var(--font-weight-heading) var(--font-size-H2)/var(--line-height-3xl) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h2)/var(--line-height-3xl) var(--font-family-text)',
   /** 标题/H3 */
   '--font-text-h3-base':
-    'var(--font-weight-heading) var(--font-size-H3)/var(--line-height-2xl) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h3)/var(--line-height-2xl) var(--font-family-text)',
   /** 标题/H4 */
   '--font-text-h4-base':
-    'var(--font-weight-heading) var(--font-size-H4)/var(--line-height-xl) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h4)/var(--line-height-xl) var(--font-family-text)',
   /** 标题/H5 */
   '--font-text-h5-base':
-    'var(--font-weight-heading) var(--font-size-H5)/var(--line-height-lg) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h5)/var(--line-height-lg) var(--font-family-text)',
   /** 标题/H6 */
   '--font-text-h6-base':
-    'var(--font-weight-heading) var(--font-size-H6)/var(--line-height-base) var(--font-family-text)',
+    'var(--font-weight-heading) var(--font-size-h6)/var(--line-height-base) var(--font-family-text)',
   /** 数值/数值-2xl */
   '--font-text-number-2xl':
     'var(--font-weight-emphasized) var(--font-size-2xl)/var(--line-height-none) var(--font-family-number)',
@@ -768,47 +779,10 @@ export const global = {
   /** 段落/段落-xs */
   '--font-text-paragraph-xs':
     'var(--font-weight-base) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
-  /** 段落/段落-base-强调 */
-  '--font-text-paragraphEmphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
-  /** 段落/段落-lg-强调 */
-  '--font-text-paragraphEmphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
-  /** 段落/段落-sm-强调 */
-  '--font-text-paragraphEmphasized-sm':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
-  /** 段落/段落-xl-强调 */
-  '--font-text-paragraphEmphasized-xl':
-    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
-  /** 段落/段落-xs-强调 */
-  '--font-text-paragraphEmphasized-xs':
-    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
-  /** 风格化/风格化-H1 */
-  '--font-text-stylishH1-base':
-    'var(--font-weight-heading) var(--font-size-H1)/var(--line-height-4xl) var(--font-family-stylish)',
-  /** 风格化/风格化-H2 */
-  '--font-text-stylishH2-base':
-    'var(--font-weight-heading) var(--font-size-H2)/var(--line-height-3xl) var(--font-family-stylish)',
-  /** 风格化/风格化-H3 */
-  '--font-text-stylishH3-base':
-    'var(--font-weight-heading) var(--font-size-H3)/var(--line-height-2xl) var(--font-family-stylish)',
-  /** 风格化/风格化-H4 */
-  '--font-text-stylishH4-base':
-    'var(--font-weight-heading) var(--font-size-H4)/var(--line-height-xl) var(--font-family-stylish)',
-  /** 风格化/风格化-H5 */
-  '--font-text-stylishH5-base':
-    'var(--font-weight-heading) var(--font-size-H5)/var(--line-height-lg) var(--font-family-stylish)',
-  /** 风格化/风格化-H6 */
-  '--font-text-stylishH6-base':
-    'var(--font-weight-heading) var(--font-size-H6)/var(--line-height-base) var(--font-family-stylish)',
   /** 标题/H1-letter-spacing */
   '--letter-spacing-h1-base': 'var(--letter-spacing-loose)',
   /** 标题/H4-letter-spacing */
   '--letter-spacing-h4-base': 'var(--letter-spacing-loose)',
-  /** 风格化/风格化-H1-letter-spacing */
-  '--letter-spacing-stylishH1-base': 'var(--letter-spacing-loose)',
-  /** 风格化/风格化-H4-letter-spacing */
-  '--letter-spacing-stylishH4-base': 'var(--letter-spacing-loose)',
 
   // 圆角相关
   /** 圆角-卡片-base */
@@ -1263,15 +1237,15 @@ export const global = {
   '--color-sub7-a11': '#008604',
   '--color-sub7-a12': '#003005eb',
   '--font-family-text':
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
   '--font-family-number':
-    "Rubik, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "Rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
   '--font-family-stylish':
-    "'DingTalk JinBuTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "'DingTalk JinBuTi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
   '--font-family-code':
     "'Roboto Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Liberation Mono', 'Courier New', monospace",
   '--font-family-document':
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
   '--font-size-xs': '10px',
   '--font-size-sm': '12px',
   '--font-size-base': '13px',
@@ -1280,12 +1254,12 @@ export const global = {
   '--font-size-2xl': '24px',
   '--font-size-3xl': '30px',
   '--font-size-4xl': '56px',
-  '--font-size-H1': '56px',
-  '--font-size-H2': '30px',
-  '--font-size-H3': '24px',
-  '--font-size-H4': '18px',
-  '--font-size-H5': '15px',
-  '--font-size-H6': '13px',
+  '--font-size-h1': '56px',
+  '--font-size-h2': '30px',
+  '--font-size-h3': '24px',
+  '--font-size-h4': '18px',
+  '--font-size-h5': '15px',
+  '--font-size-h6': '13px',
   '--line-height-xs': '18px',
   '--line-height-sm': '20px',
   '--line-height-base': '22px',
@@ -1303,7 +1277,7 @@ export const global = {
   '--font-weight-emphasized': '500',
   '--font-weight-heading': '600',
   '--letter-spacing-tight': '-0.02em',
-  '--letter-spacing-base': 'normal',
+  '--letter-spacing-base': '0em',
   '--letter-spacing-loose': '0.04em',
   '--shadow-hard-xs': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.15)',
   '--shadow-hard-sm': 'inset 0px 0px 1px 0px rgba(0, 0, 0, 0.25)',
@@ -1385,6 +1359,44 @@ export const global = {
   '--height-control-sm': '28px',
   '--height-control-base': '32px',
   '--height-control-lg': '36px',
+  '--font-text-body-emphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
+  '--font-text-body-emphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
+  '--font-text-body-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
+  '--font-text-body-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
+  '--font-text-body-emphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-code-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
+  '--font-text-code-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
+  '--font-text-stylish-h1-base':
+    'var(--font-weight-heading) var(--font-size-h1)/var(--line-height-4xl) var(--font-family-stylish)',
+  '--letter-spacing-stylish-h1-base': 'var(--letter-spacing-loose)',
+  '--font-text-stylish-h2-base':
+    'var(--font-weight-heading) var(--font-size-h2)/var(--line-height-3xl) var(--font-family-stylish)',
+  '--font-text-stylish-h3-base':
+    'var(--font-weight-heading) var(--font-size-h3)/var(--line-height-2xl) var(--font-family-stylish)',
+  '--font-text-stylish-h4-base':
+    'var(--font-weight-heading) var(--font-size-h4)/var(--line-height-xl) var(--font-family-stylish)',
+  '--letter-spacing-stylish-h4-base': 'var(--letter-spacing-loose)',
+  '--font-text-stylish-h5-base':
+    'var(--font-weight-heading) var(--font-size-h5)/var(--line-height-lg) var(--font-family-stylish)',
+  '--font-text-stylish-h6-base':
+    'var(--font-weight-heading) var(--font-size-h6)/var(--line-height-base) var(--font-family-stylish)',
   '--height-control-alias-xs': 'var(--height-control-xs)',
   '--height-control-alias-sm': 'var(--height-control-sm)',
   '--height-control-alias-base': 'var(--height-control-base)',
