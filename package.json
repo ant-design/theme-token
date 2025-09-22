@@ -74,5 +74,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "authors": []
+  "authors": [],
+  "repository": "git@github.com:ant-design/theme-token.git"
 }
