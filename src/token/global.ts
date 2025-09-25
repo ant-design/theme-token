@@ -10,7 +10,7 @@ export const global = {
   /** blue/blue-背景-页面深 */
   '--color-blue-bg-page-dark': 'var(--color-blue-3)',
   /** blue/blue-背景-页面-浅 */
-  '--color-blue-bg-page-light': 'var(--color-blue-a1)',
+  '--color-blue-bg-page-light': 'var(--color-blue-1)',
   /** blue/blue-背景-提示块 */
   '--color-blue-bg-tip': 'var(--color-blue-a3)',
   /** blue/blue-边线-深 */
@@ -58,7 +58,7 @@ export const global = {
   /** gray/gray-背景-页面深 */
   '--color-gray-bg-page-dark': 'var(--color-gray-3)',
   /** gray/gray-背景-页面-浅 */
-  '--color-gray-bg-page-light': 'var(--color-gray-a1)',
+  '--color-gray-bg-page-light': 'var(--color-gray-1)',
   /** gray/gray-背景-提示块 */
   '--color-gray-bg-tip': 'var(--color-gray-a3)',
   /** gray/gray-背景-透明 */
@@ -108,7 +108,7 @@ export const global = {
   /** green/green-背景-页面深 */
   '--color-green-bg-page-dark': 'var(--color-green-3)',
   /** green/green-背景-页面-浅 */
-  '--color-green-bg-page-light': 'var(--color-green-a1)',
+  '--color-green-bg-page-light': 'var(--color-green-1)',
   /** green/green-背景-提示块 */
   '--color-green-bg-tip': 'var(--color-green-a3)',
   /** green/green-边线-深 */
@@ -154,7 +154,7 @@ export const global = {
   /** orange/orange-背景-页面深 */
   '--color-orange-bg-page-dark': 'var(--color-orange-3)',
   /** orange/orange-背景-页面-浅 */
-  '--color-orange-bg-page-light': 'var(--color-orange-a1)',
+  '--color-orange-bg-page-light': 'var(--color-orange-1)',
   /** orange/orange-背景-提示块 */
   '--color-orange-bg-tip': 'var(--color-orange-a3)',
   /** orange/orange-边线-深 */
@@ -200,7 +200,7 @@ export const global = {
   /** primary/primary-背景-页面深 */
   '--color-primary-bg-page-dark': 'var(--color-primary-3)',
   /** primary/primary-背景-页面-浅 */
-  '--color-primary-bg-page-light': 'var(--color-primary-a1)',
+  '--color-primary-bg-page-light': 'var(--color-primary-1)',
   /** primary/primary-背景-提示块 */
   '--color-primary-bg-tip': 'var(--color-primary-a3)',
   /** primary/primary-边线-深 */
@@ -246,7 +246,7 @@ export const global = {
   /** red/red-背景-页面深 */
   '--color-red-bg-page-dark': 'var(--color-red-3)',
   /** red/red-背景-页面-浅 */
-  '--color-red-bg-page-light': 'var(--color-red-a1)',
+  '--color-red-bg-page-light': 'var(--color-red-1)',
   /** red/red-背景-提示块 */
   '--color-red-bg-tip': 'var(--color-red-a3)',
   /** red/red-边线-深 */
@@ -292,7 +292,7 @@ export const global = {
   /** 辅0/辅0-背景-页面深 */
   '--color-sub0-bg-page-dark': 'var(--color-sub0-3)',
   /** 辅0/辅0-背景-页面-浅 */
-  '--color-sub0-bg-page-light': 'var(--color-sub0-a1)',
+  '--color-sub0-bg-page-light': 'var(--color-sub0-1)',
   /** 辅0/辅0-背景-提示块 */
   '--color-sub0-bg-tip': 'var(--color-sub0-a3)',
   /** 辅0/辅0-边线-深 */
@@ -338,7 +338,7 @@ export const global = {
   /** 辅1/辅1-背景-页面深 */
   '--color-sub1-bg-page-dark': 'var(--color-sub1-3)',
   /** 辅1/辅1-背景-页面-浅 */
-  '--color-sub1-bg-page-light': 'var(--color-sub1-a1)',
+  '--color-sub1-bg-page-light': 'var(--color-sub1-1)',
   /** 辅1/辅1-背景-提示块 */
   '--color-sub1-bg-tip': 'var(--color-sub1-a3)',
   /** 辅1/辅1-边线-深 */
@@ -384,7 +384,7 @@ export const global = {
   /** 辅2/辅2-背景-页面深 */
   '--color-sub2-bg-page-dark': 'var(--color-sub2-3)',
   /** 辅2/辅2-背景-页面-浅 */
-  '--color-sub2-bg-page-light': 'var(--color-sub2-a1)',
+  '--color-sub2-bg-page-light': 'var(--color-sub2-1)',
   /** 辅2/辅2-背景-提示块 */
   '--color-sub2-bg-tip': 'var(--color-sub2-a3)',
   /** 辅2/辅2-边线-深 */
@@ -430,7 +430,7 @@ export const global = {
   /** 辅3/辅3-背景-页面深 */
   '--color-sub3-bg-page-dark': 'var(--color-sub3-3)',
   /** 辅3/辅3-背景-页面-浅 */
-  '--color-sub3-bg-page-light': 'var(--color-sub3-a1)',
+  '--color-sub3-bg-page-light': 'var(--color-sub3-1)',
   /** 辅3/辅3-背景-提示块 */
   '--color-sub3-bg-tip': 'var(--color-sub3-a3)',
   /** 辅3/辅3-边线-深 */
@@ -476,7 +476,7 @@ export const global = {
   /** 辅4/辅4-背景-页面深 */
   '--color-sub4-bg-page-dark': 'var(--color-sub4-3)',
   /** 辅4/辅4-背景-页面-浅 */
-  '--color-sub4-bg-page-light': 'var(--color-sub4-a1)',
+  '--color-sub4-bg-page-light': 'var(--color-sub4-1)',
   /** 辅4/辅4-背景-提示块 */
   '--color-sub4-bg-tip': 'var(--color-sub4-a3)',
   /** 辅4/辅4-边线-深 */
@@ -522,7 +522,7 @@ export const global = {
   /** 辅5/辅5-背景-页面深 */
   '--color-sub5-bg-page-dark': 'var(--color-sub5-3)',
   /** 辅5/辅5-背景-页面-浅 */
-  '--color-sub5-bg-page-light': 'var(--color-sub5-a1)',
+  '--color-sub5-bg-page-light': 'var(--color-sub5-1)',
   /** 辅5/辅5-背景-提示块 */
   '--color-sub5-bg-tip': 'var(--color-sub5-a3)',
   /** 辅5/辅5-边线-深 */
@@ -568,7 +568,7 @@ export const global = {
   /** 辅6/辅6-背景-页面深 */
   '--color-sub6-bg-page-dark': 'var(--color-sub6-3)',
   /** 辅6/辅6-背景-页面-浅 */
-  '--color-sub6-bg-page-light': 'var(--color-sub6-a1)',
+  '--color-sub6-bg-page-light': 'var(--color-sub6-1)',
   /** 辅6/辅6-背景-提示块 */
   '--color-sub6-bg-tip': 'var(--color-sub6-a3)',
   /** 辅6/辅6-边线-深 */
@@ -614,7 +614,7 @@ export const global = {
   /** 辅7/辅7-背景-页面深 */
   '--color-sub7-bg-page-dark': 'var(--color-sub7-3)',
   /** 辅7/辅7-背景-页面-浅 */
-  '--color-sub7-bg-page-light': 'var(--color-sub7-a1)',
+  '--color-sub7-bg-page-light': 'var(--color-sub7-1)',
   /** 辅7/辅7-背景-提示块 */
   '--color-sub7-bg-tip': 'var(--color-sub7-a3)',
   /** 辅7/辅7-边线-深 */
@@ -660,7 +660,7 @@ export const global = {
   /** yellow/yellow-背景-页面深 */
   '--color-yellow-bg-page-dark': 'var(--color-yellow-3)',
   /** yellow/yellow-背景-页面-浅 */
-  '--color-yellow-bg-page-light': 'var(--color-yellow-a1)',
+  '--color-yellow-bg-page-light': 'var(--color-yellow-1)',
   /** yellow/yellow-背景-提示块 */
   '--color-yellow-bg-tip': 'var(--color-yellow-a3)',
   /** yellow/yellow-边线-深 */
@@ -862,185 +862,20 @@ export const global = {
   /** 间距-卡片-xs */
   '--padding-card-xs': 'var(--padding-1x)',
   /** 间距-控件-base */
-  '--padding-control-base': 'var(--padding-none) var(--padding-3x)',
+  '--padding-control-base': 'var(--padding-1x) var(--padding-3x)',
   /** 间距-控件-sm */
-  '--padding-control-sm': 'var(--padding-none) var(--padding-2x)',
+  '--padding-control-sm': 'var(--padding-1-5x) var(--padding-2x)',
   /** 间距-控件-xs */
-  '--padding-control-xs': 'var(--padding-none) var(--padding-1-5x)',
+  '--padding-control-xs': 'var(--padding-1x) var(--padding-1-5x)',
   /** 间距-弹窗-base */
-  '--padding-modal-base': 'var(--padding-3x) var(--padding-5x)',
+  '--padding-modal-base':
+    'var(--padding-3x) var(--padding-5x) var(--padding-5x) var(--padding-5x)',
   /** 间距-页面-base */
   '--padding-page-base': 'var(--padding-4x) var(--padding-10x)',
   /** 间距-页面-sm */
   '--padding-page-sm': 'var(--padding-4x) var(--padding-6x)',
 
   // 其他未分类的 token
-  '--font-text-body-emphasized-xs':
-    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
-  '--font-text-body-emphasized-sm':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
-  '--font-text-body-emphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
-  '--font-text-body-emphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
-  '--font-text-body-emphasized-xl':
-    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
-  '--font-text-paragraph-emphasized-xs':
-    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
-  '--font-text-paragraph-emphasized-sm':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
-  '--font-text-paragraph-emphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
-  '--font-text-paragraph-emphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
-  '--font-text-paragraph-emphasized-xl':
-    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
-  '--font-text-code-emphasized-base':
-    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
-  '--font-text-code-emphasized-lg':
-    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
-  '--font-text-stylish-h1-base':
-    'var(--font-weight-heading) var(--font-size-h1)/var(--line-height-4xl) var(--font-family-stylish)',
-  '--letter-spacing-stylish-h1-base': 'var(--letter-spacing-loose)',
-  '--font-text-stylish-h2-base':
-    'var(--font-weight-heading) var(--font-size-h2)/var(--line-height-3xl) var(--font-family-stylish)',
-  '--font-text-stylish-h3-base':
-    'var(--font-weight-heading) var(--font-size-h3)/var(--line-height-2xl) var(--font-family-stylish)',
-  '--font-text-stylish-h4-base':
-    'var(--font-weight-heading) var(--font-size-h4)/var(--line-height-xl) var(--font-family-stylish)',
-  '--letter-spacing-stylish-h4-base': 'var(--letter-spacing-loose)',
-  '--font-text-stylish-h5-base':
-    'var(--font-weight-heading) var(--font-size-h5)/var(--line-height-lg) var(--font-family-stylish)',
-  '--font-text-stylish-h6-base':
-    'var(--font-weight-heading) var(--font-size-h6)/var(--line-height-base) var(--font-family-stylish)',
-  '--height-control-alias-xs': 'var(--height-control-xs)',
-  '--height-control-alias-sm': 'var(--height-control-sm)',
-  '--height-control-alias-base': 'var(--height-control-base)',
-  '--height-control-alias-lg': 'var(--height-control-lg)',
-  '--font-family-text':
-    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
-  '--font-family-number':
-    "Rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
-  '--font-family-stylish':
-    "'DingTalk JinBuTi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
-  '--font-family-code':
-    "'Roboto Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Liberation Mono', 'Courier New', monospace",
-  '--font-family-document':
-    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
-  '--font-size-xs': '10px',
-  '--font-size-sm': '12px',
-  '--font-size-base': '13px',
-  '--font-size-lg': '15px',
-  '--font-size-xl': '18px',
-  '--font-size-2xl': '24px',
-  '--font-size-3xl': '30px',
-  '--font-size-4xl': '56px',
-  '--font-size-h1': '56px',
-  '--font-size-h2': '30px',
-  '--font-size-h3': '24px',
-  '--font-size-h4': '18px',
-  '--font-size-h5': '15px',
-  '--font-size-h6': '13px',
-  '--line-height-xs': '18px',
-  '--line-height-sm': '20px',
-  '--line-height-base': '22px',
-  '--line-height-lg': '24px',
-  '--line-height-xl': '26px',
-  '--line-height-2xl': '32px',
-  '--line-height-3xl': '36px',
-  '--line-height-4xl': '64px',
-  '--line-height-none': '100%',
-  '--line-height-tight': '120%',
-  '--line-height-loose': '160%',
-  '--line-height-wide': '180%',
-  '--font-weight-light': '300',
-  '--font-weight-base': '400',
-  '--font-weight-emphasized': '500',
-  '--font-weight-heading': '600',
-  '--letter-spacing-tight': '-0.02em',
-  '--letter-spacing-base': 'normal',
-  '--letter-spacing-loose': '0.04em',
-  '--shadow-hard-xs': 'inset 0 0 1px 0 rgba(0, 19, 41, 15%)',
-  '--shadow-hard-sm': 'inset 0 0 1px 0 rgba(0, 0, 0, 25%)',
-  '--shadow-hard-base': 'inset 0 0 1px 0 rgba(0, 19, 41, 25%)',
-  '--shadow-hard-lg':
-    '0 0 1px 0 rgba(0, 19, 41, 5%), 0 2px 7px 0 rgba(0, 19, 41, 5%), 0 2px 5px -2px rgba(0, 19, 41, 6%)',
-  '--shadow-hard-xl':
-    '0 0 1px 0 rgba(0, 15, 41, 5%), 0 2px 7px 0 rgba(0, 15, 41, 5%), 0 2px 5px -2px rgba(0, 15, 41, 6%)',
-  '--shadow-hard-2xl':
-    '0 0 1px 0 rgba(0, 15, 41, 5%), 0 4px 14px 0 rgba(0, 15, 41, 5%), 0 4px 10px -4px rgba(0, 15, 41, 6%)',
-  '--shadow-soft-xs': '0 1.5px 4px -1px rgba(10, 9, 11, 7%)',
-  '--shadow-soft-sm':
-    '0 2px 4px -1px rgba(10, 9, 11, 2%), 0 5px 13px -5px rgba(10, 9, 11, 5%)',
-  '--shadow-soft-base': '0 1.5px 4px -1px rgba(0, 1, 3, 7%)',
-  '--shadow-soft-lg': '0 2px 6px -1px rgba(0, 19, 41, 7%)',
-  '--shadow-soft-xl':
-    '0 0 1px 0 rgba(0, 15, 41, 5%), 0 6px 16px 0 rgba(0, 15, 41, 8%)',
-  '--shadow-soft-2xl':
-    '0 0 3px -1px rgba(0, 15, 41, 4%), 0 32px 33px -15px rgba(0, 15, 41, 17%)',
-  '--padding-unit': '4px',
-  '--padding-none': '0',
-  '--padding-0-25x': '1px',
-  '--padding-0-5x': '2px',
-  '--padding-1x': '4px',
-  '--padding-1-5x': '6px',
-  '--padding-2x': '8px',
-  '--padding-3x': '12px',
-  '--padding-4x': '16px',
-  '--padding-5x': '20px',
-  '--padding-6x': '24px',
-  '--padding-7x': '28px',
-  '--padding-8x': '32px',
-  '--padding-9x': '36px',
-  '--padding-10x': '40px',
-  '--padding-11x': '44px',
-  '--padding-12x': '48px',
-  '--padding-13x': '52px',
-  '--padding-14x': '56px',
-  '--padding-15x': '60px',
-  '--padding-16x': '64px',
-  '--padding-17x': '68px',
-  '--padding-18x': '72px',
-  '--padding-19x': '76px',
-  '--padding-20x': '80px',
-  '--margin-unit': '4px',
-  '--margin-0-25x': '1px',
-  '--margin-0-5x': '2px',
-  '--margin-1x': '4px',
-  '--margin-1-5x': '6px',
-  '--margin-2x': '8px',
-  '--margin-3x': '12px',
-  '--margin-4x': '16px',
-  '--margin-5x': '20px',
-  '--margin-6x': '24px',
-  '--margin-7x': '28px',
-  '--margin-8x': '32px',
-  '--margin-9x': '36px',
-  '--margin-10x': '40px',
-  '--margin-11x': '44px',
-  '--margin-12x': '48px',
-  '--margin-13x': '52px',
-  '--margin-14x': '56px',
-  '--margin-15x': '60px',
-  '--margin-16x': '64px',
-  '--margin-17x': '68px',
-  '--margin-18x': '72px',
-  '--margin-19x': '76px',
-  '--margin-20x': '80px',
-  '--radius-none': '0',
-  '--radius-2xs': '2px',
-  '--radius-xs': '4px',
-  '--radius-sm': '6px',
-  '--radius-base': '8px',
-  '--radius-lg': '12px',
-  '--radius-xl': '16px',
-  '--radius-2xl': '20px',
-  '--radius-3xl': '24px',
-  '--radius-circle': '50%',
-  '--height-control-xs': '24px',
-  '--height-control-sm': '28px',
-  '--height-control-base': '32px',
-  '--height-control-lg': '36px',
   '--color-primary-1': '#fcfdff',
   '--color-primary-2': '#f5f9ff',
   '--color-primary-3': '#e9f3ff',
@@ -1065,30 +900,30 @@ export const global = {
   '--color-primary-a10': '#0068edf9',
   '--color-primary-a11': '#0068e8',
   '--color-primary-a12': '#002862f5',
-  '--color-gray-1': '#FDFEFE',
-  '--color-gray-2': '#F7F8F9',
-  '--color-gray-3': '#F1F2F3',
-  '--color-gray-4': '#EAECEE',
-  '--color-gray-5': '#E2E5E8',
-  '--color-gray-6': '#D9DDE2',
-  '--color-gray-7': '#C7CCD3',
-  '--color-gray-8': '#B6BCC5',
-  '--color-gray-9': '#14161C',
-  '--color-gray-10': '#232831',
-  '--color-gray-11': '#767E8B',
-  '--color-gray-12': '#343A45',
-  '--color-gray-a1': '#14161c03',
-  '--color-gray-a2': '#14161c08',
-  '--color-gray-a3': '#14161c0f',
-  '--color-gray-a4': '#14161c14',
-  '--color-gray-a5': '#14161c1a',
-  '--color-gray-a6': '#14161c1f',
-  '--color-gray-a7': '#535f744d',
-  '--color-gray-a8': '#505c716b',
-  '--color-gray-a9': '#14161C',
-  '--color-gray-a10': '#232831',
-  '--color-gray-a11': '#545d6dcc',
-  '--color-gray-a12': '#343A45',
+  '--color-gray-1': '#fcfcfd',
+  '--color-gray-2': '#f8f9fc',
+  '--color-gray-3': '#eff0f4',
+  '--color-gray-4': '#e6e8ee',
+  '--color-gray-5': '#dfe1e8',
+  '--color-gray-6': '#d7dae2',
+  '--color-gray-7': '#cbcfd9',
+  '--color-gray-8': '#b7bbc8',
+  '--color-gray-9': '#14161c',
+  '--color-gray-10': '#2b2e34',
+  '--color-gray-11': '#60646e',
+  '--color-gray-12': '#1d1f26',
+  '--color-gray-a1': '#00005503',
+  '--color-gray-a2': '#00259207',
+  '--color-gray-a3': '#00105010',
+  '--color-gray-a4': '#00155219',
+  '--color-gray-a5': '#00104820',
+  '--color-gray-a6': '#00144728',
+  '--color-gray-a7': '#00144534',
+  '--color-gray-a8': '#000f3d48',
+  '--color-gray-a9': '#000209eb',
+  '--color-gray-a10': '#00040bd4',
+  '--color-gray-a11': '#0007179f',
+  '--color-gray-a12': '#00020ae2',
   '--color-blue-1': '#fcfdff',
   '--color-blue-2': '#f5f9ff',
   '--color-blue-3': '#e9f3ff',
@@ -1367,7 +1202,7 @@ export const global = {
   '--color-sub6-12': '#4c361d',
   '--color-sub6-a1': '#c0800004',
   '--color-sub6-a2': '#ffa20013',
-  '--color-sub6-a3': '#fa03',
+  '--color-sub6-a3': '#ffaa0033',
   '--color-sub6-a4': '#ffa2004c',
   '--color-sub6-a5': '#ff9b0066',
   '--color-sub6-a6': '#ff90017b',
@@ -1401,6 +1236,171 @@ export const global = {
   '--color-sub7-a10': '#00b21bc4',
   '--color-sub7-a11': '#008604',
   '--color-sub7-a12': '#003005eb',
+  '--font-family-text':
+    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-family-number':
+    "Rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-family-stylish':
+    "'DingTalk JinBuTi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-family-code':
+    "'Roboto Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Liberation Mono', 'Courier New', monospace",
+  '--font-family-document':
+    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif",
+  '--font-size-xs': '10px',
+  '--font-size-sm': '12px',
+  '--font-size-base': '13px',
+  '--font-size-lg': '15px',
+  '--font-size-xl': '18px',
+  '--font-size-2xl': '24px',
+  '--font-size-3xl': '30px',
+  '--font-size-4xl': '56px',
+  '--font-size-h1': '56px',
+  '--font-size-h2': '30px',
+  '--font-size-h3': '24px',
+  '--font-size-h4': '18px',
+  '--font-size-h5': '15px',
+  '--font-size-h6': '13px',
+  '--line-height-xs': '18px',
+  '--line-height-sm': '20px',
+  '--line-height-base': '22px',
+  '--line-height-lg': '24px',
+  '--line-height-xl': '26px',
+  '--line-height-2xl': '32px',
+  '--line-height-3xl': '36px',
+  '--line-height-4xl': '64px',
+  '--line-height-none': '100%',
+  '--line-height-tight': '120%',
+  '--line-height-loose': '160%',
+  '--line-height-wide': '180%',
+  '--font-weight-light': '300',
+  '--font-weight-base': '400',
+  '--font-weight-emphasized': '500',
+  '--font-weight-heading': '600',
+  '--letter-spacing-tight': '-0.02em',
+  '--letter-spacing-base': '0em',
+  '--letter-spacing-loose': '0.04em',
+  '--shadow-hard-xs': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.15)',
+  '--shadow-hard-sm': 'inset 0px 0px 1px 0px rgba(0, 0, 0, 0.25)',
+  '--shadow-hard-base': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.25)',
+  '--shadow-hard-lg':
+    '0px 0px 1px 0px rgba(0, 19, 41, 0.05), 0px 2px 7px 0px rgba(0, 19, 41, 0.05), 0px 2px 5px -2px rgba(0, 19, 41, 0.06)',
+  '--shadow-hard-xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 2px 7px 0px rgba(0, 15, 41, 0.05), 0px 2px 5px -2px rgba(0, 15, 41, 0.06)',
+  '--shadow-hard-2xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 4px 14px 0px rgba(0, 15, 41, 0.05), 0px 4px 10px -4px rgba(0, 15, 41, 0.06)',
+  '--shadow-soft-xs': '0px 1.5px 4px -1px rgba(10, 9, 11, 0.07)',
+  '--shadow-soft-sm':
+    '0px 2px 4px -1px rgba(10, 9, 11, 0.02), 0px 5px 13px -5px rgba(10, 9, 11, 0.05)',
+  '--shadow-soft-base': '0px 1.5px 4px -1px rgba(0, 1, 3, 0.07)',
+  '--shadow-soft-lg': '0px 2px 6px -1px rgba(0, 19, 41, 0.07)',
+  '--shadow-soft-xl':
+    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 6px 16px 0px rgba(0, 15, 41, 0.08)',
+  '--shadow-soft-2xl':
+    '0px 0px 3px -1px rgba(0, 15, 41, 0.04), 0px 32px 33px -15px rgba(0, 15, 41, 0.17)',
+  '--padding-unit': '4px',
+  '--padding-0-25x': '1px',
+  '--padding-0-5x': '2px',
+  '--padding-1x': '4px',
+  '--padding-1-5x': '6px',
+  '--padding-2x': '8px',
+  '--padding-3x': '12px',
+  '--padding-4x': '16px',
+  '--padding-5x': '20px',
+  '--padding-6x': '24px',
+  '--padding-7x': '28px',
+  '--padding-8x': '32px',
+  '--padding-9x': '36px',
+  '--padding-10x': '40px',
+  '--padding-11x': '44px',
+  '--padding-12x': '48px',
+  '--padding-13x': '52px',
+  '--padding-14x': '56px',
+  '--padding-15x': '60px',
+  '--padding-16x': '64px',
+  '--padding-17x': '68px',
+  '--padding-18x': '72px',
+  '--padding-19x': '76px',
+  '--padding-20x': '80px',
+  '--margin-unit': '4px',
+  '--margin-0-25x': '1px',
+  '--margin-0-5x': '2px',
+  '--margin-1x': '4px',
+  '--margin-1-5x': '6px',
+  '--margin-2x': '8px',
+  '--margin-3x': '12px',
+  '--margin-4x': '16px',
+  '--margin-5x': '20px',
+  '--margin-6x': '24px',
+  '--margin-7x': '28px',
+  '--margin-8x': '32px',
+  '--margin-9x': '36px',
+  '--margin-10x': '40px',
+  '--margin-11x': '44px',
+  '--margin-12x': '48px',
+  '--margin-13x': '52px',
+  '--margin-14x': '56px',
+  '--margin-15x': '60px',
+  '--margin-16x': '64px',
+  '--margin-17x': '68px',
+  '--margin-18x': '72px',
+  '--margin-19x': '76px',
+  '--margin-20x': '80px',
+  '--radius-none': '0px',
+  '--radius-2xs': '2px',
+  '--radius-xs': '4px',
+  '--radius-sm': '6px',
+  '--radius-base': '8px',
+  '--radius-lg': '12px',
+  '--radius-xl': '16px',
+  '--radius-2xl': '20px',
+  '--radius-3xl': '24px',
+  '--radius-circle': '50%',
+  '--height-control-xs': '24px',
+  '--height-control-sm': '28px',
+  '--height-control-base': '32px',
+  '--height-control-lg': '36px',
+  '--font-text-body-emphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-xs) var(--font-family-text)',
+  '--font-text-body-emphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-sm) var(--font-family-text)',
+  '--font-text-body-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-base) var(--font-family-text)',
+  '--font-text-body-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-lg) var(--font-family-text)',
+  '--font-text-body-emphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-xl) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-xs':
+    'var(--font-weight-emphasized) var(--font-size-xs)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-sm':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-lg)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-paragraph-emphasized-xl':
+    'var(--font-weight-emphasized) var(--font-size-xl)/var(--line-height-loose) var(--font-family-text)',
+  '--font-text-code-emphasized-base':
+    'var(--font-weight-emphasized) var(--font-size-sm)/var(--line-height-loose) var(--font-family-code)',
+  '--font-text-code-emphasized-lg':
+    'var(--font-weight-emphasized) var(--font-size-base)/var(--line-height-loose) var(--font-family-code)',
+  '--font-text-stylish-h1-base':
+    'var(--font-weight-heading) var(--font-size-h1)/var(--line-height-4xl) var(--font-family-stylish)',
+  '--letter-spacing-stylish-h1-base': 'var(--letter-spacing-loose)',
+  '--font-text-stylish-h2-base':
+    'var(--font-weight-heading) var(--font-size-h2)/var(--line-height-3xl) var(--font-family-stylish)',
+  '--font-text-stylish-h3-base':
+    'var(--font-weight-heading) var(--font-size-h3)/var(--line-height-2xl) var(--font-family-stylish)',
+  '--font-text-stylish-h4-base':
+    'var(--font-weight-heading) var(--font-size-h4)/var(--line-height-xl) var(--font-family-stylish)',
+  '--letter-spacing-stylish-h4-base': 'var(--letter-spacing-loose)',
+  '--font-text-stylish-h5-base':
+    'var(--font-weight-heading) var(--font-size-h5)/var(--line-height-lg) var(--font-family-stylish)',
+  '--font-text-stylish-h6-base':
+    'var(--font-weight-heading) var(--font-size-h6)/var(--line-height-base) var(--font-family-stylish)',
+  '--height-control-alias-xs': 'var(--height-control-xs)',
+  '--height-control-alias-sm': 'var(--height-control-sm)',
+  '--height-control-alias-base': 'var(--height-control-base)',
+  '--height-control-alias-lg': 'var(--height-control-lg)',
 };
 
 export default global;

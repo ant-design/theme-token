@@ -1,4 +1,4 @@
-﻿export const antToken = {
+export const antToken = {
   blue: '#1677FF',
   purple: '#722ED1',
   cyan: '#13C2C2',
