@@ -1,4 +1,4 @@
-﻿export const ComponentTokenMap = {
+export const ComponentTokenMap = {
   Affix: {},
   Alert: {},
   Anchor: {},
