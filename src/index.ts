@@ -1,6 +1,6 @@
-export { ThemeProvider, useThemeContext } from './ThemeProvider';
 export { default as algorithm } from './algorithm';
-export { useCSSVariables } from './hooks';
+export { insertCSSVariables, useCSSVariables } from './hooks';
+export { ThemeProvider, useThemeContext } from './ThemeProvider';
 export {
   convertGlobalToAntdCssToken,
   convertGlobalToAntdToken,
