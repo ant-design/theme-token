@@ -10,7 +10,7 @@ export const global = {
   /** blue/blue-背景-页面深 */
   '--color-blue-bg-page-dark': 'var(--color-blue-3)',
   /** blue/blue-背景-页面-浅 */
-  '--color-blue-bg-page-light': 'var(--color-blue-1)',
+  '--color-blue-bg-page-light': 'var(--color-blue-a1)',
   /** blue/blue-背景-提示块 */
   '--color-blue-bg-tip': 'var(--color-blue-a3)',
   /** blue/blue-边线-深 */
@@ -108,7 +108,7 @@ export const global = {
   /** green/green-背景-页面深 */
   '--color-green-bg-page-dark': 'var(--color-green-3)',
   /** green/green-背景-页面-浅 */
-  '--color-green-bg-page-light': 'var(--color-green-1)',
+  '--color-green-bg-page-light': 'var(--color-green-a1)',
   /** green/green-背景-提示块 */
   '--color-green-bg-tip': 'var(--color-green-a3)',
   /** green/green-边线-深 */
@@ -154,7 +154,7 @@ export const global = {
   /** orange/orange-背景-页面深 */
   '--color-orange-bg-page-dark': 'var(--color-orange-3)',
   /** orange/orange-背景-页面-浅 */
-  '--color-orange-bg-page-light': 'var(--color-orange-1)',
+  '--color-orange-bg-page-light': 'var(--color-orange-a1)',
   /** orange/orange-背景-提示块 */
   '--color-orange-bg-tip': 'var(--color-orange-a3)',
   /** orange/orange-边线-深 */
@@ -200,7 +200,7 @@ export const global = {
   /** primary/primary-背景-页面深 */
   '--color-primary-bg-page-dark': 'var(--color-primary-3)',
   /** primary/primary-背景-页面-浅 */
-  '--color-primary-bg-page-light': 'var(--color-primary-1)',
+  '--color-primary-bg-page-light': 'var(--color-primary-a1)',
   /** primary/primary-背景-提示块 */
   '--color-primary-bg-tip': 'var(--color-primary-a3)',
   /** primary/primary-边线-深 */
@@ -246,7 +246,7 @@ export const global = {
   /** red/red-背景-页面深 */
   '--color-red-bg-page-dark': 'var(--color-red-3)',
   /** red/red-背景-页面-浅 */
-  '--color-red-bg-page-light': 'var(--color-red-1)',
+  '--color-red-bg-page-light': 'var(--color-red-a1)',
   /** red/red-背景-提示块 */
   '--color-red-bg-tip': 'var(--color-red-a3)',
   /** red/red-边线-深 */
@@ -292,7 +292,7 @@ export const global = {
   /** 辅0/辅0-背景-页面深 */
   '--color-sub0-bg-page-dark': 'var(--color-sub0-3)',
   /** 辅0/辅0-背景-页面-浅 */
-  '--color-sub0-bg-page-light': 'var(--color-sub0-1)',
+  '--color-sub0-bg-page-light': 'var(--color-sub0-a1)',
   /** 辅0/辅0-背景-提示块 */
   '--color-sub0-bg-tip': 'var(--color-sub0-a3)',
   /** 辅0/辅0-边线-深 */
@@ -338,7 +338,7 @@ export const global = {
   /** 辅1/辅1-背景-页面深 */
   '--color-sub1-bg-page-dark': 'var(--color-sub1-3)',
   /** 辅1/辅1-背景-页面-浅 */
-  '--color-sub1-bg-page-light': 'var(--color-sub1-1)',
+  '--color-sub1-bg-page-light': 'var(--color-sub1-a1)',
   /** 辅1/辅1-背景-提示块 */
   '--color-sub1-bg-tip': 'var(--color-sub1-a3)',
   /** 辅1/辅1-边线-深 */
@@ -384,7 +384,7 @@ export const global = {
   /** 辅2/辅2-背景-页面深 */
   '--color-sub2-bg-page-dark': 'var(--color-sub2-3)',
   /** 辅2/辅2-背景-页面-浅 */
-  '--color-sub2-bg-page-light': 'var(--color-sub2-1)',
+  '--color-sub2-bg-page-light': 'var(--color-sub2-a1)',
   /** 辅2/辅2-背景-提示块 */
   '--color-sub2-bg-tip': 'var(--color-sub2-a3)',
   /** 辅2/辅2-边线-深 */
@@ -430,7 +430,7 @@ export const global = {
   /** 辅3/辅3-背景-页面深 */
   '--color-sub3-bg-page-dark': 'var(--color-sub3-3)',
   /** 辅3/辅3-背景-页面-浅 */
-  '--color-sub3-bg-page-light': 'var(--color-sub3-1)',
+  '--color-sub3-bg-page-light': 'var(--color-sub3-a1)',
   /** 辅3/辅3-背景-提示块 */
   '--color-sub3-bg-tip': 'var(--color-sub3-a3)',
   /** 辅3/辅3-边线-深 */
@@ -476,7 +476,7 @@ export const global = {
   /** 辅4/辅4-背景-页面深 */
   '--color-sub4-bg-page-dark': 'var(--color-sub4-3)',
   /** 辅4/辅4-背景-页面-浅 */
-  '--color-sub4-bg-page-light': 'var(--color-sub4-1)',
+  '--color-sub4-bg-page-light': 'var(--color-sub4-a1)',
   /** 辅4/辅4-背景-提示块 */
   '--color-sub4-bg-tip': 'var(--color-sub4-a3)',
   /** 辅4/辅4-边线-深 */
@@ -522,7 +522,7 @@ export const global = {
   /** 辅5/辅5-背景-页面深 */
   '--color-sub5-bg-page-dark': 'var(--color-sub5-3)',
   /** 辅5/辅5-背景-页面-浅 */
-  '--color-sub5-bg-page-light': 'var(--color-sub5-1)',
+  '--color-sub5-bg-page-light': 'var(--color-sub5-a1)',
   /** 辅5/辅5-背景-提示块 */
   '--color-sub5-bg-tip': 'var(--color-sub5-a3)',
   /** 辅5/辅5-边线-深 */
@@ -568,7 +568,7 @@ export const global = {
   /** 辅6/辅6-背景-页面深 */
   '--color-sub6-bg-page-dark': 'var(--color-sub6-3)',
   /** 辅6/辅6-背景-页面-浅 */
-  '--color-sub6-bg-page-light': 'var(--color-sub6-1)',
+  '--color-sub6-bg-page-light': 'var(--color-sub6-a1)',
   /** 辅6/辅6-背景-提示块 */
   '--color-sub6-bg-tip': 'var(--color-sub6-a3)',
   /** 辅6/辅6-边线-深 */
@@ -614,7 +614,7 @@ export const global = {
   /** 辅7/辅7-背景-页面深 */
   '--color-sub7-bg-page-dark': 'var(--color-sub7-3)',
   /** 辅7/辅7-背景-页面-浅 */
-  '--color-sub7-bg-page-light': 'var(--color-sub7-1)',
+  '--color-sub7-bg-page-light': 'var(--color-sub7-a1)',
   /** 辅7/辅7-背景-提示块 */
   '--color-sub7-bg-tip': 'var(--color-sub7-a3)',
   /** 辅7/辅7-边线-深 */
@@ -660,7 +660,7 @@ export const global = {
   /** yellow/yellow-背景-页面深 */
   '--color-yellow-bg-page-dark': 'var(--color-yellow-3)',
   /** yellow/yellow-背景-页面-浅 */
-  '--color-yellow-bg-page-light': 'var(--color-yellow-1)',
+  '--color-yellow-bg-page-light': 'var(--color-yellow-a1)',
   /** yellow/yellow-背景-提示块 */
   '--color-yellow-bg-tip': 'var(--color-yellow-a3)',
   /** yellow/yellow-边线-深 */
@@ -784,24 +784,6 @@ export const global = {
   /** 标题/H4-letter-spacing */
   '--letter-spacing-h4-base': 'var(--letter-spacing-loose)',
 
-  // 圆角相关
-  /** 圆角-卡片-base */
-  '--radius-card-base': 'var(--radius-lg)',
-  /** 圆角-卡片-lg */
-  '--radius-card-lg': 'var(--radius-xl)',
-  /** 圆角-全圆角-base */
-  '--radius-circle-base': 'var(--radius-circle)',
-  /** 圆角-控件-base */
-  '--radius-control-base': 'var(--radius-base)',
-  /** 圆角-控件-lg */
-  '--radius-control-lg': 'var(--radius-lg)',
-  /** 圆角-控件-sm */
-  '--radius-control-sm': 'var(--radius-sm)',
-  /** 圆角-控件-xs */
-  '--radius-control-xs': 'var(--radius-xs)',
-  /** 圆角-弹窗-base */
-  '--radius-modal-base': 'var(--radius-2xl)',
-
   // 阴影相关
   /** 投影-描边-base */
   '--shadow-border-base': 'var(--shadow-hard-xs)',
@@ -821,59 +803,6 @@ export const global = {
   '--shadow-popover-base': 'var(--shadow-soft-xl)',
   /** 投影-风格化-base */
   '--shadow-stylish-base': 'var(--shadow-stylish)',
-
-  // 其他
-  /** 间距-组件-base */
-  '--margin-component-base': 'var(--margin-2x)',
-  /** 间距-组件-lg */
-  '--margin-component-lg': 'var(--margin-3x)',
-  /** 间距-组件-sm */
-  '--margin-component-sm': 'var(--margin-1x)',
-  /** 间距-组件-xs */
-  '--margin-component-xs': 'var(--margin-0-5x)',
-  /** 间距-布局-2xs */
-  '--margin-layout-2xs': 'var(--margin-1x)',
-  /** 间距-布局-base */
-  '--margin-layout-base': 'var(--margin-6x)',
-  /** 间距-布局-lg */
-  '--margin-layout-lg': 'var(--margin-8x)',
-  /** 间距-布局-sm */
-  '--margin-layout-sm': 'var(--margin-4x)',
-  /** 间距-布局-xl */
-  '--margin-layout-xl': 'var(--margin-10x)',
-  /** 间距-布局-xs */
-  '--margin-layout-xs': 'var(--margin-2x)',
-  /** 间距-模块-base */
-  '--margin-module-base': 'var(--margin-3x)',
-  /** 间距-模块-lg */
-  '--margin-module-lg': 'var(--margin-4x)',
-  /** 间距-模块-sm */
-  '--margin-module-sm': 'var(--margin-2x)',
-  /** 间距-模块-xs */
-  '--margin-module-xs': 'var(--margin-1x)',
-  /** 间距-卡片-base */
-  '--padding-card-base': 'var(--padding-3x)',
-  /** 间距-卡片-lg */
-  '--padding-card-lg': 'var(--padding-4x)',
-  /** 间距-卡片-sm */
-  '--padding-card-sm': 'var(--padding-2x)',
-  /** 间距-卡片-xl */
-  '--padding-card-xl': 'var(--padding-5x)',
-  /** 间距-卡片-xs */
-  '--padding-card-xs': 'var(--padding-1x)',
-  /** 间距-控件-base */
-  '--padding-control-base': 'var(--padding-1x) var(--padding-3x)',
-  /** 间距-控件-sm */
-  '--padding-control-sm': 'var(--padding-1-5x) var(--padding-2x)',
-  /** 间距-控件-xs */
-  '--padding-control-xs': 'var(--padding-1x) var(--padding-1-5x)',
-  /** 间距-弹窗-base */
-  '--padding-modal-base':
-    'var(--padding-3x) var(--padding-5x) var(--padding-5x) var(--padding-5x)',
-  /** 间距-页面-base */
-  '--padding-page-base': 'var(--padding-4x) var(--padding-10x)',
-  /** 间距-页面-sm */
-  '--padding-page-sm': 'var(--padding-4x) var(--padding-6x)',
 
   // 其他未分类的 token
   '--color-primary-1': '#fcfdff',
@@ -900,30 +829,30 @@ export const global = {
   '--color-primary-a10': '#0068edf9',
   '--color-primary-a11': '#0068e8',
   '--color-primary-a12': '#002862f5',
-  '--color-gray-1': '#fcfcfd',
-  '--color-gray-2': '#f8f9fc',
-  '--color-gray-3': '#eff0f4',
-  '--color-gray-4': '#e6e8ee',
-  '--color-gray-5': '#dfe1e8',
-  '--color-gray-6': '#d7dae2',
-  '--color-gray-7': '#cbcfd9',
-  '--color-gray-8': '#b7bbc8',
-  '--color-gray-9': '#14161c',
-  '--color-gray-10': '#2b2e34',
-  '--color-gray-11': '#60646e',
-  '--color-gray-12': '#1d1f26',
-  '--color-gray-a1': '#00005503',
-  '--color-gray-a2': '#00259207',
-  '--color-gray-a3': '#00105010',
-  '--color-gray-a4': '#00155219',
-  '--color-gray-a5': '#00104820',
-  '--color-gray-a6': '#00144728',
-  '--color-gray-a7': '#00144534',
-  '--color-gray-a8': '#000f3d48',
-  '--color-gray-a9': '#000209eb',
-  '--color-gray-a10': '#00040bd4',
-  '--color-gray-a11': '#0007179f',
-  '--color-gray-a12': '#00020ae2',
+  '--color-gray-1': '#FDFEFE',
+  '--color-gray-2': '#F7F8F9',
+  '--color-gray-3': '#F1F2F3',
+  '--color-gray-4': '#EAECEE',
+  '--color-gray-5': '#E2E5E8',
+  '--color-gray-6': '#D9DDE2',
+  '--color-gray-7': '#C7CCD3',
+  '--color-gray-8': '#B6BCC5',
+  '--color-gray-9': '#14161C',
+  '--color-gray-10': '#232831',
+  '--color-gray-11': '#767E8B',
+  '--color-gray-12': '#343A45',
+  '--color-gray-a1': '#14161c03',
+  '--color-gray-a2': '#14161c08',
+  '--color-gray-a3': '#14161c0f',
+  '--color-gray-a4': '#14161c14',
+  '--color-gray-a5': '#14161c1a',
+  '--color-gray-a6': '#14161c1f',
+  '--color-gray-a7': '#535f744d',
+  '--color-gray-a8': '#505c716b',
+  '--color-gray-a9': '#14161C',
+  '--color-gray-a10': '#232831',
+  '--color-gray-a11': '#545d6dcc',
+  '--color-gray-a12': '#343A45',
   '--color-blue-1': '#fcfdff',
   '--color-blue-2': '#f5f9ff',
   '--color-blue-3': '#e9f3ff',
@@ -1277,26 +1206,8 @@ export const global = {
   '--font-weight-emphasized': '500',
   '--font-weight-heading': '600',
   '--letter-spacing-tight': '-0.02em',
-  '--letter-spacing-base': '0em',
+  '--letter-spacing-base': 'normal',
   '--letter-spacing-loose': '0.04em',
-  '--shadow-hard-xs': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.15)',
-  '--shadow-hard-sm': 'inset 0px 0px 1px 0px rgba(0, 0, 0, 0.25)',
-  '--shadow-hard-base': 'inset 0px 0px 1px 0px rgba(0, 19, 41, 0.25)',
-  '--shadow-hard-lg':
-    '0px 0px 1px 0px rgba(0, 19, 41, 0.05), 0px 2px 7px 0px rgba(0, 19, 41, 0.05), 0px 2px 5px -2px rgba(0, 19, 41, 0.06)',
-  '--shadow-hard-xl':
-    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 2px 7px 0px rgba(0, 15, 41, 0.05), 0px 2px 5px -2px rgba(0, 15, 41, 0.06)',
-  '--shadow-hard-2xl':
-    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 4px 14px 0px rgba(0, 15, 41, 0.05), 0px 4px 10px -4px rgba(0, 15, 41, 0.06)',
-  '--shadow-soft-xs': '0px 1.5px 4px -1px rgba(10, 9, 11, 0.07)',
-  '--shadow-soft-sm':
-    '0px 2px 4px -1px rgba(10, 9, 11, 0.02), 0px 5px 13px -5px rgba(10, 9, 11, 0.05)',
-  '--shadow-soft-base': '0px 1.5px 4px -1px rgba(0, 1, 3, 0.07)',
-  '--shadow-soft-lg': '0px 2px 6px -1px rgba(0, 19, 41, 0.07)',
-  '--shadow-soft-xl':
-    '0px 0px 1px 0px rgba(0, 15, 41, 0.05), 0px 6px 16px 0px rgba(0, 15, 41, 0.08)',
-  '--shadow-soft-2xl':
-    '0px 0px 3px -1px rgba(0, 15, 41, 0.04), 0px 32px 33px -15px rgba(0, 15, 41, 0.17)',
   '--padding-unit': '4px',
   '--padding-0-25x': '1px',
   '--padding-0-5x': '2px',
@@ -1397,10 +1308,6 @@ export const global = {
     'var(--font-weight-heading) var(--font-size-h5)/var(--line-height-lg) var(--font-family-stylish)',
   '--font-text-stylish-h6-base':
     'var(--font-weight-heading) var(--font-size-h6)/var(--line-height-base) var(--font-family-stylish)',
-  '--height-control-alias-xs': 'var(--height-control-xs)',
-  '--height-control-alias-sm': 'var(--height-control-sm)',
-  '--height-control-alias-base': 'var(--height-control-base)',
-  '--height-control-alias-lg': 'var(--height-control-lg)',
 };
 
 export default global;
