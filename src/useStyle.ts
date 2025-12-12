@@ -2,7 +2,6 @@ import type { CSSInterpolation } from '@ant-design/cssinjs';
 import { useStyleRegister as useDefaultStyleRegister } from '@ant-design/cssinjs';
 import type React from 'react';
 import { useCSSVariables, type CSSVariables } from './hooks';
-import { global as globalCssVariables } from './token/global';
 
 // 基础token类型定义
 export interface BaseToken {
@@ -67,12 +66,7 @@ export function createStyleRegister<T extends ComponentToken>(
     cssVariables?: CSSVariables;
   } = {},
 ) {
-  const {
-    token = {},
-    theme,
-    hashId = '',
-    cssVariables = globalCssVariables,
-  } = options;
+  const { token = {}, theme, hashId = '', cssVariables = {} } = options;
 
   return (componentName: string, styleFn: (token: T) => CSSInterpolation) => {
     // 在 React 环境中使用 hooks，在非 React 环境中直接调用内部函数
